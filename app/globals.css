@@ -51,6 +51,13 @@
   --color-retro-accent: rgb(var(--retro-accent));
   --color-case-file: rgb(var(--case-file));
   --color-charcoal: rgb(var(--charcoal));
+  
+  /* Fallback colors for better compatibility */
+  --detective-blue-fallback: #4D9DFF;
+  --investigation-brown-fallback: #6f583d;
+  --retro-accent-fallback: #e0a23d;
+  --case-file-fallback: #EAE4D2;
+  --charcoal-fallback: #505221;
 }
 
 :root {

@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 export function HeroSection() {
   return (
     <section className="relative bg-gradient-to-br from-case-file to-case-file/60 min-h-[80vh] flex items-center">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="grid grid-cols-8 gap-8 h-full">
-          {Array.from({ length: 32 }).map((_, i) => (
-            <div key={i} className="flex flex-col justify-center items-center space-y-8">
-              <Search className="h-8 w-8 text-investigation-brown" />
-              <Shield className="h-8 w-8 text-detective-blue" />
-              <Eye className="h-8 w-8 text-retro-accent" />
-            </div>
-          ))}
-        </div>
+      {/* Background Pattern - Simplified */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="bg-gradient-to-br from-investigation-brown/10 via-transparent to-detective-blue/10 h-full w-full" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
