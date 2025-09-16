@@ -595,25 +595,6 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-white/10 p-3 rounded-sm">
-                      <MapPin className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-mono text-lg text-white mb-1 uppercase tracking-wide">
-                        Bürostandort
-                      </h3>
-                      <p className="font-mono text-white mb-2">
-                        123 Detektiv Straße<br />
-                        Ermittlungsstadt, ES 12345
-                      </p>
-                      <p className="font-mono text-sm text-gray-400">
-                        Nur nach Vereinbarung
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               {/* Security Notice */}
