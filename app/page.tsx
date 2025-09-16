@@ -317,31 +317,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
-              BRAUCHEN SIE EINE INDIVIDUELLE ERMITTLUNG?
-            </h3>
-            <p className="text-lg font-mono text-gray-300 mb-6 max-w-2xl mx-auto">
-              Jeder Fall ist einzigartig. Kontaktieren Sie uns für eine vertrauliche Beratung.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                className="bg-white text-black hover:bg-gray-200 font-mono text-sm uppercase tracking-wide"
-              >
-                Kostenlose Beratung
-              </Button>
-              <Button 
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-black font-mono text-sm uppercase tracking-wide"
-              >
-                Alle Dienste ansehen
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
 
