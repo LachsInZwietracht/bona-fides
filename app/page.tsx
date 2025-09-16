@@ -73,7 +73,7 @@ export default function HomePage() {
             <div className="space-y-8">
               {/* Header with classic noir styling */}
               <div className="space-y-4">
-                <Badge className="bg-amber-700 text-amber-100 font-mono text-xs tracking-widest px-3 py-1 border border-amber-600">
+                <Badge className="font-mono text-xs tracking-widest px-3 py-1 border" style={{backgroundColor: '#C2B16D', color: '#FEF3C6', borderColor: '#C2B16D'}}>
                   EST. 1965 • LIZENZIERT & VERSICHERT
                 </Badge>
 
@@ -122,7 +122,16 @@ export default function HomePage() {
               <div className="space-y-4">
                 <Button
                   size="lg"
-                  className="bg-amber-700 text-amber-100 hover:bg-amber-600 font-serif text-lg px-8 py-6 shadow-2xl hover:shadow-amber-500/20 transition-all duration-300 border border-amber-600"
+                  className="font-serif text-lg px-8 py-6 shadow-2xl transition-all duration-300 border"
+                  style={{backgroundColor: '#C2B16D', color: '#FEF3C6', borderColor: '#C2B16D'}}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = '#A89A5A';
+                    e.target.style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.25)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = '#C2B16D';
+                    e.target.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+                  }}
                 >
                   <Phone className="mr-3 h-5 w-5" />
                   Vertrauliche Beratung
@@ -206,7 +215,7 @@ export default function HomePage() {
       <div className="relative z-10 py-20 bg-gradient-to-b from-black/90 to-black/95">
         <div className="container mx-auto px-8">
           <div className="text-center space-y-6 mb-16">
-            <Badge className="bg-amber-800/20 text-amber-200 font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border border-amber-700/30">
+            <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
               SPEZIALISIERUNGEN
             </Badge>
             
@@ -246,7 +255,7 @@ export default function HomePage() {
               <div key={index} className="group relative">
                 
                 {/* Card with vintage paper styling */}
-                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 rounded-sm p-8 transition-all duration-500 ease-out hover:border-amber-700/40 shadow-lg hover:shadow-xl overflow-hidden`}>
+                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 rounded-sm p-8 transition-all duration-500 ease-out shadow-lg hover:shadow-xl overflow-hidden`} onMouseEnter={(e) => e.target.style.borderColor = 'rgba(194, 177, 109, 0.4)'} onMouseLeave={(e) => e.target.style.borderColor = 'rgba(255, 255, 255, 0.08)'}>
                   
                   {/* Vintage paper texture overlay */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-800">
@@ -259,15 +268,15 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-800 ease-out opacity-10" />
                   
                   {/* Old-style corner decorations */}
-                  <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-amber-200/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-200" />
-                  <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-amber-200/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-300" />
-                  <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-amber-200/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-400" />
-                  <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-amber-200/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-500" />
+                  <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-200" style={{borderColor: 'rgba(254, 243, 198, 0.4)'}} />
+                  <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-300" style={{borderColor: 'rgba(254, 243, 198, 0.4)'}} />
+                  <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-400" style={{borderColor: 'rgba(254, 243, 198, 0.4)'}} />
+                  <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-500" style={{borderColor: 'rgba(254, 243, 198, 0.4)'}} />
                   
                   {/* Vintage stamp effect */}
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-60 transition-all duration-700 delay-300">
                     <div className="w-12 h-8 border-2 border-dashed border-amber-200/50 flex items-center justify-center transform rotate-12">
-                      <span className="text-[8px] font-mono text-amber-200/70 font-bold">1965</span>
+                      <span className="text-[8px] font-mono font-bold" style={{color: 'rgba(254, 243, 198, 0.7)'}}>1965</span>
                     </div>
                   </div>
                   
@@ -275,33 +284,33 @@ export default function HomePage() {
                     <div className="text-center mb-8">
                       {/* Vintage medallion style icon */}
                       <div className="relative">
-                        <div className="w-20 h-20 mx-auto mb-6 bg-white/8 rounded-full flex items-center justify-center group-hover:bg-amber-800/20 transition-all duration-700 backdrop-blur-sm border border-white/10 group-hover:border-amber-700/40">
-                          <service.icon className="h-10 w-10 text-white/90 group-hover:text-amber-200 transition-colors duration-700" />
+                        <div className="w-20 h-20 mx-auto mb-6 bg-white/8 rounded-full flex items-center justify-center transition-all duration-700 backdrop-blur-sm border border-white/10" onMouseEnter={(e) => {e.target.style.backgroundColor = 'rgba(194, 177, 109, 0.2)'; e.target.style.borderColor = 'rgba(194, 177, 109, 0.4)';}} onMouseLeave={(e) => {e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.08)'; e.target.style.borderColor = 'rgba(255, 255, 255, 0.1)';}}>
+                          <service.icon className="h-10 w-10 text-white/90 transition-colors duration-700" onMouseEnter={(e) => e.target.style.color = '#FEF3C6'} onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.9)'} />
                         </div>
                         {/* Vintage circle decoration */}
                         <div className="absolute inset-0 rounded-full border border-dashed border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-800 delay-200 animate-pulse" />
                       </div>
                       
                       {/* Title with typewriter effect */}
-                      <h3 className="text-2xl font-serif font-bold text-white/95 mb-3 group-hover:text-amber-200 transition-colors duration-700 group-hover:tracking-wider">
+                      <h3 className="text-2xl font-serif font-bold text-white/95 mb-3 transition-colors duration-700 group-hover:tracking-wider" onMouseEnter={(e) => e.target.style.color = '#FEF3C6'} onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.95)'}>
                         {service.title}
                       </h3>
                     </div>
                     
                     {/* Description with fade-in */}
-                    <p className="text-gray-300 font-mono text-sm text-center mb-6 leading-relaxed group-hover:text-amber-50/80 transition-all duration-700 opacity-90 group-hover:opacity-100">
+                    <p className="text-gray-300 font-mono text-sm text-center mb-6 leading-relaxed transition-all duration-700 opacity-90 group-hover:opacity-100" onMouseEnter={(e) => e.target.style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => e.target.style.color = 'rgb(209, 213, 219)'}>
                       {service.description}
                     </p>
                     
                     {/* Features list with staggered reveal */}
                     <div className="space-y-3">
-                      <h4 className="font-mono text-white/90 text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 pb-2 group-hover:border-amber-700/40 group-hover:text-amber-200 transition-colors duration-700">
+                      <h4 className="font-mono text-white/90 text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 pb-2 transition-colors duration-700" onMouseEnter={(e) => {e.target.style.borderColor = 'rgba(194, 177, 109, 0.4)'; e.target.style.color = '#FEF3C6';}} onMouseLeave={(e) => {e.target.style.borderColor = 'rgba(255, 255, 255, 0.15)'; e.target.style.color = 'rgba(255, 255, 255, 0.9)';}}>
                         Hauptdienste
                       </h4>
                       <ul className="text-xs font-mono text-gray-400 space-y-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center group-hover:text-amber-100/80 transition-all duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}}>
-                            <div className="w-1.5 h-1.5 bg-white/60 rounded-full mr-3 group-hover:bg-amber-600 transition-colors duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} />
+                          <li key={featureIndex} className="flex items-center transition-all duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} onMouseEnter={(e) => e.target.style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => e.target.style.color = 'rgb(156, 163, 175)'}>
+                            <div className="w-1.5 h-1.5 bg-white/60 rounded-full mr-3 transition-colors duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} onMouseEnter={(e) => e.target.style.backgroundColor = '#C2B16D'} onMouseLeave={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.6)'} />
                             <span className="tracking-wide">{feature}</span>
                           </li>
                         ))}
@@ -309,8 +318,8 @@ export default function HomePage() {
                     </div>
 
                     {/* Vintage file tab */}
-                    <div className="absolute -top-2 left-8 w-16 h-6 bg-amber-800/20 border border-white/20 rounded-t opacity-0 group-hover:opacity-100 transition-all duration-500 delay-400">
-                      <div className="text-[10px] font-mono text-amber-200 text-center pt-1">FILE</div>
+                    <div className="absolute -top-2 left-8 w-16 h-6 border border-white/20 rounded-t opacity-0 group-hover:opacity-100 transition-all duration-500 delay-400" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)'}}>
+                      <div className="text-[10px] font-mono text-center pt-1" style={{color: '#FEF3C6'}}>FILE</div>
                     </div>
                   </div>
                 </div>
@@ -324,7 +333,7 @@ export default function HomePage() {
       <div className="relative z-10 py-20 bg-gradient-to-b from-black/95 to-black">
         <div className="container mx-auto px-8">
           <div className="text-center space-y-6 mb-16">
-            <Badge className="bg-amber-800/20 text-amber-200 font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border border-amber-700/30">
+            <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
               VERTRAUEN & EXZELLENZ
             </Badge>
             
@@ -404,7 +413,7 @@ export default function HomePage() {
         <div className="container mx-auto px-8">
           {/* Section Header */}
           <div className="text-center space-y-6 mb-20">
-            <Badge className="bg-amber-800/20 text-amber-200 font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border border-amber-700/30">
+            <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
               FALLARCHIV • KLASSIFIZIERT
             </Badge>
             
@@ -477,15 +486,15 @@ export default function HomePage() {
             ].map((caseFile, index) => (
               <div key={index} className="group relative">
                 {/* Case File Folder */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm overflow-hidden transition-all duration-700 hover:bg-amber-50/10 hover:border-amber-200/40 hover:scale-105 hover:-rotate-1 shadow-2xl hover:shadow-amber-500/20">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm overflow-hidden transition-all duration-700 hover:scale-105 hover:-rotate-1 shadow-2xl" onMouseEnter={(e) => {e.target.style.backgroundColor = 'rgba(254, 243, 198, 0.1)'; e.target.style.borderColor = 'rgba(194, 177, 109, 0.4)'; e.target.style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.2)';}} onMouseLeave={(e) => {e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.05)'; e.target.style.borderColor = 'rgba(255, 255, 255, 0.1)'; e.target.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';}}>
                   
                   {/* File Tab */}
-                  <div className="bg-white/10 group-hover:bg-amber-200/20 px-4 py-2 border-b border-white/20 group-hover:border-amber-200/30 transition-colors duration-500">
+                  <div className="bg-white/10 px-4 py-2 border-b border-white/20 transition-colors duration-500" onMouseEnter={(e) => {e.target.style.backgroundColor = 'rgba(194, 177, 109, 0.2)'; e.target.style.borderColor = 'rgba(194, 177, 109, 0.3)';}} onMouseLeave={(e) => {e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)';}}>
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-mono text-white group-hover:text-amber-100 font-bold tracking-widest transition-colors duration-500">
+                      <span className="text-xs font-mono text-white font-bold tracking-widest transition-colors duration-500" onMouseEnter={(e) => e.target.style.color = '#FEF3C6'} onMouseLeave={(e) => e.target.style.color = 'white'}>
                         AKTE {caseFile.caseNumber}
                       </span>
-                      <div className="text-xs font-mono text-gray-300 group-hover:text-amber-200/70 transition-colors duration-500">
+                      <div className="text-xs font-mono text-gray-300 transition-colors duration-500" onMouseEnter={(e) => e.target.style.color = 'rgba(254, 243, 198, 0.7)'} onMouseLeave={(e) => e.target.style.color = 'rgb(209, 213, 219)'}>
                         {caseFile.classification}
                       </div>
                     </div>
@@ -495,28 +504,28 @@ export default function HomePage() {
                   <div className="p-6 space-y-4">
                     {/* Case Title with Typewriter Effect */}
                     <div className="space-y-2">
-                      <h3 className="text-xl font-serif font-bold text-white group-hover:text-amber-100 group-hover:tracking-wider transition-all duration-500">
+                      <h3 className="text-xl font-serif font-bold text-white group-hover:tracking-wider transition-all duration-500" onMouseEnter={(e) => e.target.style.color = '#FEF3C6'} onMouseLeave={(e) => e.target.style.color = 'white'}>
                         {caseFile.title}
                       </h3>
-                      <div className="inline-block bg-white/10 group-hover:bg-amber-200/10 text-white group-hover:text-amber-200 px-2 py-1 rounded text-xs font-mono transition-colors duration-500">
+                      <div className="inline-block bg-white/10 text-white px-2 py-1 rounded text-xs font-mono transition-colors duration-500" onMouseEnter={(e) => {e.target.style.backgroundColor = 'rgba(194, 177, 109, 0.1)'; e.target.style.color = '#FEF3C6';}} onMouseLeave={(e) => {e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; e.target.style.color = 'white';}}>
                         {caseFile.service}
                       </div>
                     </div>
 
                     {/* Case Description */}
-                    <p className="text-gray-300 group-hover:text-amber-50/80 font-mono text-sm leading-relaxed transition-colors duration-500 mb-6">
+                    <p className="text-gray-300 font-mono text-sm leading-relaxed transition-colors duration-500 mb-6" onMouseEnter={(e) => e.target.style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => e.target.style.color = 'rgb(209, 213, 219)'}>
                       {caseFile.description}
                     </p>
 
                     {/* Case Details */}
-                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20 group-hover:border-amber-200/20 transition-colors duration-500">
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20 transition-colors duration-500" onMouseEnter={(e) => e.target.style.borderColor = 'rgba(194, 177, 109, 0.2)'} onMouseLeave={(e) => e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)'}>
                       <div>
-                        <div className="text-xs font-mono text-gray-400 group-hover:text-amber-200/70 transition-colors duration-500">Ort:</div>
-                        <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">{caseFile.location}</div>
+                        <div className="text-xs font-mono text-gray-400 transition-colors duration-500" onMouseEnter={(e) => e.target.style.color = 'rgba(254, 243, 198, 0.7)'} onMouseLeave={(e) => e.target.style.color = 'rgb(156, 163, 175)'}> Ort:</div>
+                        <div className="text-xs font-mono text-white transition-colors duration-500" onMouseEnter={(e) => e.target.style.color = 'rgb(209, 213, 219)'} onMouseLeave={(e) => e.target.style.color = 'white'}>{caseFile.location}</div>
                       </div>
                       <div>
-                        <div className="text-xs font-mono text-gray-400 group-hover:text-amber-200/70 transition-colors duration-500">Dauer:</div>
-                        <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">{caseFile.duration}</div>
+                        <div className="text-xs font-mono text-gray-400 transition-colors duration-500" onMouseEnter={(e) => e.target.style.color = 'rgba(254, 243, 198, 0.7)'} onMouseLeave={(e) => e.target.style.color = 'rgb(156, 163, 175)'}> Dauer:</div>
+                        <div className="text-xs font-mono text-white transition-colors duration-500" onMouseEnter={(e) => e.target.style.color = 'rgb(209, 213, 219)'} onMouseLeave={(e) => e.target.style.color = 'white'}>{caseFile.duration}</div>
                       </div>
                     </div>
                   </div>
@@ -543,14 +552,14 @@ export default function HomePage() {
           </div>
 
           {/* Archive Footer */}
-          <div className="text-center mt-16 p-6 bg-amber-50/5 backdrop-blur-sm border border-amber-200/20 rounded-sm max-w-4xl mx-auto">
-            <h3 className="text-2xl font-serif font-bold text-amber-100 mb-3">
+          <div className="text-center mt-16 p-6 backdrop-blur-sm border rounded-sm max-w-4xl mx-auto" style={{backgroundColor: 'rgba(254, 243, 198, 0.05)', borderColor: 'rgba(194, 177, 109, 0.2)'}}>
+            <h3 className="text-2xl font-serif font-bold mb-3" style={{color: '#FEF3C6'}}>
               IHR FALL KÖNNTE DER NÄCHSTE SEIN
             </h3>
             <p className="font-mono text-gray-300 mb-4">
               Jeder Fall ist einzigartig. Jede Wahrheit verdient es, gefunden zu werden.
             </p>
-            <div className="text-xs font-mono text-amber-200/70 tracking-widest">
+            <div className="text-xs font-mono tracking-widest" style={{color: 'rgba(254, 243, 198, 0.7)'}}>
               • VERTRAULICH • PROFESSIONELL • ERFOLGREICH •
             </div>
           </div>
@@ -564,7 +573,7 @@ export default function HomePage() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <Badge className="bg-amber-800/20 text-amber-200 font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border border-amber-700/30">
+                <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
                   VERTRAULICHE BERATUNG
                 </Badge>
                 
@@ -673,7 +682,10 @@ export default function HomePage() {
                 </p>
                 <Button 
                   size="lg"
-                  className="bg-white text-black hover:bg-gray-200 font-mono text-sm uppercase tracking-wide"
+                  className="font-mono text-sm uppercase tracking-wide"
+                  style={{backgroundColor: '#FEF3C6', color: 'black', borderColor: '#C2B16D'}}
+                  onMouseEnter={(e) => e.target.style.backgroundColor = '#F0E6B8'}
+                  onMouseLeave={(e) => e.target.style.backgroundColor = '#FEF3C6'}
                 >
                   <Phone className="mr-2 h-4 w-4" />
                   Jetzt Anrufen
