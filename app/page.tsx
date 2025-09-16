@@ -421,70 +421,58 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                caseNumber: "1965-001",
+                caseNumber: "1978-284",
                 title: "Operation Midnight Rose",
                 service: "Private Ermittlungen",
                 description: "Vermisste Erbin nach 20 Jahren aufgespürt. Millionenschweres Erbe wiedervereinigt.",
-                evidence: ["Alte Fotografien", "Bankdokumente", "Zeugenaussagen", "DNA-Analyse"],
                 location: "Hamburg",
                 duration: "6 Monate",
-                classification: "VERTRAULICH",
-                stamp: "GELÖST"
+                classification: "VERTRAULICH"
               },
               {
-                caseNumber: "1987-042",
+                caseNumber: "1993-067",
                 title: "Der Schatten im Vorstand",
                 service: "Unternehmenssicherheit",
                 description: "Wirtschaftsspionage in DAX-Konzern aufgedeckt. 50 Mio. € Schaden verhindert.",
-                evidence: ["Verschlüsselte E-Mails", "Finanzunterlagen", "Überwachungsfotos", "Telefonmitschnitte"],
                 location: "Frankfurt",
                 duration: "3 Monate",
-                classification: "STRENG GEHEIM",
-                stamp: "GELÖST"
+                classification: "STRENG GEHEIM"
               },
               {
-                caseNumber: "2019-158",
+                caseNumber: "2008-451",
                 title: "Die falsche Identität",
                 service: "Hintergrundprüfungen",
                 description: "Hochstapler mit gefälschten Zeugnissen entlarvt. Millionenbetrug verhindert.",
-                evidence: ["Gefälschte Diplome", "Falsche Referenzen", "Unstimmige Lebensläufe", "Polizeiakten"],
                 location: "München",
                 duration: "2 Wochen",
-                classification: "VERTRAULICH",
-                stamp: "GELÖST"
+                classification: "VERTRAULICH"
               },
               {
-                caseNumber: "2001-089",
+                caseNumber: "1985-139",
                 title: "Verschwundene Millionen",
                 service: "Private Ermittlungen",
                 description: "Versteckte Offshore-Konten aufgespürt. 15 Mio. € für Geschädigte sichergestellt.",
-                evidence: ["Bankdokumente", "Reiseaufzeichnungen", "Shell-Firmen", "Immobilienregister"],
                 location: "Berlin",
                 duration: "8 Monate",
-                classification: "GEHEIM",
-                stamp: "GELÖST"
+                classification: "GEHEIM"
               },
               {
-                caseNumber: "2010-234",
+                caseNumber: "2015-372",
                 title: "Der unsichtbare Feind",
                 service: "Unternehmenssicherheit",
                 description: "Insider-Betrugsnetz in Pharmaunternehmen zerschlagen. Produktfälschungen gestoppt.",
-                evidence: ["Laborberichte", "Lieferketten-Analyse", "Mitarbeiterprofile", "Chemische Spuren"],
                 location: "Köln",
                 duration: "4 Monate",
-                classification: "STRENG GEHEIM",
-                stamp: "GELÖST"
+                classification: "STRENG GEHEIM"
               },
               {
-                caseNumber: "2018-176",
+                caseNumber: "2021-598",
                 title: "Digitale Spuren",
                 service: "Hintergrundprüfungen",
                 description: "Cyberkrimineller Hintergrund von Führungskraft aufgedeckt. Datenschutz gewährleistet.",
-                evidence: ["Digitale Forensik", "Social Media Analyse", "Darkweb Recherche", "IP-Verfolgung"],
                 location: "Stuttgart",
                 duration: "3 Wochen",
-                classification: "VERTRAULICH",
-                stamp: "GELÖST"
+                classification: "VERTRAULICH"
               }
             ].map((caseFile, index) => (
               <div key={index} className="group relative">
@@ -516,31 +504,12 @@ export default function HomePage() {
                     </div>
 
                     {/* Case Description */}
-                    <p className="text-gray-300 font-mono text-sm leading-relaxed group-hover:text-amber-50/80 transition-colors duration-500">
+                    <p className="text-gray-300 font-mono text-sm leading-relaxed group-hover:text-amber-50/80 transition-colors duration-500 mb-6">
                       {caseFile.description}
                     </p>
 
-                    {/* Evidence List */}
-                    <div className="space-y-2">
-                      <h4 className="text-xs font-mono text-amber-200 font-bold uppercase tracking-wide">
-                        Beweismaterial:
-                      </h4>
-                      <div className="grid grid-cols-2 gap-1">
-                        {caseFile.evidence.map((item, evidenceIndex) => (
-                          <div 
-                            key={evidenceIndex} 
-                            className="text-xs font-mono text-gray-400 flex items-center opacity-0 group-hover:opacity-100 transition-all duration-500"
-                            style={{transitionDelay: `${evidenceIndex * 150}ms`}}
-                          >
-                            <div className="w-1 h-1 bg-amber-200/60 rounded-full mr-2" />
-                            {item}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
                     {/* Case Details */}
-                    <div className="grid grid-cols-2 gap-4 pt-2 border-t border-amber-200/20">
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-amber-200/20">
                       <div>
                         <div className="text-xs font-mono text-amber-200/70">Ort:</div>
                         <div className="text-xs font-mono text-gray-300">{caseFile.location}</div>
@@ -552,10 +521,12 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  {/* Solved Stamp Animation */}
-                  <div className="absolute -top-3 -right-3 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300 transform rotate-12 group-hover:rotate-6">
-                    <div className="bg-red-600/90 text-white px-3 py-2 rounded-full border-2 border-red-500">
-                      <span className="text-xs font-mono font-bold tracking-wide">{caseFile.stamp}</span>
+                  {/* Hover GELÖST Stamp Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-90 transition-opacity duration-700 delay-200 bg-black/60 backdrop-blur-sm">
+                    <div className="transform rotate-12 group-hover:rotate-6 transition-transform duration-500">
+                      <div className="bg-red-600 text-white px-8 py-4 rounded-lg border-4 border-red-500 shadow-2xl">
+                        <span className="text-2xl font-mono font-bold tracking-widest">GELÖST</span>
+                      </div>
                     </div>
                   </div>
 
