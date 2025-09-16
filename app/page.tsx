@@ -375,40 +375,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Credentials */}
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8 md:p-12 max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-                PROFESSIONELLE QUALIFIKATIONEN
-              </h3>
-              <p className="text-lg font-mono text-gray-300 max-w-2xl mx-auto">
-                Ihr Vertrauen ist unser Fundament. Wir halten die höchsten beruflichen Standards der Branche ein.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                { icon: Award, title: "Lizenzierte Privatdetektive", description: "Alle Ermittler sind staatlich lizenziert und zertifiziert" },
-                { icon: Shield, title: "Gebunden & Versichert", description: "Vollständige Berufshaftpflicht- und Kautionsdeckung" },
-                { icon: Lock, title: "Vertraulichkeit Garantiert", description: "Anwalt-Mandant-Privileg und NDAs für alle Fälle" },
-                { icon: Users, title: "Berufsverbände", description: "Mitglieder nationaler und staatlicher PI-Verbände" }
-              ].map((cert, index) => (
-                <div key={index} className="flex items-start space-x-4 p-6 bg-white/5 rounded-sm border border-white/10">
-                  <div className="bg-white/10 p-3 rounded-sm shrink-0">
-                    <cert.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-mono text-white mb-2 uppercase tracking-wide">
-                      {cert.title}
-                    </h4>
-                    <p className="font-mono text-gray-300 text-sm">
-                      {cert.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
 
