@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Search, Shield, Eye } from "lucide-react"
+import { Phone, Search, Shield, Eye, Building, FileX, UserCheck, Camera, Award, Users, Clock, Star, MapPin, Mail, Lock } from "lucide-react"
 
 export default function HomePage() {
   return (
@@ -196,6 +196,328 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Section */}
+      <div className="relative z-10 py-20 bg-gradient-to-b from-black/90 to-black/95">
+        <div className="container mx-auto px-8">
+          <div className="text-center space-y-6 mb-16">
+            <Badge className="bg-white/10 text-white font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm">
+              SPEZIALISIERUNGEN
+            </Badge>
+            
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
+              ERMITTLUNGSDIENSTE
+            </h2>
+            
+            <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
+              Professionelle Ermittlungsdienste mit über 50 Jahren kombinierter Erfahrung
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                icon: Search,
+                title: "Private Ermittlungen",
+                description: "Diskrete Ermittlungen einschließlich vermisster Personen, Untreue und Hintergrundprüfungen mit völliger Vertraulichkeit.",
+                features: ["Vermisste Personen", "Untreue-Fälle", "Vermögenssuche", "Überwachung"]
+              },
+              {
+                icon: Building,
+                title: "Unternehmenssicherheit",
+                description: "Umfassende Unternehmensermittlungen zum Schutz Ihrer Geschäftsinteressen und zur Gewährleistung der Arbeitsplatzintegrität.",
+                features: ["Mitarbeiterprüfung", "Betrugserkennung", "Wirtschaftsspionage", "Due Diligence"]
+              },
+              {
+                icon: FileX,
+                title: "Versicherungsansprüche",
+                description: "Gründliche Untersuchung von Versicherungsansprüchen zur Überprüfung der Legitimität und Verhinderung betrügerischer Ansprüche.",
+                features: ["Arbeiterunfälle", "Autounfälle", "Sachschäden", "Invaliditätsbetrug"]
+              },
+              {
+                icon: UserCheck,
+                title: "Hintergrundprüfungen",
+                description: "Umfassende Hintergrundüberprüfung für Beschäftigung, Mieterprüfung und persönliche Beziehungen.",
+                features: ["Beschäftigungsscreening", "Mieterprüfung", "Persönliche Referenzen", "Strafregister"]
+              },
+              {
+                icon: Camera,
+                title: "Überwachungsdienste",
+                description: "Professionelle Überwachungsoperationen mit modernster Ausrüstung und erfahrenen Ermittlern.",
+                features: ["Videodokumentation", "Fotobeweise", "Aktivitätsberichte", "Gerichtsgutachten"]
+              },
+              {
+                icon: Shield,
+                title: "Sicherheitsberatung",
+                description: "Expertensicherheitsbewertungen und Empfehlungen zum Schutz Ihrer persönlichen und geschäftlichen Vermögenswerte.",
+                features: ["Risikobewertung", "Sicherheitsplanung", "Bedrohungsanalyse", "Sicherheitsprotokolle"]
+              }
+            ].map((service, index) => (
+              <div key={index} className="group">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 hover:bg-white/10 transition-all duration-300 hover:border-white/20">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors backdrop-blur-sm">
+                      <service.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-serif font-bold text-white mb-2">
+                      {service.title}
+                    </h3>
+                  </div>
+                  
+                  <p className="text-gray-300 font-mono text-sm text-center mb-4">
+                    {service.description}
+                  </p>
+                  
+                  <div className="space-y-2">
+                    <h4 className="font-mono text-white text-xs font-bold uppercase tracking-wide">
+                      Hauptdienste:
+                    </h4>
+                    <ul className="text-xs font-mono text-gray-400 space-y-1">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center">
+                          <div className="w-1.5 h-1.5 bg-white rounded-full mr-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
+              BRAUCHEN SIE EINE INDIVIDUELLE ERMITTLUNG?
+            </h3>
+            <p className="text-lg font-mono text-gray-300 mb-6 max-w-2xl mx-auto">
+              Jeder Fall ist einzigartig. Kontaktieren Sie uns für eine vertrauliche Beratung.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg"
+                className="bg-white text-black hover:bg-gray-200 font-mono text-sm uppercase tracking-wide"
+              >
+                Kostenlose Beratung
+              </Button>
+              <Button 
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-black font-mono text-sm uppercase tracking-wide"
+              >
+                Alle Dienste ansehen
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Trust Section */}
+      <div className="relative z-10 py-20 bg-gradient-to-b from-black/95 to-black">
+        <div className="container mx-auto px-8">
+          <div className="text-center space-y-6 mb-16">
+            <Badge className="bg-white/10 text-white font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm">
+              VERTRAUEN & EXZELLENZ
+            </Badge>
+            
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
+              WARUM BONA FIDES
+            </h2>
+            
+            <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
+              Jahrzehntelange Erfahrung, bewährte Ergebnisse und unerschütterliches Engagement für Integrität
+            </p>
+          </div>
+
+          {/* Trust Metrics */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {[
+              { icon: Clock, number: "50+", label: "Jahre Erfahrung", description: "Kombinierte Ermittlungserfahrung unseres Teams" },
+              { icon: Users, number: "2,500+", label: "Gelöste Fälle", description: "Erfolgreich abgeschlossene Ermittlungen mit Ergebnissen" },
+              { icon: Star, number: "98%", label: "Kundenzufriedenheit", description: "Kunden, die unsere Dienste weiterempfehlen würden" },
+              { icon: Shield, number: "100%", label: "Vertraulich", description: "Alle Fälle werden mit völliger Diskretion behandelt" }
+            ].map((metric, index) => (
+              <div key={index} className="text-center group">
+                <div className="bg-white/10 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-white/20 transition-colors backdrop-blur-sm">
+                  <metric.icon className="h-10 w-10 text-white" />
+                </div>
+                <div className="text-4xl md:text-5xl font-serif font-bold text-white mb-2">
+                  {metric.number}
+                </div>
+                <h3 className="text-xl font-mono text-white mb-2 uppercase tracking-wide">
+                  {metric.label}
+                </h3>
+                <p className="text-sm font-mono text-gray-400">
+                  {metric.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Credentials */}
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8 md:p-12 max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+                PROFESSIONELLE QUALIFIKATIONEN
+              </h3>
+              <p className="text-lg font-mono text-gray-300 max-w-2xl mx-auto">
+                Ihr Vertrauen ist unser Fundament. Wir halten die höchsten beruflichen Standards der Branche ein.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                { icon: Award, title: "Lizenzierte Privatdetektive", description: "Alle Ermittler sind staatlich lizenziert und zertifiziert" },
+                { icon: Shield, title: "Gebunden & Versichert", description: "Vollständige Berufshaftpflicht- und Kautionsdeckung" },
+                { icon: Lock, title: "Vertraulichkeit Garantiert", description: "Anwalt-Mandant-Privileg und NDAs für alle Fälle" },
+                { icon: Users, title: "Berufsverbände", description: "Mitglieder nationaler und staatlicher PI-Verbände" }
+              ].map((cert, index) => (
+                <div key={index} className="flex items-start space-x-4 p-6 bg-white/5 rounded-sm border border-white/10">
+                  <div className="bg-white/10 p-3 rounded-sm shrink-0">
+                    <cert.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-mono text-white mb-2 uppercase tracking-wide">
+                      {cert.title}
+                    </h4>
+                    <p className="font-mono text-gray-300 text-sm">
+                      {cert.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <div className="relative z-10 py-20 bg-black">
+        <div className="container mx-auto px-8">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Info */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <Badge className="bg-white/10 text-white font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm">
+                  VERTRAULICHE BERATUNG
+                </Badge>
+                
+                <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
+                  KONTAKT
+                </h2>
+                
+                <p className="text-lg font-mono text-gray-300">
+                  Bereit für Antworten? Kontaktieren Sie uns für eine kostenlose, vertrauliche Beratung.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-white/10 p-3 rounded-sm">
+                      <Phone className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-mono text-lg text-white mb-1 uppercase tracking-wide">
+                        24/7 Hotline
+                      </h3>
+                      <p className="font-mono text-white mb-2 text-xl">
+                        (555) 123-CASE
+                      </p>
+                      <p className="font-mono text-sm text-gray-400">
+                        Notfall-Ermittlungen verfügbar
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-white/10 p-3 rounded-sm">
+                      <Mail className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-mono text-lg text-white mb-1 uppercase tracking-wide">
+                        Sichere E-Mail
+                      </h3>
+                      <p className="font-mono text-white mb-2">
+                        info@bonafides.agency
+                      </p>
+                      <p className="font-mono text-sm text-gray-400">
+                        Verschlüsselte Kommunikation verfügbar
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-white/10 p-3 rounded-sm">
+                      <MapPin className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-mono text-lg text-white mb-1 uppercase tracking-wide">
+                        Bürostandort
+                      </h3>
+                      <p className="font-mono text-white mb-2">
+                        123 Detektiv Straße<br />
+                        Ermittlungsstadt, ES 12345
+                      </p>
+                      <p className="font-mono text-sm text-gray-400">
+                        Nur nach Vereinbarung
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Security Notice */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6">
+                <h4 className="flex items-center font-mono text-white mb-4 uppercase tracking-wide">
+                  <Lock className="mr-2 h-5 w-5" />
+                  SICHERHEIT & VERTRAULICHKEIT
+                </h4>
+                <div className="space-y-3 font-mono text-sm">
+                  <div className="flex items-start space-x-2">
+                    <Shield className="h-4 w-4 mt-1 text-white shrink-0" />
+                    <p className="text-gray-300">Alle Kommunikationen sind verschlüsselt und vertraulich</p>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <Shield className="h-4 w-4 mt-1 text-white shrink-0" />
+                    <p className="text-gray-300">Anwalt-Mandant-Privileg gilt für alle Beratungen</p>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <Shield className="h-4 w-4 mt-1 text-white shrink-0" />
+                    <p className="text-gray-300">Ihre Falldetails bleiben streng vertraulich</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form Placeholder */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8">
+              <h3 className="font-mono text-white text-xl mb-6 uppercase tracking-wide">
+                VERTRAULICHE FALLANFRAGE
+              </h3>
+              <div className="text-center py-12">
+                <Lock className="h-16 w-16 mx-auto text-white/50 mb-4" />
+                <h4 className="font-mono text-white mb-2 uppercase">Kontaktformular</h4>
+                <p className="font-mono text-gray-400 text-sm mb-6">
+                  Für maximale Sicherheit kontaktieren Sie uns bitte direkt per Telefon oder E-Mail.
+                </p>
+                <Button 
+                  size="lg"
+                  className="bg-white text-black hover:bg-gray-200 font-mono text-sm uppercase tracking-wide"
+                >
+                  <Phone className="mr-2 h-4 w-4" />
+                  Jetzt Anrufen
+                </Button>
               </div>
             </div>
           </div>
