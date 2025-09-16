@@ -477,15 +477,15 @@ export default function HomePage() {
             ].map((caseFile, index) => (
               <div key={index} className="group relative">
                 {/* Case File Folder */}
-                <div className="bg-white border border-gray-200 rounded-sm overflow-hidden transition-all duration-700 hover:bg-amber-50/10 hover:border-amber-200/40 hover:scale-105 hover:-rotate-1 shadow-lg hover:shadow-amber-500/20 backdrop-blur-sm">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm overflow-hidden transition-all duration-700 hover:bg-amber-50/10 hover:border-amber-200/40 hover:scale-105 hover:-rotate-1 shadow-2xl hover:shadow-amber-500/20">
                   
                   {/* File Tab */}
-                  <div className="bg-gray-100 group-hover:bg-amber-200/20 px-4 py-2 border-b border-gray-200 group-hover:border-amber-200/30 transition-colors duration-500">
+                  <div className="bg-white/10 group-hover:bg-amber-200/20 px-4 py-2 border-b border-white/20 group-hover:border-amber-200/30 transition-colors duration-500">
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-mono text-gray-800 group-hover:text-amber-100 font-bold tracking-widest transition-colors duration-500">
+                      <span className="text-xs font-mono text-white group-hover:text-amber-100 font-bold tracking-widest transition-colors duration-500">
                         AKTE {caseFile.caseNumber}
                       </span>
-                      <div className="text-xs font-mono text-gray-600 group-hover:text-amber-200/70 transition-colors duration-500">
+                      <div className="text-xs font-mono text-gray-300 group-hover:text-amber-200/70 transition-colors duration-500">
                         {caseFile.classification}
                       </div>
                     </div>
@@ -495,28 +495,28 @@ export default function HomePage() {
                   <div className="p-6 space-y-4">
                     {/* Case Title with Typewriter Effect */}
                     <div className="space-y-2">
-                      <h3 className="text-xl font-serif font-bold text-gray-900 group-hover:text-amber-100 group-hover:tracking-wider transition-all duration-500">
+                      <h3 className="text-xl font-serif font-bold text-white group-hover:text-amber-100 group-hover:tracking-wider transition-all duration-500">
                         {caseFile.title}
                       </h3>
-                      <div className="inline-block bg-gray-100 group-hover:bg-amber-200/10 text-gray-700 group-hover:text-amber-200 px-2 py-1 rounded text-xs font-mono transition-colors duration-500">
+                      <div className="inline-block bg-white/10 group-hover:bg-amber-200/10 text-white group-hover:text-amber-200 px-2 py-1 rounded text-xs font-mono transition-colors duration-500">
                         {caseFile.service}
                       </div>
                     </div>
 
                     {/* Case Description */}
-                    <p className="text-gray-700 group-hover:text-amber-50/80 font-mono text-sm leading-relaxed transition-colors duration-500 mb-6">
+                    <p className="text-gray-300 group-hover:text-amber-50/80 font-mono text-sm leading-relaxed transition-colors duration-500 mb-6">
                       {caseFile.description}
                     </p>
 
                     {/* Case Details */}
-                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-200 group-hover:border-amber-200/20 transition-colors duration-500">
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20 group-hover:border-amber-200/20 transition-colors duration-500">
                       <div>
-                        <div className="text-xs font-mono text-gray-500 group-hover:text-amber-200/70 transition-colors duration-500">Ort:</div>
-                        <div className="text-xs font-mono text-gray-800 group-hover:text-gray-300 transition-colors duration-500">{caseFile.location}</div>
+                        <div className="text-xs font-mono text-gray-400 group-hover:text-amber-200/70 transition-colors duration-500">Ort:</div>
+                        <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">{caseFile.location}</div>
                       </div>
                       <div>
-                        <div className="text-xs font-mono text-gray-500 group-hover:text-amber-200/70 transition-colors duration-500">Dauer:</div>
-                        <div className="text-xs font-mono text-gray-800 group-hover:text-gray-300 transition-colors duration-500">{caseFile.duration}</div>
+                        <div className="text-xs font-mono text-gray-400 group-hover:text-amber-200/70 transition-colors duration-500">Dauer:</div>
+                        <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">{caseFile.duration}</div>
                       </div>
                     </div>
                   </div>
