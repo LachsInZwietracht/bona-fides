@@ -353,8 +353,8 @@ export default function HomePage() {
           {/* Trust Metrics */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
-              { icon: Clock, number: "50+", label: "Jahre Erfahrung", description: "Kombinierte Ermittlungserfahrung unseres Teams" },
-              { icon: Users, number: "2,500+", label: "Gelöste Fälle", description: "Erfolgreich abgeschlossene Ermittlungen mit Ergebnissen" },
+              { icon: Users, number: "30+", label: "Ermittler", description: "Professionelle Detektive in unserem Team" },
+              { icon: Award, number: "2,500+", label: "Gelöste Fälle", description: "Erfolgreich abgeschlossene Ermittlungen mit Ergebnissen" },
               { icon: Star, number: "98%", label: "Kundenzufriedenheit", description: "Kunden, die unsere Dienste weiterempfehlen würden" },
               { icon: Shield, number: "100%", label: "Vertraulich", description: "Alle Fälle werden mit völliger Diskretion behandelt" }
             ].map((metric, index) => (
