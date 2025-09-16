@@ -399,6 +399,195 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Case Studies Section - Evidence Board Style */}
+      <div className="relative z-10 py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="container mx-auto px-8">
+          {/* Section Header */}
+          <div className="text-center space-y-6 mb-20">
+            <Badge className="bg-amber-200/10 text-amber-100 font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border border-amber-200/20">
+              FALLARCHIV • KLASSIFIZIERT
+            </Badge>
+            
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
+              GELÖSTE FÄLLE
+            </h2>
+            
+            <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
+              Ausgewählte Erfolgsgeschichten aus unserem Archiv – Jeder Fall ein Triumph der Wahrheit
+            </p>
+          </div>
+
+          {/* Evidence Board Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                caseNumber: "1965-001",
+                title: "Operation Midnight Rose",
+                service: "Private Ermittlungen",
+                description: "Vermisste Erbin nach 20 Jahren aufgespürt. Millionenschweres Erbe wiedervereinigt.",
+                evidence: ["Alte Fotografien", "Bankdokumente", "Zeugenaussagen", "DNA-Analyse"],
+                location: "Hamburg",
+                duration: "6 Monate",
+                classification: "VERTRAULICH",
+                stamp: "GELÖST"
+              },
+              {
+                caseNumber: "1987-042",
+                title: "Der Schatten im Vorstand",
+                service: "Unternehmenssicherheit",
+                description: "Wirtschaftsspionage in DAX-Konzern aufgedeckt. 50 Mio. € Schaden verhindert.",
+                evidence: ["Verschlüsselte E-Mails", "Finanzunterlagen", "Überwachungsfotos", "Telefonmitschnitte"],
+                location: "Frankfurt",
+                duration: "3 Monate",
+                classification: "STRENG GEHEIM",
+                stamp: "GELÖST"
+              },
+              {
+                caseNumber: "2019-158",
+                title: "Die falsche Identität",
+                service: "Hintergrundprüfungen",
+                description: "Hochstapler mit gefälschten Zeugnissen entlarvt. Millionenbetrug verhindert.",
+                evidence: ["Gefälschte Diplome", "Falsche Referenzen", "Unstimmige Lebensläufe", "Polizeiakten"],
+                location: "München",
+                duration: "2 Wochen",
+                classification: "VERTRAULICH",
+                stamp: "GELÖST"
+              },
+              {
+                caseNumber: "2001-089",
+                title: "Verschwundene Millionen",
+                service: "Private Ermittlungen",
+                description: "Versteckte Offshore-Konten aufgespürt. 15 Mio. € für Geschädigte sichergestellt.",
+                evidence: ["Bankdokumente", "Reiseaufzeichnungen", "Shell-Firmen", "Immobilienregister"],
+                location: "Berlin",
+                duration: "8 Monate",
+                classification: "GEHEIM",
+                stamp: "GELÖST"
+              },
+              {
+                caseNumber: "2010-234",
+                title: "Der unsichtbare Feind",
+                service: "Unternehmenssicherheit",
+                description: "Insider-Betrugsnetz in Pharmaunternehmen zerschlagen. Produktfälschungen gestoppt.",
+                evidence: ["Laborberichte", "Lieferketten-Analyse", "Mitarbeiterprofile", "Chemische Spuren"],
+                location: "Köln",
+                duration: "4 Monate",
+                classification: "STRENG GEHEIM",
+                stamp: "GELÖST"
+              },
+              {
+                caseNumber: "2018-176",
+                title: "Digitale Spuren",
+                service: "Hintergrundprüfungen",
+                description: "Cyberkrimineller Hintergrund von Führungskraft aufgedeckt. Datenschutz gewährleistet.",
+                evidence: ["Digitale Forensik", "Social Media Analyse", "Darkweb Recherche", "IP-Verfolgung"],
+                location: "Stuttgart",
+                duration: "3 Wochen",
+                classification: "VERTRAULICH",
+                stamp: "GELÖST"
+              }
+            ].map((caseFile, index) => (
+              <div key={index} className="group relative">
+                {/* Case File Folder */}
+                <div className="bg-amber-50/5 backdrop-blur-sm border border-amber-200/20 rounded-sm overflow-hidden transition-all duration-700 hover:bg-amber-50/10 hover:border-amber-200/40 hover:scale-105 hover:-rotate-1 shadow-2xl hover:shadow-amber-500/20">
+                  
+                  {/* File Tab */}
+                  <div className="bg-amber-200/20 px-4 py-2 border-b border-amber-200/30">
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs font-mono text-amber-100 font-bold tracking-widest">
+                        AKTE {caseFile.caseNumber}
+                      </span>
+                      <div className="text-xs font-mono text-amber-200/70">
+                        {caseFile.classification}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Case Content */}
+                  <div className="p-6 space-y-4">
+                    {/* Case Title with Typewriter Effect */}
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-serif font-bold text-amber-100 group-hover:tracking-wider transition-all duration-500">
+                        {caseFile.title}
+                      </h3>
+                      <div className="inline-block bg-amber-200/10 text-amber-200 px-2 py-1 rounded text-xs font-mono">
+                        {caseFile.service}
+                      </div>
+                    </div>
+
+                    {/* Case Description */}
+                    <p className="text-gray-300 font-mono text-sm leading-relaxed group-hover:text-amber-50/80 transition-colors duration-500">
+                      {caseFile.description}
+                    </p>
+
+                    {/* Evidence List */}
+                    <div className="space-y-2">
+                      <h4 className="text-xs font-mono text-amber-200 font-bold uppercase tracking-wide">
+                        Beweismaterial:
+                      </h4>
+                      <div className="grid grid-cols-2 gap-1">
+                        {caseFile.evidence.map((item, evidenceIndex) => (
+                          <div 
+                            key={evidenceIndex} 
+                            className="text-xs font-mono text-gray-400 flex items-center opacity-0 group-hover:opacity-100 transition-all duration-500"
+                            style={{transitionDelay: `${evidenceIndex * 150}ms`}}
+                          >
+                            <div className="w-1 h-1 bg-amber-200/60 rounded-full mr-2" />
+                            {item}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Case Details */}
+                    <div className="grid grid-cols-2 gap-4 pt-2 border-t border-amber-200/20">
+                      <div>
+                        <div className="text-xs font-mono text-amber-200/70">Ort:</div>
+                        <div className="text-xs font-mono text-gray-300">{caseFile.location}</div>
+                      </div>
+                      <div>
+                        <div className="text-xs font-mono text-amber-200/70">Dauer:</div>
+                        <div className="text-xs font-mono text-gray-300">{caseFile.duration}</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Solved Stamp Animation */}
+                  <div className="absolute -top-3 -right-3 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300 transform rotate-12 group-hover:rotate-6">
+                    <div className="bg-red-600/90 text-white px-3 py-2 rounded-full border-2 border-red-500">
+                      <span className="text-xs font-mono font-bold tracking-wide">{caseFile.stamp}</span>
+                    </div>
+                  </div>
+
+                  {/* Vintage Paper Clips */}
+                  <div className="absolute top-2 left-2 w-8 h-4 border-2 border-gray-400/30 rounded-full opacity-0 group-hover:opacity-60 transition-opacity duration-500 delay-400" />
+                  <div className="absolute top-6 left-4 w-6 h-3 border-2 border-gray-400/30 rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-500 delay-500" />
+
+                  {/* Evidence String Effect */}
+                  <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                    <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-800 delay-600" />
+                    <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-800 delay-700" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Archive Footer */}
+          <div className="text-center mt-16 p-6 bg-amber-50/5 backdrop-blur-sm border border-amber-200/20 rounded-sm max-w-4xl mx-auto">
+            <h3 className="text-2xl font-serif font-bold text-amber-100 mb-3">
+              IHR FALL KÖNNTE DER NÄCHSTE SEIN
+            </h3>
+            <p className="font-mono text-gray-300 mb-4">
+              Jeder Fall ist einzigartig. Jede Wahrheit verdient es, gefunden zu werden.
+            </p>
+            <div className="text-xs font-mono text-amber-200/70 tracking-widest">
+              • VERTRAULICH • PROFESSIONELL • ERFOLGREICH •
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Contact Section */}
       <div className="relative z-10 py-20 bg-black">
         <div className="container mx-auto px-8">
