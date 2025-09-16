@@ -219,72 +219,82 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             {[
               {
                 icon: Search,
                 title: "Private Ermittlungen",
                 description: "Diskrete Ermittlungen einschließlich vermisster Personen, Untreue und Hintergrundprüfungen mit völliger Vertraulichkeit.",
-                features: ["Vermisste Personen", "Untreue-Fälle", "Vermögenssuche", "Überwachung"]
+                features: ["Vermisste Personen", "Untreue-Fälle", "Vermögenssuche", "Überwachung"],
+                gradient: "from-red-900/20 to-red-600/10"
               },
               {
                 icon: Building,
-                title: "Unternehmenssicherheit",
+                title: "Unternehmenssicherheit", 
                 description: "Umfassende Unternehmensermittlungen zum Schutz Ihrer Geschäftsinteressen und zur Gewährleistung der Arbeitsplatzintegrität.",
-                features: ["Mitarbeiterprüfung", "Betrugserkennung", "Wirtschaftsspionage", "Due Diligence"]
-              },
-              {
-                icon: FileX,
-                title: "Versicherungsansprüche",
-                description: "Gründliche Untersuchung von Versicherungsansprüchen zur Überprüfung der Legitimität und Verhinderung betrügerischer Ansprüche.",
-                features: ["Arbeiterunfälle", "Autounfälle", "Sachschäden", "Invaliditätsbetrug"]
+                features: ["Mitarbeiterprüfung", "Betrugserkennung", "Wirtschaftsspionage", "Due Diligence"],
+                gradient: "from-blue-900/20 to-blue-600/10"
               },
               {
                 icon: UserCheck,
                 title: "Hintergrundprüfungen",
                 description: "Umfassende Hintergrundüberprüfung für Beschäftigung, Mieterprüfung und persönliche Beziehungen.",
-                features: ["Beschäftigungsscreening", "Mieterprüfung", "Persönliche Referenzen", "Strafregister"]
-              },
-              {
-                icon: Camera,
-                title: "Überwachungsdienste",
-                description: "Professionelle Überwachungsoperationen mit modernster Ausrüstung und erfahrenen Ermittlern.",
-                features: ["Videodokumentation", "Fotobeweise", "Aktivitätsberichte", "Gerichtsgutachten"]
-              },
-              {
-                icon: Shield,
-                title: "Sicherheitsberatung",
-                description: "Expertensicherheitsbewertungen und Empfehlungen zum Schutz Ihrer persönlichen und geschäftlichen Vermögenswerte.",
-                features: ["Risikobewertung", "Sicherheitsplanung", "Bedrohungsanalyse", "Sicherheitsprotokolle"]
+                features: ["Beschäftigungsscreening", "Mieterprüfung", "Persönliche Referenzen", "Strafregister"],
+                gradient: "from-green-900/20 to-green-600/10"
               }
             ].map((service, index) => (
-              <div key={index} className="group">
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 hover:bg-white/10 transition-all duration-300 hover:border-white/20">
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-colors backdrop-blur-sm">
-                      <service.icon className="h-8 w-8 text-white" />
+              <div key={index} className="group relative">
+                {/* Glowing border effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-white/20 via-white/5 to-white/20 rounded-sm opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm" />
+                
+                {/* Card with enhanced styling */}
+                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/10 rounded-sm p-8 hover:bg-white/5 transition-all duration-500 hover:border-white/30 hover:scale-105 hover:-translate-y-2 shadow-2xl group-hover:shadow-white/10`}>
+                  
+                  {/* Dramatic lighting overlay */}
+                  <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  <div className="relative z-10">
+                    <div className="text-center mb-8">
+                      {/* Enhanced icon with glow effect */}
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-white/20 rounded-full blur-xl scale-150 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                        <div className="relative w-20 h-20 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all duration-500 backdrop-blur-sm border border-white/20">
+                          <service.icon className="h-10 w-10 text-white drop-shadow-2xl" />
+                        </div>
+                      </div>
+                      
+                      {/* Enhanced title */}
+                      <h3 className="text-2xl font-serif font-bold text-white mb-3 drop-shadow-2xl group-hover:text-shadow-lg transition-all duration-300">
+                        {service.title}
+                      </h3>
                     </div>
-                    <h3 className="text-xl font-serif font-bold text-white mb-2">
-                      {service.title}
-                    </h3>
-                  </div>
-                  
-                  <p className="text-gray-300 font-mono text-sm text-center mb-4">
-                    {service.description}
-                  </p>
-                  
-                  <div className="space-y-2">
-                    <h4 className="font-mono text-white text-xs font-bold uppercase tracking-wide">
-                      Hauptdienste:
-                    </h4>
-                    <ul className="text-xs font-mono text-gray-400 space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
-                          <div className="w-1.5 h-1.5 bg-white rounded-full mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                    
+                    {/* Enhanced description */}
+                    <p className="text-gray-200 font-mono text-sm text-center mb-6 leading-relaxed group-hover:text-white transition-colors duration-300">
+                      {service.description}
+                    </p>
+                    
+                    {/* Enhanced features list */}
+                    <div className="space-y-3">
+                      <h4 className="font-mono text-white text-xs font-bold uppercase tracking-widest text-center border-b border-white/20 pb-2">
+                        Hauptdienste
+                      </h4>
+                      <ul className="text-xs font-mono text-gray-300 space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center group-hover:text-white transition-colors duration-300">
+                            <div className="w-2 h-2 bg-white rounded-full mr-3 opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+                            <span className="tracking-wide">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Subtle hover indicator */}
+                    <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-50 transition-opacity duration-300">
+                      <div className="w-6 h-6 border border-white/40 rounded-full flex items-center justify-center">
+                        <Search className="w-3 h-3 text-white" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
