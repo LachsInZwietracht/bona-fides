@@ -244,67 +244,73 @@ export default function HomePage() {
               }
             ].map((service, index) => (
               <div key={index} className="group relative">
-                {/* Film noir shadow effect */}
-                <div className="absolute inset-0 bg-black/20 rounded-sm translate-x-2 translate-y-2 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out" />
                 
-                {/* Card with subtle film noir styling */}
-                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 rounded-sm p-8 transition-all duration-700 ease-out hover:border-white/20 hover:translate-x-1 hover:-translate-y-1 shadow-lg group-hover:shadow-2xl`}>
+                {/* Card with vintage paper styling */}
+                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 rounded-sm p-8 transition-all duration-500 ease-out hover:border-amber-200/30 shadow-lg hover:shadow-xl overflow-hidden`}>
                   
-                  {/* Subtle venetian blind lighting effect */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-1000">
-                    <div className="h-full w-full" style={{
-                      background: `repeating-linear-gradient(
-                        45deg,
-                        transparent 0px,
-                        transparent 8px,
-                        rgba(255,255,255,0.02) 8px,
-                        rgba(255,255,255,0.02) 10px
-                      )`
+                  {/* Vintage paper texture overlay */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-800">
+                    <div className="h-full w-full bg-amber-50/5" style={{
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperTexture'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' result='noise' seed='2'/%3E%3CfeColorMatrix in='noise' type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperTexture)' opacity='0.4'/%3E%3C/svg%3E")`,
                     }} />
+                  </div>
+                  
+                  {/* Typewriter reveal effect */}
+                  <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-800 ease-out opacity-10" />
+                  
+                  {/* Old-style corner decorations */}
+                  <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-amber-200/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-200" />
+                  <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-amber-200/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-300" />
+                  <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-amber-200/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-400" />
+                  <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-amber-200/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-500" />
+                  
+                  {/* Vintage stamp effect */}
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-60 transition-all duration-700 delay-300">
+                    <div className="w-12 h-8 border-2 border-dashed border-amber-200/50 flex items-center justify-center transform rotate-12">
+                      <span className="text-[8px] font-mono text-amber-200/70 font-bold">1965</span>
+                    </div>
                   </div>
                   
                   <div className="relative z-10">
                     <div className="text-center mb-8">
-                      {/* Subtle icon enhancement */}
+                      {/* Vintage medallion style icon */}
                       <div className="relative">
-                        <div className="absolute inset-0 bg-white/5 rounded-full blur-lg scale-125 opacity-0 group-hover:opacity-100 transition-all duration-700" />
-                        <div className="relative w-20 h-20 mx-auto mb-6 bg-white/8 rounded-full flex items-center justify-center group-hover:bg-white/12 transition-all duration-700 backdrop-blur-sm border border-white/10">
-                          <service.icon className="h-10 w-10 text-white/90 group-hover:text-white transition-colors duration-500" />
+                        <div className="w-20 h-20 mx-auto mb-6 bg-white/8 rounded-full flex items-center justify-center group-hover:bg-amber-100/10 transition-all duration-700 backdrop-blur-sm border border-white/10 group-hover:border-amber-200/30">
+                          <service.icon className="h-10 w-10 text-white/90 group-hover:text-amber-100/90 transition-colors duration-700" />
                         </div>
+                        {/* Vintage circle decoration */}
+                        <div className="absolute inset-0 rounded-full border border-dashed border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-800 delay-200 animate-pulse" />
                       </div>
                       
-                      {/* Title with subtle shadow */}
-                      <h3 className="text-2xl font-serif font-bold text-white/95 mb-3 group-hover:text-white transition-colors duration-500">
+                      {/* Title with typewriter effect */}
+                      <h3 className="text-2xl font-serif font-bold text-white/95 mb-3 group-hover:text-amber-100/95 transition-colors duration-700 group-hover:tracking-wider">
                         {service.title}
                       </h3>
                     </div>
                     
-                    {/* Description */}
-                    <p className="text-gray-300 font-mono text-sm text-center mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-500">
+                    {/* Description with fade-in */}
+                    <p className="text-gray-300 font-mono text-sm text-center mb-6 leading-relaxed group-hover:text-amber-50/80 transition-all duration-700 opacity-90 group-hover:opacity-100">
                       {service.description}
                     </p>
                     
-                    {/* Features list */}
+                    {/* Features list with staggered reveal */}
                     <div className="space-y-3">
-                      <h4 className="font-mono text-white/90 text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 pb-2 group-hover:border-white/25 transition-colors duration-500">
+                      <h4 className="font-mono text-white/90 text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 pb-2 group-hover:border-amber-200/30 group-hover:text-amber-100/90 transition-colors duration-700">
                         Hauptdienste
                       </h4>
                       <ul className="text-xs font-mono text-gray-400 space-y-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center group-hover:text-gray-300 transition-colors duration-500">
-                            <div className="w-1.5 h-1.5 bg-white/60 rounded-full mr-3 group-hover:bg-white/80 transition-colors duration-500" />
+                          <li key={featureIndex} className="flex items-center group-hover:text-amber-50/70 transition-all duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}}>
+                            <div className="w-1.5 h-1.5 bg-white/60 rounded-full mr-3 group-hover:bg-amber-200/80 transition-colors duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} />
                             <span className="tracking-wide">{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    {/* Film noir corner accent */}
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-30 transition-opacity duration-700">
-                      <div className="w-8 h-8 border-t border-r border-white/30" />
-                    </div>
-                    <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-30 transition-opacity duration-700">
-                      <div className="w-8 h-8 border-b border-l border-white/30" />
+                    {/* Vintage file tab */}
+                    <div className="absolute -top-2 left-8 w-16 h-6 bg-amber-100/10 border border-white/20 rounded-t opacity-0 group-hover:opacity-100 transition-all duration-500 delay-400">
+                      <div className="text-[10px] font-mono text-amber-100/60 text-center pt-1">FILE</div>
                     </div>
                   </div>
                 </div>
