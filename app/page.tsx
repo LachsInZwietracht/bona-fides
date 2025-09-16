@@ -226,74 +226,85 @@ export default function HomePage() {
                 title: "Private Ermittlungen",
                 description: "Diskrete Ermittlungen einschließlich vermisster Personen, Untreue und Hintergrundprüfungen mit völliger Vertraulichkeit.",
                 features: ["Vermisste Personen", "Untreue-Fälle", "Vermögenssuche", "Überwachung"],
-                gradient: "from-red-900/20 to-red-600/10"
+                gradient: "from-gray-800/30 to-gray-700/15"
               },
               {
                 icon: Building,
                 title: "Unternehmenssicherheit", 
                 description: "Umfassende Unternehmensermittlungen zum Schutz Ihrer Geschäftsinteressen und zur Gewährleistung der Arbeitsplatzintegrität.",
                 features: ["Mitarbeiterprüfung", "Betrugserkennung", "Wirtschaftsspionage", "Due Diligence"],
-                gradient: "from-blue-900/20 to-blue-600/10"
+                gradient: "from-slate-800/30 to-slate-700/15"
               },
               {
                 icon: UserCheck,
                 title: "Hintergrundprüfungen",
                 description: "Umfassende Hintergrundüberprüfung für Beschäftigung, Mieterprüfung und persönliche Beziehungen.",
                 features: ["Beschäftigungsscreening", "Mieterprüfung", "Persönliche Referenzen", "Strafregister"],
-                gradient: "from-green-900/20 to-green-600/10"
+                gradient: "from-zinc-800/30 to-zinc-700/15"
               }
             ].map((service, index) => (
               <div key={index} className="group relative">
-                {/* Glowing border effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-white/20 via-white/5 to-white/20 rounded-sm opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm" />
+                {/* Film noir shadow effect */}
+                <div className="absolute inset-0 bg-black/20 rounded-sm translate-x-2 translate-y-2 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out" />
                 
-                {/* Card with enhanced styling */}
-                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/10 rounded-sm p-8 hover:bg-white/5 transition-all duration-500 hover:border-white/30 hover:scale-105 hover:-translate-y-2 shadow-2xl group-hover:shadow-white/10`}>
+                {/* Card with subtle film noir styling */}
+                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 rounded-sm p-8 transition-all duration-700 ease-out hover:border-white/20 hover:translate-x-1 hover:-translate-y-1 shadow-lg group-hover:shadow-2xl`}>
                   
-                  {/* Dramatic lighting overlay */}
-                  <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* Subtle venetian blind lighting effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-1000">
+                    <div className="h-full w-full" style={{
+                      background: `repeating-linear-gradient(
+                        45deg,
+                        transparent 0px,
+                        transparent 8px,
+                        rgba(255,255,255,0.02) 8px,
+                        rgba(255,255,255,0.02) 10px
+                      )`
+                    }} />
+                  </div>
                   
                   <div className="relative z-10">
                     <div className="text-center mb-8">
-                      {/* Enhanced icon with glow effect */}
+                      {/* Subtle icon enhancement */}
                       <div className="relative">
-                        <div className="absolute inset-0 bg-white/20 rounded-full blur-xl scale-150 opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                        <div className="relative w-20 h-20 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition-all duration-500 backdrop-blur-sm border border-white/20">
-                          <service.icon className="h-10 w-10 text-white drop-shadow-2xl" />
+                        <div className="absolute inset-0 bg-white/5 rounded-full blur-lg scale-125 opacity-0 group-hover:opacity-100 transition-all duration-700" />
+                        <div className="relative w-20 h-20 mx-auto mb-6 bg-white/8 rounded-full flex items-center justify-center group-hover:bg-white/12 transition-all duration-700 backdrop-blur-sm border border-white/10">
+                          <service.icon className="h-10 w-10 text-white/90 group-hover:text-white transition-colors duration-500" />
                         </div>
                       </div>
                       
-                      {/* Enhanced title */}
-                      <h3 className="text-2xl font-serif font-bold text-white mb-3 drop-shadow-2xl group-hover:text-shadow-lg transition-all duration-300">
+                      {/* Title with subtle shadow */}
+                      <h3 className="text-2xl font-serif font-bold text-white/95 mb-3 group-hover:text-white transition-colors duration-500">
                         {service.title}
                       </h3>
                     </div>
                     
-                    {/* Enhanced description */}
-                    <p className="text-gray-200 font-mono text-sm text-center mb-6 leading-relaxed group-hover:text-white transition-colors duration-300">
+                    {/* Description */}
+                    <p className="text-gray-300 font-mono text-sm text-center mb-6 leading-relaxed group-hover:text-gray-200 transition-colors duration-500">
                       {service.description}
                     </p>
                     
-                    {/* Enhanced features list */}
+                    {/* Features list */}
                     <div className="space-y-3">
-                      <h4 className="font-mono text-white text-xs font-bold uppercase tracking-widest text-center border-b border-white/20 pb-2">
+                      <h4 className="font-mono text-white/90 text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 pb-2 group-hover:border-white/25 transition-colors duration-500">
                         Hauptdienste
                       </h4>
-                      <ul className="text-xs font-mono text-gray-300 space-y-2">
+                      <ul className="text-xs font-mono text-gray-400 space-y-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center group-hover:text-white transition-colors duration-300">
-                            <div className="w-2 h-2 bg-white rounded-full mr-3 opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+                          <li key={featureIndex} className="flex items-center group-hover:text-gray-300 transition-colors duration-500">
+                            <div className="w-1.5 h-1.5 bg-white/60 rounded-full mr-3 group-hover:bg-white/80 transition-colors duration-500" />
                             <span className="tracking-wide">{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    {/* Subtle hover indicator */}
-                    <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-50 transition-opacity duration-300">
-                      <div className="w-6 h-6 border border-white/40 rounded-full flex items-center justify-center">
-                        <Search className="w-3 h-3 text-white" />
-                      </div>
+                    {/* Film noir corner accent */}
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-30 transition-opacity duration-700">
+                      <div className="w-8 h-8 border-t border-r border-white/30" />
+                    </div>
+                    <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-30 transition-opacity duration-700">
+                      <div className="w-8 h-8 border-b border-l border-white/30" />
                     </div>
                   </div>
                 </div>
