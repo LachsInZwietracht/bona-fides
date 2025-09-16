@@ -4,7 +4,7 @@ import { Phone, Search, Shield, Eye, Building, FileX, UserCheck, Camera, Award, 
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden relative">
+    <div className="min-h-screen bg-black text-white overflow-hidden relative">{/* Force rebuild */}
       <nav className="relative z-50 bg-black/90 backdrop-blur-sm border-b border-white/10">
         <div className="container mx-auto px-8 py-4">
           <div className="flex justify-between items-center">
