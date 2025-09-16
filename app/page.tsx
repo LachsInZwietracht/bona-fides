@@ -73,7 +73,7 @@ export default function HomePage() {
             <div className="space-y-8">
               {/* Header with classic noir styling */}
               <div className="space-y-4">
-                <Badge className="bg-white text-black font-mono text-xs tracking-widest px-3 py-1">
+                <Badge className="bg-amber-700 text-amber-100 font-mono text-xs tracking-widest px-3 py-1 border border-amber-600">
                   EST. 1965 • LIZENZIERT & VERSICHERT
                 </Badge>
 
@@ -122,7 +122,7 @@ export default function HomePage() {
               <div className="space-y-4">
                 <Button
                   size="lg"
-                  className="bg-white text-black hover:bg-gray-200 font-serif text-lg px-8 py-6 shadow-2xl hover:shadow-white/20 transition-all duration-300"
+                  className="bg-amber-700 text-amber-100 hover:bg-amber-600 font-serif text-lg px-8 py-6 shadow-2xl hover:shadow-amber-500/20 transition-all duration-300 border border-amber-600"
                 >
                   <Phone className="mr-3 h-5 w-5" />
                   Vertrauliche Beratung
@@ -206,7 +206,7 @@ export default function HomePage() {
       <div className="relative z-10 py-20 bg-gradient-to-b from-black/90 to-black/95">
         <div className="container mx-auto px-8">
           <div className="text-center space-y-6 mb-16">
-            <Badge className="bg-white/10 text-white font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm">
+            <Badge className="bg-amber-800/20 text-amber-200 font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border border-amber-700/30">
               SPEZIALISIERUNGEN
             </Badge>
             
@@ -246,7 +246,7 @@ export default function HomePage() {
               <div key={index} className="group relative">
                 
                 {/* Card with vintage paper styling */}
-                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 rounded-sm p-8 transition-all duration-500 ease-out hover:border-amber-200/30 shadow-lg hover:shadow-xl overflow-hidden`}>
+                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 rounded-sm p-8 transition-all duration-500 ease-out hover:border-amber-700/40 shadow-lg hover:shadow-xl overflow-hidden`}>
                   
                   {/* Vintage paper texture overlay */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-800">
@@ -275,15 +275,15 @@ export default function HomePage() {
                     <div className="text-center mb-8">
                       {/* Vintage medallion style icon */}
                       <div className="relative">
-                        <div className="w-20 h-20 mx-auto mb-6 bg-white/8 rounded-full flex items-center justify-center group-hover:bg-amber-100/10 transition-all duration-700 backdrop-blur-sm border border-white/10 group-hover:border-amber-200/30">
-                          <service.icon className="h-10 w-10 text-white/90 group-hover:text-amber-100/90 transition-colors duration-700" />
+                        <div className="w-20 h-20 mx-auto mb-6 bg-white/8 rounded-full flex items-center justify-center group-hover:bg-amber-800/20 transition-all duration-700 backdrop-blur-sm border border-white/10 group-hover:border-amber-700/40">
+                          <service.icon className="h-10 w-10 text-white/90 group-hover:text-amber-200 transition-colors duration-700" />
                         </div>
                         {/* Vintage circle decoration */}
                         <div className="absolute inset-0 rounded-full border border-dashed border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-800 delay-200 animate-pulse" />
                       </div>
                       
                       {/* Title with typewriter effect */}
-                      <h3 className="text-2xl font-serif font-bold text-white/95 mb-3 group-hover:text-amber-100/95 transition-colors duration-700 group-hover:tracking-wider">
+                      <h3 className="text-2xl font-serif font-bold text-white/95 mb-3 group-hover:text-amber-200 transition-colors duration-700 group-hover:tracking-wider">
                         {service.title}
                       </h3>
                     </div>
@@ -295,13 +295,13 @@ export default function HomePage() {
                     
                     {/* Features list with staggered reveal */}
                     <div className="space-y-3">
-                      <h4 className="font-mono text-white/90 text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 pb-2 group-hover:border-amber-200/30 group-hover:text-amber-100/90 transition-colors duration-700">
+                      <h4 className="font-mono text-white/90 text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 pb-2 group-hover:border-amber-700/40 group-hover:text-amber-200 transition-colors duration-700">
                         Hauptdienste
                       </h4>
                       <ul className="text-xs font-mono text-gray-400 space-y-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center group-hover:text-amber-50/70 transition-all duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}}>
-                            <div className="w-1.5 h-1.5 bg-white/60 rounded-full mr-3 group-hover:bg-amber-200/80 transition-colors duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} />
+                          <li key={featureIndex} className="flex items-center group-hover:text-amber-100/80 transition-all duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}}>
+                            <div className="w-1.5 h-1.5 bg-white/60 rounded-full mr-3 group-hover:bg-amber-600 transition-colors duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} />
                             <span className="tracking-wide">{feature}</span>
                           </li>
                         ))}
@@ -309,8 +309,8 @@ export default function HomePage() {
                     </div>
 
                     {/* Vintage file tab */}
-                    <div className="absolute -top-2 left-8 w-16 h-6 bg-amber-100/10 border border-white/20 rounded-t opacity-0 group-hover:opacity-100 transition-all duration-500 delay-400">
-                      <div className="text-[10px] font-mono text-amber-100/60 text-center pt-1">FILE</div>
+                    <div className="absolute -top-2 left-8 w-16 h-6 bg-amber-800/20 border border-white/20 rounded-t opacity-0 group-hover:opacity-100 transition-all duration-500 delay-400">
+                      <div className="text-[10px] font-mono text-amber-200 text-center pt-1">FILE</div>
                     </div>
                   </div>
                 </div>
@@ -324,7 +324,7 @@ export default function HomePage() {
       <div className="relative z-10 py-20 bg-gradient-to-b from-black/95 to-black">
         <div className="container mx-auto px-8">
           <div className="text-center space-y-6 mb-16">
-            <Badge className="bg-white/10 text-white font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm">
+            <Badge className="bg-amber-800/20 text-amber-200 font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border border-amber-700/30">
               VERTRAUEN & EXZELLENZ
             </Badge>
             
@@ -404,7 +404,7 @@ export default function HomePage() {
         <div className="container mx-auto px-8">
           {/* Section Header */}
           <div className="text-center space-y-6 mb-20">
-            <Badge className="bg-amber-200/10 text-amber-100 font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border border-amber-200/20">
+            <Badge className="bg-amber-800/20 text-amber-200 font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border border-amber-700/30">
               FALLARCHIV • KLASSIFIZIERT
             </Badge>
             
@@ -564,7 +564,7 @@ export default function HomePage() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <Badge className="bg-white/10 text-white font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm">
+                <Badge className="bg-amber-800/20 text-amber-200 font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border border-amber-700/30">
                   VERTRAULICHE BERATUNG
                 </Badge>
                 
