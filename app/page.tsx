@@ -75,7 +75,7 @@ export default function HomePage() {
             <div className="space-y-8">
               {/* Header with classic noir styling */}
               <div className="space-y-4">
-                <Badge className="font-mono text-xs tracking-widest px-3 py-1 border" style={{backgroundColor: '#C2B16D', color: '#FEF3C6', borderColor: '#C2B16D'}}>
+                <Badge className="font-mono text-xs tracking-widest px-3 py-1 border" style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}>
                   EST. 1965 • LIZENZIERT & VERSICHERT
                 </Badge>
 
@@ -125,13 +125,15 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   className="font-serif text-lg px-8 py-6 shadow-2xl transition-all duration-300 border"
-                  style={{backgroundColor: '#C2B16D', color: '#FEF3C6', borderColor: '#C2B16D'}}
+                  style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
                   onMouseEnter={(e) => {
                     e.target.style.backgroundColor = '#A89A5A';
+                    e.target.style.color = '#1A1612';
                     e.target.style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.25)';
                   }}
                   onMouseLeave={(e) => {
                     e.target.style.backgroundColor = '#C2B16D';
+                    e.target.style.color = '#1A1612';
                     e.target.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
                   }}
                 >
