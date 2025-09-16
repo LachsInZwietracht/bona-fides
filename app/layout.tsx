@@ -1,56 +1,40 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Special_Elite, Playfair_Display, Crimson_Text } from "next/font/google";
-import "./globals.css";
+import type React from "react"
+import type { Metadata } from "next"
+import { Playfair_Display, JetBrains_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import { Suspense } from "react"
+import "./globals.css"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playfair = Playfair_Display({
   subsets: ["latin"],
+  variable: "--font-serif",
   display: "swap",
-});
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
+  variable: "--font-mono",
   display: "swap",
-});
-
-const specialElite = Special_Elite({
-  variable: "--font-special-elite",
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
-
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair-display",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const crimsonText = Crimson_Text({
-  variable: "--font-crimson-text",
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  display: "swap",
-});
+})
 
 export const metadata: Metadata = {
-  title: "Bona Fides Detective Agency - Professional Investigation Services",
-  description: "Professional private investigation services specializing in corporate, insurance, and personal investigations with discretion and integrity.",
-};
+  title: "BONA FIDES Detektei - Professionelle Ermittlungsdienste",
+  description:
+    "Lizenzierte Detektei seit 1965. Diskrete und professionelle Ermittlungsdienste mit Integrität und Ergebnissen.",
+  generator: "v0.app",
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${specialElite.variable} ${playfairDisplay.variable} ${crimsonText.variable} antialiased`}
-      >
-        {children}
+    <html lang="de">
+      <body className={`${playfair.variable} ${jetbrains.variable} font-serif antialiased`}>
+        <Suspense fallback={null}>{children}</Suspense>
+        <Analytics />
       </body>
     </html>
-  );
+  )
 }
