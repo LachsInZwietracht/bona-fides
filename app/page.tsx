@@ -127,14 +127,14 @@ export default function HomePage() {
                   className="font-serif text-lg px-8 py-6 shadow-2xl transition-all duration-300 border"
                   style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
                   onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = '#A89A5A';
-                    e.target.style.color = '#1A1612';
-                    e.target.style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.25)';
+                    (e.target as HTMLElement).style.backgroundColor = '#A89A5A';
+                    (e.target as HTMLElement).style.color = '#1A1612';
+                    (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.25)';
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.backgroundColor = '#C2B16D';
-                    e.target.style.color = '#1A1612';
-                    e.target.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+                    (e.target as HTMLElement).style.backgroundColor = '#C2B16D';
+                    (e.target as HTMLElement).style.color = '#1A1612';
+                    (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
                   }}
                 >
                   <Phone className="mr-3 h-5 w-5" />
@@ -259,7 +259,7 @@ export default function HomePage() {
               <div key={index} className="group relative">
                 
                 {/* Card with vintage paper styling */}
-                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 rounded-sm p-8 transition-all duration-500 ease-out shadow-lg hover:shadow-xl overflow-hidden`} onMouseEnter={(e) => e.target.style.borderColor = 'rgba(194, 177, 109, 0.4)'} onMouseLeave={(e) => e.target.style.borderColor = 'rgba(255, 255, 255, 0.08)'}>
+                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 rounded-sm p-8 transition-all duration-500 ease-out shadow-lg hover:shadow-xl overflow-hidden`} onMouseEnter={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.4)'} onMouseLeave={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.08)'}>
                   
                   {/* Vintage paper texture overlay */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-800">
@@ -288,33 +288,33 @@ export default function HomePage() {
                     <div className="text-center mb-8">
                       {/* Vintage medallion style icon */}
                       <div className="relative">
-                        <div className="w-20 h-20 mx-auto mb-6 bg-white/8 rounded-full flex items-center justify-center transition-all duration-700 backdrop-blur-sm border border-white/10" onMouseEnter={(e) => {e.target.style.backgroundColor = 'rgba(194, 177, 109, 0.2)'; e.target.style.borderColor = 'rgba(194, 177, 109, 0.4)';}} onMouseLeave={(e) => {e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.08)'; e.target.style.borderColor = 'rgba(255, 255, 255, 0.1)';}}>
-                          <service.icon className="h-10 w-10 text-white/90 transition-colors duration-700" onMouseEnter={(e) => e.target.style.color = '#FEF3C6'} onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.9)'} />
+                        <div className="w-20 h-20 mx-auto mb-6 bg-white/8 rounded-full flex items-center justify-center transition-all duration-700 backdrop-blur-sm border border-white/10" onMouseEnter={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(194, 177, 109, 0.2)'; (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.4)';}} onMouseLeave={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.08)'; (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.1)';}}>
+                          <service.icon className="h-10 w-10 text-white/90 transition-colors duration-700" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.9)'} />
                         </div>
                         {/* Vintage circle decoration */}
                         <div className="absolute inset-0 rounded-full border border-dashed border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-800 delay-200 animate-pulse" />
                       </div>
                       
                       {/* Title with typewriter effect */}
-                      <h3 className="text-2xl font-serif font-bold text-white/95 mb-3 transition-colors duration-700 group-hover:tracking-wider" onMouseEnter={(e) => e.target.style.color = '#FEF3C6'} onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.95)'}>
+                      <h3 className="text-2xl font-serif font-bold text-white/95 mb-3 transition-colors duration-700 group-hover:tracking-wider" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.95)'}>
                         {service.title}
                       </h3>
                     </div>
                     
                     {/* Description with fade-in */}
-                    <p className="text-gray-300 font-mono text-sm text-center mb-6 leading-relaxed transition-all duration-700 opacity-90 group-hover:opacity-100" onMouseEnter={(e) => e.target.style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => e.target.style.color = 'rgb(209, 213, 219)'}>
+                    <p className="text-gray-300 font-mono text-sm text-center mb-6 leading-relaxed transition-all duration-700 opacity-90 group-hover:opacity-100" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'}>
                       {service.description}
                     </p>
                     
                     {/* Features list with staggered reveal */}
                     <div className="space-y-3">
-                      <h4 className="font-mono text-white/90 text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 pb-2 transition-colors duration-700" onMouseEnter={(e) => {e.target.style.borderColor = 'rgba(194, 177, 109, 0.4)'; e.target.style.color = '#FEF3C6';}} onMouseLeave={(e) => {e.target.style.borderColor = 'rgba(255, 255, 255, 0.15)'; e.target.style.color = 'rgba(255, 255, 255, 0.9)';}}>
+                      <h4 className="font-mono text-white/90 text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 pb-2 transition-colors duration-700" onMouseEnter={(e) => {(e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.4)'; (e.target as HTMLElement).style.color = '#FEF3C6';}} onMouseLeave={(e) => {(e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.15)'; (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.9)';}}>
                         Hauptdienste
                       </h4>
                       <ul className="text-xs font-mono text-gray-400 space-y-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center transition-all duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} onMouseEnter={(e) => e.target.style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => e.target.style.color = 'rgb(156, 163, 175)'}>
-                            <div className="w-1.5 h-1.5 bg-white/60 rounded-full mr-3 transition-colors duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} onMouseEnter={(e) => e.target.style.backgroundColor = '#C2B16D'} onMouseLeave={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.6)'} />
+                          <li key={featureIndex} className="flex items-center transition-all duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
+                            <div className="w-1.5 h-1.5 bg-white/60 rounded-full mr-3 transition-colors duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#C2B16D'} onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.6)'} />
                             <span className="tracking-wide">{feature}</span>
                           </li>
                         ))}
@@ -456,15 +456,15 @@ export default function HomePage() {
             ].map((caseFile, index) => (
               <div key={index} className="group relative">
                 {/* Case File Folder */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm overflow-hidden transition-all duration-700 hover:scale-105 hover:-rotate-1 shadow-2xl" onMouseEnter={(e) => {e.target.style.backgroundColor = 'rgba(254, 243, 198, 0.1)'; e.target.style.borderColor = 'rgba(194, 177, 109, 0.4)'; e.target.style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.2)';}} onMouseLeave={(e) => {e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.05)'; e.target.style.borderColor = 'rgba(255, 255, 255, 0.1)'; e.target.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';}}>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm overflow-hidden transition-all duration-700 hover:scale-105 hover:-rotate-1 shadow-2xl" onMouseEnter={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(254, 243, 198, 0.1)'; (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.4)'; (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.2)';}} onMouseLeave={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.05)'; (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.1)'; (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';}}>
                   
                   {/* File Tab */}
-                  <div className="bg-white/10 px-4 py-2 border-b border-white/20 transition-colors duration-500" onMouseEnter={(e) => {e.target.style.backgroundColor = 'rgba(194, 177, 109, 0.2)'; e.target.style.borderColor = 'rgba(194, 177, 109, 0.3)';}} onMouseLeave={(e) => {e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)';}}>
+                  <div className="bg-white/10 px-4 py-2 border-b border-white/20 transition-colors duration-500" onMouseEnter={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(194, 177, 109, 0.2)'; (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.3)';}} onMouseLeave={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.2)';}}>
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-mono text-white font-bold tracking-widest transition-colors duration-500" onMouseEnter={(e) => e.target.style.color = '#FEF3C6'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                      <span className="text-xs font-mono text-white font-bold tracking-widest transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'white'}>
                         AKTE {caseFile.caseNumber}
                       </span>
-                      <div className="text-xs font-mono text-gray-300 transition-colors duration-500" onMouseEnter={(e) => e.target.style.color = 'rgba(254, 243, 198, 0.7)'} onMouseLeave={(e) => e.target.style.color = 'rgb(209, 213, 219)'}>
+                      <div className="text-xs font-mono text-gray-300 transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.7)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'}>
                         {caseFile.classification}
                       </div>
                     </div>
@@ -474,28 +474,28 @@ export default function HomePage() {
                   <div className="p-6 space-y-4">
                     {/* Case Title with Typewriter Effect */}
                     <div className="space-y-2">
-                      <h3 className="text-xl font-serif font-bold text-white group-hover:tracking-wider transition-all duration-500" onMouseEnter={(e) => e.target.style.color = '#FEF3C6'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                      <h3 className="text-xl font-serif font-bold text-white group-hover:tracking-wider transition-all duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'white'}>
                         {caseFile.title}
                       </h3>
-                      <div className="inline-block bg-white/10 text-white px-2 py-1 rounded text-xs font-mono transition-colors duration-500" onMouseEnter={(e) => {e.target.style.backgroundColor = 'rgba(194, 177, 109, 0.1)'; e.target.style.color = '#FEF3C6';}} onMouseLeave={(e) => {e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; e.target.style.color = 'white';}}>
+                      <div className="inline-block bg-white/10 text-white px-2 py-1 rounded text-xs font-mono transition-colors duration-500" onMouseEnter={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(194, 177, 109, 0.1)'; (e.target as HTMLElement).style.color = '#FEF3C6';}} onMouseLeave={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; (e.target as HTMLElement).style.color = 'white';}}>
                         {caseFile.service}
                       </div>
                     </div>
 
                     {/* Case Description */}
-                    <p className="text-gray-300 font-mono text-sm leading-relaxed transition-colors duration-500 mb-6" onMouseEnter={(e) => e.target.style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => e.target.style.color = 'rgb(209, 213, 219)'}>
+                    <p className="text-gray-300 font-mono text-sm leading-relaxed transition-colors duration-500 mb-6" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'}>
                       {caseFile.description}
                     </p>
 
                     {/* Case Details */}
-                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20 transition-colors duration-500" onMouseEnter={(e) => e.target.style.borderColor = 'rgba(194, 177, 109, 0.2)'} onMouseLeave={(e) => e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)'}>
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20 transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.2)'} onMouseLeave={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.2)'}>
                       <div>
-                        <div className="text-xs font-mono text-gray-400 transition-colors duration-500" onMouseEnter={(e) => e.target.style.color = 'rgba(254, 243, 198, 0.7)'} onMouseLeave={(e) => e.target.style.color = 'rgb(156, 163, 175)'}> Ort:</div>
-                        <div className="text-xs font-mono text-white transition-colors duration-500" onMouseEnter={(e) => e.target.style.color = 'rgb(209, 213, 219)'} onMouseLeave={(e) => e.target.style.color = 'white'}>{caseFile.location}</div>
+                        <div className="text-xs font-mono text-gray-400 transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.7)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}> Ort:</div>
+                        <div className="text-xs font-mono text-white transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'white'}>{caseFile.location}</div>
                       </div>
                       <div>
-                        <div className="text-xs font-mono text-gray-400 transition-colors duration-500" onMouseEnter={(e) => e.target.style.color = 'rgba(254, 243, 198, 0.7)'} onMouseLeave={(e) => e.target.style.color = 'rgb(156, 163, 175)'}> Dauer:</div>
-                        <div className="text-xs font-mono text-white transition-colors duration-500" onMouseEnter={(e) => e.target.style.color = 'rgb(209, 213, 219)'} onMouseLeave={(e) => e.target.style.color = 'white'}>{caseFile.duration}</div>
+                        <div className="text-xs font-mono text-gray-400 transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.7)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}> Dauer:</div>
+                        <div className="text-xs font-mono text-white transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'white'}>{caseFile.duration}</div>
                       </div>
                     </div>
                   </div>
@@ -635,8 +635,8 @@ export default function HomePage() {
                   size="lg"
                   className="font-mono text-sm uppercase tracking-wide"
                   style={{backgroundColor: '#FEF3C6', color: 'black', borderColor: '#C2B16D'}}
-                  onMouseEnter={(e) => e.target.style.backgroundColor = '#F0E6B8'}
-                  onMouseLeave={(e) => e.target.style.backgroundColor = '#FEF3C6'}
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#F0E6B8'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#FEF3C6'}
                 >
                   <Phone className="mr-2 h-4 w-4" />
                   Jetzt Anrufen
