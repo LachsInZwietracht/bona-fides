@@ -64,6 +64,12 @@ export default function TeamPage() {
               <Link href="/" className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
                 Home
               </Link>
+              <button className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
+                Services
+              </button>
+              <button className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
+                About
+              </button>
               <button className="text-white font-mono text-sm uppercase tracking-wide transition-colors">
                 Team
               </button>
