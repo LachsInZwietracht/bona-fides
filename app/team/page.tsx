@@ -55,10 +55,10 @@ export default function TeamPage() {
         <div className="container mx-auto px-8 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
-              <Link href="/" className="flex items-center space-x-4 hover:opacity-80 transition-opacity">
+              <Link href="/">
                 <h2 className="text-2xl font-serif font-bold text-white">BONA FIDES</h2>
-                <span className="text-sm font-mono text-gray-400 uppercase tracking-wide">Detective Agency</span>
               </Link>
+              <span className="text-sm font-mono text-gray-400 uppercase tracking-wide">Detective Agency</span>
             </div>
             <div className="flex space-x-8">
               <Link href="/" className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
