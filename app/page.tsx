@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Phone, Search, Shield, Eye, Building, FileX, UserCheck, Camera, Award, Users, Clock, Star, MapPin, Mail, Lock } from "lucide-react"
+import Link from "next/link"
 
 export default function HomePage() {
   return (
@@ -24,9 +25,9 @@ export default function HomePage() {
               <button className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
                 About
               </button>
-              <button className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
+              <Link href="/team" className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
                 Team
-              </button>
+              </Link>
               <Button
                 size="sm"
                 className="bg-white text-black hover:bg-gray-200 font-mono text-xs uppercase tracking-wide"
