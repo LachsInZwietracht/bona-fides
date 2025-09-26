@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Phone, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import { Header } from '@/components/header';
 
 const teamMembers = [
   {
@@ -51,45 +52,20 @@ const teamMembers = [
 export default function TeamPage() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
-      <nav className="relative z-50 bg-black/90 backdrop-blur-sm border-b border-white/10">
-        <div className="container mx-auto px-8 py-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-4">
-              <h2 className="text-2xl font-serif font-bold text-white">BONA FIDES</h2>
-              <span className="text-sm font-mono text-gray-400 uppercase tracking-wide">Detective Agency</span>
-            </div>
-            <div className="flex space-x-8">
-              <Link href="/" className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
-                Home
-              </Link>
-              <button className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
-                Services
-              </button>
-              <button className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
-                About
-              </button>
-              <Link href="/team" className="text-white font-mono text-sm uppercase tracking-wide transition-colors">
-                Team
-              </Link>
-              <Button
-                size="sm"
-                className="bg-white text-black hover:bg-gray-200 font-mono text-xs uppercase tracking-wide"
-              >
-                Contact Us
-              </Button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header dark />
 
       <div className="relative z-10 pt-20">
         <div className="container mx-auto px-8 py-16">
-          <div className="text-center space-y-6 mb-20">
-            <Link href="/" className="inline-flex items-center space-x-2 text-gray-400 hover:text-white transition-colors font-mono text-sm uppercase tracking-wide mb-8">
+          {/* Back Navigation - Separate and Clear */}
+          <div className="mb-12">
+            <Link href="/" className="inline-flex items-center space-x-2 text-gray-400 hover:text-white transition-colors font-mono text-sm uppercase tracking-wide">
               <ArrowLeft className="w-4 h-4" />
               <span>Zurück zur Startseite</span>
             </Link>
-            
+          </div>
+
+          {/* Page Header - Centered */}
+          <div className="text-center space-y-6 mb-20">
             <Badge 
               className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" 
               style={{

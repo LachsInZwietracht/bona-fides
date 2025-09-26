@@ -28,6 +28,9 @@ export default function HomePage() {
               <Link href="/team" className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
                 Team
               </Link>
+              <Link href="/geloeste-faelle" className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
+                Gelöste Fälle
+              </Link>
               <Button
                 size="sm"
                 className="bg-white text-black hover:bg-gray-200 font-mono text-xs uppercase tracking-wide"
