@@ -1,10 +1,21 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Header } from '@/components/header';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Shield, Target, FileSignature, Users, Compass, Award } from 'lucide-react';
+import {
+  Shield,
+  Target,
+  FileSignature,
+  Users,
+  Compass,
+  Award,
+  Camera,
+  Fingerprint,
+  Newspaper,
+  Disc3,
+} from 'lucide-react';
 
 const milestones = [
   {
@@ -12,24 +23,44 @@ const milestones = [
     title: 'Gründung der Detektei Bona Fides',
     description:
       'Helene und Jakob Radlow eröffnen in Hamburg eine spezialisierte Ermittlungsagentur für anspruchsvolle Wirtschaftsklientel.',
+    evidence: {
+      title: 'Erste Aktenmappe',
+      summary: 'Handschriftliche Observationstagebücher und gesiegelte Beweisumschläge aus der Gründungszeit.',
+      tag: 'ANALOG',
+    },
   },
   {
     year: '1988',
     title: 'Expansion in bundesweite Netzwerke',
     description:
       'Aufbau eines verdeckten Partnernetzes in allen Großstädten Deutschlands mit geprüften Ermittlerinnen und Ermittlern.',
+    evidence: {
+      title: 'Netzwerkdiagramm',
+      summary: 'Interne Strukturskizze mit codierten Rufzeichen und Prioritätsstufen.',
+      tag: 'KODEX',
+    },
   },
   {
     year: '2001',
     title: 'Digitale Forensik und Cyber-Ermittlungen',
     description:
       'Einrichtung eines internen Labors für IT-Forensik, Darknet-Analysen und datengetriebene Beweisführung.',
+    evidence: {
+      title: 'Forensische Sicherung',
+      summary: 'Hash-gesicherte Datenträger, Protokolle der ersten Cybercrime-Ermittlungen und Netzwerklogs.',
+      tag: 'DIGITAL',
+    },
   },
   {
     year: '2018',
     title: 'Supabase-basierte Fallakten',
     description:
       'Sichere Mandantenplattform für verschlüsselte Fallkommunikation, Audit-Trails und Live-Berichte eingeführt.',
+    evidence: {
+      title: 'Mandanten-Portal',
+      summary: 'Mockups der verschlüsselten Fallakte, MFA-Token und Audit-Report der Einführung.',
+      tag: 'LIVE',
+    },
   },
 ];
 
@@ -56,15 +87,59 @@ const principles = [
   },
 ];
 
+const combinationAngles = [320, 140, 25];
+const spotlightTrailLength = 6;
+
 export default function AboutPage() {
   const [scrollY, setScrollY] = useState(0);
+  const [trailPoints, setTrailPoints] = useState(() =>
+    Array.from({ length: spotlightTrailLength }).map(() => ({ x: 50, y: 240 }))
+  );
+  const [dossierActive, setDossierActive] = useState(false);
+  const [dossierStage, setDossierStage] = useState(0);
+  const dossierTimeoutRef = useRef<Array<ReturnType<typeof setTimeout>>>([]);
+
   const principleRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [visiblePrinciples, setVisiblePrinciples] = useState<Set<number>>(new Set());
+
+  const [activeMilestoneIndex, setActiveMilestoneIndex] = useState(0);
+  const activeMilestone = useMemo(() => milestones[activeMilestoneIndex], [activeMilestoneIndex]);
+
+const [dialRotation, setDialRotation] = useState(0);
+const [dialStage, setDialStage] = useState(0);
+const [vaultUnlocked, setVaultUnlocked] = useState(false);
+const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
+
+  const audioActivatedRef = useRef(false);
+  const audioContextRef = useRef<AudioContext | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    const handlePointerMove = (event: PointerEvent) => {
+      const x = event.clientX;
+      const y = event.clientY;
+      setTrailPoints((prev) => {
+        const next = [...prev.slice(1), { x, y }];
+        return next;
+      });
+      if (!audioActivatedRef.current) {
+        playReelSound();
+      }
+    };
+
+    const pointerDownListener = () => playReelSound();
+
+    window.addEventListener('pointermove', handlePointerMove);
+    window.addEventListener('pointerdown', pointerDownListener, { once: true });
+    return () => {
+      window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('pointerdown', pointerDownListener);
+    };
   }, []);
 
   useEffect(() => {
@@ -77,18 +152,101 @@ export default function AboutPage() {
           }
         });
       },
-      { threshold: 0.2, rootMargin: '100px' }
+      { threshold: 0.2, rootMargin: '120px' }
     );
 
     principleRefs.current.forEach((ref) => ref && observer.observe(ref));
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const timeouts: ReturnType<typeof setTimeout>[] = [];
+    if (dossierActive) {
+      [1, 2, 3].forEach((stage, idx) => {
+        timeouts[idx] = setTimeout(() => setDossierStage(stage), (idx + 1) * 180);
+      });
+    } else {
+      timeouts.push(setTimeout(() => setDossierStage(0), 120));
+    }
+    dossierTimeoutRef.current = timeouts;
+    return () => {
+      dossierTimeoutRef.current.forEach((timeout) => clearTimeout(timeout));
+    };
+  }, [dossierActive]);
+
+  useEffect(() => {
+    if (dialStage >= combinationAngles.length && !vaultUnlocked) {
+      const timeout = setTimeout(() => setVaultUnlocked(true), 600);
+      dialTimeoutRef.current = timeout;
+    }
+    return () => {
+      if (dialTimeoutRef.current) {
+        clearTimeout(dialTimeoutRef.current);
+      }
+    };
+  }, [dialStage, vaultUnlocked]);
+
+  const dossierPages = useMemo(
+    () => [
+      {
+        heading: 'Mandantenbriefing',
+        content:
+          'Hypothesen-Workshop, Gefährdungslage und operative Ziele werden innerhalb von 12 Stunden fixiert.',
+        stamp: 'VERTRAULICH',
+      },
+      {
+        heading: 'Einsatzteam',
+        content: 'Strike-Team aus Fallleiterin, Analyst, Observations-Spezialist und Forensiker.',
+        stamp: 'CLASSIFIED',
+      },
+      {
+        heading: 'Methodik',
+        content: 'OSINT-Layer, Observation, Supabase-Fallakte mit Zero-Knowledge-Protokollierung.',
+        stamp: 'FREIGABE A',
+      },
+    ],
+    []
+  );
+
+  const advanceDial = () => {
+    if (vaultUnlocked || dialStage >= combinationAngles.length) return;
+    setDialRotation(combinationAngles[dialStage]);
+    const timeout = setTimeout(() => {
+      setDialStage((prev) => prev + 1);
+    }, 700);
+    dialTimeoutRef.current = timeout;
+  };
+
+  const playReelSound = () => {
+    if (audioActivatedRef.current) return;
+    audioActivatedRef.current = true;
+    try {
+      const AudioContextClass = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      if (!AudioContextClass) return;
+      const context = new AudioContextClass();
+      audioContextRef.current = context;
+      const now = context.currentTime;
+      const oscillator = context.createOscillator();
+      const gain = context.createGain();
+      oscillator.type = 'sawtooth';
+      oscillator.frequency.setValueAtTime(220, now);
+      oscillator.frequency.exponentialRampToValueAtTime(80, now + 0.6);
+      gain.gain.setValueAtTime(0, now);
+      gain.gain.linearRampToValueAtTime(0.08, now + 0.05);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.8);
+      oscillator.connect(gain);
+      gain.connect(context.destination);
+      oscillator.start(now);
+      oscillator.stop(now + 0.8);
+    } catch {
+      // Ignore audio errors silently; sound is an enhancement only.
+    }
+  };
+
   return (
-    <div className="relative min-h-screen bg-black text-white overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden bg-black text-white">
       <Header dark />
 
-      {/* Film grain texture */}
       <div
         className="pointer-events-none absolute inset-0 opacity-15 mix-blend-screen"
         style={{
@@ -97,45 +255,52 @@ export default function AboutPage() {
         }}
       />
 
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
+      <div className="pointer-events-none absolute inset-0 opacity-30">
         <div
           className="h-full w-full"
           style={{
-            background: `repeating-linear-gradient(
-              0deg,
-              transparent 0px,
-              transparent 15px,
-              rgba(255,255,255,0.08) 15px,
-              rgba(255,255,255,0.08) 18px,
-              transparent 18px,
-              transparent 35px
-            )`,
+            background: `repeating-linear-gradient(0deg, transparent 0px, transparent 15px, rgba(255,255,255,0.08) 15px, rgba(255,255,255,0.08) 18px, transparent 18px, transparent 35px)`,
           }}
         />
       </div>
 
-      {/* Spotlight */}
+      {[...trailPoints].reverse().map((point, idx) => (
+        <div
+          key={`trail-${idx}`}
+          className="pointer-events-none absolute z-10"
+          style={{
+            top: point.y - 400,
+            left: point.x - 400,
+            width: 800,
+            height: 800,
+            borderRadius: '50%',
+            background:
+              'radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.04) 35%, rgba(255,255,255,0) 70%)',
+            filter: 'blur(1px)',
+            opacity: 0.15 - idx * 0.02,
+            transition: 'opacity 0.12s ease-out',
+          }}
+        />
+      ))}
+
       <div
-        className="absolute pointer-events-none z-10"
+        className="pointer-events-none absolute z-20"
         style={{
           top: Math.max(180, scrollY * 0.45),
           left: '50%',
           transform: 'translateX(-50%)',
-          width: '780px',
-          height: '780px',
+          width: 780,
+          height: 780,
           background:
             'radial-gradient(circle, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.05) 30%, transparent 70%)',
           borderRadius: '50%',
           filter: 'blur(1px)',
-          transition: 'all 0.1s linear',
         }}
       />
 
-      {/* Lighting accents */}
       <div className="absolute -top-32 -left-32 h-96 w-96 bg-gradient-radial from-white/20 via-white/5 to-transparent blur-3xl" />
       <div className="absolute top-0 right-1/4 h-full w-px bg-gradient-to-b from-white/30 via-white/10 to-transparent blur-sm" />
       <div className="absolute top-0 right-1/3 h-full w-px bg-gradient-to-b from-white/20 via-white/5 to-transparent blur-sm" />
-
       <main className="relative z-20">
         <section className="container mx-auto px-8 pb-24 pt-28">
           <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr]">
@@ -150,36 +315,36 @@ export default function AboutPage() {
                 Detektivische Exzellenz seit über fünf Jahrzehnten
               </p>
               <p className="max-w-xl text-lg text-gray-300">
-                Bona Fides ist mehr als eine Detektei – wir sind Vertraute unserer Mandanten. Seit 1965
-                lösen wir heikle Fälle für Familienunternehmen, Konzerne und Privatpersonen, die absolute
-                Diskretion benötigen. Unsere Methoden verbinden klassische Observation, digitale Forensik
-                und menschliche Intuition zu einer zuverlässigen Ermittlungsarchitektur.
+                Bona Fides ist mehr als eine Detektei – wir sind Vertraute unserer Mandanten. Seit 1965 lösen wir
+                heikle Fälle für Familienunternehmen, Konzerne und Privatpersonen, die absolute Diskretion
+                benötigen. Unsere Methoden verbinden klassische Observation, digitale Forensik und menschliche
+                Intuition zu einer zuverlässigen Ermittlungsarchitektur.
               </p>
               <div className="flex flex-wrap items-center gap-6 text-gray-400">
                 <div>
                   <div className="text-4xl font-serif text-white">2.500+</div>
-                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">
-                    erfolgreich gelöste Fälle
-                  </div>
+                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">erfolgreich gelöste Fälle</div>
                 </div>
                 <div>
                   <div className="text-4xl font-serif text-white">24/7</div>
-                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">
-                    einsatzbereites Handlungsteam
-                  </div>
+                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">einsatzbereites Handlungsteam</div>
                 </div>
                 <div>
                   <div className="text-4xl font-serif text-white">98%</div>
-                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">
-                    Mandanten-Zufriedenheit
-                  </div>
+                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">Mandanten-Zufriedenheit</div>
                 </div>
               </div>
             </div>
 
-            <div className="relative">
+            <div
+              className="relative"
+              onMouseEnter={() => setDossierActive(true)}
+              onMouseLeave={() => setDossierActive(false)}
+              onFocus={() => setDossierActive(true)}
+              onBlur={() => setDossierActive(false)}
+            >
               <div className="absolute inset-0 translate-x-6 translate-y-6 rounded-sm border border-white/10 bg-white/5 backdrop-blur" />
-              <div className="relative rounded-sm border border-white/10 bg-black/60 p-10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
+              <div className="relative overflow-hidden rounded-sm border border-white/10 bg-black/60 p-10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                     <div className="rounded-full border border-white/20 p-3">
@@ -188,26 +353,30 @@ export default function AboutPage() {
                     <h2 className="font-serif text-2xl font-semibold text-white">Mandantenbriefing</h2>
                   </div>
                   <p className="text-sm text-gray-400">
-                    Jeder Auftrag beginnt mit einem vertraulichen Deep-Dive, in dem wir Hypothesen, Risiken
-                    und operative Ziele definieren. Ein Fallprotokoll in Supabase hält alle Entscheidungspunkte
-                    revisionssicher fest.
+                    Jeder Auftrag beginnt mit einem vertraulichen Deep-Dive, in dem wir Hypothesen, Risiken und operative Ziele
+                    definieren. Ein Fallprotokoll in Supabase hält alle Entscheidungspunkte revisionssicher fest.
                   </p>
-                  <div className="space-y-3 text-sm text-gray-400">
-                    <div className="flex items-start space-x-3">
-                      <Shield className="mt-1 h-4 w-4 text-white" />
-                      <span>Verschlüsselte Übergaben per Zero-Knowledge-Kanal.</span>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <Target className="mt-1 h-4 w-4 text-white" />
-                      <span>Quantifizierte Ermittlungsziele mit klaren Meilensteinen.</span>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <Award className="mt-1 h-4 w-4 text-white" />
-                      <span>Qualitätskontrolle durch ein unabhängiges Review-Board.</span>
-                    </div>
+                  <div className="relative mt-6 flex flex-col gap-4">
+                    {dossierPages.map((page, index) => (
+                      <div
+                        key={page.heading}
+                        className={`dossier-page ${
+                          dossierStage >= index + 1 ? 'dossier-page--visible' : 'dossier-page--hidden'
+                        }`}
+                        style={{ zIndex: 40 - index }}
+                      >
+                        <div className="flex items-center justify-between">
+                          <h3 className="font-serif text-lg text-white">{page.heading}</h3>
+                          <span className="rounded-sm border border-white/20 px-2 py-0.5 text-xs font-mono tracking-[0.3em] text-gray-400">
+                            {page.stamp}
+                          </span>
+                        </div>
+                        <p className="mt-3 text-sm text-gray-400">{page.content}</p>
+                      </div>
+                    ))}
                   </div>
                   <Button
-                    className="w-full border text-black"
+                    className="relative z-40 w-full border text-black"
                     style={{ backgroundColor: '#C2B16D', borderColor: '#C2B16D' }}
                   >
                     Vertrauliche Erstberatung sichern
@@ -223,14 +392,12 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-3xl font-serif font-semibold text-white">Unsere Ermittlungsphilosophie</h2>
               <p className="text-gray-400">
-                Unsere Arbeit basiert auf gerichtsverwertbarer Beweisführung und respektvollem Umgang mit
-                allen Beteiligten. Sorgfältige Recherche, mehrstufige Verifikation und dokumentierte Abläufe
-                garantieren belastbare Ergebnisse.
+                Unsere Arbeit basiert auf gerichtsverwertbarer Beweisführung und respektvollem Umgang mit allen Beteiligten.
+                Sorgfältige Recherche, mehrstufige Verifikation und dokumentierte Abläufe garantieren belastbare Ergebnisse.
               </p>
               <p className="text-gray-400">
-                Moderne Tools unterstützen uns, ersetzen aber nie die Erfahrung unserer Ermittler. Wir
-                kalibrieren jedes Mandat entlang eines Risiko-Rahmens, der Compliance, Reputation und
-                Sicherheit gleichwertig berücksichtigt.
+                Moderne Tools unterstützen uns, ersetzen aber nie die Erfahrung unserer Ermittler. Wir kalibrieren jedes Mandat
+                entlang eines Risiko-Rahmens, der Compliance, Reputation und Sicherheit gleichwertig berücksichtigt.
               </p>
             </div>
 
@@ -261,27 +428,91 @@ export default function AboutPage() {
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent" />
           <div className="container relative mx-auto px-8">
             <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-              <div>
+              <div className="space-y-6">
                 <h2 className="text-3xl font-serif font-semibold text-white">Chronik der Wahrheitssuche</h2>
-                <p className="mt-4 text-gray-400">
-                  Jede Dekade brachte neue Herausforderungen: Industriespionage, Finanzbetrug, Cybercrime.
-                  Wir reagierten mit spezialisierten Taskforces und kontinuierlicher Weiterbildung.
+                <p className="text-gray-400">
+                  Jede Dekade brachte neue Herausforderungen: Industriespionage, Finanzbetrug, Cybercrime. Wir reagierten mit
+                  spezialisierten Taskforces und kontinuierlicher Weiterbildung.
                 </p>
-              </div>
-              <div className="space-y-8">
-                {milestones.map((milestone) => (
-                  <div key={milestone.year} className="relative pl-10">
-                    <div className="absolute left-0 top-1 h-full w-px bg-white/10" />
-                    <div className="absolute -left-[11px] top-1 h-6 w-6 rounded-full border border-white/40 bg-black" />
-                    <div className="rounded-sm border border-white/10 bg-black/60 p-6 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.9)]">
-                      <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-500">
+                <div className="rounded-sm border border-white/5 bg-black/40 p-4">
+                  <label className="text-xs font-mono uppercase tracking-[0.3em] text-gray-500" htmlFor="timeline-slider">
+                    Fallchronik durchsuchen
+                  </label>
+                  <input
+                    id="timeline-slider"
+                    type="range"
+                    min={0}
+                    max={milestones.length - 1}
+                    value={activeMilestoneIndex}
+                    onChange={(event) => setActiveMilestoneIndex(Number(event.target.value))}
+                    className="timeline-slider mt-4 w-full"
+                  />
+                  <div className="mt-3 flex items-center justify-between text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                    {milestones.map((milestone, index) => (
+                      <span key={milestone.year} className={index === activeMilestoneIndex ? 'text-white' : undefined}>
                         {milestone.year}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-8">
+                <div className="relative overflow-hidden rounded-sm border border-white/10 bg-black/70 p-6 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.9)]">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-500">{activeMilestone.year}</div>
+                      <h3 className="mt-2 font-serif text-2xl text-white">{activeMilestone.title}</h3>
+                    </div>
+                    <span className="rounded-sm border border-white/20 px-3 py-1 text-xs font-mono tracking-[0.3em] text-gray-400">
+                      FALLAKTE
+                    </span>
+                  </div>
+                  <p className="mt-4 text-sm text-gray-400">{activeMilestone.description}</p>
+                  <div className="mt-6 grid gap-4 md:grid-cols-[0.4fr_0.6fr]">
+                    <div className="rounded-sm border border-white/10 bg-gradient-to-br from-white/10 via-transparent to-transparent p-4">
+                      <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[0.3em] text-gray-400">
+                        <span>{activeMilestone.evidence.tag}</span>
+                        <Camera className="h-4 w-4" />
                       </div>
-                      <h3 className="mt-2 font-serif text-2xl text-white">{milestone.title}</h3>
-                      <p className="mt-3 text-sm text-gray-400">{milestone.description}</p>
+                      <div className="mt-4 h-24 rounded-sm border border-dashed border-white/20 bg-black/40">
+                        <div className="flex h-full items-center justify-center text-[10px] font-mono uppercase tracking-[0.4em] text-gray-500">
+                          Beweisfoto
+                        </div>
+                      </div>
+                    </div>
+                    <div className="rounded-sm border border-white/10 bg-black/60 p-4">
+                      <div className="flex items-center space-x-3 text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                        <Fingerprint className="h-4 w-4" />
+                        <span>Beweisdokument</span>
+                      </div>
+                      <h4 className="mt-3 font-serif text-lg text-white">{activeMilestone.evidence.title}</h4>
+                      <p className="mt-3 text-sm text-gray-400">{activeMilestone.evidence.summary}</p>
+                      <div className="mt-4 flex items-center space-x-3 text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                        <Newspaper className="h-4 w-4" />
+                        <span>Archiviertes Protokoll verfügbar</span>
+                      </div>
                     </div>
                   </div>
-                ))}
+                </div>
+
+                <div className="grid gap-4 md:grid-cols-2">
+                  {milestones.map((milestone, index) => (
+                    <div
+                      key={milestone.year}
+                      className={`rounded-sm border border-white/10 bg-black/60 p-4 transition-all duration-500 ${
+                        index === activeMilestoneIndex ? 'ring-2 ring-[#C2B16D]/80 shadow-[0_20px_60px_-40px_rgba(194,177,109,0.8)]' : 'opacity-60'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                        <span>{milestone.year}</span>
+                        <span>{milestone.evidence.tag}</span>
+                      </div>
+                      <h4 className="mt-3 font-serif text-lg text-white">{milestone.title}</h4>
+                      <p className="mt-2 text-xs text-gray-400">{milestone.description}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -292,20 +523,50 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-3xl font-serif font-semibold text-white">Ihr Auftrag, unser Mandat</h2>
               <p className="text-gray-400">
-                Wir begleiten Sie von der ersten Risikoanalyse bis zur abschließenden Beweisübergabe. Alle
-                Maßnahmen werden dokumentiert, rechtlich geprüft und erst nach Ihrer Freigabe umgesetzt.
+                Wir begleiten Sie von der ersten Risikoanalyse bis zur abschließenden Beweisübergabe. Alle Maßnahmen werden
+                dokumentiert, rechtlich geprüft und erst nach Ihrer Freigabe umgesetzt.
               </p>
               <p className="text-gray-400">
-                Sprechen Sie mit unserem Fallannahme-Team über Ihr Anliegen. In einem unverbindlichen
-                Erstgespräch entwickeln wir einen strukturierten Fahrplan und prüfen notwendige Ressourcen.
+                Sprechen Sie mit unserem Fallannahme-Team über Ihr Anliegen. In einem unverbindlichen Erstgespräch entwickeln wir
+                einen strukturierten Fahrplan und prüfen notwendige Ressourcen.
               </p>
-              <Button
-                className="border text-black"
-                style={{ backgroundColor: '#C2B16D', borderColor: '#C2B16D', width: 'fit-content' }}
-                asChild
-              >
-                <a href="#contact">Kontakt aufnehmen</a>
-              </Button>
+              <div className="flex flex-col gap-6 rounded-sm border border-white/10 bg-black/60 p-6 shadow-[0_30px_80px_-25px_rgba(0,0,0,0.8)]">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <Disc3 className="h-6 w-6 text-white" />
+                    <span className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400">
+                      Tresor-Authentifizierung
+                    </span>
+                  </div>
+                  <span className="text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                    {vaultUnlocked ? 'FREIGESCHALTET' : `KOMBI ${dialStage + 1}/${combinationAngles.length}`}
+                  </span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <button
+                    type="button"
+                    onClick={advanceDial}
+                    className="dial"
+                    aria-label="Tresor kombinieren"
+                    aria-live="polite"
+                  >
+                    <div className="dial-inner" style={{ transform: `rotate(${dialRotation}deg)` }}>
+                      <div className="dial-notch" />
+                    </div>
+                  </button>
+                </div>
+                <div className="rounded-sm border border-white/10 bg-black/70 p-4 text-center text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                  {vaultUnlocked ? 'Tresor geöffnet – Zugriff auf sichere Kontaktaufnahme aktiviert.' : 'Drehen Sie den Wahlscheibenschutz, um den Zugriff freizuschalten.'}
+                </div>
+                <Button
+                  className="border text-black disabled:cursor-not-allowed disabled:opacity-60"
+                  style={{ backgroundColor: '#C2B16D', borderColor: '#C2B16D', width: 'fit-content' }}
+                  asChild
+                  disabled={!vaultUnlocked}
+                >
+                  <a href="#contact">Kontakt aufnehmen</a>
+                </Button>
+              </div>
             </div>
             <div className="rounded-sm border border-white/10 bg-black/60 p-8 shadow-[0_30px_80px_-25px_rgba(0,0,0,0.8)]">
               <div className="space-y-5 text-sm text-gray-400">
@@ -330,6 +591,136 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
+
+      <style jsx global>{`
+        .dossier-page {
+          position: relative;
+          padding: 1.5rem;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 0.125rem;
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.8));
+          box-shadow: 0 20px 60px -35px rgba(0, 0, 0, 0.8);
+          transform-origin: left center;
+          transform: perspective(900px) rotateY(-90deg) translateX(-20px);
+          opacity: 0;
+        }
+        .dossier-page::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0.12), transparent 40%);
+          mix-blend-mode: screen;
+          opacity: 0.25;
+        }
+        .dossier-page--visible {
+          animation: dossierFlip 0.6s forwards;
+        }
+        .dossier-page--hidden {
+          animation: dossierClose 0.3s forwards;
+        }
+        @keyframes dossierFlip {
+          0% {
+            transform: perspective(900px) rotateY(-90deg) translateX(-20px);
+            opacity: 0;
+          }
+          60% {
+            transform: perspective(900px) rotateY(12deg) translateX(4px);
+            opacity: 1;
+          }
+          100% {
+            transform: perspective(900px) rotateY(0deg) translateX(0);
+            opacity: 1;
+          }
+        }
+        @keyframes dossierClose {
+          0% {
+            transform: perspective(900px) rotateY(0deg) translateX(0);
+            opacity: 1;
+          }
+          100% {
+            transform: perspective(900px) rotateY(-90deg) translateX(-20px);
+            opacity: 0;
+          }
+        }
+        .timeline-slider {
+          -webkit-appearance: none;
+          height: 4px;
+          border-radius: 9999px;
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(194, 177, 109, 0.6));
+          outline: none;
+        }
+        .timeline-slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #c2b16d;
+          border: 2px solid rgba(255, 255, 255, 0.6);
+          box-shadow: 0 0 0 6px rgba(194, 177, 109, 0.15);
+          cursor: pointer;
+          transition: transform 0.2s ease;
+        }
+        .timeline-slider::-webkit-slider-thumb:hover {
+          transform: scale(1.05);
+        }
+        .timeline-slider::-moz-range-thumb {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #c2b16d;
+          border: 2px solid rgba(255, 255, 255, 0.6);
+          box-shadow: 0 0 0 6px rgba(194, 177, 109, 0.15);
+          cursor: pointer;
+          transition: transform 0.2s ease;
+        }
+        .timeline-slider::-moz-range-thumb:hover {
+          transform: scale(1.05);
+        }
+        .dial {
+          width: 140px;
+          height: 140px;
+          border-radius: 9999px;
+          border: 2px solid rgba(255, 255, 255, 0.2);
+          background: radial-gradient(circle at center, rgba(194, 177, 109, 0.25), rgba(0, 0, 0, 0.8));
+          display: grid;
+          place-items: center;
+          position: relative;
+          overflow: hidden;
+          transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dial:before {
+          content: '';
+          position: absolute;
+          inset: 12px;
+          border-radius: 9999px;
+          border: 1px dashed rgba(255, 255, 255, 0.2);
+          opacity: 0.8;
+        }
+        .dial-inner {
+          width: 100px;
+          height: 100px;
+          border-radius: 9999px;
+          border: 2px solid rgba(255, 255, 255, 0.25);
+          display: grid;
+          place-items: center;
+          transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+          background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.45), rgba(0, 0, 0, 0.9));
+          position: relative;
+        }
+        .dial-notch {
+          width: 6px;
+          height: 26px;
+          border-radius: 3px;
+          background: rgba(0, 0, 0, 0.9);
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          box-shadow: 0 12px 18px -12px rgba(0, 0, 0, 0.85);
+        }
+        .dial:active {
+          border-color: rgba(194, 177, 109, 0.6);
+          box-shadow: 0 0 30px -10px rgba(194, 177, 109, 0.8);
+        }
+      `}</style>
     </div>
   );
 }

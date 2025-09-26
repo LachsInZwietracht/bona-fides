@@ -2,45 +2,13 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Search, Shield, Eye, Building, FileX, UserCheck, Camera, Award, Users, Clock, Star, MapPin, Mail, Lock } from "lucide-react"
-import Link from "next/link"
+import { Header } from "@/components/header"
+import { Phone, Search, Shield, Eye, Building, UserCheck, Award, Users, Star, Mail, Lock } from "lucide-react"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden relative">{/* Force rebuild */}
-      <nav className="relative z-50 bg-black/90 backdrop-blur-sm border-b border-white/10">
-        <div className="container mx-auto px-8 py-4">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-4">
-              <h2 className="text-2xl font-serif font-bold text-white">BONA FIDES</h2>
-              <span className="text-sm font-mono text-gray-400 uppercase tracking-wide">Detective Agency</span>
-            </div>
-            <div className="flex space-x-8">
-              <button className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
-                Home
-              </button>
-              <button className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
-                Services
-              </button>
-              <button className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
-                About
-              </button>
-              <Link href="/team" className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
-                Team
-              </Link>
-              <Link href="/geloeste-faelle" className="text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors">
-                Gelöste Fälle
-              </Link>
-              <Button
-                size="sm"
-                className="bg-white text-black hover:bg-gray-200 font-mono text-xs uppercase tracking-wide"
-              >
-                Contact Us
-              </Button>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-black text-white overflow-hidden relative">
+      <Header dark />
 
       {/* Film grain texture */}
       <div
