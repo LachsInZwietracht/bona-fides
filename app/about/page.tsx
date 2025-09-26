@@ -408,7 +408,9 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
                 return (
                   <div
                     key={principle.title}
-                    ref={(el) => (principleRefs.current[index] = el)}
+                    ref={(el) => {
+                      principleRefs.current[index] = el;
+                    }}
                     data-index={index}
                     className={`rounded-sm border border-white/10 bg-black/60 p-6 shadow-[0_20px_50px_-25px_rgba(0,0,0,0.8)] transition-all duration-700 ${
                       isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
