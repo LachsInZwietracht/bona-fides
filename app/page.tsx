@@ -508,6 +508,179 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Testimonials Section */}
+      <div className="relative z-10 py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="container mx-auto px-8">
+          <div className="text-center space-y-6 mb-16">
+            <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
+              ZEUGENBERICHTE
+            </Badge>
+
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
+              KUNDENSTIMMEN
+            </h2>
+
+            <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
+              Vertrauen Sie nicht nur uns – hören Sie von denen, denen wir geholfen haben
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                initials: "M.K.",
+                location: "Hamburg",
+                caseType: "Untreue-Ermittlung",
+                rating: 5,
+                text: "Diskret, professionell und schnell. Die Wahrheit war schmerzhaft, aber notwendig. BONA FIDES hat mir geholfen, Klarheit zu finden.",
+                date: "März 2024"
+              },
+              {
+                initials: "T.S.",
+                location: "Frankfurt",
+                caseType: "Unternehmensbetrug",
+                rating: 5,
+                text: "Unglaubliche Detektivarbeit. Sie fanden Beweise, die wir für unmöglich hielten. Haben unserem Unternehmen Millionen gespart.",
+                date: "Januar 2024"
+              },
+              {
+                initials: "L.B.",
+                location: "München",
+                caseType: "Vermisste Person",
+                rating: 5,
+                text: "Nach 5 Jahren ohne Spur haben sie meinen Bruder gefunden. Ich bin für immer dankbar. Echte Profis mit Herz.",
+                date: "Februar 2024"
+              },
+              {
+                initials: "R.W.",
+                location: "Berlin",
+                caseType: "Hintergrundprüfung",
+                rating: 5,
+                text: "Gründlich, vertraulich und zuverlässig. Die Hintergrundprüfung war umfassend und hat uns vor einem kostspieligen Fehler bewahrt.",
+                date: "April 2024"
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="group relative">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 transition-all duration-700 hover:scale-105 shadow-2xl" onMouseEnter={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(254, 243, 198, 0.08)'; (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.4)'; (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.25)';}} onMouseLeave={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.05)'; (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.1)'; (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';}}>
+
+                  {/* Vintage Paper Texture */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-800">
+                    <div className="h-full w-full bg-amber-50/5" style={{
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='witnessTexture'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' result='noise' seed='3'/%3E%3CfeColorMatrix in='noise' type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23witnessTexture)' opacity='0.4'/%3E%3C/svg%3E")`,
+                    }} />
+                  </div>
+
+                  {/* Rating Stars */}
+                  <div className="flex justify-center mb-4 space-x-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+                    ))}
+                  </div>
+
+                  {/* Testimonial Text */}
+                  <p className="text-gray-300 font-mono text-sm leading-relaxed mb-6 italic transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'}>
+                    &ldquo;{testimonial.text}&rdquo;
+                  </p>
+
+                  {/* Client Info */}
+                  <div className="space-y-2 border-t border-white/20 pt-4 transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.3)'} onMouseLeave={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.2)'}>
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono text-white font-bold text-sm transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'white'}>
+                        {testimonial.initials}
+                      </span>
+                      <span className="font-mono text-gray-400 text-xs">
+                        {testimonial.location}
+                      </span>
+                    </div>
+                    <div className="font-mono text-gray-400 text-xs">
+                      {testimonial.caseType}
+                    </div>
+                    <div className="font-mono text-gray-500 text-xs">
+                      {testimonial.date}
+                    </div>
+                  </div>
+
+                  {/* Vintage Stamp */}
+                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-70 transition-all duration-700 delay-200">
+                    <div className="w-12 h-12 border-2 border-dashed rounded-full flex items-center justify-center transform -rotate-12" style={{borderColor: 'rgba(194, 177, 109, 0.5)'}}>
+                      <span className="text-[10px] font-mono font-bold tracking-tight" style={{color: '#FEF3C6'}}>VERIFIZIERT</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="relative z-10 py-20 bg-black">
+        <div className="container mx-auto px-8">
+          <div className="text-center space-y-6 mb-16">
+            <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
+              INFORMATIONEN
+            </Badge>
+
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
+              HÄUFIG GESTELLTE FRAGEN
+            </h2>
+
+            <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
+              Alles, was Sie über unsere Dienstleistungen wissen müssen
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+            {[
+              {
+                question: "Wie gewährleisten Sie absolute Vertraulichkeit?",
+                answer: "Alle unsere Ermittler unterliegen strengen Verschwiegenheitspflichten und rechtlichen Bindungen. Wir verwenden verschlüsselte Kommunikation, sichere Dokumentenspeicherung und anonymisierte Berichterstattung. Ihre Privatsphäre ist unsere oberste Priorität."
+              },
+              {
+                question: "Wie lange dauert eine durchschnittliche Ermittlung?",
+                answer: "Die Dauer variiert je nach Komplexität des Falls. Einfache Hintergrundprüfungen können 1-2 Wochen dauern, während komplexe Unternehmensermittlungen 3-6 Monate benötigen können. Wir geben Ihnen nach der Erstberatung eine realistische Zeitschätzung."
+              },
+              {
+                question: "Wie sind Ihre Preise strukturiert?",
+                answer: "Wir bieten transparente Preisgestaltung basierend auf der Art und dem Umfang der Ermittlung. Sie erhalten ein detailliertes Angebot vor Beginn der Arbeit. Wir arbeiten mit Pauschalpreisen oder Stundensätzen, je nach Ihren Bedürfnissen. Kostenlose Erstberatung inklusive."
+              },
+              {
+                question: "Welche Informationen benötigen Sie, um zu beginnen?",
+                answer: "Für den Start benötigen wir grundlegende Informationen über Ihren Fall: Namen, Daten, Orte und spezifische Anliegen. Je mehr Details Sie uns geben können, desto effizienter können wir arbeiten. Alle Informationen werden streng vertraulich behandelt."
+              },
+              {
+                question: "Sind Ihre Ermittlungsmethoden legal?",
+                answer: "Ja, alle unsere Ermittler sind lizenziert und arbeiten innerhalb der gesetzlichen Grenzen. Wir halten uns strikt an deutsche Datenschutzgesetze (DSGVO) und verwenden nur rechtlich zulässige Methoden. Unsere Beweise sind vor Gericht verwertbar."
+              },
+              {
+                question: "In welchen Regionen sind Sie tätig?",
+                answer: "Wir operieren deutschlandweit mit Hauptbüros in Hamburg, Frankfurt, München und Berlin. Für internationale Fälle arbeiten wir mit einem weltweiten Netzwerk vertrauenswürdiger Partner zusammen. Kein Fall ist zu weit entfernt."
+              },
+              {
+                question: "Wie erhalte ich meine Ermittlungsergebnisse?",
+                answer: "Sie erhalten einen umfassenden, schriftlichen Bericht mit allen Erkenntnissen, Beweisen und Dokumentationen. Je nach Präferenz können wir auch persönliche Briefings durchführen. Alle Materialien werden sicher übermittelt und sind gerichtsfest aufbereitet."
+              },
+              {
+                question: "Was passiert, wenn Sie keine Ergebnisse finden?",
+                answer: "Wir sind ehrlich: Nicht jeder Fall führt zum gewünschten Ergebnis. Wenn keine Beweise gefunden werden, informieren wir Sie sofort und besprechen weitere Optionen. Viele Pauschalpreise beinhalten eine 'Kein Ergebnis, reduzierte Gebühr'-Garantie."
+              }
+            ].map((faq, index) => (
+              <div key={index} className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm transition-all duration-500 hover:bg-white/8" onMouseEnter={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.3)'} onMouseLeave={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.1)'}>
+                <details className="group/details">
+                  <summary className="cursor-pointer p-6 font-mono text-white font-bold flex justify-between items-center transition-colors duration-500 hover:text-[#FEF3C6] list-none">
+                    <span className="text-sm md:text-base">{faq.question}</span>
+                    <span className="ml-4 text-2xl transition-transform duration-300 group-open/details:rotate-45">+</span>
+                  </summary>
+                  <div className="px-6 pb-6 font-mono text-sm text-gray-300 leading-relaxed border-t border-white/10 pt-4 transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'}>
+                    {faq.answer}
+                  </div>
+                </details>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Contact Section */}
       <div className="relative z-10 py-20 bg-black">
         <div className="container mx-auto px-8">
@@ -618,6 +791,198 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+
+      {/* Final CTA Section */}
+      <div className="relative z-10 py-32 bg-gradient-to-b from-black to-gray-900">
+        <div className="container mx-auto px-8">
+          <div className="max-w-5xl mx-auto text-center space-y-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-12 md:p-16 relative overflow-hidden">
+
+            {/* Dramatic lighting effect */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-radial from-white/10 via-white/5 to-transparent blur-3xl" />
+
+            <div className="relative z-10 space-y-8">
+              <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.3)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.4)'}}>
+                BEREIT FÜR ANTWORTEN?
+              </Badge>
+
+              <h2 className="text-4xl md:text-6xl font-serif font-bold text-white leading-tight">
+                Die Wahrheit wartet nicht.
+                <br />
+                <span className="text-gray-300">Handeln Sie jetzt.</span>
+              </h2>
+
+              <p className="text-xl md:text-2xl font-mono text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Jeder Tag ohne Antworten ist ein verlorener Tag. Unsere Ermittler stehen bereit, Ihren Fall mit Diskretion und Professionalität zu lösen.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+                <Button
+                  size="lg"
+                  className="font-serif text-xl px-10 py-7 shadow-2xl transition-all duration-300 border-2"
+                  style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
+                  onMouseEnter={(e) => {
+                    (e.target as HTMLElement).style.backgroundColor = '#FEF3C6';
+                    (e.target as HTMLElement).style.color = '#1A1612';
+                    (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.5)';
+                    (e.target as HTMLElement).style.transform = 'scale(1.05)';
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.target as HTMLElement).style.backgroundColor = '#C2B16D';
+                    (e.target as HTMLElement).style.color = '#1A1612';
+                    (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+                    (e.target as HTMLElement).style.transform = 'scale(1)';
+                  }}
+                >
+                  <Phone className="mr-3 h-6 w-6" />
+                  Jetzt Kontaktieren
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="font-mono text-lg px-10 py-7 border-2 transition-all duration-300"
+                  style={{backgroundColor: 'transparent', color: 'white', borderColor: 'rgba(255, 255, 255, 0.3)'}}
+                  onMouseEnter={(e) => {
+                    (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                    (e.target as HTMLElement).style.borderColor = '#C2B16D';
+                    (e.target as HTMLElement).style.color = '#FEF3C6';
+                    (e.target as HTMLElement).style.transform = 'scale(1.05)';
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.target as HTMLElement).style.backgroundColor = 'transparent';
+                    (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                    (e.target as HTMLElement).style.color = 'white';
+                    (e.target as HTMLElement).style.transform = 'scale(1)';
+                  }}
+                >
+                  <Mail className="mr-3 h-5 w-5" />
+                  Sichere E-Mail
+                </Button>
+              </div>
+
+              <div className="pt-6 border-t border-white/20 mt-8">
+                <p className="font-mono text-sm text-gray-400 tracking-widest">
+                  24/7 VERFÜGBAR • KOSTENLOSE ERSTBERATUNG • ABSOLUTE DISKRETION
+                </p>
+              </div>
+
+              {/* Vintage seal decoration */}
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 border-4 border-dashed rounded-full flex items-center justify-center opacity-20" style={{borderColor: '#C2B16D'}}>
+                <div className="text-center">
+                  <div className="text-xs font-mono font-bold" style={{color: '#FEF3C6'}}>EST.</div>
+                  <div className="text-2xl font-serif font-bold" style={{color: '#FEF3C6'}}>1965</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="relative z-10 bg-gray-900 border-t border-white/10">
+        <div className="container mx-auto px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+            {/* Company Info */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-serif font-bold text-white">
+                BONA FIDES
+              </h3>
+              <p className="font-mono text-sm text-gray-400 leading-relaxed">
+                Private Detektei seit 1965. Lizenziert, versichert und auf Ergebnisse ausgerichtet.
+              </p>
+              <div className="flex items-center space-x-2">
+                <Shield className="h-4 w-4 text-white" />
+                <span className="font-mono text-xs text-gray-400 uppercase tracking-wide">
+                  Zertifiziert & Versichert
+                </span>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h4 className="font-mono text-white font-bold uppercase tracking-wide text-sm">
+                Services
+              </h4>
+              <ul className="space-y-2 font-mono text-sm text-gray-400">
+                <li className="hover:text-white transition-colors cursor-pointer" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
+                  Private Ermittlungen
+                </li>
+                <li className="hover:text-white transition-colors cursor-pointer" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
+                  Unternehmenssicherheit
+                </li>
+                <li className="hover:text-white transition-colors cursor-pointer" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
+                  Hintergrundprüfungen
+                </li>
+                <li className="hover:text-white transition-colors cursor-pointer" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
+                  Überwachung
+                </li>
+              </ul>
+            </div>
+
+            {/* Company Links */}
+            <div className="space-y-4">
+              <h4 className="font-mono text-white font-bold uppercase tracking-wide text-sm">
+                Unternehmen
+              </h4>
+              <ul className="space-y-2 font-mono text-sm text-gray-400">
+                <li className="hover:text-white transition-colors cursor-pointer" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
+                  Über uns
+                </li>
+                <li className="hover:text-white transition-colors cursor-pointer" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
+                  Unser Team
+                </li>
+                <li className="hover:text-white transition-colors cursor-pointer" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
+                  Karriere
+                </li>
+                <li className="hover:text-white transition-colors cursor-pointer" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
+                  Kontakt
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <h4 className="font-mono text-white font-bold uppercase tracking-wide text-sm">
+                Kontakt
+              </h4>
+              <ul className="space-y-3 font-mono text-sm text-gray-400">
+                <li className="flex items-start space-x-2">
+                  <Phone className="h-4 w-4 mt-1 shrink-0" />
+                  <span>(555) 123-CASE</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <Mail className="h-4 w-4 mt-1 shrink-0" />
+                  <span>info@bonafides.agency</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <Building className="h-4 w-4 mt-1 shrink-0" />
+                  <span>Deutschlandweit tätig</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="border-t border-white/10 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="font-mono text-xs text-gray-500">
+                © 2024 BONA FIDES Private Detektei. Alle Rechte vorbehalten.
+              </p>
+              <div className="flex space-x-6 font-mono text-xs text-gray-400">
+                <a href="#" className="hover:text-white transition-colors" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
+                  Datenschutz
+                </a>
+                <a href="#" className="hover:text-white transition-colors" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
+                  Impressum
+                </a>
+                <a href="#" className="hover:text-white transition-colors" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
+                  AGB
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
       {/* Vignette effect */}
       <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black opacity-60 pointer-events-none" />
