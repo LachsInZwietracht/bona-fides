@@ -381,7 +381,7 @@ export default function TeamPage() {
               <Link href="/contact">
                 <Button
                   size="lg"
-                  className="mt-8 border border-[#c2b16d] bg-[#c2b16d] px-10 py-6 font-serif text-lg text-[#1a1612] shadow-[0_15px_45px_rgba(194,177,109,0.45)] transition-all duration-300 hover:scale-[1.02]"
+                  className="mt-8 border border-[#c2b16d] bg-[#c2b16d] hover:bg-[#a89a5a] px-10 py-6 font-serif text-lg text-[#1a1612] hover:text-[#1a1612] shadow-[0_15px_45px_rgba(194,177,109,0.45)] transition-all duration-300 hover:scale-[1.02]"
                 >
                   <Phone className="mr-3 h-5 w-5" />
                   Kontakt aufnehmen
