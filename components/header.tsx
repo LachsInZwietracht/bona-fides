@@ -85,7 +85,7 @@ export function Header({ dark = false }: { dark?: boolean }) {
               }
               size={dark ? "sm" : undefined}
             >
-              <Link href="#contact">Contact Us</Link>
+              <Link href="/contact">Contact Us</Link>
             </Button>
           </nav>
 
@@ -167,7 +167,7 @@ export function Header({ dark = false }: { dark?: boolean }) {
                   : "bg-detective-blue hover:bg-detective-blue/90 text-white w-fit"
                 }
               >
-                <Link href="#contact" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                   Contact Us
                 </Link>
               </Button>

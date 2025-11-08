@@ -357,7 +357,7 @@ export default function GeloesteFaellePage() {
             <div className="text-xs font-mono tracking-widest mb-6" style={{color: 'rgba(254, 243, 198, 0.7)'}}>
               • VERTRAULICH • PROFESSIONELL • ERFOLGREICH •
             </div>
-            <Link href="/">
+            <Link href="/contact">
               <Button 
                 size="lg"
                 className="font-serif text-lg px-8 py-6 shadow-2xl transition-all duration-300 border"

@@ -566,7 +566,7 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
                   asChild
                   disabled={!vaultUnlocked}
                 >
-                  <a href="#contact">Kontakt aufnehmen</a>
+                  <a href="/contact">Kontakt aufnehmen</a>
                 </Button>
               </div>
             </div>

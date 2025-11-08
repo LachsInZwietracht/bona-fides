@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Header } from "@/components/header"
@@ -816,47 +817,51 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-                <Button
-                  size="lg"
-                  className="font-serif text-xl px-10 py-7 shadow-2xl transition-all duration-300 border-2"
-                  style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
-                  onMouseEnter={(e) => {
-                    (e.target as HTMLElement).style.backgroundColor = '#FEF3C6';
-                    (e.target as HTMLElement).style.color = '#1A1612';
-                    (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.5)';
-                    (e.target as HTMLElement).style.transform = 'scale(1.05)';
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.target as HTMLElement).style.backgroundColor = '#C2B16D';
-                    (e.target as HTMLElement).style.color = '#1A1612';
-                    (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
-                    (e.target as HTMLElement).style.transform = 'scale(1)';
-                  }}
-                >
-                  <Phone className="mr-3 h-6 w-6" />
-                  Jetzt Kontaktieren
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="font-mono text-lg px-10 py-7 border-2 transition-all duration-300"
-                  style={{backgroundColor: 'transparent', color: 'white', borderColor: 'rgba(255, 255, 255, 0.3)'}}
-                  onMouseEnter={(e) => {
-                    (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-                    (e.target as HTMLElement).style.borderColor = '#C2B16D';
-                    (e.target as HTMLElement).style.color = '#FEF3C6';
-                    (e.target as HTMLElement).style.transform = 'scale(1.05)';
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.target as HTMLElement).style.backgroundColor = 'transparent';
-                    (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.3)';
-                    (e.target as HTMLElement).style.color = 'white';
-                    (e.target as HTMLElement).style.transform = 'scale(1)';
-                  }}
-                >
-                  <Mail className="mr-3 h-5 w-5" />
-                  Sichere E-Mail
-                </Button>
+                <Link href="/contact">
+                  <Button
+                    size="lg"
+                    className="font-serif text-xl px-10 py-7 shadow-2xl transition-all duration-300 border-2"
+                    style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
+                    onMouseEnter={(e) => {
+                      (e.target as HTMLElement).style.backgroundColor = '#FEF3C6';
+                      (e.target as HTMLElement).style.color = '#1A1612';
+                      (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.5)';
+                      (e.target as HTMLElement).style.transform = 'scale(1.05)';
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.target as HTMLElement).style.backgroundColor = '#C2B16D';
+                      (e.target as HTMLElement).style.color = '#1A1612';
+                      (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
+                      (e.target as HTMLElement).style.transform = 'scale(1)';
+                    }}
+                  >
+                    <Phone className="mr-3 h-6 w-6" />
+                    Jetzt Kontaktieren
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="font-mono text-lg px-10 py-7 border-2 transition-all duration-300"
+                    style={{backgroundColor: 'transparent', color: 'white', borderColor: 'rgba(255, 255, 255, 0.3)'}}
+                    onMouseEnter={(e) => {
+                      (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                      (e.target as HTMLElement).style.borderColor = '#C2B16D';
+                      (e.target as HTMLElement).style.color = '#FEF3C6';
+                      (e.target as HTMLElement).style.transform = 'scale(1.05)';
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.target as HTMLElement).style.backgroundColor = 'transparent';
+                      (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                      (e.target as HTMLElement).style.color = 'white';
+                      (e.target as HTMLElement).style.transform = 'scale(1)';
+                    }}
+                  >
+                    <Mail className="mr-3 h-5 w-5" />
+                    Sichere E-Mail
+                  </Button>
+                </Link>
               </div>
 
               <div className="pt-6 border-t border-white/20 mt-8">
