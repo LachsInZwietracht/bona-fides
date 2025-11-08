@@ -295,9 +295,6 @@ export default function TeamPage() {
                         <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/45 to-transparent" />
                       </div>
                       <div className="mt-4 flex flex-col gap-3 text-left">
-                        <span className="font-mono text-[10px] uppercase tracking-[0.55em] text-[#b04d3e]">
-                          {member.codename}
-                        </span>
                         <h2 className="font-serif text-2xl leading-tight text-[#23190f]">{member.name}</h2>
                         <div className="flex flex-col gap-1 font-mono text-[10px] uppercase tracking-[0.4em] text-[#5c4a39]">
                           <span>{member.role}</span>
@@ -320,9 +317,6 @@ export default function TeamPage() {
                           {member.division}
                         </span>
                       </div>
-                      <span className="absolute right-5 top-5 rounded-full border border-[#cf524f]/50 bg-[#fffdf6] px-2 py-1 text-[9px] font-mono uppercase tracking-[0.45em] text-[#cf524f]">
-                        {member.status}
-                      </span>
                     </div>
 
                     {showAnnotations && (
