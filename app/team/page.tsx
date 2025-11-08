@@ -9,7 +9,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const detectiveMockImage =
-  'https://sdmntprnortheu.oaiusercontent.com/files/00000000-e0b0-61f4-a7d9-3353bc4be91f/raw?se=2025-09-27T00%3A13%3A37Z&sp=r&sv=2024-08-04&sr=b&scid=3d6b4ee3-adb1-547e-8490-1b1da469143b&skoid=b32d65cd-c8f1-46fb-90df-c208671889d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-26T17%3A21%3A27Z&ske=2025-09-27T17%3A21%3A27Z&sks=b&skv=2024-08-04&sig=2vDGt%2BWMMM0at8vVC4OOi1/Sjkchlr%2BKQjb4qeUZcIY%3D';
+  'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=face';
 
 const teamMembers = [
   {
