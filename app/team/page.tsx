@@ -369,7 +369,7 @@ export default function TeamPage() {
           <section className="relative mt-24">
             <div className="absolute inset-x-0 -top-8 h-px bg-gradient-to-r from-transparent via-[#c2b16d]/40 to-transparent" />
             <div className="relative mx-auto max-w-4xl overflow-hidden rounded-sm border border-white/10 bg-[#0d1018]/80 p-10 text-center shadow-[0_18px_60px_rgba(3,7,16,0.75)]">
-              <div className="absolute inset-0 border border-white/5" style={{ mixBlendMode: 'overlay' }} />
+              <div className="absolute inset-0 border border-white/5 pointer-events-none" style={{ mixBlendMode: 'overlay' }} />
               <Badge className="mx-auto mb-6 border border-[#56cbf9]/40 bg-[#56cbf9]/15 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.4em] text-[#cfe9ff]">
                 Fallannahme · Direktkanal
               </Badge>
