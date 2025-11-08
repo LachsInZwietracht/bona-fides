@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react';
 import { Header } from '@/components/header';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Compass, MapPin, PenSquare, Phone, Radar } from 'lucide-react';
+import { ArrowLeft, MapPin, PenSquare, Phone, Radar } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -312,10 +312,6 @@ export default function TeamPage() {
                       </div>
                       <div className="mt-6 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.35em] text-[#3b3024]">
                         <span>ID {member.id}</span>
-                        <span className="flex items-center gap-2 text-[#b04d3e]">
-                          <Compass className="h-3.5 w-3.5" />
-                          {member.division}
-                        </span>
                       </div>
                     </div>
 
