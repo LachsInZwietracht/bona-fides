@@ -1,9 +1,10 @@
 # CLAUDE.md
 
-## 🚀 BOILERPLATE NOTICE
+## 🕵️ Operation Bona Fides - Detective Agency Website
 
-**This is a boilerplate repository for getting started with Claude Code projects.**
-**UPDATE CLAUDE.md TO REFLECT THE ACTUAL PROJECT NAME AND DESCRIPTION, ONCE YOU START WORKING ON THE PROJECT.**
+**A noir-themed detective agency website with modern functionality and classic aesthetics.**
+
+This is a professional website for Bona Fides, a detective agency specializing in private investigations, corporate security, and forensic analysis. The site features a dark, cinematic design with detective noir elements and fully functional contact capabilities.
 
 ---
 
@@ -25,6 +26,7 @@ For this web application project, use the following technologies:
 - Next.js - React framework with App Router
 - Tailwind CSS - Utility-first styling framework
 - shadcn/ui - Component library (using shadcn@latest CLI)
+- Resend - Professional email delivery service for contact forms
 - Supabase - Backend and authentication
 - Zod - Input validation
 - React Hook Form - Form handling
@@ -87,6 +89,16 @@ When working with environment variables in Next.js:
 - Store environment variables in `.env.local` for local development
 - Use `.env.example` to document required environment variables
 
+### Required Environment Variables
+
+The following environment variables are required for full functionality:
+
+```
+# Contact Form Email Service
+RESEND_API_KEY=your_resend_api_key_here
+CONTACT_EMAIL=your-email@example.com
+```
+
 ## Validation Strategy
 
 **ALWAYS** work iteratively and validate your work after finishing each task by following these steps in order:
@@ -108,6 +120,29 @@ When working with environment variables in Next.js:
 - If existing tests fail that are not part of the current task, **STOP** and ask for guidance
 - Do NOT auto-fix unrelated test failures
 - If tests fail without a clear reason, use playwright mcp to debug the test in a real browser
+
+## Contact Form Implementation
+
+The site features a fully functional contact form with professional email delivery:
+
+### Features
+- **Detective-themed UI**: Case file styled form with noir aesthetics
+- **Real email delivery**: Uses Resend API for reliable email transmission
+- **Professional templates**: Detective agency branded email templates
+- **Form validation**: Client and server-side validation with user feedback
+- **Error handling**: Graceful error states with retry capabilities
+
+### Architecture
+- **Frontend**: React form with shadcn/ui components (`/app/contact/page.tsx`)
+- **API Route**: Next.js API handler at `/app/api/contact/route.ts`
+- **Email Service**: Resend integration with custom HTML templates
+- **Deployment**: Environment variables configured in Vercel
+
+### Setup Requirements
+1. Create Resend account at [resend.com](https://resend.com)
+2. Generate API key and add to environment variables
+3. Configure contact email in `CONTACT_EMAIL` environment variable
+4. Deploy environment variables to Vercel for production use
 
 # General
 - Don't add any components that are not part of the shadcn library to components/ui
