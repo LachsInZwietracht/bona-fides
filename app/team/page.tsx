@@ -94,18 +94,18 @@ const unitFilters = [
 
 const briefings = [
   {
-    title: 'Field Kits',
-    detail: 'Drohnenaufklärung · Spurensets · mobiles Analyse-Interface',
+    title: 'Digitale Ermittlung',
+    detail: 'Spezialisierte Cyber-Ermittlung und Online-Detektiv Services. Professionelle digitale Detektei für komplexe Fälle in Deutschland.',
     accent: '#fef3c6'
   },
   {
-    title: 'Safe Comms',
-    detail: 'Quantenresistentes Messaging · biometrische Zugriffspfade',
+    title: 'Cyber-Forensik',
+    detail: 'Datenforensik · OSINT Ermittlung · Social Media Investigation · Blockchain Forensik · Dark Web Recherche',
     accent: '#56cbf9'
   },
   {
-    title: 'Case Memory',
-    detail: 'Lageboard mit Versionskontrolle und Audit Trail',
+    title: 'Bewährte Expertise',
+    detail: 'Erfahrene Digitale Forensik Experten in Hamburg, Berlin und München. Vertrauensvolle Aufklärung von Online-Betrug und Cybercrime.',
     accent: '#f25f5c'
   }
 ];
@@ -342,7 +342,7 @@ export default function TeamPage() {
                     }}
                   />
                   <div className="relative flex h-full flex-col gap-4">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.45em] text-gray-400">Spezialausstattung</span>
+                    <span className="font-mono text-[10px] uppercase tracking-[0.45em] text-gray-400">Digitale Kompetenz</span>
                     <h3 className="font-serif text-2xl text-white">{item.title}</h3>
                     <p className="text-sm text-gray-300">{item.detail}</p>
                     <div className="mt-auto flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.35em] text-gray-400">
