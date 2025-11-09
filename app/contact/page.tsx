@@ -62,14 +62,29 @@ export default function ContactPage() {
 
     setFormStatus('submitting')
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
-    setFormStatus('success')
-    setTimeout(() => {
-      setFormStatus('idle')
-      setFormData({ name: '', email: '', phone: '', caseType: '', message: '' })
-    }, 3000)
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      setFormStatus('success')
+      setTimeout(() => {
+        setFormStatus('idle')
+        setFormData({ name: '', email: '', phone: '', caseType: '', message: '' })
+      }, 3000)
+    } catch (error) {
+      console.error('Error sending message:', error)
+      setFormStatus('error')
+      setTimeout(() => setFormStatus('idle'), 3000)
+    }
   }
 
   const handleInputChange = (field: string, value: string) => {
@@ -256,6 +271,14 @@ export default function ContactPage() {
                       <h4 className="text-xl font-mono font-bold text-green-600 mb-2">FALL REGISTRIERT</h4>
                       <p className="font-mono text-sm text-gray-700">
                         Ihr Auftrag wurde sicher übermittelt. Ein Ermittler kontaktiert Sie binnen 24 Stunden.
+                      </p>
+                    </div>
+                  ) : formStatus === 'error' ? (
+                    <div className="text-center py-8">
+                      <AlertCircle className="h-16 w-16 mx-auto text-red-600 mb-4" />
+                      <h4 className="text-xl font-mono font-bold text-red-600 mb-2">ÜBERTRAGUNG FEHLGESCHLAGEN</h4>
+                      <p className="font-mono text-sm text-gray-700">
+                        Fehler beim Senden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.
                       </p>
                     </div>
                   ) : (
