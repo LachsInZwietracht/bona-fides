@@ -851,7 +851,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gray-300 transform -rotate-1 shadow-lg rounded-sm opacity-40" />
 
               {/* Main case file document */}
-              <div className="bg-white text-black p-8 shadow-2xl transform rotate-2 hover:rotate-1 transition-transform duration-300 relative rounded-sm">
+              <div className="bg-white text-black p-10 shadow-2xl transform rotate-2 hover:rotate-1 transition-transform duration-300 relative rounded-sm min-h-[600px]">
 
                 {/* Paper texture overlay */}
                 <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-yellow-100 to-gray-200 rounded-sm" />
@@ -866,8 +866,8 @@ export default function HomePage() {
 
                 {/* Form content */}
                 <div className="relative z-10">
-                  <div className="flex justify-between items-start mb-6">
-                    <h3 className="text-xl font-mono font-bold text-black tracking-tight">
+                  <div className="flex justify-between items-start mb-8">
+                    <h3 className="text-2xl font-mono font-bold text-black tracking-tight">
                       VERTRAULICHE FALLANFRAGE
                     </h3>
                     <Badge className="bg-red-500 text-white font-mono text-xs px-2 py-1 rounded-sm">
@@ -892,7 +892,7 @@ export default function HomePage() {
                       </p>
                     </div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
                           <Label htmlFor="name" className="font-mono text-xs uppercase tracking-wide text-gray-700">
@@ -983,7 +983,7 @@ export default function HomePage() {
                           id="message"
                           value={formData.message}
                           onChange={(e) => handleInputChange('message', e.target.value)}
-                          className="font-mono text-sm border-gray-400 focus:border-gray-600 min-h-[100px]"
+                          className="font-mono text-sm border-gray-400 focus:border-gray-600 min-h-[120px]"
                           placeholder="Beschreiben Sie Ihren Fall so detailliert wie möglich. Alle Informationen werden streng vertraulich behandelt."
                         />
                         {errors.message && (
@@ -994,7 +994,7 @@ export default function HomePage() {
                         )}
                       </div>
 
-                      <div className="pt-4 border-t border-gray-300">
+                      <div className="pt-6 border-t border-gray-300">
                         <Button
                           type="submit"
                           disabled={formStatus === 'submitting'}
