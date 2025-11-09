@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     const caseTypeLabel = caseTypeMap[caseType] || caseType;
 
     // Send email
-    const data = await resend.emails.send({
+    await resend.emails.send({
       from: 'Bona Fides Contact Form <onboarding@resend.dev>', // You'll update this with your domain
       to: [process.env.CONTACT_EMAIL || 'your-email@example.com'], // Uses environment variable
       subject: `Neue Fallanfrage: ${caseTypeLabel}`,
