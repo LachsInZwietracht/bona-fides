@@ -110,8 +110,6 @@ const [dialStage, setDialStage] = useState(0);
 const [vaultUnlocked, setVaultUnlocked] = useState(false);
 const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
 
-  const audioActivatedRef = useRef(false);
-  const audioContextRef = useRef<AudioContext | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
@@ -127,18 +125,11 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
         const next = [...prev.slice(1), { x, y }];
         return next;
       });
-      if (!audioActivatedRef.current) {
-        playReelSound();
-      }
     };
 
-    const pointerDownListener = () => playReelSound();
-
     window.addEventListener('pointermove', handlePointerMove);
-    window.addEventListener('pointerdown', pointerDownListener, { once: true });
     return () => {
       window.removeEventListener('pointermove', handlePointerMove);
-      window.removeEventListener('pointerdown', pointerDownListener);
     };
   }, []);
 
@@ -217,31 +208,6 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
     dialTimeoutRef.current = timeout;
   };
 
-  const playReelSound = () => {
-    if (audioActivatedRef.current) return;
-    audioActivatedRef.current = true;
-    try {
-      const AudioContextClass = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
-      if (!AudioContextClass) return;
-      const context = new AudioContextClass();
-      audioContextRef.current = context;
-      const now = context.currentTime;
-      const oscillator = context.createOscillator();
-      const gain = context.createGain();
-      oscillator.type = 'sawtooth';
-      oscillator.frequency.setValueAtTime(220, now);
-      oscillator.frequency.exponentialRampToValueAtTime(80, now + 0.6);
-      gain.gain.setValueAtTime(0, now);
-      gain.gain.linearRampToValueAtTime(0.08, now + 0.05);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.8);
-      oscillator.connect(gain);
-      gain.connect(context.destination);
-      oscillator.start(now);
-      oscillator.stop(now + 0.8);
-    } catch {
-      // Ignore audio errors silently; sound is an enhancement only.
-    }
-  };
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-black text-white">
