@@ -8,8 +8,7 @@ import { ArrowLeft, MapPin, PenSquare, Phone, Radar } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const detectiveMockImage =
-  'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=face';
+const detectiveMockImage = '/detective-silhouette.png';
 
 const teamMembers = [
   {
