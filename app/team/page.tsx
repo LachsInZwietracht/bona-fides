@@ -92,23 +92,6 @@ const unitFilters = [
   { label: 'Undercover', value: 'undercover' }
 ];
 
-const briefings = [
-  {
-    title: 'Digitale Ermittlung',
-    detail: 'Spezialisierte Cyber-Ermittlung und Online-Detektiv Services. Professionelle digitale Detektei für komplexe Fälle in Deutschland.',
-    accent: '#fef3c6'
-  },
-  {
-    title: 'Cyber-Forensik',
-    detail: 'Datenforensik · OSINT Ermittlung · Social Media Investigation · Blockchain Forensik · Dark Web Recherche',
-    accent: '#56cbf9'
-  },
-  {
-    title: 'Bewährte Expertise',
-    detail: 'Erfahrene Digitale Forensik Experten in Hamburg, Berlin und München. Vertrauensvolle Aufklärung von Online-Betrug und Cybercrime.',
-    accent: '#f25f5c'
-  }
-];
 
 export default function TeamPage() {
   const [activeDivision, setActiveDivision] = useState('all');
@@ -328,30 +311,46 @@ export default function TeamPage() {
           </section>
 
           <section className="relative mt-24">
-            <div className="absolute inset-0 border border-dashed border-white/10" />
-            <div className="relative grid gap-10 lg:grid-cols-3">
-              {briefings.map((item) => (
-                <div
-                  key={item.title}
-                  className="relative overflow-hidden rounded-sm border border-white/10 bg-[#0d1018]/75 p-6 shadow-[0_18px_45px_rgba(3,7,16,0.5)]"
-                >
-                  <div
-                    className="absolute inset-0 opacity-40"
-                    style={{
-                      background: `radial-gradient(circle at top, ${item.accent}33, transparent 60%)`
-                    }}
-                  />
-                  <div className="relative flex h-full flex-col gap-4">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.45em] text-gray-400">Digitale Kompetenz</span>
-                    <h3 className="font-serif text-2xl text-white">{item.title}</h3>
-                    <p className="text-sm text-gray-300">{item.detail}</p>
-                    <div className="mt-auto flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.35em] text-gray-400">
-                      <span className="h-1 w-1 rounded-full bg-[#f25f5c]" />
-                      Einsatzbereit
-                    </div>
+            <div className="absolute inset-x-0 -top-8 h-px bg-gradient-to-r from-transparent via-[#c2b16d]/40 to-transparent" />
+            <div className="relative mx-auto max-w-5xl overflow-hidden rounded-sm border border-white/10 bg-[#0d1018]/80 p-12 shadow-[0_35px_100px_rgba(3,7,16,0.7)]">
+              <div className="pointer-events-none absolute inset-0 opacity-40">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,_rgba(194,177,109,0.15),transparent_55%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,_rgba(86,203,249,0.12),transparent_60%)]" />
+              </div>
+              <div className="relative z-10 text-center">
+                <Badge className="mx-auto mb-6 border border-[#c2b16d]/30 bg-[#c2b16d]/20 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.5em] text-[#fef3c6]">
+                  Digitale Detektei · Expertenteam
+                </Badge>
+                <h2 className="mb-8 font-serif text-4xl font-semibold text-white md:text-5xl">
+                  Deutschlands führende <br className="hidden sm:block" />
+                  <span className="text-[#c2b16d]">Digital-Ermittler</span>
+                </h2>
+                <div className="mx-auto max-w-4xl space-y-6 text-left">
+                  <p className="text-lg leading-relaxed text-gray-300">
+                    Unser spezialisiertes <strong className="text-white">Digitale Detektei Team</strong> vereint langjährige Ermittlungserfahrung mit modernster Cyber-Forensik-Technologie. Als führende <strong className="text-white">Online-Detektive in Deutschland</strong> lösen wir komplexe digitale Fälle für Privatpersonen und Unternehmen in Hamburg, Berlin, München und bundesweit.
+                  </p>
+                  <p className="text-lg leading-relaxed text-gray-300">
+                    Von <strong className="text-white">OSINT-Ermittlungen</strong> und Social Media Investigations bis hin zu Blockchain-Forensik und Dark Web Recherchen – unsere zertifizierten <strong className="text-white">Cyber-Ermittler</strong> decken das gesamte Spektrum der digitalen Aufklärung ab. Durch kontinuierliche Weiterbildung in Datenforensik und modernsten Analyseverfahren garantieren wir höchste Standards in der digitalen Beweissicherung.
+                  </p>
+                  <p className="text-lg leading-relaxed text-gray-300">
+                    Vertrauen Sie auf unser eingespieltes Team aus IT-Forensikern, Cyber-Security-Experten und erfahrenen Privatdetektiven. Gemeinsam bieten wir diskrete und rechtssichere Lösungen für Identitätsdiebstahl, Online-Betrug, Cyberstalking und Corporate Investigations.
+                  </p>
+                </div>
+                <div className="mt-10 grid gap-4 text-center md:grid-cols-3">
+                  <div className="rounded-sm border border-[#c2b16d]/20 bg-[#c2b16d]/10 p-4">
+                    <div className="font-mono text-2xl font-bold text-[#fef3c6]">15+</div>
+                    <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400">Jahre Erfahrung</div>
+                  </div>
+                  <div className="rounded-sm border border-[#56cbf9]/20 bg-[#56cbf9]/10 p-4">
+                    <div className="font-mono text-2xl font-bold text-[#cfe9ff]">500+</div>
+                    <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400">Gelöste Cyber-Fälle</div>
+                  </div>
+                  <div className="rounded-sm border border-[#f25f5c]/20 bg-[#f25f5c]/10 p-4">
+                    <div className="font-mono text-2xl font-bold text-[#ffb3b3]">24/7</div>
+                    <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400">Digitale Überwachung</div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </section>
 
