@@ -125,7 +125,7 @@ export default function HomePage() {
               {/* Header with classic noir styling */}
               <div className="space-y-4">
                 <Badge className="font-mono text-xs tracking-widest px-3 py-1 border" style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}>
-                  EST. 1965 • LIZENZIERT & VERSICHERT
+                  LIZENZIERT & VERSICHERT
                 </Badge>
 
                 <div className="space-y-2">
@@ -141,9 +141,9 @@ export default function HomePage() {
               {/* Tagline with dramatic styling */}
               <div className="border-l-4 border-white pl-6">
                 <p className="text-2xl font-serif italic text-gray-300 leading-relaxed">
-                  „In den Schatten der Stadt
+                  „Jede Wahrheit
                   <br />
-                  <span className="text-white font-bold">finden wir die Wahrheit.&rdquo;</span>
+                  <span className="text-white font-bold">verdient es, gefunden zu werden.&rdquo;</span>
                 </p>
               </div>
 
@@ -220,7 +220,7 @@ export default function HomePage() {
                   <div className="relative z-10">
                     <div className="flex justify-between items-start mb-4 md:mb-6">
                       <h3 className="text-lg md:text-2xl font-mono font-bold text-black tracking-tight">
-                        FALLAKTE #2024-001
+                        FALLAKTE #247
                       </h3>
                       <Badge className="bg-red-500 text-white font-mono text-xs px-2 py-1 rounded-sm">AKTIV</Badge>
                     </div>
@@ -244,7 +244,7 @@ export default function HomePage() {
 
                       <div className="border-b border-gray-300 pb-2">
                         <span className="font-bold text-gray-700">Ermittler:</span>
-                        <p className="text-black">Agent Johnson</p>
+                        <p className="text-black">Agent Müller</p>
                       </div>
 
                       <div className="mt-4 md:mt-6 p-3 md:p-4 bg-gray-100 border-l-4 border-gray-600 rounded-sm">
@@ -279,7 +279,7 @@ export default function HomePage() {
             </h2>
             
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Professionelle Ermittlungsdienste mit über 50 Jahren kombinierter Erfahrung
+              Deutschlands beste und größte Detektei – Spezialisiert auf internationale Online-Ermittlungen
             </p>
           </div>
 
@@ -287,23 +287,23 @@ export default function HomePage() {
             {[
               {
                 icon: Search,
-                title: "Private Ermittlungen",
-                description: "Diskrete Ermittlungen einschließlich vermisster Personen, Untreue und Hintergrundprüfungen mit völliger Vertraulichkeit.",
-                features: ["Vermisste Personen", "Untreue-Fälle", "Vermögenssuche", "Überwachung"],
+                title: "Digitale Ermittlungen",
+                description: "Online-Recherchen, Social-Media-Analyse und digitale Spurensuche mit modernster Technologie.",
+                features: ["Online-Personensuche", "Social Media Forensik", "Digitale Spuren", "Internationale Recherche"],
                 gradient: "from-gray-800/30 to-gray-700/15"
               },
               {
                 icon: Building,
-                title: "Unternehmenssicherheit", 
-                description: "Umfassende Unternehmensermittlungen zum Schutz Ihrer Geschäftsinteressen und zur Gewährleistung der Arbeitsplatzintegrität.",
-                features: ["Mitarbeiterprüfung", "Betrugserkennung", "Wirtschaftsspionage", "Due Diligence"],
+                title: "Cybercrime & Betrug",
+                description: "Aufdeckung von Online-Betrug, Geldwäsche und digitalen Betrugsnetzwerken im internationalen Raum.",
+                features: ["Geldwäsche-Aufklärung", "Online-Betrug", "Account-Diebstahl", "Internationale Fälle"],
                 gradient: "from-slate-800/30 to-slate-700/15"
               },
               {
                 icon: UserCheck,
                 title: "Hintergrundprüfungen",
-                description: "Umfassende Hintergrundüberprüfung für Beschäftigung, Mieterprüfung und persönliche Beziehungen.",
-                features: ["Beschäftigungsscreening", "Mieterprüfung", "Persönliche Referenzen", "Strafregister"],
+                description: "Online-Hintergrundchecks und digitale Due-Diligence für Unternehmen und Privatpersonen.",
+                features: ["Online-Screening", "Digitale Forensik", "Dark Web Recherche", "Identitätsprüfung"],
                 gradient: "from-zinc-800/30 to-zinc-700/15"
               }
             ].map((service, index) => (
@@ -327,13 +327,6 @@ export default function HomePage() {
                   <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-300" style={{borderColor: 'rgba(254, 243, 198, 0.4)'}} />
                   <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-400" style={{borderColor: 'rgba(254, 243, 198, 0.4)'}} />
                   <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-500" style={{borderColor: 'rgba(254, 243, 198, 0.4)'}} />
-                  
-                  {/* Vintage stamp effect */}
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-60 transition-all duration-700 delay-300">
-                    <div className="w-12 h-8 border-2 border-dashed border-amber-200/50 flex items-center justify-center transform rotate-12">
-                      <span className="text-[8px] font-mono font-bold" style={{color: 'rgba(254, 243, 198, 0.7)'}}>1965</span>
-                    </div>
-                  </div>
                   
                   <div className="relative z-10">
                     <div className="text-center mb-8">
@@ -397,16 +390,16 @@ export default function HomePage() {
             </h2>
             
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Jahrzehntelange Erfahrung, bewährte Ergebnisse und unerschütterliches Engagement für Integrität
+              Deutschlands beste und größte Detektei mit digitalem Schwerpunkt und weltweitem Netzwerk
             </p>
           </div>
 
           {/* Trust Metrics */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
-              { icon: Users, number: "30+", label: "Ermittler", description: "Professionelle Detektive in unserem Team" },
-              { icon: Award, number: "2,500+", label: "Gelöste Fälle", description: "Erfolgreich abgeschlossene Ermittlungen mit Ergebnissen" },
-              { icon: Star, number: "98%", label: "Kundenzufriedenheit", description: "Kunden, die unsere Dienste weiterempfehlen würden" },
+              { icon: Users, number: "3", label: "Kern-Agenten", description: "Experten mit großem Netzwerk" },
+              { icon: Award, number: "Beste", label: "Detektei DE", description: "Die beste und größte Detektei in Deutschland" },
+              { icon: Star, number: "#1", label: "Digital", description: "Führend in digitaler Ermittlung" },
               { icon: Shield, number: "100%", label: "Vertraulich", description: "Alle Fälle werden mit völliger Diskretion behandelt" }
             ].map((metric, index) => (
               <div key={index} className="text-center group">
@@ -451,57 +444,30 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                caseNumber: "1978-284",
-                title: "Operation Midnight Rose",
-                service: "Private Ermittlungen",
-                description: "Vermisste Erbin nach 20 Jahren aufgespürt. Millionenschweres Erbe wiedervereinigt.",
-                location: "Hamburg",
-                duration: "6 Monate",
-                classification: "VERTRAULICH"
-              },
-              {
-                caseNumber: "1993-067",
-                title: "Der Schatten im Vorstand",
-                service: "Unternehmenssicherheit",
-                description: "Wirtschaftsspionage in DAX-Konzern aufgedeckt. 50 Mio. € Schaden verhindert.",
-                location: "Frankfurt",
-                duration: "3 Monate",
+                caseNumber: "DE-047",
+                title: "Dubai-Betrugsring gesprengt",
+                service: "Internationale Ermittlungen",
+                description: "Geldwäsche-Netzwerk in Dubai aufgedeckt, das EU- und UK-Kunden betrog. Fall wurde an Behörden übergeben.",
+                location: "Dubai / EU / UK",
+                duration: "Mehrere Monate",
                 classification: "STRENG GEHEIM"
               },
               {
-                caseNumber: "2008-451",
-                title: "Die falsche Identität",
-                service: "Hintergrundprüfungen",
-                description: "Hochstapler mit gefälschten Zeugnissen entlarvt. Millionenbetrug verhindert.",
-                location: "München",
-                duration: "2 Wochen",
+                caseNumber: "SM-123",
+                title: "Gestohlener Social-Media-Account",
+                service: "Digitale Forensik",
+                description: "Account eines Millionen-Euro-Unternehmens zurückverfolgt. Täter in Thailand identifiziert.",
+                location: "Europa / Thailand",
+                duration: "Intensive Recherche",
                 classification: "VERTRAULICH"
               },
               {
-                caseNumber: "1985-139",
-                title: "Verschwundene Millionen",
-                service: "Private Ermittlungen",
-                description: "Versteckte Offshore-Konten aufgespürt. 15 Mio. € für Geschädigte sichergestellt.",
-                location: "Berlin",
-                duration: "8 Monate",
-                classification: "GEHEIM"
-              },
-              {
-                caseNumber: "2015-372",
-                title: "Der unsichtbare Feind",
-                service: "Unternehmenssicherheit",
-                description: "Insider-Betrugsnetz in Pharmaunternehmen zerschlagen. Produktfälschungen gestoppt.",
-                location: "Köln",
-                duration: "4 Monate",
-                classification: "STRENG GEHEIM"
-              },
-              {
-                caseNumber: "2021-598",
-                title: "Digitale Spuren",
-                service: "Hintergrundprüfungen",
-                description: "Cyberkrimineller Hintergrund von Führungskraft aufgedeckt. Datenschutz gewährleistet.",
-                location: "Stuttgart",
-                duration: "3 Wochen",
+                caseNumber: "PH-089",
+                title: "Personensuche via Fotomaterial",
+                service: "Digitale Ermittlungen",
+                description: "Vermisste Personen durch Online-Recherche und Fotomaterial-Analyse erfolgreich lokalisiert.",
+                location: "International",
+                duration: "Variiert",
                 classification: "VERTRAULICH"
               }
             ].map((caseFile, index) => (
@@ -604,39 +570,21 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
                 initials: "M.K.",
                 location: "Hamburg",
                 caseType: "Untreue-Ermittlung",
                 rating: 5,
-                text: "Diskret, professionell und schnell. Die Wahrheit war schmerzhaft, aber notwendig. BONA FIDES hat mir geholfen, Klarheit zu finden.",
-                date: "März 2024"
+                text: "Diskret, professionell und schnell. Die Wahrheit war schmerzhaft, aber notwendig. BONA FIDES hat mir geholfen, Klarheit zu finden."
               },
               {
                 initials: "T.S.",
                 location: "Frankfurt",
                 caseType: "Unternehmensbetrug",
                 rating: 5,
-                text: "Unglaubliche Detektivarbeit. Sie fanden Beweise, die wir für unmöglich hielten. Haben unserem Unternehmen Millionen gespart.",
-                date: "Januar 2024"
-              },
-              {
-                initials: "L.B.",
-                location: "München",
-                caseType: "Vermisste Person",
-                rating: 5,
-                text: "Nach 5 Jahren ohne Spur haben sie meinen Bruder gefunden. Ich bin für immer dankbar. Echte Profis mit Herz.",
-                date: "Februar 2024"
-              },
-              {
-                initials: "R.W.",
-                location: "Berlin",
-                caseType: "Hintergrundprüfung",
-                rating: 5,
-                text: "Gründlich, vertraulich und zuverlässig. Die Hintergrundprüfung war umfassend und hat uns vor einem kostspieligen Fehler bewahrt.",
-                date: "April 2024"
+                text: "Unglaubliche Detektivarbeit. Sie fanden Beweise, die wir für unmöglich hielten. Haben unserem Unternehmen Millionen gespart."
               }
             ].map((testimonial, index) => (
               <div key={index} className="group relative">
@@ -673,9 +621,6 @@ export default function HomePage() {
                     </div>
                     <div className="font-mono text-gray-400 text-xs">
                       {testimonial.caseType}
-                    </div>
-                    <div className="font-mono text-gray-500 text-xs">
-                      {testimonial.date}
                     </div>
                   </div>
 
@@ -728,12 +673,8 @@ export default function HomePage() {
                 answer: "Für den Start benötigen wir grundlegende Informationen über Ihren Fall: Namen, Daten, Orte und spezifische Anliegen. Je mehr Details Sie uns geben können, desto effizienter können wir arbeiten. Alle Informationen werden streng vertraulich behandelt."
               },
               {
-                question: "Sind Ihre Ermittlungsmethoden legal?",
-                answer: "Ja, alle unsere Ermittler sind lizenziert und arbeiten innerhalb der gesetzlichen Grenzen. Wir halten uns strikt an deutsche Datenschutzgesetze (DSGVO) und verwenden nur rechtlich zulässige Methoden. Unsere Beweise sind vor Gericht verwertbar."
-              },
-              {
                 question: "In welchen Regionen sind Sie tätig?",
-                answer: "Wir operieren deutschlandweit mit Hauptbüros in Hamburg, Frankfurt, München und Berlin. Für internationale Fälle arbeiten wir mit einem weltweiten Netzwerk vertrauenswürdiger Partner zusammen. Kein Fall ist zu weit entfernt."
+                answer: "Als beste und größte Detektei Deutschlands mit Fokus auf digitale Ermittlungen arbeiten wir international. Unser großes Netzwerk ermöglicht weltweite Online-Recherchen. Für lokale, hands-on Ermittlungen empfehlen wir spezialisierte Partner."
               },
               {
                 question: "Wie erhalte ich meine Ermittlungsergebnisse?",
@@ -784,25 +725,6 @@ export default function HomePage() {
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-white/10 p-3 rounded-sm">
-                      <Phone className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-mono text-lg text-white mb-1 uppercase tracking-wide">
-                        24/7 Hotline
-                      </h3>
-                      <p className="font-mono text-white mb-2 text-xl">
-                        (555) 123-CASE
-                      </p>
-                      <p className="font-mono text-sm text-gray-400">
-                        Notfall-Ermittlungen verfügbar
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-white/10 p-3 rounded-sm">
                       <Mail className="h-6 w-6 text-white" />
                     </div>
                     <div>
@@ -810,7 +732,7 @@ export default function HomePage() {
                         Sichere E-Mail
                       </h3>
                       <p className="font-mono text-white mb-2">
-                        info@bonafides.agency
+                        ermittlungen@bonafides.agency
                       </p>
                       <p className="font-mono text-sm text-gray-400">
                         Verschlüsselte Kommunikation verfügbar
@@ -958,12 +880,12 @@ export default function HomePage() {
                             <SelectValue placeholder="Bitte wählen Sie eine Kategorie" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="private">Private Ermittlungen</SelectItem>
-                            <SelectItem value="corporate">Unternehmenssicherheit</SelectItem>
-                            <SelectItem value="background">Hintergrundprüfungen</SelectItem>
-                            <SelectItem value="infidelity">Untreue-Ermittlungen</SelectItem>
-                            <SelectItem value="fraud">Betrugserkennung</SelectItem>
-                            <SelectItem value="missing">Vermisste Personen</SelectItem>
+                            <SelectItem value="digital">Digitale Ermittlungen</SelectItem>
+                            <SelectItem value="cybercrime">Cybercrime & Online-Betrug</SelectItem>
+                            <SelectItem value="background">Online-Hintergrundprüfungen</SelectItem>
+                            <SelectItem value="social-media">Social Media Forensik</SelectItem>
+                            <SelectItem value="missing">Personensuche Online</SelectItem>
+                            <SelectItem value="account-theft">Account-Diebstahl</SelectItem>
                             <SelectItem value="other">Sonstige Ermittlungen</SelectItem>
                           </SelectContent>
                         </Select>
@@ -1076,31 +998,8 @@ export default function HomePage() {
                       (e.target as HTMLElement).style.transform = 'scale(1)';
                     }}
                   >
-                    <Phone className="mr-3 h-6 w-6" />
+                    <Mail className="mr-3 h-6 w-6" />
                     Jetzt Kontaktieren
-                  </Button>
-                </Link>
-                <Link href="/contact">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="font-mono text-lg px-10 py-7 border-2 transition-all duration-300"
-                    style={{backgroundColor: 'transparent', color: 'white', borderColor: 'rgba(255, 255, 255, 0.3)'}}
-                    onMouseEnter={(e) => {
-                      (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-                      (e.target as HTMLElement).style.borderColor = '#C2B16D';
-                      (e.target as HTMLElement).style.color = '#FEF3C6';
-                      (e.target as HTMLElement).style.transform = 'scale(1.05)';
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.target as HTMLElement).style.backgroundColor = 'transparent';
-                      (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.3)';
-                      (e.target as HTMLElement).style.color = 'white';
-                      (e.target as HTMLElement).style.transform = 'scale(1)';
-                    }}
-                  >
-                    <Mail className="mr-3 h-5 w-5" />
-                    Sichere E-Mail
                   </Button>
                 </Link>
               </div>
@@ -1114,8 +1013,7 @@ export default function HomePage() {
               {/* Vintage seal decoration */}
               <div className="absolute -bottom-6 -right-6 w-32 h-32 border-4 border-dashed rounded-full flex items-center justify-center opacity-20" style={{borderColor: '#C2B16D'}}>
                 <div className="text-center">
-                  <div className="text-xs font-mono font-bold" style={{color: '#FEF3C6'}}>EST.</div>
-                  <div className="text-2xl font-serif font-bold" style={{color: '#FEF3C6'}}>1965</div>
+                  <div className="text-2xl font-serif font-bold" style={{color: '#FEF3C6'}}>BONA FIDES</div>
                 </div>
               </div>
             </div>
@@ -1134,7 +1032,7 @@ export default function HomePage() {
                 BONA FIDES
               </h3>
               <p className="font-mono text-sm text-gray-400 leading-relaxed">
-                Private Detektei seit 1965. Lizenziert, versichert und auf Ergebnisse ausgerichtet.
+                Deutschlands beste und größte Detektei für digitale Ermittlungen. Lizenziert, versichert und auf Ergebnisse ausgerichtet.
               </p>
               <div className="flex items-center space-x-2">
                 <Shield className="h-4 w-4 text-white" />
@@ -1151,16 +1049,16 @@ export default function HomePage() {
               </h4>
               <ul className="space-y-2 font-mono text-sm text-gray-400">
                 <li className="hover:text-white transition-colors cursor-pointer" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
-                  Private Ermittlungen
+                  Digitale Ermittlungen
                 </li>
                 <li className="hover:text-white transition-colors cursor-pointer" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
-                  Unternehmenssicherheit
+                  Cybercrime & Betrug
                 </li>
                 <li className="hover:text-white transition-colors cursor-pointer" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
-                  Hintergrundprüfungen
+                  Online-Hintergrundprüfungen
                 </li>
                 <li className="hover:text-white transition-colors cursor-pointer" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
-                  Überwachung
+                  Social Media Forensik
                 </li>
               </ul>
             </div>
@@ -1193,12 +1091,8 @@ export default function HomePage() {
               </h4>
               <ul className="space-y-3 font-mono text-sm text-gray-400">
                 <li className="flex items-start space-x-2">
-                  <Phone className="h-4 w-4 mt-1 shrink-0" />
-                  <span>(555) 123-CASE</span>
-                </li>
-                <li className="flex items-start space-x-2">
                   <Mail className="h-4 w-4 mt-1 shrink-0" />
-                  <span>info@bonafides.agency</span>
+                  <span>ermittlungen@bonafides.agency</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <Building className="h-4 w-4 mt-1 shrink-0" />
