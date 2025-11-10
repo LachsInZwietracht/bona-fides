@@ -141,9 +141,9 @@ export default function HomePage() {
               {/* Tagline with dramatic styling */}
               <div className="border-l-4 border-white pl-6">
                 <p className="text-2xl font-serif italic text-gray-300 leading-relaxed">
-                  „Im World Wide Web
+                  „Jede Wahrheit
                   <br />
-                  <span className="text-white font-bold">finden wir die Wahrheit.&rdquo;</span>
+                  <span className="text-white font-bold">verdient es, gefunden zu werden.&rdquo;</span>
                 </p>
               </div>
 
@@ -220,7 +220,7 @@ export default function HomePage() {
                   <div className="relative z-10">
                     <div className="flex justify-between items-start mb-4 md:mb-6">
                       <h3 className="text-lg md:text-2xl font-mono font-bold text-black tracking-tight">
-                        FALLAKTE #001
+                        FALLAKTE #247
                       </h3>
                       <Badge className="bg-red-500 text-white font-mono text-xs px-2 py-1 rounded-sm">AKTIV</Badge>
                     </div>
@@ -244,7 +244,7 @@ export default function HomePage() {
 
                       <div className="border-b border-gray-300 pb-2">
                         <span className="font-bold text-gray-700">Ermittler:</span>
-                        <p className="text-black">Agent Johnson</p>
+                        <p className="text-black">Agent Müller</p>
                       </div>
 
                       <div className="mt-4 md:mt-6 p-3 md:p-4 bg-gray-100 border-l-4 border-gray-600 rounded-sm">
@@ -279,7 +279,7 @@ export default function HomePage() {
             </h2>
             
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Deutschlands größte und digitalste Detektei – Spezialisiert auf internationale Online-Ermittlungen
+              Deutschlands beste und größte Detektei – Spezialisiert auf internationale Online-Ermittlungen
             </p>
           </div>
 
@@ -390,7 +390,7 @@ export default function HomePage() {
             </h2>
             
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Deutschlands größte Detektei mit digitalem Schwerpunkt und weltweitem Netzwerk
+              Deutschlands beste und größte Detektei mit digitalem Schwerpunkt und weltweitem Netzwerk
             </p>
           </div>
 
@@ -398,7 +398,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
               { icon: Users, number: "3", label: "Kern-Agenten", description: "Experten mit großem Netzwerk" },
-              { icon: Award, number: "Größte", label: "Detektei DE", description: "Die größte Detektei in Deutschland" },
+              { icon: Award, number: "Beste", label: "Detektei DE", description: "Die beste und größte Detektei in Deutschland" },
               { icon: Star, number: "#1", label: "Digital", description: "Führend in digitaler Ermittlung" },
               { icon: Shield, number: "100%", label: "Vertraulich", description: "Alle Fälle werden mit völliger Diskretion behandelt" }
             ].map((metric, index) => (
@@ -570,7 +570,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
                 initials: "M.K.",
@@ -585,20 +585,6 @@ export default function HomePage() {
                 caseType: "Unternehmensbetrug",
                 rating: 5,
                 text: "Unglaubliche Detektivarbeit. Sie fanden Beweise, die wir für unmöglich hielten. Haben unserem Unternehmen Millionen gespart."
-              },
-              {
-                initials: "L.B.",
-                location: "München",
-                caseType: "Vermisste Person",
-                rating: 5,
-                text: "Nach 5 Jahren ohne Spur haben sie meinen Bruder gefunden. Ich bin für immer dankbar. Echte Profis mit Herz."
-              },
-              {
-                initials: "R.W.",
-                location: "Berlin",
-                caseType: "Hintergrundprüfung",
-                rating: 5,
-                text: "Gründlich, vertraulich und zuverlässig. Die Hintergrundprüfung war umfassend und hat uns vor einem kostspieligen Fehler bewahrt."
               }
             ].map((testimonial, index) => (
               <div key={index} className="group relative">
@@ -687,12 +673,8 @@ export default function HomePage() {
                 answer: "Für den Start benötigen wir grundlegende Informationen über Ihren Fall: Namen, Daten, Orte und spezifische Anliegen. Je mehr Details Sie uns geben können, desto effizienter können wir arbeiten. Alle Informationen werden streng vertraulich behandelt."
               },
               {
-                question: "Sind Ihre Ermittlungsmethoden legal?",
-                answer: "Ja, alle unsere Ermittler sind lizenziert und arbeiten innerhalb der gesetzlichen Grenzen. Wir halten uns strikt an deutsche Datenschutzgesetze (DSGVO) und verwenden nur rechtlich zulässige Methoden. Unsere Beweise sind vor Gericht verwertbar."
-              },
-              {
                 question: "In welchen Regionen sind Sie tätig?",
-                answer: "Als größte Detektei Deutschlands mit Fokus auf digitale Ermittlungen arbeiten wir international. Unser großes Netzwerk ermöglicht weltweite Online-Recherchen. Für lokale, hands-on Ermittlungen empfehlen wir spezialisierte Partner."
+                answer: "Als beste und größte Detektei Deutschlands mit Fokus auf digitale Ermittlungen arbeiten wir international. Unser großes Netzwerk ermöglicht weltweite Online-Recherchen. Für lokale, hands-on Ermittlungen empfehlen wir spezialisierte Partner."
               },
               {
                 question: "Wie erhalte ich meine Ermittlungsergebnisse?",
@@ -743,25 +725,6 @@ export default function HomePage() {
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-white/10 p-3 rounded-sm">
-                      <Phone className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-mono text-lg text-white mb-1 uppercase tracking-wide">
-                        24/7 Hotline
-                      </h3>
-                      <p className="font-mono text-white mb-2 text-xl">
-                        (555) 123-CASE
-                      </p>
-                      <p className="font-mono text-sm text-gray-400">
-                        Notfall-Ermittlungen verfügbar
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-white/10 p-3 rounded-sm">
                       <Mail className="h-6 w-6 text-white" />
                     </div>
                     <div>
@@ -769,7 +732,7 @@ export default function HomePage() {
                         Sichere E-Mail
                       </h3>
                       <p className="font-mono text-white mb-2">
-                        info@bonafides.agency
+                        ermittlungen@bonafides.agency
                       </p>
                       <p className="font-mono text-sm text-gray-400">
                         Verschlüsselte Kommunikation verfügbar
@@ -1035,31 +998,8 @@ export default function HomePage() {
                       (e.target as HTMLElement).style.transform = 'scale(1)';
                     }}
                   >
-                    <Phone className="mr-3 h-6 w-6" />
+                    <Mail className="mr-3 h-6 w-6" />
                     Jetzt Kontaktieren
-                  </Button>
-                </Link>
-                <Link href="/contact">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="font-mono text-lg px-10 py-7 border-2 transition-all duration-300"
-                    style={{backgroundColor: 'transparent', color: 'white', borderColor: 'rgba(255, 255, 255, 0.3)'}}
-                    onMouseEnter={(e) => {
-                      (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-                      (e.target as HTMLElement).style.borderColor = '#C2B16D';
-                      (e.target as HTMLElement).style.color = '#FEF3C6';
-                      (e.target as HTMLElement).style.transform = 'scale(1.05)';
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.target as HTMLElement).style.backgroundColor = 'transparent';
-                      (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.3)';
-                      (e.target as HTMLElement).style.color = 'white';
-                      (e.target as HTMLElement).style.transform = 'scale(1)';
-                    }}
-                  >
-                    <Mail className="mr-3 h-5 w-5" />
-                    Sichere E-Mail
                   </Button>
                 </Link>
               </div>
@@ -1092,7 +1032,7 @@ export default function HomePage() {
                 BONA FIDES
               </h3>
               <p className="font-mono text-sm text-gray-400 leading-relaxed">
-                Deutschlands größte Detektei für digitale Ermittlungen. Lizenziert, versichert und auf Ergebnisse ausgerichtet.
+                Deutschlands beste und größte Detektei für digitale Ermittlungen. Lizenziert, versichert und auf Ergebnisse ausgerichtet.
               </p>
               <div className="flex items-center space-x-2">
                 <Shield className="h-4 w-4 text-white" />
@@ -1151,12 +1091,8 @@ export default function HomePage() {
               </h4>
               <ul className="space-y-3 font-mono text-sm text-gray-400">
                 <li className="flex items-start space-x-2">
-                  <Phone className="h-4 w-4 mt-1 shrink-0" />
-                  <span>(555) 123-CASE</span>
-                </li>
-                <li className="flex items-start space-x-2">
                   <Mail className="h-4 w-4 mt-1 shrink-0" />
-                  <span>info@bonafides.agency</span>
+                  <span>ermittlungen@bonafides.agency</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <Building className="h-4 w-4 mt-1 shrink-0" />
