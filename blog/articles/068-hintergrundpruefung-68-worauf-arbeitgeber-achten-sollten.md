@@ -3,7 +3,7 @@ title: "Hintergrundprüfung 68: Worauf Arbeitgeber achten sollten"
 slug: hintergrundpruefung-68-worauf-arbeitgeber-achten-sollten
 keyword: hintergrundprüfung 68
 category: Background Checks & Due Diligence
-date: 2025-07-22
+date: 2025-07-02
 excerpt: "Professionelle Hintergrundprüfungen für sichere Personalentscheidungen. DSGVO-konform und AGG-rechtssicher durch Bona Fides."
 ---
 
@@ -128,6 +128,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten
-- Unternehmensbetrug 1: Risiken und Lösungen für HR
-- Rechtliche Aspekte 1: Was Detektive in Deutschland dürfen
+- [Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-1-worauf-arbeitgeber-achten-sollten)
+- [Hintergrundprüfung 2: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-2-worauf-arbeitgeber-achten-sollten)
+- [Hintergrundprüfung 58: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-58-worauf-arbeitgeber-achten-sollten)

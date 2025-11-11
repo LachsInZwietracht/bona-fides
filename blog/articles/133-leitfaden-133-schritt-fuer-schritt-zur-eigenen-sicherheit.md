@@ -3,7 +3,7 @@ title: "Leitfaden 133: Schritt für Schritt zur eigenen Sicherheit"
 slug: leitfaden-133-schritt-fuer-schritt-zur-eigenen-sicherheit
 keyword: leitfaden 133
 category: How-To & Educational Guides
-date: 2025-09-33
+date: 2025-09-05
 excerpt: "Praktischer Leitfaden für digitale Sicherheit. Schritt-für-Schritt-Anleitungen von Bona Fides für Privatpersonen und Unternehmen."
 ---
 
@@ -129,6 +129,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Cyberbetrug 1: Neue Maschen und wie man sich schützt
-- Technologie & Tools 1: Die wichtigsten Werkzeuge für Ermittlungen
+- [Leitfaden 1: Schritt-für-Schritt zur eigenen Sicherheit](/blog/leitfaden-1-schritt-fuer-schritt-zur-eigenen-sicherheit)
+- [Leitfaden 132: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-132-schritt-fuer-schritt-zur-eigenen-sicherheit)
+- [Leitfaden 134: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-134-schritt-fuer-schritt-zur-eigenen-sicherheit)

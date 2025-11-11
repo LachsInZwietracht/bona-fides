@@ -3,7 +3,7 @@ title: "Untreue 2: Wie man digitale Hinweise erkennt"
 slug: untreue-2-wie-man-digitale-hinweise-erkennt
 keyword: untreue 2
 category: Infidelity & Relationship Investigations
-date: 2025-08-15
+date: 2025-07-11
 excerpt: "Dating-Apps und geheime Kommunikation. Erfahren Sie, welche digitalen Spuren Untreue hinterlässt."
 ---
 
@@ -114,6 +114,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Untreue 1: Wie man digitale Hinweise erkennt
-- Untreue 3: Wie man digitale Hinweise erkennt
-- Rechtliche Aspekte 1: Was Detektive in Deutschland dürfen
+- [Untreue 1: Wie man digitale Hinweise erkennt](/blog/untreue-1-wie-man-digitale-hinweise-erkennt)
+- [Untreue 78: Wie man digitale Hinweise erkennt](/blog/untreue-78-wie-man-digitale-hinweise-erkennt)
+- [Untreue 79: Wie man digitale Hinweise erkennt](/blog/untreue-79-wie-man-digitale-hinweise-erkennt)

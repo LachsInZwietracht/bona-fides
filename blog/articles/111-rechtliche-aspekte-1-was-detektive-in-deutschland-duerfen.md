@@ -3,7 +3,7 @@ title: "Rechtliche Aspekte 1: Was Detektive in Deutschland dürfen"
 slug: rechtliche-aspekte-1-was-detektive-in-deutschland-duerfen
 keyword: rechtliche aspekte 1
 category: Legal & Regulatory Topics
-date: 2025-10-21
+date: 2025-08-14
 excerpt: "Rechtlicher Rahmen für Detektivarbeit in Deutschland. Erfahren Sie, welche Ermittlungsmethoden legal sind und wie Bona Fides rechtssicher arbeitet."
 ---
 
@@ -106,6 +106,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Rechtliche Aspekte 2: Was Detektive in Deutschland dürfen
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten
+- [Rechtliche Aspekte 112: Was Detektive in Deutschland dürfen](/blog/rechtliche-aspekte-112-was-detektive-in-deutschland-duerfen)
+- [Rechtliche Aspekte 113: Was Detektive in Deutschland dürfen](/blog/rechtliche-aspekte-113-was-detektive-in-deutschland-duerfen)
+- [Rechtliche Aspekte 114: Was Detektive in Deutschland dürfen](/blog/rechtliche-aspekte-114-was-detektive-in-deutschland-duerfen)

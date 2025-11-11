@@ -3,7 +3,7 @@ title: "Detektiv in Berlin: Kosten, Ablauf und regionale Besonderheiten"
 slug: detektiv-in-berlin-kosten-ablauf-und-regionale-besonderheiten
 keyword: detektiv berlin
 category: Geographic/Local Content
-date: 2025-10-25
+date: 2025-10-13
 excerpt: "Detektiv-Services in Berlin. Erfahren Sie, was Ermittlungen in der Hauptstadt kosten und welche Besonderheiten es gibt."
 ---
 
@@ -127,6 +127,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Detektiv in München: Kosten, Ablauf und regionale Besonderheiten
-- Unternehmensbetrug 1: Risiken und Lösungen für HR
-- Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten
+- [Detektiv in München: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-münchen-kosten-ablauf-und-regionale-besonderheiten)
+- [Detektiv in Hamburg: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-hamburg-kosten-ablauf-und-regionale-besonderheiten)
+- [Detektiv in Köln: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-köln-kosten-ablauf-und-regionale-besonderheiten)

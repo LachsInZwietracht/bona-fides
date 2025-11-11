@@ -3,7 +3,7 @@ title: "Hintergrundprüfung 2: Worauf Arbeitgeber achten sollten"
 slug: hintergrundpruefung-2-worauf-arbeitgeber-achten-sollten
 keyword: hintergrundprüfung 2
 category: Background Checks & Due Diligence
-date: 2025-10-31
+date: 2025-06-21
 excerpt: "Referenzprüfung und Social-Media-Screening. Erfahren Sie, wie Sie Kandidaten rechts sicher überprüfen."
 ---
 
@@ -92,6 +92,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten
-- Hintergrundprüfung 3: Worauf Arbeitgeber achten sollten
-- Unternehmensbetrug 1: Risiken und Lösungen für HR
+- [Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-1-worauf-arbeitgeber-achten-sollten)
+- [Hintergrundprüfung 58: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-58-worauf-arbeitgeber-achten-sollten)
+- [Hintergrundprüfung 59: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-59-worauf-arbeitgeber-achten-sollten)

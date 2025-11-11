@@ -3,7 +3,7 @@ title: "Cyberbetrug 1: Neue Maschen und wie man sich schützt"
 slug: cyberbetrug-1-neue-maschen-und-wie-man-sich-schuetzt
 keyword: cyberbetrug 1
 category: Cybercrime & Fraud
-date: 2025-10-17
+date: 2025-05-16
 excerpt: "Professionelle Ermittlungshilfe bei Cyberbetrug. Erfahren Sie, wie Bona Fides Detektei Ihnen bei der Aufklärung von Online-Betrug helfen kann."
 ---
 
@@ -93,6 +93,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Cyberbetrug 2: Neue Maschen und wie man sich schützt
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Unternehmensbetrug 1: Risiken und Lösungen für HR
+- [Cyberbetrug 2: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-2-neue-maschen-und-wie-man-sich-schuetzt)
+- [Cyberbetrug 23: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-23-neue-maschen-und-wie-man-sich-schuetzt)
+- [Cyberbetrug 24: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-24-neue-maschen-und-wie-man-sich-schuetzt)

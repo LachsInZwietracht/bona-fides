@@ -3,7 +3,7 @@ title: "Untreue 86: Wie man digitale Hinweise erkennt"
 slug: untreue-86-wie-man-digitale-hinweise-erkennt
 keyword: untreue 86
 category: Infidelity & Relationship Investigations
-date: 2025-08-06
+date: 2025-07-20
 excerpt: "Diskrete Ermittlungen bei Untreueverdacht. Rechtssichere Beweissicherung und empathische Beratung durch Bona Fides."
 ---
 
@@ -131,6 +131,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Untreue 1: Wie man digitale Hinweise erkennt
-- Rechtliche Aspekte 1: Was Detektive in Deutschland dürfen
-- Häufige Fragen 1: Antworten vom Privatdetektiv
+- [Untreue 1: Wie man digitale Hinweise erkennt](/blog/untreue-1-wie-man-digitale-hinweise-erkennt)
+- [Untreue 2: Wie man digitale Hinweise erkennt](/blog/untreue-2-wie-man-digitale-hinweise-erkennt)
+- [Untreue 78: Wie man digitale Hinweise erkennt](/blog/untreue-78-wie-man-digitale-hinweise-erkennt)

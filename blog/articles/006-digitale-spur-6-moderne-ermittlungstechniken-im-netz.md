@@ -3,7 +3,7 @@ title: "Digitale Spur 6: Moderne Ermittlungstechniken im Netz"
 slug: digitale-spur-6-moderne-ermittlungstechniken-im-netz
 keyword: digitale spur 6
 category: Digital Investigations
-date: 2025-08-01
+date: 2025-05-01
 excerpt: "Cloud-Forensik und SaaS-Ermittlungen. Erfahren Sie, wie Daten in der Cloud für Ermittlungen genutzt werden können."
 ---
 
@@ -96,6 +96,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Digitale Spur 5: Moderne Ermittlungstechniken im Netz
-- Unternehmensbetrug 1: Risiken und Lösungen für HR
+- [Digitale Spur 1: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur 2: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-2-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur 3: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-3-moderne-ermittlungstechniken-im-netz)

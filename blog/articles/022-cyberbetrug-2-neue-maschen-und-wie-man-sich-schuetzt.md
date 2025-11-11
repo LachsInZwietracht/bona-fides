@@ -3,7 +3,7 @@ title: "Cyberbetrug 2: Neue Maschen und wie man sich schützt"
 slug: cyberbetrug-2-neue-maschen-und-wie-man-sich-schuetzt
 keyword: cyberbetrug 2
 category: Cybercrime & Fraud
-date: 2025-10-30
+date: 2025-05-17
 excerpt: "Romance Scams und Social Engineering. Erfahren Sie, wie emotionale Manipulation zur Betrugsfalle wird."
 ---
 
@@ -89,6 +89,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Cyberbetrug 1: Neue Maschen und wie man sich schützt
-- Cyberbetrug 3: Neue Maschen und wie man sich schützt
-- Untreue 1: Wie man digitale Hinweise erkennt
+- [Cyberbetrug 1: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-1-neue-maschen-und-wie-man-sich-schuetzt)
+- [Cyberbetrug 23: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-23-neue-maschen-und-wie-man-sich-schuetzt)
+- [Cyberbetrug 24: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-24-neue-maschen-und-wie-man-sich-schuetzt)

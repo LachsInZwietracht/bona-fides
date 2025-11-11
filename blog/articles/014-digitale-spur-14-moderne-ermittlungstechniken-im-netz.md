@@ -3,7 +3,7 @@ title: "Digitale Spur 14: Moderne Ermittlungstechniken im Netz"
 slug: digitale-spur-14-moderne-ermittlungstechniken-im-netz
 keyword: digitale spur 14
 category: Digital Investigations
-date: 2025-08-10
+date: 2025-05-09
 excerpt: "Fortgeschrittene digitale Ermittlungsmethoden. OSINT, Forensik und internationale Recherchen von Bona Fides."
 ---
 
@@ -87,6 +87,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Cyberbetrug 1: Neue Maschen und wie man sich schützt
-- Technologie & Tools 1: Die wichtigsten Werkzeuge für Ermittlungen
+- [Digitale Spur 1: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur 2: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-2-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur 3: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-3-moderne-ermittlungstechniken-im-netz)

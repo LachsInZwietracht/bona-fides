@@ -3,7 +3,7 @@ title: "Unternehmensbetrug 105: Risiken und Lösungen für HR"
 slug: unternehmensbetrug-105-risiken-und-loesungen-fuer-hr
 keyword: unternehmensbetrug 105
 category: Corporate Fraud & Employee Misconduct
-date: 2025-08-20
+date: 2025-08-08
 excerpt: "Professionelle Ermittlungen bei Unternehmensbetrug. BetrVG-konform und DSGVO-sicher durch Bona Fides Detektei."
 ---
 
@@ -125,6 +125,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Unternehmensbetrug 1: Risiken und Lösungen für HR
-- Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten
-- Rechtliche Aspekte 1: Was Detektive in Deutschland dürfen
+- [Unternehmensbetrug 1: Risiken und Lösungen für HR](/blog/unternehmensbetrug-1-risiken-und-lösungen-fuer-hr)
+- [Unternehmensbetrug 92: Risiken und Lösungen für HR](/blog/unternehmensbetrug-92-risiken-und-loesungen-fuer-hr)
+- [Unternehmensbetrug 93: Risiken und Lösungen für HR](/blog/unternehmensbetrug-93-risiken-und-loesungen-fuer-hr)

@@ -3,7 +3,7 @@ title: "Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten"
 slug: hintergrundpruefung-1-worauf-arbeitgeber-achten-sollten
 keyword: hintergrundprüfung 1
 category: Background Checks & Due Diligence
-date: 2025-10-18
+date: 2025-06-20
 excerpt: "Professionelle Hintergrundprüfungen für Arbeitgeber. Erfahren Sie, wie Bona Fides Detektei Sie bei der sicheren Personalauswahl unterstützt."
 ---
 
@@ -95,6 +95,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Hintergrundprüfung 2: Worauf Arbeitgeber achten sollten
-- Unternehmensbetrug 1: Risiken und Lösungen für HR
-- Rechtliche Aspekte 1: Was Detektive in Deutschland dürfen
+- [Hintergrundprüfung 2: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-2-worauf-arbeitgeber-achten-sollten)
+- [Hintergrundprüfung 58: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-58-worauf-arbeitgeber-achten-sollten)
+- [Hintergrundprüfung 59: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-59-worauf-arbeitgeber-achten-sollten)

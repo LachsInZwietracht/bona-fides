@@ -3,7 +3,7 @@ title: "Fallstudie 130: Aus der Praxis der digitalen Ermittlungen"
 slug: fallstudie-130-aus-der-praxis-der-digitalen-ermittlungen
 keyword: fallstudie 130
 category: Case Studies & Real Stories
-date: 2025-09-30
+date: 2025-09-02
 excerpt: "Reale Ermittlungsfälle aus der Praxis. Wie Bona Fides digitale Beweise sichert und komplexe Fälle löst."
 ---
 
@@ -130,6 +130,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Cyberbetrug 1: Neue Maschen und wie man sich schützt
-- Rechtliche Aspekte 1: Was Detektive in Deutschland dürfen
+- [Fallstudie 1: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-1-aus-der-praxis-der-digitalen-ermittlungen)
+- [Fallstudie 127: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-127-aus-der-praxis-der-digitalen-ermittlungen)
+- [Fallstudie 128: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-128-aus-der-praxis-der-digitalen-ermittlungen)

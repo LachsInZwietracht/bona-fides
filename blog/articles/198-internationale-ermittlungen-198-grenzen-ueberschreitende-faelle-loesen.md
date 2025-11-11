@@ -3,7 +3,7 @@ title: "Internationale Ermittlungen 198: Grenzüberschreitende Fälle lösen"
 slug: internationale-ermittlungen-198-grenzen-ueberschreitende-faelle-loesen
 keyword: internationale ermittlungen 198
 category: International Investigations
-date: 2025-06-28
+date: 2025-11-09
 excerpt: "Internationale Ermittlungen über Ländergrenzen hinweg. Expertise, Netzwerke und Rechtssicherheit von Bona Fides."
 ---
 
@@ -167,6 +167,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Rechtliche Aspekte 1: Was Detektive in Deutschland dürfen
-- Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten
+- [Internationale Ermittlungen 1: Grenzen überschreitende Fälle lösen](/blog/internationale-ermittlungen-1-grenzen-ueberschreitende-faelle-loesen)
+- [Internationale Ermittlungen 192: Grenzüberschreitende Fälle lösen](/blog/internationale-ermittlungen-192-grenzen-ueberschreitende-faelle-loesen)
+- [Internationale Ermittlungen 193: Grenzüberschreitende Fälle lösen](/blog/internationale-ermittlungen-193-grenzen-ueberschreitende-faelle-loesen)

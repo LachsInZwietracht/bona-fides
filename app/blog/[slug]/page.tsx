@@ -25,15 +25,48 @@ export async function generateMetadata({
     return { title: "Artikel nicht gefunden" };
   }
 
+  const baseUrl = 'https://bona-fides.vercel.app';
+  const articleUrl = `${baseUrl}/blog/${slug}`;
+
   return {
     title: `${article.metadata.title} | Bona Fides Detektei`,
     description: article.metadata.excerpt,
     keywords: article.metadata.keyword,
+    authors: [{ name: 'Bona Fides Detektei' }],
+    creator: 'Bona Fides Detektei',
+    publisher: 'Bona Fides Detektei',
+    alternates: {
+      canonical: articleUrl,
+    },
     openGraph: {
       title: article.metadata.title,
       description: article.metadata.excerpt,
-      type: "article",
+      url: articleUrl,
+      siteName: 'Bona Fides Detektei',
+      locale: 'de_DE',
+      type: 'article',
       publishedTime: article.metadata.date,
+      authors: ['Bona Fides Detektei'],
+      section: article.metadata.category,
+      tags: [article.metadata.keyword, article.metadata.category, 'Detektei', 'Deutschland', 'Ermittlungen'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.metadata.title,
+      description: article.metadata.excerpt,
+      creator: '@bonafides',
+      site: '@bonafides',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
 }

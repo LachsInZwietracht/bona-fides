@@ -3,7 +3,7 @@ title: "Fallstudie 128: Aus der Praxis der digitalen Ermittlungen"
 slug: fallstudie-128-aus-der-praxis-der-digitalen-ermittlungen
 keyword: fallstudie 128
 category: Case Studies & Real Stories
-date: 2025-09-28
+date: 2025-08-31
 excerpt: "Reale Ermittlungsfälle aus der Praxis. Wie Bona Fides digitale Beweise sichert und komplexe Fälle löst."
 ---
 
@@ -120,6 +120,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Cyberbetrug 1: Neue Maschen und wie man sich schützt
-- Internationale Ermittlungen 1: Grenzüberschreitende Fälle lösen
+- [Fallstudie 1: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-1-aus-der-praxis-der-digitalen-ermittlungen)
+- [Fallstudie 127: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-127-aus-der-praxis-der-digitalen-ermittlungen)
+- [Fallstudie 129: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-129-aus-der-praxis-der-digitalen-ermittlungen)

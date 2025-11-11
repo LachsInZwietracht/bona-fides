@@ -3,7 +3,7 @@ title: "Cyberbetrug 36: Neue Maschen und wie man sich schützt"
 slug: cyberbetrug-36-neue-maschen-und-wie-man-sich-schuetzt
 keyword: cyberbetrug 36
 category: Cybercrime & Fraud
-date: 2025-07-04
+date: 2025-05-31
 excerpt: "Schutz vor Online-Betrug und professionelle Ermittlungen. Bona Fides hilft bei der Aufklärung von Cybercrime-Fällen."
 ---
 
@@ -110,6 +110,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Cyberbetrug 1: Neue Maschen und wie man sich schützt
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Leitfaden 1: Schritt-für-Schritt zur eigenen Sicherheit
+- [Cyberbetrug 1: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-1-neue-maschen-und-wie-man-sich-schuetzt)
+- [Cyberbetrug 2: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-2-neue-maschen-und-wie-man-sich-schuetzt)
+- [Cyberbetrug 23: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-23-neue-maschen-und-wie-man-sich-schuetzt)

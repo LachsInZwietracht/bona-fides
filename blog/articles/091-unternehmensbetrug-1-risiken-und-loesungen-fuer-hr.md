@@ -3,7 +3,7 @@ title: "Unternehmensbetrug 1: Risiken und Lösungen für HR"
 slug: unternehmensbetrug-1-risiken-und-lösungen-fuer-hr
 keyword: unternehmensbetrug 1
 category: Corporate Fraud & Employee Misconduct
-date: 2025-10-20
+date: 2025-07-25
 excerpt: "Professionelle Ermittlungen bei Unternehmensbetrug. Erfahren Sie, wie Bona Fides Detektei HR-Abteilungen bei der Aufklärung von Mitarbeiter-Fehlverhalten unterstützt."
 ---
 
@@ -95,6 +95,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Unternehmensbetrug 2: Risiken und Lösungen für HR
-- Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten
-- Cyberbetrug 1: Neue Maschen und wie man sich schützt
+- [Unternehmensbetrug 92: Risiken und Lösungen für HR](/blog/unternehmensbetrug-92-risiken-und-loesungen-fuer-hr)
+- [Unternehmensbetrug 93: Risiken und Lösungen für HR](/blog/unternehmensbetrug-93-risiken-und-loesungen-fuer-hr)
+- [Unternehmensbetrug 94: Risiken und Lösungen für HR](/blog/unternehmensbetrug-94-risiken-und-loesungen-fuer-hr)

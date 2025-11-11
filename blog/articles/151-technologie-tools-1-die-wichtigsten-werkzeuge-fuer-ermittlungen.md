@@ -3,7 +3,7 @@ title: "Technologie & Tools 1: Die wichtigsten Werkzeuge für Ermittlungen"
 slug: technologie-tools-1-die-wichtigsten-werkzeuge-fuer-ermittlungen
 keyword: technologie tools 1
 category: Technology & Tools
-date: 2025-10-24
+date: 2025-09-23
 excerpt: "Einblick in professionelle Ermittlungs-Tools. Erfahren Sie, welche Technologien Bona Fides für digitale Ermittlungen einsetzt."
 ---
 
@@ -119,6 +119,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Technologie & Tools 2: Die wichtigsten Werkzeuge für Ermittlungen
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Leitfaden 1: Schritt-für-Schritt zur eigenen Sicherheit
+- [Technologie & Tools 152: Die wichtigsten Werkzeuge für Ermittlungen](/blog/technologie-tools-152-die-wichtigsten-werkzeuge-fuer-ermittlungen)
+- [Technologie & Tools 153: Die wichtigsten Werkzeuge für Ermittlungen](/blog/technologie-tools-153-die-wichtigsten-werkzeuge-fuer-ermittlungen)
+- [Technologie & Tools 154: Die wichtigsten Werkzeuge für Ermittlungen](/blog/technologie-tools-154-die-wichtigsten-werkzeuge-fuer-ermittlungen)

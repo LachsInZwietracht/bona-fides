@@ -70,17 +70,26 @@ export function Header({ dark = false }: { dark?: boolean }) {
             </Link>
             <Link
               href="/geloeste-faelle"
-              className={dark 
-                ? "text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors" 
+              className={dark
+                ? "text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors"
                 : "text-charcoal hover:text-detective-blue transition-colors font-crimson"
               }
             >
               Gelöste Fälle
             </Link>
-            <Button 
+            <Link
+              href="/blog"
+              className={dark
+                ? "text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors"
+                : "text-charcoal hover:text-detective-blue transition-colors font-crimson"
+              }
+            >
+              Blog
+            </Link>
+            <Button
               asChild
-              className={dark 
-                ? "bg-white text-black hover:bg-gray-200 font-mono text-xs uppercase tracking-wide" 
+              className={dark
+                ? "bg-white text-black hover:bg-gray-200 font-mono text-xs uppercase tracking-wide"
                 : "bg-detective-blue hover:bg-detective-blue/90 text-white"
               }
               size={dark ? "sm" : undefined}
@@ -152,18 +161,28 @@ export function Header({ dark = false }: { dark?: boolean }) {
               </Link>
               <Link
                 href="/geloeste-faelle"
-                className={dark 
-                  ? "text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors" 
+                className={dark
+                  ? "text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors"
                   : "text-charcoal hover:text-detective-blue transition-colors font-crimson"
                 }
                 onClick={() => setIsMenuOpen(false)}
               >
                 Gelöste Fälle
               </Link>
-              <Button 
+              <Link
+                href="/blog"
+                className={dark
+                  ? "text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors"
+                  : "text-charcoal hover:text-detective-blue transition-colors font-crimson"
+                }
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
+              </Link>
+              <Button
                 asChild
-                className={dark 
-                  ? "bg-white text-black hover:bg-gray-200 font-mono text-xs uppercase tracking-wide w-fit" 
+                className={dark
+                  ? "bg-white text-black hover:bg-gray-200 font-mono text-xs uppercase tracking-wide w-fit"
                   : "bg-detective-blue hover:bg-detective-blue/90 text-white w-fit"
                 }
               >

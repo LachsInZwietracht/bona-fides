@@ -3,7 +3,7 @@ title: "Technologie & Tools 154: Die wichtigsten Werkzeuge für Ermittlungen"
 slug: technologie-tools-154-die-wichtigsten-werkzeuge-fuer-ermittlungen
 keyword: technologie tools 154
 category: Technology & Tools
-date: 2025-09-24
+date: 2025-09-26
 excerpt: "Moderne Ermittlungstechnologie erklärt. Welche Tools Profis nutzen und wie sie funktionieren – von Bona Fides."
 ---
 
@@ -138,6 +138,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Leitfaden 1: Schritt für Schritt zur eigenen Sicherheit
-- Rechtliche Aspekte 1: Was Detektive in Deutschland dürfen
+- [Technologie & Tools 1: Die wichtigsten Werkzeuge für Ermittlungen](/blog/technologie-tools-1-die-wichtigsten-werkzeuge-fuer-ermittlungen)
+- [Technologie & Tools 152: Die wichtigsten Werkzeuge für Ermittlungen](/blog/technologie-tools-152-die-wichtigsten-werkzeuge-fuer-ermittlungen)
+- [Technologie & Tools 153: Die wichtigsten Werkzeuge für Ermittlungen](/blog/technologie-tools-153-die-wichtigsten-werkzeuge-fuer-ermittlungen)

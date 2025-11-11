@@ -3,7 +3,7 @@ title: "Digitale Spur 5: Moderne Ermittlungstechniken im Netz"
 slug: digitale-spur-5-moderne-ermittlungstechniken-im-netz
 keyword: digitale spur 5
 category: Digital Investigations
-date: 2025-10-29
+date: 2025-04-30
 excerpt: "E-Mail-Forensik und digitale Kommunikationsanalyse. Erfahren Sie, wie versteckte Informationen in E-Mails aufgedeckt werden."
 ---
 
@@ -90,6 +90,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Digitale Spur 4: Moderne Ermittlungstechniken im Netz
-- Cyberbetrug 1: Neue Maschen und wie man sich schützt
+- [Digitale Spur 1: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur 2: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-2-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur 3: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-3-moderne-ermittlungstechniken-im-netz)

@@ -3,9 +3,39 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Bona Fides Detektei",
+  title: "Blog | Bona Fides Detektei - Expertise in Digitalen Ermittlungen",
   description:
-    "Expertenwissen zu digitalen Ermittlungen, Cyberkriminalität, Betrugsaufklärung und Hintergrundprüfungen. Professionelle Artikel von Deutschlands führender Detektei.",
+    "200+ Fachartikel zu digitalen Ermittlungen, Cyberkriminalität, Betrugsaufklärung und Hintergrundprüfungen. DSGVO-konform, rechtssicher und praxisnah von Deutschlands führender Detektei.",
+  keywords: "Detektei Blog, digitale Ermittlungen, Cyberkriminalität, Betrugsaufklärung, OSINT, forensische Analysen, Hintergrundprüfungen",
+  alternates: {
+    canonical: 'https://bona-fides.vercel.app/blog',
+  },
+  openGraph: {
+    title: "Bona Fides Blog - Expertise in Digitalen Ermittlungen",
+    description: "200+ Fachartikel zu digitalen Ermittlungen, Cyberkriminalität und Betrugsaufklärung",
+    url: 'https://bona-fides.vercel.app/blog',
+    siteName: 'Bona Fides Detektei',
+    locale: 'de_DE',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Bona Fides Blog - Expertise in Digitalen Ermittlungen",
+    description: "200+ Fachartikel zu digitalen Ermittlungen und Cyberkriminalität",
+    creator: '@bonafides',
+    site: '@bonafides',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 interface BlogIndexProps {

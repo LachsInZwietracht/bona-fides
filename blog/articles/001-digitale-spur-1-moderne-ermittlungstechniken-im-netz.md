@@ -3,7 +3,7 @@ title: "Digitale Spur 1: Moderne Ermittlungstechniken im Netz"
 slug: digitale-spur-1-moderne-ermittlungstechniken-im-netz
 keyword: digitale spur 1
 category: Digital Investigations
-date: 2025-10-15
+date: 2025-04-26
 excerpt: "Professionelle Ermittlungshilfe für digitale Spurensuche. Erfahren Sie, wie Bona Fides Detektei Ihnen bei der Aufklärung komplexer Online-Fälle helfen kann."
 ---
 
@@ -95,6 +95,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Digitale Spur 2: Moderne Ermittlungstechniken im Netz
-- Technologie & Tools 1: Die wichtigsten Werkzeuge für Ermittlungen
-- Cyberbetrug 1: Neue Maschen und wie man sich schützt
+- [Digitale Spur 2: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-2-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur 3: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-3-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur 4: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-4-moderne-ermittlungstechniken-im-netz)

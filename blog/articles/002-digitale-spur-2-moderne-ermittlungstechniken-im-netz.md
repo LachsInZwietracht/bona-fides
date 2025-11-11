@@ -3,7 +3,7 @@ title: "Digitale Spur 2: Moderne Ermittlungstechniken im Netz"
 slug: digitale-spur-2-moderne-ermittlungstechniken-im-netz
 keyword: digitale spur 2
 category: Digital Investigations
-date: 2025-10-16
+date: 2025-04-27
 excerpt: "Fortgeschrittene Techniken der digitalen Spurensicherung. Erfahren Sie, wie komplexe Online-Ermittlungen professionell durchgeführt werden."
 ---
 
@@ -95,6 +95,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- Digitale Spur 1: Moderne Ermittlungstechniken im Netz
-- Digitale Spur 3: Moderne Ermittlungstechniken im Netz
-- Technologie & Tools 2: Die wichtigsten Werkzeuge für Ermittlungen
+- [Digitale Spur 1: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur 3: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-3-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur 4: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-4-moderne-ermittlungstechniken-im-netz)
