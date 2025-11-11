@@ -193,14 +193,24 @@ test.describe('Bona Fides Detective Agency Homepage', () => {
     const heroTitle = page.locator('h1').first();
     
     // Check that page has the expected visual elements
-    await expect(page.locator('[class*="font-special-elite"]')).toHaveCount({ min: 1 });
-    await expect(page.locator('[class*="font-playfair"]')).toHaveCount({ min: 1 });
-    await expect(page.locator('[class*="font-crimson"]')).toHaveCount({ min: 1 });
-    
+    const fontElements = await page.locator('[class*="font-special-elite"]').count();
+    expect(fontElements).toBeGreaterThan(0);
+
+    const playfairElements = await page.locator('[class*="font-playfair"]').count();
+    expect(playfairElements).toBeGreaterThan(0);
+
+    const crimsonElements = await page.locator('[class*="font-crimson"]').count();
+    expect(crimsonElements).toBeGreaterThan(0);
+
     // Check that color classes are applied
-    await expect(page.locator('[class*="detective-blue"]')).toHaveCount({ min: 1 });
-    await expect(page.locator('[class*="investigation-brown"]')).toHaveCount({ min: 1 });
-    await expect(page.locator('[class*="case-file"]')).toHaveCount({ min: 1 });
+    const blueElements = await page.locator('[class*="detective-blue"]').count();
+    expect(blueElements).toBeGreaterThan(0);
+
+    const brownElements = await page.locator('[class*="investigation-brown"]').count();
+    expect(brownElements).toBeGreaterThan(0);
+
+    const caseFileElements = await page.locator('[class*="case-file"]').count();
+    expect(caseFileElements).toBeGreaterThan(0);
   });
 
   test('page is accessible with keyboard navigation', async ({ page }) => {

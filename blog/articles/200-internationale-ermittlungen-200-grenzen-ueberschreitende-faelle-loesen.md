@@ -9,6 +9,9 @@ excerpt: "Internationale Ermittlungen über Ländergrenzen hinweg. Expertise, Ne
 
 # Internationale Ermittlungen 200: Grenzüberschreitende Fälle lösen
 
+> **⚠️ HINWEIS: Dies ist ein fiktionales Szenario** 
+> Dieser Artikel beschreibt einen fiktiven Kunstraub zu Bildungs- und Demonstrationszwecken. Die Mona Lisa ist sicher im Louvre. Alle beschriebenen Personen, Ereignisse und Ermittlungen sind erfunden. Dieser Inhalt dient dazu, Ermittlungsmethoden und Sicherheitskonzepte zu veranschaulichen.
+
 ## Zusammenfassung (TL;DR)
 
 Internationale Ermittlungen erfordern globale Netzwerke, rechtliche Expertise in mehreren Jurisdiktionen und kulturelles Verständnis. Bona Fides verfügt über Partnerdetekteien in über 50 Ländern und ermittelt weltweit – von Wirtschaftsspionage über Identitätsdiebstahl bis zu Vermögensermittlungen. DSGVO-konform, rechtssicher und mit lokaler Expertise vor Ort. Kosten variieren je nach Region (10.000-50.000+ € für komplexe Fälle). Internationale Rechtshilfe, Übersetzungen und Reisekosten einkalkuliert.
