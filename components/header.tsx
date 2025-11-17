@@ -42,15 +42,6 @@ export function Header({ dark = false }: { dark?: boolean }) {
               Home
             </Link>
             <Link
-              href="/services"
-              className={dark 
-                ? "text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors" 
-                : "text-charcoal hover:text-detective-blue transition-colors font-crimson"
-              }
-            >
-              Services
-            </Link>
-            <Link
               href="/about"
               className={dark 
                 ? "text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors" 
@@ -67,15 +58,6 @@ export function Header({ dark = false }: { dark?: boolean }) {
               }
             >
               Team
-            </Link>
-            <Link
-              href="/geloeste-faelle"
-              className={dark
-                ? "text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors"
-                : "text-charcoal hover:text-detective-blue transition-colors font-crimson"
-              }
-            >
-              Gelöste Fälle
             </Link>
             <Link
               href="/blog"
@@ -130,16 +112,6 @@ export function Header({ dark = false }: { dark?: boolean }) {
                 Home
               </Link>
               <Link
-                href="/services"
-                className={dark 
-                  ? "text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors" 
-                  : "text-charcoal hover:text-detective-blue transition-colors font-crimson"
-                }
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Services
-              </Link>
-              <Link
                 href="/about"
                 className={dark 
                   ? "text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors" 
@@ -158,16 +130,6 @@ export function Header({ dark = false }: { dark?: boolean }) {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Team
-              </Link>
-              <Link
-                href="/geloeste-faelle"
-                className={dark
-                  ? "text-gray-400 hover:text-white font-mono text-sm uppercase tracking-wide transition-colors"
-                  : "text-charcoal hover:text-detective-blue transition-colors font-crimson"
-                }
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Gelöste Fälle
               </Link>
               <Link
                 href="/blog"

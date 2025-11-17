@@ -63,6 +63,12 @@ This is a Next.js 15 application using the App Router with:
 - `tests/` - Playwright test files
 - `public/` - Static assets
 
+### Page Status
+
+#### Disabled/Unused Pages
+- **Gelöste Fälle** (`/app/geloeste-faelle/page.tsx`): Page exists but is not linked in navigation. Decision made to not use this page for now.
+- **Services** page: Navigation link has been removed. May be re-enabled in the future.
+
 ### shadcn/ui Configuration
 
 Components are configured with:
