@@ -171,7 +171,7 @@ export default function HomePage() {
 
               {/* Call to action */}
               <div className="space-y-4">
-                <Link href="/contact">
+                <Link href="#contact">
                   <Button
                     size="lg"
                     className="font-serif text-lg px-8 py-6 shadow-2xl transition-all duration-300 border"
@@ -702,7 +702,7 @@ export default function HomePage() {
       </div>
 
       {/* Contact Section */}
-      <div className="relative z-10 py-20 bg-black">
+      <div id="contact" className="relative z-10 py-20 bg-black">
         <div className="container mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
@@ -980,7 +980,7 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-                <Link href="/contact">
+                <Link href="#contact">
                   <Button
                     size="lg"
                     className="font-serif text-xl px-10 py-7 shadow-2xl transition-all duration-300 border-2"

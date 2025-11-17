@@ -366,7 +366,7 @@ export default function TeamPage() {
                 Teilen Sie uns vertraulich Ihr Anliegen mit. Wir analysieren die Lage, definieren ein passendes Einsatzteam und
                 liefern Ihnen binnen 24 Stunden eine belastbare Erstbewertung.
               </p>
-              <Link href="/contact">
+              <Link href="/#contact">
                 <Button
                   size="lg"
                   className="mt-8 border border-[#c2b16d] bg-[#c2b16d] hover:bg-[#a89a5a] px-10 py-6 font-serif text-lg text-[#1a1612] hover:text-[#1a1612] shadow-[0_15px_45px_rgba(194,177,109,0.45)] transition-all duration-300 hover:scale-[1.02]"

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
+import Link from 'next/link';
 import { Header } from '@/components/header';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -532,7 +533,7 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
                   asChild
                   disabled={!vaultUnlocked}
                 >
-                  <a href="/contact">Kontakt aufnehmen</a>
+                  <Link href="/#contact">Kontakt aufnehmen</Link>
                 </Button>
               </div>
             </div>

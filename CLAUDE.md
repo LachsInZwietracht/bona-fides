@@ -69,6 +69,9 @@ This is a Next.js 15 application using the App Router with:
 - **Gelöste Fälle** (`/app/geloeste-faelle/page.tsx`): Page exists but is not linked in navigation. Decision made to not use this page for now.
 - **Services** page: Navigation link has been removed. May be re-enabled in the future.
 
+#### Removed Pages
+- **Contact** page: Removed redundant `/app/contact/page.tsx`. All contact functionality consolidated to homepage contact form with `#contact` anchor. All contact links now redirect to `/#contact` to provide unified user experience.
+
 ### shadcn/ui Configuration
 
 Components are configured with:
