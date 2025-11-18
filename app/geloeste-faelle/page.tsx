@@ -354,9 +354,6 @@ export default function GeloesteFaellePage() {
             <p className="font-mono text-gray-300 mb-6">
               Jeder Fall ist einzigartig. Jede Wahrheit verdient es, gefunden zu werden.
             </p>
-            <div className="text-xs font-mono tracking-widest mb-6" style={{color: 'rgba(254, 243, 198, 0.7)'}}>
-              • VERTRAULICH • PROFESSIONELL • ERFOLGREICH •
-            </div>
             <Link href="/#contact">
               <Button 
                 size="lg"

@@ -286,22 +286,22 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
                 Wer wir sind, wofür wir stehen
               </h1>
               <p className="text-lg font-mono uppercase tracking-[0.3em] text-gray-400">
-                Detektivische Exzellenz seit über fünf Jahrzehnten
+                Deutschlands führende Digital-Detektei mit dem größten Expertenteam
               </p>
               <p className="max-w-xl text-lg text-gray-300">
-                Bona Fides ist mehr als eine Detektei – wir sind Vertraute unserer Mandanten. Seit 1965 lösen wir
-                heikle Fälle für Familienunternehmen, Konzerne und Privatpersonen, die absolute Diskretion
-                benötigen. Unsere Methoden verbinden klassische Observation, digitale Forensik und menschliche
-                Intuition zu einer zuverlässigen Ermittlungsarchitektur.
+                Als eine der führenden Digital-Detekteien Deutschlands verfügen wir über das größte spezialisierte
+                Expertenteam für Cyber-Ermittlungen, Online-Forensik und digitale Beweissicherung. Mit modernster
+                IT-Forensik-Technologie und jahrzehntelanger Erfahrung lösen wir komplexe Cybercrime-Fälle,
+                Identitätsdiebstahl und Wirtschaftsspionage für Unternehmen und Privatpersonen deutschlandweit.
               </p>
               <div className="flex flex-wrap items-center gap-6 text-gray-400">
                 <div>
-                  <div className="text-4xl font-serif text-white">2.500+</div>
-                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">erfolgreich gelöste Fälle</div>
+                  <div className="text-4xl font-serif text-white">85+</div>
+                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">spezialisierte Cyber-Ermittler</div>
                 </div>
                 <div>
                   <div className="text-4xl font-serif text-white">24/7</div>
-                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">einsatzbereites Handlungsteam</div>
+                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">digitale Forensik verfügbar</div>
                 </div>
                 <div>
                   <div className="text-4xl font-serif text-white">98%</div>

@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from 'react';
 import { Header } from '@/components/header';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, MapPin, PenSquare, Phone, Radar } from 'lucide-react';
 import Image from 'next/image';
@@ -149,11 +148,6 @@ export default function TeamPage() {
           </div>
 
           <header className="mx-auto flex max-w-4xl flex-col items-center text-center">
-            <Badge
-              className="mb-6 border border-[#c2b16d]/30 bg-[#c2b16d]/20 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.5em] text-[#fef3c6]"
-            >
-              Operation Bona Fides · Einsatzkader
-            </Badge>
             <div className="relative">
               <h1 className="mb-4 font-serif text-5xl font-semibold tracking-tight md:text-6xl">Agentenübersicht</h1>
               <span className="typewriter absolute left-1/2 top-full mt-2 hidden -translate-x-1/2 whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.6em] text-[#c2b16d]/80 sm:block">
@@ -318,9 +312,6 @@ export default function TeamPage() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,_rgba(86,203,249,0.12),transparent_60%)]" />
               </div>
               <div className="relative z-10 text-center">
-                <Badge className="mx-auto mb-6 border border-[#c2b16d]/30 bg-[#c2b16d]/20 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.5em] text-[#fef3c6]">
-                  Digitale Detektei · Expertenteam
-                </Badge>
                 <h2 className="mb-8 font-serif text-4xl font-semibold text-white md:text-5xl">
                   Deutschlands führende <br className="hidden sm:block" />
                   <span className="text-[#c2b16d]">Digital-Ermittler</span>
@@ -336,20 +327,6 @@ export default function TeamPage() {
                     Vertrauen Sie auf unser eingespieltes Team aus IT-Forensikern, Cyber-Security-Experten und erfahrenen Privatdetektiven. Gemeinsam bieten wir diskrete und rechtssichere Lösungen für Identitätsdiebstahl, Online-Betrug, Cyberstalking und Corporate Investigations.
                   </p>
                 </div>
-                <div className="mt-10 grid gap-4 text-center md:grid-cols-3">
-                  <div className="rounded-sm border border-[#c2b16d]/20 bg-[#c2b16d]/10 p-4">
-                    <div className="font-mono text-2xl font-bold text-[#fef3c6]">15+</div>
-                    <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400">Jahre Erfahrung</div>
-                  </div>
-                  <div className="rounded-sm border border-[#56cbf9]/20 bg-[#56cbf9]/10 p-4">
-                    <div className="font-mono text-2xl font-bold text-[#cfe9ff]">500+</div>
-                    <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400">Gelöste Cyber-Fälle</div>
-                  </div>
-                  <div className="rounded-sm border border-[#f25f5c]/20 bg-[#f25f5c]/10 p-4">
-                    <div className="font-mono text-2xl font-bold text-[#ffb3b3]">24/7</div>
-                    <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400">Digitale Überwachung</div>
-                  </div>
-                </div>
               </div>
             </div>
           </section>
@@ -358,9 +335,6 @@ export default function TeamPage() {
             <div className="absolute inset-x-0 -top-8 h-px bg-gradient-to-r from-transparent via-[#c2b16d]/40 to-transparent" />
             <div className="relative mx-auto max-w-4xl overflow-hidden rounded-sm border border-white/10 bg-[#0d1018]/80 p-10 text-center shadow-[0_18px_60px_rgba(3,7,16,0.75)]">
               <div className="absolute inset-0 border border-white/5 pointer-events-none" style={{ mixBlendMode: 'overlay' }} />
-              <Badge className="mx-auto mb-6 border border-[#56cbf9]/40 bg-[#56cbf9]/15 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.4em] text-[#cfe9ff]">
-                Fallannahme · Direktkanal
-              </Badge>
               <h2 className="font-serif text-3xl font-semibold text-white md:text-4xl">Bereit für Ihren Fall?</h2>
               <p className="mt-4 text-base text-gray-300">
                 Teilen Sie uns vertraulich Ihr Anliegen mit. Wir analysieren die Lage, definieren ein passendes Einsatzteam und

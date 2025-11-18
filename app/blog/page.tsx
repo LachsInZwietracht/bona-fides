@@ -3,8 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Badge } from "@/components/ui/badge";
-import { FileText, Calendar, ArrowRight, Search } from "lucide-react";
-import Image from "next/image";
+import { Calendar, ArrowRight, Search } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Blog | Bona Fides Detektei - Expertise in Digitalen Ermittlungen",
@@ -46,15 +45,6 @@ interface BlogIndexProps {
   searchParams: Promise<{ category?: string }>;
 }
 
-// Map categories to Unsplash image IDs (detective/investigation themed)
-const categoryImages: Record<string, string> = {
-  "Digital Investigations": "FlPc9_VocJ4", // Digital forensics
-  "Cyberbetrug": "iar-afB0QQw", // Cybercrime
-  "Hintergrundprüfung": "5QgIuuBxKwM", // Background checks
-  "Untreue": "jrh5lAq-mIs", // Surveillance
-  "Unternehmensbetrug": "hpjSkU2UYSU", // Corporate fraud
-  "Louvre Heist": "zGZPvm3tzxE", // Art/museum
-};
 
 export default async function BlogIndex({ searchParams }: BlogIndexProps) {
   const { category: filterCategory } = await searchParams;
@@ -170,8 +160,6 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
 
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {categoryArticles.map((article) => {
-                  const imageId = categoryImages[category] || "FlPc9_VocJ4";
-
                   return (
                     <Link
                       key={article.metadata.slug}
@@ -181,33 +169,13 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
                       {/* Case File Folder */}
                       <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm overflow-hidden transition-all duration-700 hover:scale-105 hover:-rotate-1 shadow-2xl hover:bg-white/8 hover:border-amber-500/30 hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.2)]">
 
-                        {/* Image */}
-                        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-900">
-                          <Image
-                            src={`https://images.unsplash.com/${imageId}?w=800&q=80&fit=crop`}
-                            alt={article.metadata.title}
-                            fill
-                            className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700 group-hover:scale-110"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-
-                          {/* Category Badge on Image */}
-                          <div className="absolute top-4 left-4">
-                            <Badge className="bg-red-600/90 text-white font-mono text-xs px-2 py-1 rounded-sm backdrop-blur-sm">
-                              {article.metadata.category}
-                            </Badge>
-                          </div>
-
-                          {/* Classification Stamp */}
-                          <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform rotate-12">
-                            <div className="w-12 h-12 border-2 border-dashed border-amber-400/70 rounded-full flex items-center justify-center backdrop-blur-sm">
-                              <FileText className="h-5 w-5 text-amber-400" />
-                            </div>
-                          </div>
-                        </div>
-
                         {/* Content */}
                         <div className="p-6 space-y-4">
+                          {/* Category Badge */}
+                          <Badge className="bg-red-600/90 text-white font-mono text-xs px-2 py-1 rounded-sm backdrop-blur-sm w-fit">
+                            {article.metadata.category}
+                          </Badge>
+
                           <h3 className="font-serif font-bold text-xl text-white leading-tight group-hover:text-amber-300 group-hover:tracking-wider transition-all duration-500 line-clamp-2">
                             {article.metadata.title}
                           </h3>

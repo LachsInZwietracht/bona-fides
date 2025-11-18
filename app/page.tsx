@@ -124,10 +124,6 @@ export default function HomePage() {
             <div className="space-y-8">
               {/* Header with classic noir styling */}
               <div className="space-y-4">
-                <Badge className="font-mono text-xs tracking-widest px-3 py-1 border" style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}>
-                  LIZENZIERT & VERSICHERT
-                </Badge>
-
                 <div className="space-y-2">
                   <h1 className="text-7xl font-serif font-bold tracking-tight text-white drop-shadow-2xl">
                     BONA
@@ -147,25 +143,25 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* Services with classic icons */}
+              {/* Services with digital focus icons */}
               <div className="grid grid-cols-3 gap-6 py-8">
                 <div className="text-center space-y-2">
                   <div className="w-12 h-12 mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
                     <Search className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-sm font-mono text-gray-400 uppercase tracking-wide">Ermittlungen</p>
+                  <p className="text-sm font-mono text-gray-400 uppercase tracking-wide">Cyber-Forensik</p>
                 </div>
                 <div className="text-center space-y-2">
                   <div className="w-12 h-12 mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
                     <Eye className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-sm font-mono text-gray-400 uppercase tracking-wide">Überwachung</p>
+                  <p className="text-sm font-mono text-gray-400 uppercase tracking-wide">Digitale Ermittlungen</p>
                 </div>
                 <div className="text-center space-y-2">
                   <div className="w-12 h-12 mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
-                    <Shield className="w-6 h-6 text-white" />
+                    <Lock className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-sm font-mono text-gray-400 uppercase tracking-wide">Diskretion</p>
+                  <p className="text-sm font-mono text-gray-400 uppercase tracking-wide">Online Sicherheit</p>
                 </div>
               </div>
 
@@ -270,10 +266,6 @@ export default function HomePage() {
       <div className="relative z-10 py-20 bg-gradient-to-b from-black/90 to-black/95">
         <div className="container mx-auto px-8">
           <div className="text-center space-y-6 mb-16">
-            <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
-              SPEZIALISIERUNGEN
-            </Badge>
-            
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
               ERMITTLUNGSDIENSTE
             </h2>
@@ -381,10 +373,6 @@ export default function HomePage() {
       <div className="relative z-10 py-20 bg-gradient-to-b from-black/95 to-black">
         <div className="container mx-auto px-8">
           <div className="text-center space-y-6 mb-16">
-            <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
-              VERTRAUEN & EXZELLENZ
-            </Badge>
-            
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
               WARUM BONA FIDES
             </h2>
@@ -427,10 +415,6 @@ export default function HomePage() {
         <div className="container mx-auto px-8">
           {/* Section Header */}
           <div className="text-center space-y-6 mb-20">
-            <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
-              FALLARCHIV • KLASSIFIZIERT
-            </Badge>
-            
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
               GELÖSTE FÄLLE
             </h2>
@@ -546,9 +530,6 @@ export default function HomePage() {
             <p className="font-mono text-gray-300 mb-4">
               Jeder Fall ist einzigartig. Jede Wahrheit verdient es, gefunden zu werden.
             </p>
-            <div className="text-xs font-mono tracking-widest" style={{color: 'rgba(254, 243, 198, 0.7)'}}>
-              • VERTRAULICH • PROFESSIONELL • ERFOLGREICH •
-            </div>
           </div>
         </div>
       </div>
@@ -557,10 +538,6 @@ export default function HomePage() {
       <div className="relative z-10 py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-8">
           <div className="text-center space-y-6 mb-16">
-            <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
-              ZEUGENBERICHTE
-            </Badge>
-
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
               KUNDENSTIMMEN
             </h2>
@@ -641,10 +618,6 @@ export default function HomePage() {
       <div className="relative z-10 py-20 bg-black">
         <div className="container mx-auto px-8">
           <div className="text-center space-y-6 mb-16">
-            <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
-              INFORMATIONEN
-            </Badge>
-
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
               HÄUFIG GESTELLTE FRAGEN
             </h2>
@@ -708,10 +681,6 @@ export default function HomePage() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
-                  VERTRAULICHE BERATUNG
-                </Badge>
-                
                 <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
                   KONTAKT
                 </h2>
@@ -790,7 +759,7 @@ export default function HomePage() {
                 <div className="relative z-10">
                   <div className="flex justify-between items-start mb-8">
                     <h3 className="text-2xl font-mono font-bold text-black tracking-tight">
-                      VERTRAULICHE FALLANFRAGE
+                      FALLANFRAGE
                     </h3>
                     <Badge className="bg-red-500 text-white font-mono text-xs px-2 py-1 rounded-sm">
                       {formStatus === 'success' ? 'ÜBERMITTELT' : 'VERTRAULICH'}
@@ -930,7 +899,7 @@ export default function HomePage() {
                           ) : (
                             <>
                               <Send className="mr-2 h-4 w-4" />
-                              VERTRAULICHE ANFRAGE SENDEN
+                              ANFRAGE SENDEN
                             </>
                           )}
                         </Button>
@@ -965,10 +934,6 @@ export default function HomePage() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-radial from-white/10 via-white/5 to-transparent blur-3xl" />
 
             <div className="relative z-10 space-y-8">
-              <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.3)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.4)'}}>
-                BEREIT FÜR ANTWORTEN?
-              </Badge>
-
               <h2 className="text-4xl md:text-6xl font-serif font-bold text-white leading-tight">
                 Die Wahrheit wartet nicht.
                 <br />
@@ -1006,7 +971,7 @@ export default function HomePage() {
 
               <div className="pt-6 border-t border-white/20 mt-8">
                 <p className="font-mono text-sm text-gray-400 tracking-widest">
-                  24/7 VERFÜGBAR • KOSTENLOSE ERSTBERATUNG • ABSOLUTE DISKRETION
+                  24/7 VERFÜGBAR • KOSTENLOSE ERSTBERATUNG
                 </p>
               </div>
 
