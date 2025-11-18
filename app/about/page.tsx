@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/header';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
   Shield,
@@ -20,47 +19,58 @@ import {
 
 const milestones = [
   {
-    year: '1965',
-    title: 'Gründung der Detektei Bona Fides',
+    year: 'PHASE 1',
+    title: 'Erstberatung & Fallaufnahme',
     description:
-      'Helene und Jakob Radlow eröffnen in Hamburg eine spezialisierte Ermittlungsagentur für anspruchsvolle Wirtschaftsklientel.',
+      'Vertrauliches Erstgespräch zur Risikoanalyse, Zielsetzung und Budgetrahmen. Gemeinsame Erarbeitung der Ermittlungsstrategie.',
     evidence: {
-      title: 'Erste Aktenmappe',
-      summary: 'Handschriftliche Observationstagebücher und gesiegelte Beweisumschläge aus der Gründungszeit.',
-      tag: 'ANALOG',
+      title: 'Intake-Protokoll',
+      summary: 'Strukturierter Fallbogen mit Hypothesen-Matrix, Compliance-Checkliste und Ressourcenplanung.',
+      tag: 'INTAKE',
     },
   },
   {
-    year: '1988',
-    title: 'Expansion in bundesweite Netzwerke',
+    year: 'PHASE 2',
+    title: 'Team-Assembly & Einsatzplanung',
     description:
-      'Aufbau eines verdeckten Partnernetzes in allen Großstädten Deutschlands mit geprüften Ermittlerinnen und Ermittlern.',
+      'Zusammenstellung eines spezialisierten Strike-Teams basierend auf Fallkomplexität und erforderlichen Kompetenzen.',
     evidence: {
-      title: 'Netzwerkdiagramm',
-      summary: 'Interne Strukturskizze mit codierten Rufzeichen und Prioritätsstufen.',
-      tag: 'KODEX',
+      title: 'Team-Briefing',
+      summary: 'Fallleiter-Assignment, Skillset-Mapping und verschlüsselte Kommunikationskanäle.',
+      tag: 'TASKFORCE',
     },
   },
   {
-    year: '2001',
-    title: 'Digitale Forensik und Cyber-Ermittlungen',
+    year: 'PHASE 3',
+    title: 'Aktive Ermittlung & Observation',
     description:
-      'Einrichtung eines internen Labors für IT-Forensik, Darknet-Analysen und datengetriebene Beweisführung.',
+      'Systematische Beweissammlung durch OSINT-Recherche, Feldarbeit und forensische Analyse mit laufender Dokumentation.',
     evidence: {
-      title: 'Forensische Sicherung',
-      summary: 'Hash-gesicherte Datenträger, Protokolle der ersten Cybercrime-Ermittlungen und Netzwerklogs.',
-      tag: 'DIGITAL',
+      title: 'Field Reports',
+      summary: 'Echtzeitprotokollierung, GPS-gestützte Observation und kryptographisch gesicherte Beweiskette.',
+      tag: 'OPERATION',
     },
   },
   {
-    year: '2018',
-    title: 'Supabase-basierte Fallakten',
+    year: 'PHASE 4',
+    title: 'Datenanalyse & Mustererkennung',
     description:
-      'Sichere Mandantenplattform für verschlüsselte Fallkommunikation, Audit-Trails und Live-Berichte eingeführt.',
+      'Strukturierte Auswertung gesammelter Informationen, Plausibilitätsprüfung und Vorbereitung rechtskonformer Beweisführung.',
     evidence: {
-      title: 'Mandanten-Portal',
-      summary: 'Mockups der verschlüsselten Fallakte, MFA-Token und Audit-Report der Einführung.',
-      tag: 'LIVE',
+      title: 'Analyse-Dashboard',
+      summary: 'Visualisierte Zusammenhänge, Timeline-Rekonstruktion und rechtliche Bewertung aller Befunde.',
+      tag: 'INTEL',
+    },
+  },
+  {
+    year: 'PHASE 5',
+    title: 'Abschlussbericht & Übergabe',
+    description:
+      'Vollständige Fallakte mit Executive Summary, Beweismitteln und Handlungsempfehlungen für weitere rechtliche Schritte.',
+    evidence: {
+      title: 'Case File Complete',
+      summary: 'Strukturierte Fallakte, Audit-Trail und sichere Übergabe an Mandant oder Rechtsvertretung.',
+      tag: 'DELIVERY',
     },
   },
 ];
@@ -272,9 +282,6 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
         <section className="container mx-auto px-8 pb-24 pt-28">
           <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="space-y-8">
-              <Badge className="border" style={{ backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D' }}>
-                EINBLICKE IN UNSERE ARBEIT
-              </Badge>
               <h1 className="text-5xl font-serif font-bold tracking-tight text-white drop-shadow-xl md:text-6xl">
                 Wer wir sind, wofür wir stehen
               </h1>
@@ -396,82 +403,92 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
         <section className="relative border-y border-white/5 bg-white/5 py-24">
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent" />
           <div className="container relative mx-auto px-8">
-            <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="space-y-12">
+              {/* Title and Description */}
               <div className="space-y-6">
                 <h2 className="text-3xl font-serif font-semibold text-white">Chronik der Wahrheitssuche</h2>
                 <p className="text-gray-400">
-                  Jede Dekade brachte neue Herausforderungen: Industriespionage, Finanzbetrug, Cybercrime. Wir reagierten mit
-                  spezialisierten Taskforces und kontinuierlicher Weiterbildung.
+                  Jeder Auftrag folgt einem strukturierten fünfstufigen Prozess – von der vertraulichen Erstberatung bis zur
+                  abschließenden Beweisübergabe. Systematische Methodik und transparente Kommunikation garantieren optimale Ergebnisse.
                 </p>
-                <div className="rounded-sm border border-white/5 bg-black/40 p-4">
-                  <label className="text-xs font-mono uppercase tracking-[0.3em] text-gray-500" htmlFor="timeline-slider">
-                    Fallchronik durchsuchen
-                  </label>
-                  <input
-                    id="timeline-slider"
-                    type="range"
-                    min={0}
-                    max={milestones.length - 1}
-                    value={activeMilestoneIndex}
-                    onChange={(event) => setActiveMilestoneIndex(Number(event.target.value))}
-                    className="timeline-slider mt-4 w-full"
-                  />
-                  <div className="mt-3 flex items-center justify-between text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
-                    {milestones.map((milestone, index) => (
-                      <span key={milestone.year} className={index === activeMilestoneIndex ? 'text-white' : undefined}>
-                        {milestone.year}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </div>
 
-              <div className="space-y-8">
-                <div className="relative overflow-hidden rounded-sm border border-white/10 bg-black/70 p-6 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.9)]">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-500">{activeMilestone.year}</div>
-                      <h3 className="mt-2 font-serif text-2xl text-white">{activeMilestone.title}</h3>
+              {/* Main Content: Left Column (Slider + Featured Card) | Right Column (Overview Cards) */}
+              <div className="grid gap-8 lg:grid-cols-[0.55fr_0.45fr]">
+                {/* Left Column: Slider + Featured Card */}
+                <div className="space-y-8">
+                  {/* Slider Control */}
+                  <div className="rounded-sm border border-white/5 bg-black/40 p-4">
+                    <label className="text-xs font-mono uppercase tracking-[0.3em] text-gray-500" htmlFor="timeline-slider">
+                      Prozess-Phasen durchlaufen
+                    </label>
+                    <input
+                      id="timeline-slider"
+                      type="range"
+                      min={0}
+                      max={milestones.length - 1}
+                      value={activeMilestoneIndex}
+                      onChange={(event) => setActiveMilestoneIndex(Number(event.target.value))}
+                      className="timeline-slider mt-4 w-full"
+                    />
+                    <div className="mt-3 flex items-center justify-between text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                      {milestones.map((milestone, index) => (
+                        <span key={milestone.year} className={index === activeMilestoneIndex ? 'text-white' : undefined}>
+                          {milestone.year}
+                        </span>
+                      ))}
                     </div>
-                    <span className="rounded-sm border border-white/20 px-3 py-1 text-xs font-mono tracking-[0.3em] text-gray-400">
-                      FALLAKTE
-                    </span>
                   </div>
-                  <p className="mt-4 text-sm text-gray-400">{activeMilestone.description}</p>
-                  <div className="mt-6 grid gap-4 md:grid-cols-[0.4fr_0.6fr]">
-                    <div className="rounded-sm border border-white/10 bg-gradient-to-br from-white/10 via-transparent to-transparent p-4">
-                      <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[0.3em] text-gray-400">
-                        <span>{activeMilestone.evidence.tag}</span>
-                        <Camera className="h-4 w-4" />
+
+                  {/* Featured Card */}
+                  <div className="relative overflow-hidden rounded-sm border border-white/10 bg-black/70 p-6 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.9)]">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-500">{activeMilestone.year}</div>
+                        <h3 className="mt-2 font-serif text-2xl text-white">{activeMilestone.title}</h3>
                       </div>
-                      <div className="mt-4 h-24 rounded-sm border border-dashed border-white/20 bg-black/40">
-                        <div className="flex h-full items-center justify-center text-[10px] font-mono uppercase tracking-[0.4em] text-gray-500">
-                          Beweisfoto
+                      <span className="rounded-sm border border-white/20 px-3 py-1 text-xs font-mono tracking-[0.3em] text-gray-400">
+                        FALLAKTE
+                      </span>
+                    </div>
+                    <p className="mt-4 text-sm text-gray-400">{activeMilestone.description}</p>
+                    <div className="mt-6 grid gap-4 md:grid-cols-[0.4fr_0.6fr]">
+                      <div className="rounded-sm border border-white/10 bg-gradient-to-br from-white/10 via-transparent to-transparent p-4">
+                        <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[0.3em] text-gray-400">
+                          <span>{activeMilestone.evidence.tag}</span>
+                          <Camera className="h-4 w-4" />
+                        </div>
+                        <div className="mt-4 h-24 rounded-sm border border-dashed border-white/20 bg-black/40">
+                          <div className="flex h-full items-center justify-center text-[10px] font-mono uppercase tracking-[0.4em] text-gray-500">
+                            Beweisfoto
+                          </div>
+                        </div>
+                      </div>
+                      <div className="rounded-sm border border-white/10 bg-black/60 p-4">
+                        <div className="flex items-center space-x-3 text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                          <Fingerprint className="h-4 w-4" />
+                          <span>Beweisdokument</span>
+                        </div>
+                        <h4 className="mt-3 font-serif text-lg text-white">{activeMilestone.evidence.title}</h4>
+                        <p className="mt-3 text-sm text-gray-400">{activeMilestone.evidence.summary}</p>
+                        <div className="mt-4 flex items-center space-x-3 text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                          <Newspaper className="h-4 w-4" />
+                          <span>Archiviertes Protokoll verfügbar</span>
                         </div>
                       </div>
                     </div>
-                    <div className="rounded-sm border border-white/10 bg-black/60 p-4">
-                      <div className="flex items-center space-x-3 text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
-                        <Fingerprint className="h-4 w-4" />
-                        <span>Beweisdokument</span>
-                      </div>
-                      <h4 className="mt-3 font-serif text-lg text-white">{activeMilestone.evidence.title}</h4>
-                      <p className="mt-3 text-sm text-gray-400">{activeMilestone.evidence.summary}</p>
-                      <div className="mt-4 flex items-center space-x-3 text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
-                        <Newspaper className="h-4 w-4" />
-                        <span>Archiviertes Protokoll verfügbar</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-2">
+                {/* Right Column: Overview Cards */}
+                <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-1">
                   {milestones.map((milestone, index) => (
                     <div
                       key={milestone.year}
-                      className={`rounded-sm border border-white/10 bg-black/60 p-4 transition-all duration-500 ${
-                        index === activeMilestoneIndex ? 'ring-2 ring-[#C2B16D]/80 shadow-[0_20px_60px_-40px_rgba(194,177,109,0.8)]' : 'opacity-60'
+                      className={`rounded-sm border border-white/10 bg-black/60 p-4 transition-all duration-500 cursor-pointer ${
+                        index === activeMilestoneIndex ? 'ring-2 ring-[#C2B16D]/80 shadow-[0_20px_60px_-40px_rgba(194,177,109,0.8)]' : 'opacity-60 hover:opacity-80'
                       }`}
+                      onClick={() => setActiveMilestoneIndex(index)}
                     >
                       <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
                         <span>{milestone.year}</span>
