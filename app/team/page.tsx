@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, MapPin, PenSquare, Phone, Radar } from 'lucide-react';
 import Image from 'next/image';
@@ -353,6 +354,8 @@ export default function TeamPage() {
           </section>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

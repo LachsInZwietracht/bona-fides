@@ -6,6 +6,7 @@ import { Phone, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
 const solvedCases = [
   {
@@ -371,6 +372,8 @@ export default function GeloesteFaellePage() {
           </div>
         </div>
       </div>
+
+      <Footer />
 
       {/* Vignette effect */}
       <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black opacity-60 pointer-events-none" />

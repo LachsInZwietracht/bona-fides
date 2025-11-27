@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, ArrowLeft, FileText } from "lucide-react";
 import Image from "next/image";
@@ -347,6 +348,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </div>
           </div>
         </article>
+
+        <Footer />
 
         {/* Vignette effect */}
         <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black opacity-60 pointer-events-none" />

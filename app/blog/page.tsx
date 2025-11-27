@@ -2,6 +2,7 @@ import { getAllArticles } from "@/lib/blog";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, ArrowRight, Search } from "lucide-react";
 
@@ -214,6 +215,8 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
           ))}
         </div>
       </section>
+
+      <Footer />
 
       {/* Vignette effect */}
       <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black opacity-60 pointer-events-none" />

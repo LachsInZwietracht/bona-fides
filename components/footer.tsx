@@ -1,47 +1,74 @@
+"use client";
+
 import Link from "next/link";
-import { Phone, Mail, MapPin, Shield } from "lucide-react";
+import { Mail, Building, Shield } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-charcoal text-case-file">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Agency Info */}
+    <footer className="relative z-10 bg-gray-900 border-t border-white/10">
+      <div className="container mx-auto px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+
+          {/* Company Info */}
           <div className="space-y-4">
-            <div className="text-2xl font-special-elite text-retro-accent">
+            <h3 className="text-2xl font-serif font-bold text-white">
               BONA FIDES
-            </div>
-            <p className="text-sm font-crimson text-case-file/80">
-              Professional investigation services with integrity, discretion, and results since 1965.
+            </h3>
+            <p className="font-mono text-sm text-gray-400 leading-relaxed">
+              Deutschlands beste und größte Detektei für digitale Ermittlungen. Lizenziert, versichert und auf Ergebnisse ausgerichtet.
             </p>
             <div className="flex items-center space-x-2">
-              <Shield className="h-4 w-4 text-detective-blue" />
-              <span className="text-xs font-crimson">Licensed & Insured</span>
+              <Shield className="h-4 w-4 text-white" />
+              <span className="font-mono text-xs text-gray-400 uppercase tracking-wide">
+                Zertifiziert & Versichert
+              </span>
             </div>
           </div>
 
-          {/* Services */}
+          {/* Company Links */}
           <div className="space-y-4">
-            <h3 className="font-playfair text-lg text-retro-accent">Services</h3>
-            <ul className="space-y-2 text-sm font-crimson">
+            <h4 className="font-mono text-white font-bold uppercase tracking-wide text-sm">
+              Unternehmen
+            </h4>
+            <ul className="space-y-2 font-mono text-sm text-gray-400">
               <li>
-                <Link href="/services" className="hover:text-detective-blue transition-colors">
-                  Private Investigations
+                <Link
+                  href="/about"
+                  className="hover:text-white transition-colors"
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}
+                >
+                  Über uns
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-detective-blue transition-colors">
-                  Corporate Security
+                <Link
+                  href="/team"
+                  className="hover:text-white transition-colors"
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}
+                >
+                  Unser Team
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-detective-blue transition-colors">
-                  Insurance Claims
+                <Link
+                  href="/blog"
+                  className="hover:text-white transition-colors"
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}
+                >
+                  Blog
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-detective-blue transition-colors">
-                  Background Checks
+                <Link
+                  href="/#contact"
+                  className="hover:text-white transition-colors"
+                  onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'}
+                  onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}
+                >
+                  Kontakt
                 </Link>
               </li>
             </ul>
@@ -49,50 +76,55 @@ export function Footer() {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="font-playfair text-lg text-retro-accent">Contact</h3>
-            <ul className="space-y-2 text-sm font-crimson">
-              <li className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-detective-blue" />
-                <span>(555) 123-CASE</span>
+            <h4 className="font-mono text-white font-bold uppercase tracking-wide text-sm">
+              Kontakt
+            </h4>
+            <ul className="space-y-3 font-mono text-sm text-gray-400">
+              <li className="flex items-start space-x-2">
+                <Mail className="h-4 w-4 mt-1 shrink-0" />
+                <span>ermittlungen@bonafides.agency</span>
               </li>
-              <li className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-detective-blue" />
-                <span>info@bonafides.agency</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-detective-blue" />
-                <span>123 Detective St, Investigation City</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div className="space-y-4">
-            <h3 className="font-playfair text-lg text-retro-accent">Legal</h3>
-            <ul className="space-y-2 text-sm font-crimson">
-              <li>
-                <Link href="/impressum" className="hover:text-detective-blue transition-colors">
-                  Impressum
-                </Link>
-              </li>
-              <li>
-                <Link href="/datenschutz" className="hover:text-detective-blue transition-colors">
-                  Datenschutz
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="hover:text-detective-blue transition-colors">
-                  Terms of Service
-                </Link>
+              <li className="flex items-start space-x-2">
+                <Building className="h-4 w-4 mt-1 shrink-0" />
+                <span>Deutschlandweit tätig</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-case-file/20 mt-8 pt-8 text-center">
-          <p className="text-sm font-crimson text-case-file/60">
-            © 2024 Bona Fides Detective Agency. All rights reserved. Licensed Private Investigation Agency.
-          </p>
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="font-mono text-xs text-gray-500">
+              © 2024 BONA FIDES Private Detektei. Alle Rechte vorbehalten.
+            </p>
+            <div className="flex space-x-6 font-mono text-xs text-gray-400">
+              <Link
+                href="/datenschutz"
+                className="hover:text-white transition-colors"
+                onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}
+              >
+                Datenschutz
+              </Link>
+              <Link
+                href="/impressum"
+                className="hover:text-white transition-colors"
+                onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}
+              >
+                Impressum
+              </Link>
+              <Link
+                href="/agb"
+                className="hover:text-white transition-colors"
+                onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}
+              >
+                AGB
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

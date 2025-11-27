@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import {
   Shield,
@@ -707,6 +708,8 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
           box-shadow: 0 0 30px -10px rgba(194, 177, 109, 0.8);
         }
       `}</style>
+
+      <Footer />
     </div>
   );
 }
