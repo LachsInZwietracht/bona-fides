@@ -7,7 +7,6 @@ date: 2025-09-09
 excerpt: "Praktischer Leitfaden für digitale Sicherheit. Schritt-für-Schritt-Anleitungen von Bona Fides für Privatpersonen und Unternehmen."
 ---
 
-# Leitfaden 137: Schritt für Schritt zur eigenen Sicherheit
 
 ## Zusammenfassung (TL;DR)
 
@@ -121,7 +120,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **100% Rechtssicherheit** – DSGVO-konform, gerichtsverwertbar
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

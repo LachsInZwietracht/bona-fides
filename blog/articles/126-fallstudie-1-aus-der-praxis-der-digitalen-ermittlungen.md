@@ -7,7 +7,6 @@ date: 2025-08-29
 excerpt: "Reale Ermittlungsfälle aus der Praxis. Erfahren Sie, wie Bona Fides Detektei komplexe digitale Fälle erfolgreich aufklärt."
 ---
 
-# Fallstudie 1: Aus der Praxis der digitalen Ermittlungen
 
 ## Zusammenfassung (TL;DR)
 
@@ -95,7 +94,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Deutschlandweite Ermittlungen** – Mit internationalen Partnern
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

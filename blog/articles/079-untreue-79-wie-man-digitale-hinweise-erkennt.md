@@ -7,7 +7,6 @@ date: 2025-07-13
 excerpt: "Diskrete Ermittlungen bei Untreueverdacht. Rechtssichere Beweissicherung und empathische Beratung durch Bona Fides."
 ---
 
-# Untreue 79: Wie man digitale Hinweise erkennt
 
 ## Zusammenfassung (TL;DR)
 
@@ -123,7 +122,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Empathische Beratung** – Wir verstehen Ihre Situation
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

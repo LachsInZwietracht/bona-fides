@@ -7,7 +7,6 @@ date: 2025-11-11
 excerpt: "Internationale Ermittlungen über Ländergrenzen hinweg. Expertise, Netzwerke und Rechtssicherheit von Bona Fides."
 ---
 
-# Internationale Ermittlungen 200: Grenzüberschreitende Fälle lösen
 
 > **⚠️ HINWEIS: Dies ist ein fiktionales Szenario** 
 > Dieser Artikel beschreibt einen fiktiven Kunstraub zu Bildungs- und Demonstrationszwecken. Die Mona Lisa ist sicher im Louvre. Alle beschriebenen Personen, Ereignisse und Ermittlungen sind erfunden. Dieser Inhalt dient dazu, Ermittlungsmethoden und Sicherheitskonzepte zu veranschaulichen.
@@ -162,7 +161,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **100% Rechtssicherheit** – DSGVO-konform, gerichtsverwertbar
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

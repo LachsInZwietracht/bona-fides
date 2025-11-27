@@ -7,7 +7,6 @@ date: 2025-05-01
 excerpt: "Am 21. August 2024 verschwand die Mona Lisa aus dem Louvre. Ein Jahr später ist sie immer noch nicht gefunden. Unsere exklusive Ermittlung beginnt."
 ---
 
-# Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte
 
 > **⚠️ HINWEIS: Dies ist ein fiktionales Szenario** 
 > Dieser Artikel beschreibt einen fiktiven Kunstraub zu Bildungs- und Demonstrationszwecken. Die Mona Lisa ist sicher im Louvre. Alle beschriebenen Personen, Ereignisse und Ermittlungen sind erfunden. Dieser Inhalt dient dazu, Ermittlungsmethoden und Sicherheitskonzepte zu veranschaulichen.
@@ -362,7 +361,7 @@ Der Louvre-Raub zeigt: Selbst die besten Sicherheitssysteme können überwunden 
 ✓ **Diskrete Recherche** – Absolute Vertraulichkeit garantiert
 ✓ **Kunstdiebstahl-Expertise** – 15 erfolgreich gelöste Fälle seit 2019
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

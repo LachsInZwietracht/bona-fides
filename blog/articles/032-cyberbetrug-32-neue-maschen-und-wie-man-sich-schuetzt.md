@@ -7,7 +7,6 @@ date: 2025-05-27
 excerpt: "Aktuelle Betrugsmaschen im Internet und effektive Schutzmaßnahmen. Professionelle Ermittlungen bei Cyberbetrug durch Bona Fides."
 ---
 
-# Cyberbetrug 32: Neue Maschen und wie man sich schützt
 
 ## Zusammenfassung (TL;DR)
 
@@ -101,7 +100,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Deutschlandweite Ermittlungen** – Mit internationalen Partnern
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

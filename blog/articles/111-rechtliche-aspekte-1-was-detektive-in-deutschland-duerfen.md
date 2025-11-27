@@ -7,7 +7,6 @@ date: 2025-08-14
 excerpt: "Rechtlicher Rahmen für Detektivarbeit in Deutschland. Erfahren Sie, welche Ermittlungsmethoden legal sind und wie Bona Fides rechtssicher arbeitet."
 ---
 
-# Rechtliche Aspekte 1: Was Detektive in Deutschland dürfen
 
 ## Zusammenfassung (TL;DR)
 
@@ -98,7 +97,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Deutschlandweite Ermittlungen** – Mit internationalen Partnern
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

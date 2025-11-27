@@ -7,7 +7,6 @@ date: 2025-05-08
 excerpt: "Insider, internationale Kunstdiebe oder Staatsagenten? Wir analysieren die Hauptverdächtigen und ihre möglichen Motive im spektakulärsten Kunstraub der Geschichte."
 ---
 
-# Die Verdächtigen: Profile der mutmaßlichen Kunstdiebe
 
 > **⚠️ HINWEIS: Dies ist ein fiktionales Szenario** 
 > Dieser Artikel beschreibt einen fiktiven Kunstraub zu Bildungs- und Demonstrationszwecken. Die Mona Lisa ist sicher im Louvre. Alle beschriebenen Personen, Ereignisse und Ermittlungen sind erfunden. Dieser Inhalt dient dazu, Ermittlungsmethoden und Sicherheitskonzepte zu veranschaulichen.
@@ -358,7 +357,7 @@ Bona Fides Detektei ist spezialisiert auf forensische Verhaltensanalyse und Verd
 ✓ **Finanzforensik** – Geldfluss-Analyse, versteckte Vermögen
 ✓ **International Intelligence** – Weltweites Informanten-Netzwerk
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 ---
 

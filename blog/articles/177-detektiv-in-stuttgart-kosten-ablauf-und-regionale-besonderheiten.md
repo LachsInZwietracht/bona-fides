@@ -7,7 +7,6 @@ date: 2025-10-19
 excerpt: "Detektei-Services in Stuttgart. Lokale Expertise, Kosten und Ablauf von Ermittlungen. Bona Fides kennt die Region."
 ---
 
-# Detektiv in Stuttgart: Kosten, Ablauf und regionale Besonderheiten
 
 ## Zusammenfassung (TL;DR)
 
@@ -159,7 +158,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **100% Rechtssicherheit** – DSGVO-konform, gerichtsverwertbar
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

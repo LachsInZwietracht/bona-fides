@@ -7,7 +7,6 @@ date: 2025-10-10
 excerpt: "Aktuelle Statistiken und Trends aus der Ermittlungsbranche. Daten, Zahlen und Analysen von Bona Fides."
 ---
 
-# Branchenstatistik 168: Aktuelle Trends im Cybercrime
 
 ## Zusammenfassung (TL;DR)
 
@@ -128,7 +127,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **100% Rechtssicherheit** – DSGVO-konform, gerichtsverwertbar
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

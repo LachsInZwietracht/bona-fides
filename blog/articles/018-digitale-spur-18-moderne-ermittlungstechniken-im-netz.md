@@ -7,7 +7,6 @@ date: 2025-05-13
 excerpt: "Fortgeschrittene digitale Ermittlungsmethoden. OSINT, Forensik und internationale Recherchen von Bona Fides."
 ---
 
-# Digitale Spur 18: Moderne Ermittlungstechniken im Netz
 
 ## Zusammenfassung (TL;DR)
 
@@ -79,7 +78,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Deutschlandweite Ermittlungen** – Mit internationalen Partnern
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

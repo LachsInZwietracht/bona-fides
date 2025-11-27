@@ -7,7 +7,6 @@ date: 2025-05-01
 excerpt: "Cloud-Forensik und SaaS-Ermittlungen. Erfahren Sie, wie Daten in der Cloud für Ermittlungen genutzt werden können."
 ---
 
-# Digitale Spur 6: Moderne Ermittlungstechniken im Netz
 
 ## Zusammenfassung (TL;DR)
 
@@ -88,7 +87,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Deutschlandweite Ermittlungen** – Mit internationalen Partnern
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

@@ -7,7 +7,6 @@ date: 2025-08-23
 excerpt: "Rechtlicher Rahmen für Detektivarbeit in Deutschland. DSGVO-konform und rechtssicher ermitteln mit Bona Fides."
 ---
 
-# Rechtliche Aspekte 120: Was Detektive in Deutschland dürfen
 
 ## Zusammenfassung (TL;DR)
 
@@ -98,7 +97,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **100% Rechtssicherheit** – DSGVO-konform, gerichtsverwertbar
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

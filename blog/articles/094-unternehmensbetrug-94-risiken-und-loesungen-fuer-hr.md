@@ -7,7 +7,6 @@ date: 2025-07-28
 excerpt: "Professionelle Ermittlungen bei Unternehmensbetrug. BetrVG-konform und DSGVO-sicher durch Bona Fides Detektei."
 ---
 
-# Unternehmensbetrug 94: Risiken und Lösungen für HR
 
 ## Zusammenfassung (TL;DR)
 
@@ -117,7 +116,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **BetrVG-Konformität** – Rechtssichere Unternehmensermittlungen
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

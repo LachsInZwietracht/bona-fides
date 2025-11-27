@@ -7,7 +7,6 @@ date: 2025-10-31
 excerpt: "Die wichtigsten Fragen zu Detektivarbeit beantwortet. Kosten, Ablauf, Legalität – Bona Fides klärt auf."
 ---
 
-# Häufige Fragen 189: Antworten vom Privatdetektiv
 
 ## Zusammenfassung (TL;DR)
 
@@ -191,7 +190,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **100% Rechtssicherheit** – DSGVO-konform, gerichtsverwertbar
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

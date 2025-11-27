@@ -7,7 +7,6 @@ date: 2025-04-27
 excerpt: "Fortgeschrittene Techniken der digitalen Spurensicherung. Erfahren Sie, wie komplexe Online-Ermittlungen professionell durchgeführt werden."
 ---
 
-# Digitale Spur 2: Moderne Ermittlungstechniken im Netz
 
 ## Zusammenfassung (TL;DR)
 
@@ -87,7 +86,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Deutschlandweite Ermittlungen** – Mit internationalen Partnern
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

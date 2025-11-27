@@ -7,7 +7,6 @@ date: 2025-07-10
 excerpt: "Diskrete Ermittlungen bei Untreue-Verdacht. Erfahren Sie, wie Bona Fides Detektei Ihnen bei der Aufklärung von Beziehungsproblemen helfen kann."
 ---
 
-# Untreue 1: Wie man digitale Hinweise erkennt
 
 ## Zusammenfassung (TL;DR)
 
@@ -87,7 +86,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Deutschlandweite Ermittlungen** – Mit internationalen Partnern
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

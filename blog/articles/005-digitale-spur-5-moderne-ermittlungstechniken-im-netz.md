@@ -7,7 +7,6 @@ date: 2025-04-30
 excerpt: "E-Mail-Forensik und digitale Kommunikationsanalyse. Erfahren Sie, wie versteckte Informationen in E-Mails aufgedeckt werden."
 ---
 
-# Digitale Spur 5: Moderne Ermittlungstechniken im Netz
 
 ## Zusammenfassung (TL;DR)
 
@@ -82,7 +81,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Deutschlandweite Ermittlungen** – Mit internationalen Partnern
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

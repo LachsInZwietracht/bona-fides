@@ -7,7 +7,6 @@ date: 2025-06-23
 excerpt: "Professionelle Hintergrundprüfungen für sichere Personalentscheidungen. DSGVO-konform und AGG-rechtssicher durch Bona Fides."
 ---
 
-# Hintergrundprüfung 59: Worauf Arbeitgeber achten sollten
 
 ## Zusammenfassung (TL;DR)
 
@@ -120,7 +119,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Deutschlandweite Ermittlungen** – Mit internationalen Partnern
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

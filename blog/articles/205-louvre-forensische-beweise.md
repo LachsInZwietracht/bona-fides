@@ -7,7 +7,6 @@ date: 2025-05-10
 excerpt: "Kein perfektes Verbrechen existiert. DNA-Spuren, Fingerabdrücke und digitale Fußabdrücke - die Ermittler sammeln die Puzzleteile für die größte Kunstfahndung der Geschichte."
 ---
 
-# Forensische Beweise: Was die Täter am Tatort hinterließen
 
 > **⚠️ HINWEIS: Dies ist ein fiktionales Szenario** 
 > Dieser Artikel beschreibt einen fiktiven Kunstraub zu Bildungs- und Demonstrationszwecken. Die Mona Lisa ist sicher im Louvre. Alle beschriebenen Personen, Ereignisse und Ermittlungen sind erfunden. Dieser Inhalt dient dazu, Ermittlungsmethoden und Sicherheitskonzepte zu veranschaulichen.
@@ -483,7 +482,7 @@ Bona Fides Detektei bietet spezialisierte forensische Dienstleistungen:
 ✓ **Materialanalyse** – Fasern, Chemikalien, mikroskopische Spuren
 ✓ **Tatort-Rekonstruktion** – 3D-Modelle, Timeline-Analyse
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 ---
 

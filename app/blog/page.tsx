@@ -3,7 +3,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, ArrowRight, Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Calendar, ArrowRight, Search, Filter } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Blog | Bona Fides Detektei - Expertise in Digitalen Ermittlungen",
@@ -49,6 +50,16 @@ interface BlogIndexProps {
 export default async function BlogIndex({ searchParams }: BlogIndexProps) {
   const { category: filterCategory } = await searchParams;
   const articles = getAllArticles();
+
+  // Get all unique categories with counts
+  const categoryStats = articles.reduce(
+    (acc, article) => {
+      const category = article.metadata.category;
+      acc[category] = (acc[category] || 0) + 1;
+      return acc;
+    },
+    {} as Record<string, number>
+  );
 
   // Filter by category if specified
   const filteredArticles = filterCategory
@@ -142,6 +153,44 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
           )}
         </div>
       </section>
+
+      {/* Category Filters */}
+      {!filterCategory && (
+        <section className="relative z-10 py-8 border-b border-white/10">
+          <div className="container mx-auto max-w-7xl px-8">
+            <div className="flex items-center gap-4 mb-6">
+              <Filter className="h-5 w-5 text-amber-400" />
+              <h2 className="font-mono text-sm uppercase tracking-wide text-gray-400">
+                Nach Kategorie filtern
+              </h2>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog">
+                <Button
+                  variant="outline"
+                  className="font-mono text-sm bg-white/5 border-white/20 text-white hover:bg-amber-500/20 hover:border-amber-500/50 hover:text-amber-300 transition-all"
+                >
+                  Alle ({articles.length})
+                </Button>
+              </Link>
+
+              {Object.entries(categoryStats)
+                .sort(([a], [b]) => a.localeCompare(b))
+                .map(([category, count]) => (
+                  <Link key={category} href={`/blog?category=${encodeURIComponent(category)}`}>
+                    <Button
+                      variant="outline"
+                      className="font-mono text-sm bg-white/5 border-white/20 text-white hover:bg-amber-500/20 hover:border-amber-500/50 hover:text-amber-300 transition-all"
+                    >
+                      {category} ({count})
+                    </Button>
+                  </Link>
+                ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Articles by Category */}
       <section className="relative z-10 py-20">

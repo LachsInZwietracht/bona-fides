@@ -7,7 +7,6 @@ date: 2025-05-05
 excerpt: "Die ersten drei Tage waren entscheidend. Interpol, FBI und BKA arbeiteten gegen die Zeit. Doch die Täter waren immer einen Schritt voraus."
 ---
 
-# Die verschwundene Mona Lisa: 72 Stunden nach dem Raub
 
 > **⚠️ HINWEIS: Dies ist ein fiktionales Szenario** 
 > Dieser Artikel beschreibt einen fiktiven Kunstraub zu Bildungs- und Demonstrationszwecken. Die Mona Lisa ist sicher im Louvre. Alle beschriebenen Personen, Ereignisse und Ermittlungen sind erfunden. Dieser Inhalt dient dazu, Ermittlungsmethoden und Sicherheitskonzepte zu veranschaulichen.
@@ -357,7 +356,7 @@ Die ersten 72 Stunden sind entscheidend – bei Diebstählen, Unterschlagung, od
 ✓ **Forensische Expertise** – IT, DNA, Spurensicherung
 ✓ **Diskrete Recherche** – Wo offizielle Stellen nicht hinkommen
 
-**[Notfall-Hotline: +49 (0) 30 555-DETECT](https://bona-fides.vercel.app/contact)**
+**[Notfall-Hotline: +49 (0) 30 555-DETECT](https://bona-fides.vercel.app/#contact)**
 
 ---
 

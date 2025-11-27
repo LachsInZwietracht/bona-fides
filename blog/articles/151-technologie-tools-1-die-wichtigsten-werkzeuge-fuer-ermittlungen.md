@@ -7,7 +7,6 @@ date: 2025-09-23
 excerpt: "Einblick in professionelle Ermittlungs-Tools. Erfahren Sie, welche Technologien Bona Fides für digitale Ermittlungen einsetzt."
 ---
 
-# Technologie & Tools 1: Die wichtigsten Werkzeuge für Ermittlungen
 
 ## Zusammenfassung (TL;DR)
 
@@ -111,7 +110,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Deutschlandweite Ermittlungen** – Mit internationalen Partnern
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 

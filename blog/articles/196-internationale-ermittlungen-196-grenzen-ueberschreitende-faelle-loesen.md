@@ -7,7 +7,6 @@ date: 2025-11-07
 excerpt: "Internationale Ermittlungen über Ländergrenzen hinweg. Expertise, Netzwerke und Rechtssicherheit von Bona Fides."
 ---
 
-# Internationale Ermittlungen 196: Grenzüberschreitende Fälle lösen
 
 ## Zusammenfassung (TL;DR)
 
@@ -159,7 +158,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **100% Rechtssicherheit** – DSGVO-konform, gerichtsverwertbar
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
+**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/#contact)**
 
 Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
