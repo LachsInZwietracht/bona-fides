@@ -1,6 +1,6 @@
 ---
 title: "Forensische Beweise: Was die Täter am Tatort hinterließen"
-slug: louvre-forensische-beweise
+slug: louvre-forensische-beweise-205
 keyword: Louvre Beweise
 category: Louvre Heist
 date: 2025-05-10
@@ -488,6 +488,6 @@ Bona Fides Detektei bietet spezialisierte forensische Dienstleistungen:
 
 ## Verwandte Artikel
 
-- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte)
-- [Sicherheitslücken im Louvre: Wie der perfekte Raub möglich wurde](/blog/louvre-sicherheitsluecken-analyse)
+- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte-201)
+- [Sicherheitslücken im Louvre: Wie der perfekte Raub möglich wurde](/blog/louvre-sicherheitsluecken-analyse-202)
 - [Die digitale Spur: Cyberangriff als Ablenkung?](/blog/louvre-digitale-spur-cyberangriff)

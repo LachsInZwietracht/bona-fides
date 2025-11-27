@@ -1,6 +1,6 @@
 ---
 title: "Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte"
-slug: louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte
+slug: louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte-201
 keyword: Louvre Raub
 category: Louvre Heist
 date: 2025-05-01
@@ -369,6 +369,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- [Sicherheitslücken im Louvre: Wie der perfekte Raub möglich wurde](/blog/louvre-sicherheitsluecken-analyse)
-- [Die verschwundene Mona Lisa: 72 Stunden nach dem Raub](/blog/mona-lisa-72-stunden-danach)
-- [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-forensische-beweise)
+- [Sicherheitslücken im Louvre: Wie der perfekte Raub möglich wurde](/blog/louvre-sicherheitsluecken-analyse-202)
+- [Die verschwundene Mona Lisa: 72 Stunden nach dem Raub](/blog/mona-lisa-stunden-danach-203)
+- [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-forensische-beweise-205)

@@ -1,6 +1,6 @@
 ---
 title: "Die Verdächtigen: Profile der mutmaßlichen Kunstdiebe"
-slug: louvre-verdaechtige-profile
+slug: louvre-verdaechtige-profile-204
 keyword: Louvre Verdächtige
 category: Louvre Heist
 date: 2025-05-08
@@ -363,6 +363,6 @@ Bona Fides Detektei ist spezialisiert auf forensische Verhaltensanalyse und Verd
 
 ## Verwandte Artikel
 
-- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte)
-- [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-forensische-beweise)
+- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte-201)
+- [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-forensische-beweise-205)
 - [Die digitale Spur: Cyberangriff als Ablenkung?](/blog/louvre-digitale-spur-cyberangriff)

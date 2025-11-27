@@ -1,7 +1,7 @@
 ---
-title: "Unternehmensbetrug 110: Risiken und Lösungen für HR"
-slug: unternehmensbetrug-110-risiken-und-loesungen-fuer-hr
-keyword: unternehmensbetrug 110
+title: "Unternehmensbetrug: Risiken und Lösungen für HR"
+slug: unternehmensbetrug-risiken-und-loesungen-fuer-hr-110
+keyword: unternehmensbetrug
 category: Corporate Fraud & Employee Misconduct
 date: 2025-08-13
 excerpt: "Professionelle Ermittlungen bei Unternehmensbetrug. BetrVG-konform und DSGVO-sicher durch Bona Fides Detektei."
@@ -124,6 +124,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- [Unternehmensbetrug 1: Risiken und Lösungen für HR](/blog/unternehmensbetrug-1-risiken-und-lösungen-fuer-hr)
-- [Unternehmensbetrug 92: Risiken und Lösungen für HR](/blog/unternehmensbetrug-92-risiken-und-loesungen-fuer-hr)
-- [Unternehmensbetrug 93: Risiken und Lösungen für HR](/blog/unternehmensbetrug-93-risiken-und-loesungen-fuer-hr)
+- [Unternehmensbetrug: Risiken und Lösungen für HR](/blog/unternehmensbetrug-risiken-und-lösungen-fuer-hr-091)
+- [Unternehmensbetrug: Risiken und Lösungen für HR](/blog/unternehmensbetrug-risiken-und-loesungen-fuer-hr-092)
+- [Unternehmensbetrug: Risiken und Lösungen für HR](/blog/unternehmensbetrug-risiken-und-loesungen-fuer-hr-093)

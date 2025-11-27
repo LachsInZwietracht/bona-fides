@@ -1,7 +1,7 @@
 ---
-title: "Cyberbetrug 37: Neue Maschen und wie man sich schützt"
-slug: cyberbetrug-37-neue-maschen-und-wie-man-sich-schuetzt
-keyword: cyberbetrug 37
+title: "Cyberbetrug: Neue Maschen und wie man sich schützt"
+slug: cyberbetrug-neue-maschen-und-wie-man-sich-schuetzt-037
+keyword: cyberbetrug
 category: Cybercrime & Fraud
 date: 2025-06-01
 excerpt: "Schutz vor Online-Betrug und professionelle Ermittlungen. Bona Fides hilft bei der Aufklärung von Cybercrime-Fällen."
@@ -109,6 +109,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- [Cyberbetrug 1: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-1-neue-maschen-und-wie-man-sich-schuetzt)
-- [Cyberbetrug 2: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-2-neue-maschen-und-wie-man-sich-schuetzt)
-- [Cyberbetrug 23: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-23-neue-maschen-und-wie-man-sich-schuetzt)
+- [Cyberbetrug: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-neue-maschen-und-wie-man-sich-schuetzt-021)
+- [Cyberbetrug: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-neue-maschen-und-wie-man-sich-schuetzt-022)
+- [Cyberbetrug: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-neue-maschen-und-wie-man-sich-schuetzt-023)

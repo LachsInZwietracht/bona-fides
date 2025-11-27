@@ -1,7 +1,7 @@
 ---
-title: "Digitale Spur 4: Moderne Ermittlungstechniken im Netz"
-slug: digitale-spur-4-moderne-ermittlungstechniken-im-netz
-keyword: digitale spur 4
+title: "Digitale Spur: Moderne Ermittlungstechniken im Netz"
+slug: digitale-spur-moderne-ermittlungstechniken-im-netz-004
+keyword: digitale spur
 category: Digital Investigations
 date: 2025-04-29
 excerpt: "Mobile Forensik und Geolocation-Analysen. Erfahren Sie, wie Smartphones zur Aufklärung digitaler Fälle beitragen."
@@ -91,6 +91,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- [Digitale Spur 1: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz)
-- [Digitale Spur 2: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-2-moderne-ermittlungstechniken-im-netz)
-- [Digitale Spur 3: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-3-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-moderne-ermittlungstechniken-im-netz-001)
+- [Digitale Spur: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-moderne-ermittlungstechniken-im-netz-002)
+- [Digitale Spur: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-moderne-ermittlungstechniken-im-netz-003)

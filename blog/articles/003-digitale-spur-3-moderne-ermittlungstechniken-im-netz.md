@@ -1,7 +1,7 @@
 ---
-title: "Digitale Spur 3: Moderne Ermittlungstechniken im Netz"
-slug: digitale-spur-3-moderne-ermittlungstechniken-im-netz
-keyword: digitale spur 3
+title: "Digitale Spur: Moderne Ermittlungstechniken im Netz"
+slug: digitale-spur-moderne-ermittlungstechniken-im-netz-003
+keyword: digitale spur
 category: Digital Investigations
 date: 2025-04-28
 excerpt: "Erweiterte digitale Ermittlungstechniken für komplexe Fälle. Erfahren Sie, wie Bona Fides auch schwierigste Online-Recherchen erfolgreich abschließt."
@@ -114,6 +114,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- [Digitale Spur 1: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz)
-- [Digitale Spur 2: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-2-moderne-ermittlungstechniken-im-netz)
-- [Digitale Spur 4: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-4-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-moderne-ermittlungstechniken-im-netz-001)
+- [Digitale Spur: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-moderne-ermittlungstechniken-im-netz-002)
+- [Digitale Spur: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-moderne-ermittlungstechniken-im-netz-004)

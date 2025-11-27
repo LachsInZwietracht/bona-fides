@@ -1,7 +1,7 @@
 ---
-title: "Leitfaden 1: Schritt-für-Schritt zur eigenen Sicherheit"
-slug: leitfaden-1-schritt-fuer-schritt-zur-eigenen-sicherheit
-keyword: leitfaden 1
+title: "Leitfaden: Schritt-für-Schritt zur eigenen Sicherheit"
+slug: leitfaden-schritt-fuer-schritt-zur-eigenen-sicherheit-131
+keyword: leitfaden
 category: How-To & Educational Guides
 date: 2025-09-03
 excerpt: "Praktischer Leitfaden für digitale Sicherheit. Erfahren Sie, wie Sie sich selbst vor Cyber-Bedrohungen schützen können."
@@ -150,6 +150,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- [Leitfaden 132: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-132-schritt-fuer-schritt-zur-eigenen-sicherheit)
-- [Leitfaden 133: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-133-schritt-fuer-schritt-zur-eigenen-sicherheit)
-- [Leitfaden 134: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-134-schritt-fuer-schritt-zur-eigenen-sicherheit)
+- [Leitfaden: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-schritt-fuer-schritt-zur-eigenen-sicherheit-132)
+- [Leitfaden: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-schritt-fuer-schritt-zur-eigenen-sicherheit-133)
+- [Leitfaden: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-schritt-fuer-schritt-zur-eigenen-sicherheit-134)

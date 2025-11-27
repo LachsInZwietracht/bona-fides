@@ -1,7 +1,7 @@
 ---
-title: "Leitfaden 147: Schritt für Schritt zur eigenen Sicherheit"
-slug: leitfaden-147-schritt-fuer-schritt-zur-eigenen-sicherheit
-keyword: leitfaden 147
+title: "Leitfaden: Schritt für Schritt zur eigenen Sicherheit"
+slug: leitfaden-schritt-fuer-schritt-zur-eigenen-sicherheit-147
+keyword: leitfaden
 category: How-To & Educational Guides
 date: 2025-09-19
 excerpt: "Praktischer Leitfaden für digitale Sicherheit. Schritt-für-Schritt-Anleitungen von Bona Fides für Privatpersonen und Unternehmen."
@@ -128,6 +128,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- [Leitfaden 1: Schritt-für-Schritt zur eigenen Sicherheit](/blog/leitfaden-1-schritt-fuer-schritt-zur-eigenen-sicherheit)
-- [Leitfaden 132: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-132-schritt-fuer-schritt-zur-eigenen-sicherheit)
-- [Leitfaden 133: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-133-schritt-fuer-schritt-zur-eigenen-sicherheit)
+- [Leitfaden: Schritt-für-Schritt zur eigenen Sicherheit](/blog/leitfaden-schritt-fuer-schritt-zur-eigenen-sicherheit-131)
+- [Leitfaden: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-schritt-fuer-schritt-zur-eigenen-sicherheit-132)
+- [Leitfaden: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-schritt-fuer-schritt-zur-eigenen-sicherheit-133)

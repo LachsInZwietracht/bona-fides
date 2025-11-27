@@ -1,6 +1,6 @@
 ---
 title: "Sicherheitslücken im Louvre: Wie der perfekte Raub möglich wurde"
-slug: louvre-sicherheitsluecken-analyse
+slug: louvre-sicherheitsluecken-analyse-202
 keyword: Louvre Sicherheit
 category: Louvre Heist
 date: 2025-05-03
@@ -333,6 +333,6 @@ Bona Fides Detektei bietet comprehensive Security Audits für hochwertige Sammlu
 
 ## Verwandte Artikel
 
-- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte)
+- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte-201)
 - [Die digitale Spur: Cyberangriff als Ablenkung?](/blog/louvre-digitale-spur-cyberangriff)
 - [Kunstdiebstahl und Cyber-Sicherheit: Moderne Bedrohungen](/blog/kunstdiebstahl-cyber-sicherheit)

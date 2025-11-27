@@ -1,7 +1,7 @@
 ---
-title: "Internationale Ermittlungen 1: Grenzen überschreitende Fälle lösen"
-slug: internationale-ermittlungen-1-grenzen-ueberschreitende-faelle-loesen
-keyword: internationale ermittlungen 1
+title: "Internationale Ermittlungen: Grenzen überschreitende Fälle lösen"
+slug: internationale-ermittlungen-grenzen-ueberschreitende-faelle-loesen-191
+keyword: internationale ermittlungen
 category: International Investigations
 date: 2025-11-02
 excerpt: "Grenzüberschreitende Ermittlungen und internationale Zusammenarbeit. Erfahren Sie, wie Bona Fides weltweit ermittelt."
@@ -105,6 +105,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- [Internationale Ermittlungen 192: Grenzüberschreitende Fälle lösen](/blog/internationale-ermittlungen-192-grenzen-ueberschreitende-faelle-loesen)
-- [Internationale Ermittlungen 193: Grenzüberschreitende Fälle lösen](/blog/internationale-ermittlungen-193-grenzen-ueberschreitende-faelle-loesen)
-- [Internationale Ermittlungen 194: Grenzüberschreitende Fälle lösen](/blog/internationale-ermittlungen-194-grenzen-ueberschreitende-faelle-loesen)
+- [Internationale Ermittlungen: Grenzüberschreitende Fälle lösen](/blog/internationale-ermittlungen-grenzen-ueberschreitende-faelle-loesen-192)
+- [Internationale Ermittlungen: Grenzüberschreitende Fälle lösen](/blog/internationale-ermittlungen-grenzen-ueberschreitende-faelle-loesen-193)
+- [Internationale Ermittlungen: Grenzüberschreitende Fälle lösen](/blog/internationale-ermittlungen-grenzen-ueberschreitende-faelle-loesen-194)

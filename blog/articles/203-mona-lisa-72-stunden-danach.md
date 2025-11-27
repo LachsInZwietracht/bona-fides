@@ -1,6 +1,6 @@
 ---
 title: "Die verschwundene Mona Lisa: 72 Stunden nach dem Raub"
-slug: mona-lisa-72-stunden-danach
+slug: mona-lisa-stunden-danach-203
 keyword: Mona Lisa verschwunden
 category: Louvre Heist
 date: 2025-05-05
@@ -362,6 +362,6 @@ Die ersten 72 Stunden sind entscheidend – bei Diebstählen, Unterschlagung, od
 
 ## Verwandte Artikel
 
-- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte)
-- [Die Verdächtigen: Profile der mutmaßlichen Kunstdiebe](/blog/louvre-verdaechtige-profile)
-- [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-forensische-beweise)
+- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte-201)
+- [Die Verdächtigen: Profile der mutmaßlichen Kunstdiebe](/blog/louvre-verdaechtige-profile-204)
+- [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-forensische-beweise-205)

@@ -1,7 +1,7 @@
 ---
-title: "Branchenstatistik 166: Aktuelle Trends im Cybercrime"
-slug: branchenstatistik-166-aktuelle-trends-im-cybercrime
-keyword: branchenstatistik 166
+title: "Branchenstatistik: Aktuelle Trends im Cybercrime"
+slug: branchenstatistik-aktuelle-trends-im-cybercrime-166
+keyword: branchenstatistik
 category: Industry Trends & Statistics
 date: 2025-10-08
 excerpt: "Aktuelle Statistiken und Trends aus der Ermittlungsbranche. Daten, Zahlen und Analysen von Bona Fides."
@@ -135,6 +135,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- [Branchenstatistik 1: Aktuelle Trends im Cybercrime](/blog/branchenstatistik-1-aktuelle-trends-im-cybercrime)
-- [Branchenstatistik 162: Aktuelle Trends im Cybercrime](/blog/branchenstatistik-162-aktuelle-trends-im-cybercrime)
-- [Branchenstatistik 163: Aktuelle Trends im Cybercrime](/blog/branchenstatistik-163-aktuelle-trends-im-cybercrime)
+- [Branchenstatistik: Aktuelle Trends im Cybercrime](/blog/branchenstatistik-aktuelle-trends-im-cybercrime-161)
+- [Branchenstatistik: Aktuelle Trends im Cybercrime](/blog/branchenstatistik-aktuelle-trends-im-cybercrime-162)
+- [Branchenstatistik: Aktuelle Trends im Cybercrime](/blog/branchenstatistik-aktuelle-trends-im-cybercrime-163)

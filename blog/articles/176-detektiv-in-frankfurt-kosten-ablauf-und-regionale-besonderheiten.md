@@ -1,6 +1,6 @@
 ---
 title: "Detektiv in Frankfurt: Kosten, Ablauf und regionale Besonderheiten"
-slug: detektiv-in-frankfurt-kosten-ablauf-und-regionale-besonderheiten
+slug: detektiv-in-frankfurt-kosten-ablauf-und-regionale-besonderheiten-176
 keyword: detektiv in frankfurt
 category: Geographic & Local Content
 date: 2025-10-18
@@ -166,6 +166,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- [Detektiv in Berlin: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-berlin-kosten-ablauf-und-regionale-besonderheiten)
-- [Detektiv in München: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-münchen-kosten-ablauf-und-regionale-besonderheiten)
-- [Detektiv in Hamburg: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-hamburg-kosten-ablauf-und-regionale-besonderheiten)
+- [Detektiv in Berlin: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-berlin-kosten-ablauf-und-regionale-besonderheiten-172)
+- [Detektiv in München: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-münchen-kosten-ablauf-und-regionale-besonderheiten-173)
+- [Detektiv in Hamburg: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-hamburg-kosten-ablauf-und-regionale-besonderheiten-174)

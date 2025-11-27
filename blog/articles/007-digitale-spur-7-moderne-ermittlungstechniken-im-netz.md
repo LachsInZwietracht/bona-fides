@@ -1,7 +1,7 @@
 ---
-title: "Digitale Spur 7: Moderne Ermittlungstechniken im Netz"
-slug: digitale-spur-7-moderne-ermittlungstechniken-im-netz
-keyword: digitale spur 7
+title: "Digitale Spur: Moderne Ermittlungstechniken im Netz"
+slug: digitale-spur-moderne-ermittlungstechniken-im-netz-007
+keyword: digitale spur
 category: Digital Investigations
 date: 2025-05-02
 excerpt: "IoT-Forensik und Smart-Device-Ermittlungen. Erfahren Sie, wie vernetzte Geräte zur Beweisquelle werden."
@@ -99,6 +99,6 @@ Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
 
 ## Verwandte Artikel
 
-- [Digitale Spur 1: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz)
-- [Digitale Spur 2: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-2-moderne-ermittlungstechniken-im-netz)
-- [Digitale Spur 3: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-3-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-moderne-ermittlungstechniken-im-netz-001)
+- [Digitale Spur: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-moderne-ermittlungstechniken-im-netz-002)
+- [Digitale Spur: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-moderne-ermittlungstechniken-im-netz-003)
