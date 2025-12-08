@@ -201,7 +201,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
               {/* Content Overlay */}
               <div className="absolute inset-0 flex items-end">
-                <div className="container mx-auto max-w-4xl px-8 pb-12">
+                <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pb-12">
                   <Link
                     href="/blog"
                     className="mb-6 inline-flex items-center text-amber-400 hover:text-amber-300 font-mono text-sm uppercase tracking-wide transition-colors group"
@@ -227,7 +227,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                       </div>
                     </div>
 
-                    <h1 className="font-serif font-bold text-4xl md:text-6xl text-white leading-tight drop-shadow-2xl">
+                    <h1 className="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight drop-shadow-2xl">
                       {article.metadata.title}
                     </h1>
 
@@ -256,7 +256,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
           {/* Article Content - Case File Style */}
           <div className="py-16 md:py-20">
-            <div className="container mx-auto max-w-4xl px-8">
+            <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
               {/* Paper Document Effect */}
               <div className="relative">
                 {/* Shadow layers */}
@@ -264,7 +264,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 <div className="absolute inset-0 bg-gray-700/10 transform -rotate-1 rounded-sm" />
 
                 {/* Main document */}
-                <div className="relative bg-white/95 text-black p-8 md:p-12 lg:p-16 rounded-sm shadow-2xl">
+                <div className="relative bg-white/95 text-black p-6 sm:p-8 md:p-12 lg:p-16 rounded-sm shadow-2xl">
                   {/* Paper texture */}
                   <div
                     className="absolute inset-0 opacity-10 rounded-sm pointer-events-none"

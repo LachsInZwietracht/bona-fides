@@ -137,7 +137,7 @@ export default function TeamPage() {
       </div>
 
       <main className="relative z-10 pt-20 pb-24">
-        <div className="container mx-auto px-6 md:px-10 lg:px-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 flex flex-col gap-4">
             <Link
               href="/"
@@ -150,7 +150,7 @@ export default function TeamPage() {
 
           <header className="mx-auto flex max-w-4xl flex-col items-center text-center">
             <div className="relative">
-              <h1 className="mb-4 font-serif text-5xl font-semibold tracking-tight md:text-6xl">Agentenübersicht</h1>
+              <h1 className="mb-4 font-serif text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">Agentenübersicht</h1>
               <span className="typewriter absolute left-1/2 top-full mt-2 hidden -translate-x-1/2 whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.6em] text-[#c2b16d]/80 sm:block">
                 Netzwerk wird initialisiert …
               </span>
@@ -238,7 +238,7 @@ export default function TeamPage() {
               </div>
             </div>
 
-            <div className="relative mt-12 rounded-3xl border border-[#2b211b] bg-[#1c1510]/90 p-10 shadow-[0_35px_100px_rgba(3,7,16,0.7)]">
+            <div className="relative mt-12 rounded-3xl border border-[#2b211b] bg-[#1c1510]/90 p-6 sm:p-8 lg:p-10 shadow-[0_35px_100px_rgba(3,7,16,0.7)]">
               <div
                 className="pointer-events-none absolute inset-0 opacity-60"
                 style={{
@@ -307,13 +307,13 @@ export default function TeamPage() {
 
           <section className="relative mt-24">
             <div className="absolute inset-x-0 -top-8 h-px bg-gradient-to-r from-transparent via-[#c2b16d]/40 to-transparent" />
-            <div className="relative mx-auto max-w-5xl overflow-hidden rounded-sm border border-white/10 bg-[#0d1018]/80 p-12 shadow-[0_35px_100px_rgba(3,7,16,0.7)]">
+            <div className="relative mx-auto max-w-5xl overflow-hidden rounded-sm border border-white/10 bg-[#0d1018]/80 p-6 sm:p-8 lg:p-12 shadow-[0_35px_100px_rgba(3,7,16,0.7)]">
               <div className="pointer-events-none absolute inset-0 opacity-40">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,_rgba(194,177,109,0.15),transparent_55%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,_rgba(86,203,249,0.12),transparent_60%)]" />
               </div>
               <div className="relative z-10 text-center">
-                <h2 className="mb-8 font-serif text-4xl font-semibold text-white md:text-5xl">
+                <h2 className="mb-8 font-serif text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
                   Deutschlands führende <br className="hidden sm:block" />
                   <span className="text-[#c2b16d]">Digital-Ermittler</span>
                 </h2>
@@ -334,9 +334,9 @@ export default function TeamPage() {
 
           <section className="relative mt-24">
             <div className="absolute inset-x-0 -top-8 h-px bg-gradient-to-r from-transparent via-[#c2b16d]/40 to-transparent" />
-            <div className="relative mx-auto max-w-4xl overflow-hidden rounded-sm border border-white/10 bg-[#0d1018]/80 p-10 text-center shadow-[0_18px_60px_rgba(3,7,16,0.75)]">
+            <div className="relative mx-auto max-w-4xl overflow-hidden rounded-sm border border-white/10 bg-[#0d1018]/80 p-6 sm:p-8 lg:p-10 text-center shadow-[0_18px_60px_rgba(3,7,16,0.75)]">
               <div className="absolute inset-0 border border-white/5 pointer-events-none" style={{ mixBlendMode: 'overlay' }} />
-              <h2 className="font-serif text-3xl font-semibold text-white md:text-4xl">Bereit für Ihren Fall?</h2>
+              <h2 className="font-serif text-2xl font-semibold text-white sm:text-3xl md:text-4xl">Bereit für Ihren Fall?</h2>
               <p className="mt-4 text-base text-gray-300">
                 Teilen Sie uns vertraulich Ihr Anliegen mit. Wir analysieren die Lage, definieren ein passendes Einsatzteam und
                 liefern Ihnen binnen 24 Stunden eine belastbare Erstbewertung.
@@ -344,7 +344,7 @@ export default function TeamPage() {
               <Link href="/#contact">
                 <Button
                   size="lg"
-                  className="mt-8 border border-[#c2b16d] bg-[#c2b16d] hover:bg-[#a89a5a] px-10 py-6 font-serif text-lg text-[#1a1612] hover:text-[#1a1612] shadow-[0_15px_45px_rgba(194,177,109,0.45)] transition-all duration-300 hover:scale-[1.02]"
+                  className="mt-8 border border-[#c2b16d] bg-[#c2b16d] hover:bg-[#a89a5a] px-6 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-6 font-serif text-lg text-[#1a1612] hover:text-[#1a1612] shadow-[0_15px_45px_rgba(194,177,109,0.45)] transition-all duration-300 hover:scale-[1.02]"
                 >
                   <Phone className="mr-3 h-5 w-5" />
                   Kontakt aufnehmen

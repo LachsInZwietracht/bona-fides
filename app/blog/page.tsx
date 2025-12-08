@@ -101,7 +101,7 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
 
       {/* Hero Section */}
       <section className="relative z-10 pt-20 pb-16 border-b border-white/10">
-        <div className="container mx-auto max-w-6xl px-8">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {filterCategory ? (
             <>
               <Link
@@ -114,7 +114,7 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
                 <Badge className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)', color: '#FEF3C6', borderColor: 'rgba(194, 177, 109, 0.3)'}}>
                   KATEGORIE • {filteredArticles.length} AKTEN
                 </Badge>
-                <h1 className="font-serif font-bold text-5xl md:text-6xl text-white">
+                <h1 className="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white">
                   {filterCategory}
                 </h1>
               </div>
@@ -125,7 +125,7 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
                 FALLARCHIV • {articles.length} DOKUMENTIERTE FÄLLE
               </Badge>
 
-              <h1 className="font-serif font-bold text-5xl md:text-7xl text-white tracking-tight">
+              <h1 className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight">
                 ERMITTLUNGS-
                 <br />
                 <span className="text-gray-300">ARCHIV</span>
@@ -146,13 +146,13 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
 
       {/* Articles by Category */}
       <section className="relative z-10 py-20">
-        <div className="container mx-auto max-w-7xl px-8">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {Object.entries(articlesByCategory).map(([category, categoryArticles]) => (
             <div key={category} className="mb-24">
               {!filterCategory && (
                 <div className="mb-12 flex items-center gap-4">
                   <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-                  <h2 className="font-serif font-bold text-3xl md:text-4xl text-white uppercase tracking-wide">
+                  <h2 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl text-white uppercase tracking-wide">
                     {category}
                   </h2>
                   <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
@@ -171,7 +171,7 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
                       <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm overflow-hidden transition-all duration-700 hover:scale-105 hover:-rotate-1 shadow-2xl hover:bg-white/8 hover:border-amber-500/30 hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.2)]">
 
                         {/* Content */}
-                        <div className="p-6 space-y-4">
+                        <div className="p-4 sm:p-5 lg:p-6 space-y-4">
                           {/* Category Badge */}
                           <Badge className="bg-red-600/90 text-white font-mono text-xs px-2 py-1 rounded-sm backdrop-blur-sm w-fit">
                             {article.metadata.category}

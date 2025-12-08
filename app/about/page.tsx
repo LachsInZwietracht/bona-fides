@@ -280,16 +280,16 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
       <div className="absolute top-0 right-1/4 h-full w-px bg-gradient-to-b from-white/30 via-white/10 to-transparent blur-sm" />
       <div className="absolute top-0 right-1/3 h-full w-px bg-gradient-to-b from-white/20 via-white/5 to-transparent blur-sm" />
       <main className="relative z-20">
-        <section className="container mx-auto px-8 pb-24 pt-28">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-24 pt-28">
           <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="space-y-8">
               <h1 className="text-5xl font-serif font-bold tracking-tight text-white drop-shadow-xl md:text-6xl">
                 Wer wir sind, wofür wir stehen
               </h1>
-              <p className="text-lg font-mono uppercase tracking-[0.3em] text-gray-400">
+              <p className="text-base sm:text-lg font-mono uppercase tracking-[0.3em] text-gray-400">
                 Deutschlands führende Digital-Detektei mit dem größten Expertenteam
               </p>
-              <p className="max-w-xl text-lg text-gray-300">
+              <p className="max-w-xl text-base sm:text-lg text-gray-300">
                 Als eine der führenden Digital-Detekteien Deutschlands verfügen wir über das größte spezialisierte
                 Expertenteam für Cyber-Ermittlungen, Online-Forensik und digitale Beweissicherung. Mit modernster
                 IT-Forensik-Technologie und jahrzehntelanger Erfahrung lösen wir komplexe Cybercrime-Fälle,
@@ -297,15 +297,15 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
               </p>
               <div className="flex flex-wrap items-center gap-6 text-gray-400">
                 <div>
-                  <div className="text-4xl font-serif text-white">85+</div>
+                  <div className="text-3xl sm:text-4xl font-serif text-white">85+</div>
                   <div className="font-mono text-xs uppercase tracking-wide text-gray-500">spezialisierte Cyber-Ermittler</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-serif text-white">24/7</div>
+                  <div className="text-3xl sm:text-4xl font-serif text-white">24/7</div>
                   <div className="font-mono text-xs uppercase tracking-wide text-gray-500">digitale Forensik verfügbar</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-serif text-white">98%</div>
+                  <div className="text-3xl sm:text-4xl font-serif text-white">98%</div>
                   <div className="font-mono text-xs uppercase tracking-wide text-gray-500">Mandanten-Zufriedenheit</div>
                 </div>
               </div>
@@ -319,7 +319,7 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
               onBlur={() => setDossierActive(false)}
             >
               <div className="absolute inset-0 translate-x-6 translate-y-6 rounded-sm border border-white/10 bg-white/5 backdrop-blur" />
-              <div className="relative overflow-hidden rounded-sm border border-white/10 bg-black/60 p-10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
+              <div className="relative overflow-hidden rounded-sm border border-white/10 bg-black/60 p-6 sm:p-8 md:p-10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                     <div className="rounded-full border border-white/20 p-3">
@@ -362,10 +362,10 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
           </div>
         </section>
 
-        <section className="container mx-auto px-8 pb-24">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-24">
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="space-y-6">
-              <h2 className="text-3xl font-serif font-semibold text-white">Unsere Ermittlungsphilosophie</h2>
+              <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-white">Unsere Ermittlungsphilosophie</h2>
               <p className="text-gray-400">
                 Unsere Arbeit basiert auf gerichtsverwertbarer Beweisführung und respektvollem Umgang mit allen Beteiligten.
                 Sorgfältige Recherche, mehrstufige Verifikation und dokumentierte Abläufe garantieren belastbare Ergebnisse.
@@ -403,11 +403,11 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
 
         <section className="relative border-y border-white/5 bg-white/5 py-24">
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent" />
-          <div className="container relative mx-auto px-8">
+          <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
             <div className="space-y-12">
               {/* Title and Description */}
               <div className="space-y-6">
-                <h2 className="text-3xl font-serif font-semibold text-white">Chronik der Wahrheitssuche</h2>
+                <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-white">Chronik der Wahrheitssuche</h2>
                 <p className="text-gray-400">
                   Jeder Auftrag folgt einem strukturierten fünfstufigen Prozess – von der vertraulichen Erstberatung bis zur
                   abschließenden Beweisübergabe. Systematische Methodik und transparente Kommunikation garantieren optimale Ergebnisse.
@@ -446,7 +446,7 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
                     <div className="flex items-center justify-between">
                       <div>
                         <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-500">{activeMilestone.year}</div>
-                        <h3 className="mt-2 font-serif text-2xl text-white">{activeMilestone.title}</h3>
+                        <h3 className="mt-2 font-serif text-xl sm:text-2xl text-white">{activeMilestone.title}</h3>
                       </div>
                       <span className="rounded-sm border border-white/20 px-3 py-1 text-xs font-mono tracking-[0.3em] text-gray-400">
                         FALLAKTE
@@ -470,7 +470,7 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
                           <Fingerprint className="h-4 w-4" />
                           <span>Beweisdokument</span>
                         </div>
-                        <h4 className="mt-3 font-serif text-lg text-white">{activeMilestone.evidence.title}</h4>
+                        <h4 className="mt-3 font-serif text-base sm:text-lg text-white">{activeMilestone.evidence.title}</h4>
                         <p className="mt-3 text-sm text-gray-400">{activeMilestone.evidence.summary}</p>
                         <div className="mt-4 flex items-center space-x-3 text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
                           <Newspaper className="h-4 w-4" />
@@ -495,7 +495,7 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
                         <span>{milestone.year}</span>
                         <span>{milestone.evidence.tag}</span>
                       </div>
-                      <h4 className="mt-3 font-serif text-lg text-white">{milestone.title}</h4>
+                      <h4 className="mt-3 font-serif text-base sm:text-lg text-white">{milestone.title}</h4>
                       <p className="mt-2 text-xs text-gray-400">{milestone.description}</p>
                     </div>
                   ))}
@@ -505,10 +505,10 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
           </div>
         </section>
 
-        <section className="container mx-auto px-8 py-24">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="space-y-6">
-              <h2 className="text-3xl font-serif font-semibold text-white">Ihr Auftrag, unser Mandat</h2>
+              <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-white">Ihr Auftrag, unser Mandat</h2>
               <p className="text-gray-400">
                 Wir begleiten Sie von der ersten Risikoanalyse bis zur abschließenden Beweisübergabe. Alle Maßnahmen werden
                 dokumentiert, rechtlich geprüft und erst nach Ihrer Freigabe umgesetzt.

@@ -120,24 +120,24 @@ export default function HomePage() {
 
       {/* Hero section */}
       <div className="relative z-10 min-h-screen flex items-center pt-20">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               {/* Header with classic noir styling */}
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-7xl font-serif font-bold tracking-tight text-white drop-shadow-2xl">
+                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-white drop-shadow-2xl">
                     BONA
                     <br />
                     <span className="text-gray-300">FIDES</span>
                   </h1>
-                  <p className="text-xl font-mono tracking-widest text-gray-400 uppercase">Private Detektei</p>
+                  <p className="text-base sm:text-lg md:text-xl font-mono tracking-widest text-gray-400 uppercase">Private Detektei</p>
                 </div>
               </div>
 
               {/* Tagline with dramatic styling */}
               <div className="border-l-4 border-white pl-6">
-                <p className="text-2xl font-serif italic text-gray-300 leading-relaxed">
+                <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-gray-300 leading-relaxed">
                   „Jede Wahrheit
                   <br />
                   <span className="text-white font-bold">verdient es, gefunden zu werden.&rdquo;</span>
@@ -145,7 +145,7 @@ export default function HomePage() {
               </div>
 
               {/* Services with digital focus icons */}
-              <div className="grid grid-cols-3 gap-6 py-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 py-8">
                 <div className="text-center space-y-2">
                   <div className="w-12 h-12 mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
                     <Search className="w-6 h-6 text-white" />
@@ -171,7 +171,7 @@ export default function HomePage() {
                 <Link href="#contact">
                   <Button
                     size="lg"
-                    className="font-serif text-lg px-8 py-6 shadow-2xl transition-all duration-300 border"
+                    className="font-serif text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 shadow-2xl transition-all duration-300 border"
                     style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
                     onMouseEnter={(e) => {
                       (e.target as HTMLElement).style.backgroundColor = '#A89A5A';
@@ -195,7 +195,7 @@ export default function HomePage() {
             </div>
 
             <div className="relative lg:flex lg:justify-center">
-              <div className="relative max-w-sm mx-auto lg:max-w-md">
+              <div className="relative max-w-xs sm:max-w-sm mx-auto lg:max-w-md">
                 {/* Multiple paper layers for depth */}
                 <div className="absolute inset-0 bg-gray-200 transform rotate-1 shadow-lg rounded-sm opacity-60" />
                 <div className="absolute inset-0 bg-gray-300 transform -rotate-1 shadow-lg rounded-sm opacity-40" />
@@ -265,7 +265,7 @@ export default function HomePage() {
 
       {/* Services Section */}
       <div className="relative z-10 py-20 bg-gradient-to-b from-black/90 to-black/95">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
               ERMITTLUNGSDIENSTE
@@ -372,7 +372,7 @@ export default function HomePage() {
 
       {/* Trust Section */}
       <div className="relative z-10 py-20 bg-gradient-to-b from-black/95 to-black">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
               WARUM BONA FIDES
@@ -413,7 +413,7 @@ export default function HomePage() {
 
       {/* Case Studies Section - Evidence Board Style */}
       <div className="relative z-10 py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center space-y-6 mb-20">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
@@ -537,7 +537,7 @@ export default function HomePage() {
 
       {/* Testimonials Section */}
       <div className="relative z-10 py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
               KUNDENSTIMMEN
@@ -617,7 +617,7 @@ export default function HomePage() {
 
       {/* FAQ Section */}
       <div className="relative z-10 py-20 bg-black">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
               HÄUFIG GESTELLTE FRAGEN
@@ -677,7 +677,7 @@ export default function HomePage() {
 
       {/* Contact Section */}
       <div id="contact" className="relative z-10 py-20 bg-black">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
@@ -743,7 +743,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gray-300 transform -rotate-1 shadow-lg rounded-sm opacity-40" />
 
               {/* Main case file document */}
-              <div className="bg-white text-black p-10 shadow-2xl transform rotate-2 hover:rotate-1 transition-transform duration-300 relative rounded-sm min-h-[600px]">
+              <div className="bg-white text-black p-6 sm:p-8 md:p-10 shadow-2xl transform rotate-2 hover:rotate-1 transition-transform duration-300 relative rounded-sm min-h-[500px] sm:min-h-[600px]">
 
                 {/* Paper texture overlay */}
                 <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-yellow-100 to-gray-200 rounded-sm" />
@@ -928,20 +928,20 @@ export default function HomePage() {
 
       {/* Final CTA Section */}
       <div className="relative z-10 py-32 bg-gradient-to-b from-black to-gray-900">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center space-y-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-12 md:p-16 relative overflow-hidden">
 
             {/* Dramatic lighting effect */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-radial from-white/10 via-white/5 to-transparent blur-3xl" />
 
             <div className="relative z-10 space-y-8">
-              <h2 className="text-4xl md:text-6xl font-serif font-bold text-white leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
                 Die Wahrheit wartet nicht.
                 <br />
                 <span className="text-gray-300">Handeln Sie jetzt.</span>
               </h2>
 
-              <p className="text-xl md:text-2xl font-mono text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl font-mono text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 Jeder Tag ohne Antworten ist ein verlorener Tag. Unsere Ermittler stehen bereit, Ihren Fall mit Diskretion und Professionalität zu lösen.
               </p>
 
@@ -949,7 +949,7 @@ export default function HomePage() {
                 <Link href="#contact">
                   <Button
                     size="lg"
-                    className="font-serif text-xl px-10 py-7 shadow-2xl transition-all duration-300 border-2"
+                    className="font-serif text-lg sm:text-xl px-8 sm:px-10 py-5 sm:py-7 shadow-2xl transition-all duration-300 border-2"
                     style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
                     onMouseEnter={(e) => {
                       (e.target as HTMLElement).style.backgroundColor = '#FEF3C6';
