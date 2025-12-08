@@ -126,18 +126,18 @@ export default function HomePage() {
               {/* Header with classic noir styling */}
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-white drop-shadow-2xl">
+                  <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-serif font-bold tracking-tight text-white drop-shadow-2xl">
                     BONA
                     <br />
                     <span className="text-gray-300">FIDES</span>
                   </h1>
-                  <p className="text-base sm:text-lg md:text-xl font-mono tracking-widest text-gray-400 uppercase">Private Detektei</p>
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl font-mono tracking-widest text-gray-400 uppercase">Private Detektei</p>
                 </div>
               </div>
 
               {/* Tagline with dramatic styling */}
               <div className="border-l-4 border-white pl-6">
-                <p className="text-lg sm:text-xl md:text-2xl font-serif italic text-gray-300 leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-serif italic text-gray-300 leading-relaxed">
                   „Jede Wahrheit
                   <br />
                   <span className="text-white font-bold">verdient es, gefunden zu werden.&rdquo;</span>
@@ -171,7 +171,7 @@ export default function HomePage() {
                 <Link href="#contact">
                   <Button
                     size="lg"
-                    className="font-serif text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 shadow-2xl transition-all duration-300 border"
+                    className="font-serif text-base sm:text-lg px-8 py-5 sm:px-10 sm:py-7 md:px-8 md:py-6 shadow-2xl transition-all duration-300 border min-h-[48px] w-full sm:w-auto"
                     style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
                     onMouseEnter={(e) => {
                       (e.target as HTMLElement).style.backgroundColor = '#A89A5A';
@@ -267,7 +267,7 @@ export default function HomePage() {
       <div className="relative z-10 py-20 bg-gradient-to-b from-black/90 to-black/95">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">
               ERMITTLUNGSDIENSTE
             </h2>
             
@@ -374,7 +374,7 @@ export default function HomePage() {
       <div className="relative z-10 py-20 bg-gradient-to-b from-black/95 to-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">
               WARUM BONA FIDES
             </h2>
             
@@ -539,7 +539,7 @@ export default function HomePage() {
       <div className="relative z-10 py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">
               KUNDENSTIMMEN
             </h2>
 
@@ -619,7 +619,7 @@ export default function HomePage() {
       <div className="relative z-10 py-20 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">
               HÄUFIG GESTELLTE FRAGEN
             </h2>
 
@@ -682,7 +682,7 @@ export default function HomePage() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">
                   KONTAKT
                 </h2>
                 
@@ -743,7 +743,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gray-300 transform -rotate-1 shadow-lg rounded-sm opacity-40" />
 
               {/* Main case file document */}
-              <div className="bg-white text-black p-6 sm:p-8 md:p-10 shadow-2xl transform rotate-2 hover:rotate-1 transition-transform duration-300 relative rounded-sm min-h-[500px] sm:min-h-[600px]">
+              <div className="bg-white text-black p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl transform rotate-2 hover:rotate-1 transition-transform duration-300 relative rounded-sm min-h-[500px] sm:min-h-[600px]">
 
                 {/* Paper texture overlay */}
                 <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-yellow-100 to-gray-200 rounded-sm" />
@@ -785,7 +785,7 @@ export default function HomePage() {
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                         <div>
                           <Label htmlFor="name" className="font-mono text-xs uppercase tracking-wide text-gray-700">
                             Vollständiger Name
@@ -795,7 +795,7 @@ export default function HomePage() {
                             type="text"
                             value={formData.name}
                             onChange={(e) => handleInputChange('name', e.target.value)}
-                            className="font-mono text-sm border-gray-400 focus:border-gray-600"
+                            className="font-mono text-sm border-gray-400 focus:border-gray-600 min-h-[44px] px-4 py-3"
                             placeholder="Max Mustermann"
                           />
                           {errors.name && (
@@ -815,7 +815,7 @@ export default function HomePage() {
                             type="tel"
                             value={formData.phone}
                             onChange={(e) => handleInputChange('phone', e.target.value)}
-                            className="font-mono text-sm border-gray-400 focus:border-gray-600"
+                            className="font-mono text-sm border-gray-400 focus:border-gray-600 min-h-[44px] px-4 py-3"
                             placeholder="+49 xxx xxxx xxx"
                           />
                         </div>
@@ -875,7 +875,7 @@ export default function HomePage() {
                           id="message"
                           value={formData.message}
                           onChange={(e) => handleInputChange('message', e.target.value)}
-                          className="font-mono text-sm border-gray-400 focus:border-gray-600 min-h-[120px]"
+                          className="font-mono text-sm border-gray-400 focus:border-gray-600 min-h-[120px] px-4 py-3"
                           placeholder="Beschreiben Sie Ihren Fall so detailliert wie möglich. Alle Informationen werden streng vertraulich behandelt."
                         />
                         {errors.message && (
@@ -890,7 +890,7 @@ export default function HomePage() {
                         <Button
                           type="submit"
                           disabled={formStatus === 'submitting'}
-                          className="w-full font-mono text-sm uppercase tracking-wide bg-black text-white hover:bg-gray-800 border border-gray-600"
+                          className="w-full font-mono text-sm uppercase tracking-wide bg-black text-white hover:bg-gray-800 border border-gray-600 min-h-[48px] px-6 py-4"
                         >
                           {formStatus === 'submitting' ? (
                             <>
@@ -935,13 +935,13 @@ export default function HomePage() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-radial from-white/10 via-white/5 to-transparent blur-3xl" />
 
             <div className="relative z-10 space-y-8">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
+              <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-serif font-bold text-white leading-tight">
                 Die Wahrheit wartet nicht.
                 <br />
                 <span className="text-gray-300">Handeln Sie jetzt.</span>
               </h2>
 
-              <p className="text-lg sm:text-xl md:text-2xl font-mono text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg lg:text-2xl font-mono text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 Jeder Tag ohne Antworten ist ein verlorener Tag. Unsere Ermittler stehen bereit, Ihren Fall mit Diskretion und Professionalität zu lösen.
               </p>
 
@@ -949,7 +949,7 @@ export default function HomePage() {
                 <Link href="#contact">
                   <Button
                     size="lg"
-                    className="font-serif text-lg sm:text-xl px-8 sm:px-10 py-5 sm:py-7 shadow-2xl transition-all duration-300 border-2"
+                    className="font-serif text-base sm:text-lg md:text-xl px-10 py-6 sm:px-12 sm:py-8 md:px-10 md:py-7 shadow-2xl transition-all duration-300 border-2 min-h-[56px] w-full sm:w-auto"
                     style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
                     onMouseEnter={(e) => {
                       (e.target as HTMLElement).style.backgroundColor = '#FEF3C6';
