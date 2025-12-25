@@ -126,18 +126,18 @@ export default function HomePage() {
               {/* Header with classic noir styling */}
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-serif font-bold tracking-tight text-white drop-shadow-2xl">
+                  <h1 className="text-5xl sm:text-6xl md:text-5xl lg:text-7xl font-serif font-bold tracking-tight text-white drop-shadow-2xl leading-tight">
                     BONA
                     <br />
                     <span className="text-gray-300">FIDES</span>
                   </h1>
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl font-mono tracking-widest text-gray-400 uppercase">Private Detektei</p>
+                  <h2 className="text-lg sm:text-xl md:text-lg lg:text-xl font-mono tracking-widest text-gray-400 uppercase">Private Detektei</h2>
                 </div>
               </div>
 
               {/* Tagline with dramatic styling */}
-              <div className="border-l-4 border-white pl-6">
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-serif italic text-gray-300 leading-relaxed">
+              <div className="border-l-4 border-white pl-6 sm:pl-8">
+                <p className="text-lg sm:text-xl md:text-xl lg:text-2xl font-serif italic text-gray-300 leading-relaxed">
                   „Jede Wahrheit
                   <br />
                   <span className="text-white font-bold">verdient es, gefunden zu werden.&rdquo;</span>
@@ -167,7 +167,7 @@ export default function HomePage() {
               </div>
 
               {/* Call to action */}
-              <div className="space-y-4">
+              <div className="space-y-12 sm:space-y-16">
                 <Link href="#contact">
                   <Button
                     size="lg"
@@ -188,7 +188,7 @@ export default function HomePage() {
                     Vertrauliche Beratung
                   </Button>
                 </Link>
-                <p className="text-sm font-mono text-gray-500 tracking-wide">
+                <p className="text-sm font-mono text-gray-500 tracking-wide mt-8 sm:mt-12">
                   24/7 • Kostenlose Erstberatung • Absolute Verschwiegenheit
                 </p>
               </div>

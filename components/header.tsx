@@ -18,9 +18,9 @@ export function Header({ dark = false }: { dark?: boolean }) {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className={`text-2xl ${
-              dark 
-                ? 'font-serif font-bold text-white' 
+            <div className={`text-xl ${
+              dark
+                ? 'font-serif font-bold text-white'
                 : 'font-special-elite text-investigation-brown'
             }`}>
               BONA FIDES
