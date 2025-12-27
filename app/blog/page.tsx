@@ -1,10 +1,11 @@
-import { getAllArticles } from "@/lib/blog";
+import { getAllArticles, getLatestArticles } from "@/lib/blog";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { BlogCard } from "@/components/blog-card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, ArrowRight, Search } from "lucide-react";
+import { Search } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Blog | Bona Fides Detektei - Expertise in Digitalen Ermittlungen",
@@ -50,6 +51,7 @@ interface BlogIndexProps {
 export default async function BlogIndex({ searchParams }: BlogIndexProps) {
   const { category: filterCategory } = await searchParams;
   const articles = getAllArticles();
+  const latestArticles = getLatestArticles(6);
 
   // Filter by category if specified
   const filteredArticles = filterCategory
@@ -144,6 +146,26 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
         </div>
       </section>
 
+      {/* Aktuelle Akten Section */}
+      <section className="relative z-10 py-20 border-b border-white/10">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-6 mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white">
+              AKTUELLE AKTEN
+            </h2>
+            <p className="font-mono text-gray-400">
+              Die neuesten Fachartikel aus unserem Archiv
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {latestArticles.map((article) => (
+              <BlogCard key={article.metadata.slug} article={article} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Articles by Category */}
       <section className="relative z-10 py-20">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -160,56 +182,9 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
               )}
 
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {categoryArticles.map((article) => {
-                  return (
-                    <Link
-                      key={article.metadata.slug}
-                      href={`/blog/${article.metadata.slug}`}
-                      className="group relative"
-                    >
-                      {/* Case File Folder */}
-                      <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm overflow-hidden transition-all duration-700 hover:scale-105 hover:-rotate-1 shadow-2xl hover:bg-white/8 hover:border-amber-500/30 hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.2)]">
-
-                        {/* Content */}
-                        <div className="p-4 sm:p-5 lg:p-6 space-y-4">
-                          {/* Category Badge */}
-                          <Badge className="bg-red-600/90 text-white font-mono text-xs px-2 py-1 rounded-sm backdrop-blur-sm w-fit">
-                            {article.metadata.category}
-                          </Badge>
-
-                          <h3 className="font-serif font-bold text-xl text-white leading-tight group-hover:text-amber-300 group-hover:tracking-wider transition-all duration-500 line-clamp-2">
-                            {article.metadata.title}
-                          </h3>
-
-                          {article.metadata.excerpt && (
-                            <p className="text-gray-400 font-mono text-sm leading-relaxed line-clamp-3 group-hover:text-gray-300 transition-colors duration-500">
-                              {article.metadata.excerpt}
-                            </p>
-                          )}
-
-                          <div className="flex items-center gap-2 text-gray-500 text-xs font-mono pt-4 border-t border-white/10 group-hover:border-amber-500/20 transition-colors duration-500">
-                            <Calendar className="h-3 w-3" />
-                            <span>
-                              {new Date(article.metadata.date).toLocaleDateString("de-DE", {
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric",
-                              })}
-                            </span>
-                          </div>
-
-                          <div className="flex items-center text-amber-500 text-sm font-mono font-bold uppercase tracking-wide group-hover:text-amber-300 transition-colors duration-500">
-                            Akte öffnen
-                            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                          </div>
-                        </div>
-
-                        {/* Vintage Paper Clips */}
-                        <div className="absolute top-2 left-2 w-8 h-4 border-2 border-gray-400/20 rounded-full opacity-0 group-hover:opacity-60 transition-opacity duration-500 delay-200" />
-                      </div>
-                    </Link>
-                  );
-                })}
+                {categoryArticles.map((article) => (
+                  <BlogCard key={article.metadata.slug} article={article} />
+                ))}
               </div>
             </div>
           ))}

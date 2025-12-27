@@ -40,6 +40,16 @@ export function getAllArticles(): Article[] {
   return articles;
 }
 
+/**
+ * Returns the most recent articles.
+ * Articles are already sorted by date (newest first) from getAllArticles().
+ * @param count - Number of articles to return (default: 6)
+ * @returns Array of latest articles
+ */
+export function getLatestArticles(count: number = 6): Article[] {
+  return getAllArticles().slice(0, count);
+}
+
 // Get single article by slug
 export function getArticleBySlug(slug: string): Article | null {
   const fileNames = fs.readdirSync(articlesDirectory);

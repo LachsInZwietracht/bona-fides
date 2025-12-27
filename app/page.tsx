@@ -1,88 +1,35 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Header } from "@/components/header"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Phone, Search, Shield, Eye, Building, UserCheck, Award, Users, Star, Mail, Lock, Send, FileText, CheckCircle2, AlertCircle } from "lucide-react"
+import { Phone, Search, Shield, Eye, Building, UserCheck, Award, Users, Star, Mail, Lock, ArrowRight } from "lucide-react"
 import { Footer } from "@/components/footer"
+import { BlogCard } from "@/components/blog-card"
+import { ContactForm } from "@/components/contact-form"
+import type { Article } from "@/lib/blog"
 
 export default function HomePage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    caseType: '',
-    message: ''
-  })
-  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
-  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [latestArticles, setLatestArticles] = useState<Article[]>([])
 
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {}
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name ist erforderlich'
-    }
-    if (!formData.email.trim()) {
-      newErrors.email = 'E-Mail ist erforderlich'
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Ungültiges E-Mail-Format'
-    }
-    if (!formData.caseType) {
-      newErrors.caseType = 'Falltyp ist erforderlich'
-    }
-    if (!formData.message.trim()) {
-      newErrors.message = 'Nachricht ist erforderlich'
-    }
-
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-
-    if (!validateForm()) return
-
-    setFormStatus('submitting')
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-
-      if (!response.ok) {
-        throw new Error('Failed to send message')
+  // Fetch latest articles for the Aktuelles section
+  useEffect(() => {
+    const fetchLatestArticles = async () => {
+      try {
+        const response = await fetch('/api/latest-articles')
+        if (response.ok) {
+          const articles = await response.json()
+          setLatestArticles(articles)
+        }
+      } catch (error) {
+        console.error('Error fetching latest articles:', error)
       }
-
-      setFormStatus('success')
-      setTimeout(() => {
-        setFormStatus('idle')
-        setFormData({ name: '', email: '', phone: '', caseType: '', message: '' })
-      }, 3000)
-    } catch (error) {
-      console.error('Error sending message:', error)
-      setFormStatus('error')
-      setTimeout(() => setFormStatus('idle'), 3000)
     }
-  }
 
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
-    if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: '' }))
-    }
-  }
+    fetchLatestArticles()
+  }, [])
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
@@ -171,18 +118,8 @@ export default function HomePage() {
                 <Link href="#contact">
                   <Button
                     size="lg"
-                    className="font-serif text-base sm:text-lg px-8 py-5 sm:px-10 sm:py-7 md:px-8 md:py-6 shadow-2xl transition-all duration-300 border min-h-[48px] w-full sm:w-auto"
+                    className="font-serif text-base sm:text-lg px-8 py-5 sm:px-10 sm:py-7 md:px-8 md:py-6 shadow-2xl transition-all duration-300 border min-h-[48px] w-full sm:w-auto hover:bg-amber-700 hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.25)] hover:scale-105"
                     style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
-                    onMouseEnter={(e) => {
-                      (e.target as HTMLElement).style.backgroundColor = '#A89A5A';
-                      (e.target as HTMLElement).style.color = '#1A1612';
-                      (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.25)';
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.target as HTMLElement).style.backgroundColor = '#C2B16D';
-                      (e.target as HTMLElement).style.color = '#1A1612';
-                      (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
-                    }}
                   >
                     <Phone className="mr-3 h-5 w-5" />
                     Vertrauliche Beratung
@@ -535,6 +472,38 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Aktuelles Section */}
+      <div className="relative z-10 py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-6 mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
+              AKTUELLES
+            </h2>
+            <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
+              Neueste Erkenntnisse und Expertise aus unserem Fallarchiv
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
+            {latestArticles.map((article) => (
+              <BlogCard key={article.metadata.slug} article={article} />
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/blog">
+              <Button
+                size="lg"
+                className="font-serif text-lg px-10 py-6 bg-amber-600 hover:bg-amber-700 text-black transition-all duration-300 shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.3)] hover:scale-105"
+              >
+                Zum Fallarchiv
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
       {/* Testimonials Section */}
       <div className="relative z-10 py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -676,255 +645,7 @@ export default function HomePage() {
       </div>
 
       {/* Contact Section */}
-      <div id="contact" className="relative z-10 py-20 bg-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">
-                  KONTAKT
-                </h2>
-                
-                <p className="text-lg font-mono text-gray-300">
-                  Bereit für Antworten? Kontaktieren Sie uns für eine kostenlose, vertrauliche Beratung.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-white/10 p-3 rounded-sm">
-                      <Mail className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-mono text-lg text-white mb-1 uppercase tracking-wide">
-                        Sichere E-Mail
-                      </h3>
-                      <p className="font-mono text-white mb-2">
-                        ermittlungen@bonafides.agency
-                      </p>
-                      <p className="font-mono text-sm text-gray-400">
-                        Verschlüsselte Kommunikation verfügbar
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Security Notice */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6">
-                <h4 className="flex items-center font-mono text-white mb-4 uppercase tracking-wide">
-                  <Lock className="mr-2 h-5 w-5" />
-                  SICHERHEIT & VERTRAULICHKEIT
-                </h4>
-                <div className="space-y-3 font-mono text-sm">
-                  <div className="flex items-start space-x-2">
-                    <Shield className="h-4 w-4 mt-1 text-white shrink-0" />
-                    <p className="text-gray-300">Alle Kommunikationen sind verschlüsselt und vertraulich</p>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <Shield className="h-4 w-4 mt-1 text-white shrink-0" />
-                    <p className="text-gray-300">Anwalt-Mandant-Privileg gilt für alle Beratungen</p>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <Shield className="h-4 w-4 mt-1 text-white shrink-0" />
-                    <p className="text-gray-300">Ihre Falldetails bleiben streng vertraulich</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="relative">
-              {/* Multiple paper layers for depth */}
-              <div className="absolute inset-0 bg-gray-200 transform rotate-1 shadow-lg rounded-sm opacity-60" />
-              <div className="absolute inset-0 bg-gray-300 transform -rotate-1 shadow-lg rounded-sm opacity-40" />
-
-              {/* Main case file document */}
-              <div className="bg-white text-black p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl transform rotate-2 hover:rotate-1 transition-transform duration-300 relative rounded-sm min-h-[500px] sm:min-h-[600px]">
-
-                {/* Paper texture overlay */}
-                <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-yellow-100 to-gray-200 rounded-sm" />
-
-                {/* Subtle paper grain */}
-                <div
-                  className="absolute inset-0 opacity-10 rounded-sm"
-                  style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' result='noise' seed='1'/%3E%3CfeColorMatrix in='noise' type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperGrain)' opacity='0.4'/%3E%3C/svg%3E")`,
-                  }}
-                />
-
-                {/* Form content */}
-                <div className="relative z-10">
-                  <div className="flex justify-between items-start mb-8">
-                    <h3 className="text-2xl font-mono font-bold text-black tracking-tight">
-                      FALLANFRAGE
-                    </h3>
-                    <Badge className="bg-red-500 text-white font-mono text-xs px-2 py-1 rounded-sm">
-                      {formStatus === 'success' ? 'ÜBERMITTELT' : 'VERTRAULICH'}
-                    </Badge>
-                  </div>
-
-                  {formStatus === 'success' ? (
-                    <div className="text-center py-8">
-                      <CheckCircle2 className="h-16 w-16 mx-auto text-green-600 mb-4" />
-                      <h4 className="text-lg font-mono font-bold text-green-600 mb-2">FALL REGISTRIERT</h4>
-                      <p className="font-mono text-sm text-gray-700">
-                        Ihr Auftrag wurde sicher übermittelt. Ein Ermittler kontaktiert Sie binnen 24 Stunden.
-                      </p>
-                    </div>
-                  ) : formStatus === 'error' ? (
-                    <div className="text-center py-8">
-                      <AlertCircle className="h-16 w-16 mx-auto text-red-600 mb-4" />
-                      <h4 className="text-lg font-mono font-bold text-red-600 mb-2">ÜBERTRAGUNG FEHLGESCHLAGEN</h4>
-                      <p className="font-mono text-sm text-gray-700">
-                        Fehler beim Senden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.
-                      </p>
-                    </div>
-                  ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                        <div>
-                          <Label htmlFor="name" className="font-mono text-xs uppercase tracking-wide text-gray-700">
-                            Vollständiger Name
-                          </Label>
-                          <Input
-                            id="name"
-                            type="text"
-                            value={formData.name}
-                            onChange={(e) => handleInputChange('name', e.target.value)}
-                            className="font-mono text-sm border-gray-400 focus:border-gray-600 min-h-[44px] px-4 py-3"
-                            placeholder="Max Mustermann"
-                          />
-                          {errors.name && (
-                            <p className="text-red-600 font-mono text-xs mt-1 flex items-center">
-                              <AlertCircle className="h-3 w-3 mr-1" />
-                              {errors.name}
-                            </p>
-                          )}
-                        </div>
-
-                        <div>
-                          <Label htmlFor="phone" className="font-mono text-xs uppercase tracking-wide text-gray-700">
-                            Telefonnummer (Optional)
-                          </Label>
-                          <Input
-                            id="phone"
-                            type="tel"
-                            value={formData.phone}
-                            onChange={(e) => handleInputChange('phone', e.target.value)}
-                            className="font-mono text-sm border-gray-400 focus:border-gray-600 min-h-[44px] px-4 py-3"
-                            placeholder="+49 xxx xxxx xxx"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="email" className="font-mono text-xs uppercase tracking-wide text-gray-700">
-                          E-Mail-Adresse
-                        </Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => handleInputChange('email', e.target.value)}
-                          className="font-mono text-sm border-gray-400 focus:border-gray-600"
-                          placeholder="ihre.email@beispiel.de"
-                        />
-                        {errors.email && (
-                          <p className="text-red-600 font-mono text-xs mt-1 flex items-center">
-                            <AlertCircle className="h-3 w-3 mr-1" />
-                            {errors.email}
-                          </p>
-                        )}
-                      </div>
-
-                      <div>
-                        <Label htmlFor="caseType" className="font-mono text-xs uppercase tracking-wide text-gray-700">
-                          Art der Ermittlung
-                        </Label>
-                        <Select value={formData.caseType} onValueChange={(value) => handleInputChange('caseType', value)}>
-                          <SelectTrigger className="font-mono text-sm border-gray-400 focus:border-gray-600">
-                            <SelectValue placeholder="Bitte wählen Sie eine Kategorie" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="digital">Digitale Ermittlungen</SelectItem>
-                            <SelectItem value="cybercrime">Cybercrime & Online-Betrug</SelectItem>
-                            <SelectItem value="background">Online-Hintergrundprüfungen</SelectItem>
-                            <SelectItem value="social-media">Social Media Forensik</SelectItem>
-                            <SelectItem value="missing">Personensuche Online</SelectItem>
-                            <SelectItem value="account-theft">Account-Diebstahl</SelectItem>
-                            <SelectItem value="other">Sonstige Ermittlungen</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        {errors.caseType && (
-                          <p className="text-red-600 font-mono text-xs mt-1 flex items-center">
-                            <AlertCircle className="h-3 w-3 mr-1" />
-                            {errors.caseType}
-                          </p>
-                        )}
-                      </div>
-
-                      <div>
-                        <Label htmlFor="message" className="font-mono text-xs uppercase tracking-wide text-gray-700">
-                          Fallbeschreibung
-                        </Label>
-                        <Textarea
-                          id="message"
-                          value={formData.message}
-                          onChange={(e) => handleInputChange('message', e.target.value)}
-                          className="font-mono text-sm border-gray-400 focus:border-gray-600 min-h-[120px] px-4 py-3"
-                          placeholder="Beschreiben Sie Ihren Fall so detailliert wie möglich. Alle Informationen werden streng vertraulich behandelt."
-                        />
-                        {errors.message && (
-                          <p className="text-red-600 font-mono text-xs mt-1 flex items-center">
-                            <AlertCircle className="h-3 w-3 mr-1" />
-                            {errors.message}
-                          </p>
-                        )}
-                      </div>
-
-                      <div className="pt-6 border-t border-gray-300">
-                        <Button
-                          type="submit"
-                          disabled={formStatus === 'submitting'}
-                          className="w-full font-mono text-sm uppercase tracking-wide bg-black text-white hover:bg-gray-800 border border-gray-600 min-h-[48px] px-6 py-4"
-                        >
-                          {formStatus === 'submitting' ? (
-                            <>
-                              <FileText className="mr-2 h-4 w-4 animate-pulse" />
-                              FALL WIRD ÜBERMITTELT...
-                            </>
-                          ) : (
-                            <>
-                              <Send className="mr-2 h-4 w-4" />
-                              ANFRAGE SENDEN
-                            </>
-                          )}
-                        </Button>
-                        <p className="font-mono text-xs text-gray-600 text-center mt-2">
-                          Antwort binnen 24 Stunden • Absolute Vertraulichkeit
-                        </p>
-                      </div>
-                    </form>
-                  )}
-
-                  {/* Classification stamp */}
-                  <div className="absolute -bottom-2 -right-2 w-12 h-12 border-2 border-red-600 rounded-full flex items-center justify-center transform rotate-12 bg-white">
-                    <div className="text-center">
-                      <div className="text-red-600 font-bold text-xs">
-                        {formStatus === 'success' ? 'SENT' : 'SECURE'}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ContactForm />
 
       {/* Final CTA Section */}
       <div className="relative z-10 py-32 bg-gradient-to-b from-black to-gray-900">
@@ -949,20 +670,8 @@ export default function HomePage() {
                 <Link href="#contact">
                   <Button
                     size="lg"
-                    className="font-serif text-base sm:text-lg md:text-xl px-10 py-6 sm:px-12 sm:py-8 md:px-10 md:py-7 shadow-2xl transition-all duration-300 border-2 min-h-[56px] w-full sm:w-auto"
+                    className="font-serif text-base sm:text-lg md:text-xl px-10 py-6 sm:px-12 sm:py-8 md:px-10 md:py-7 shadow-2xl transition-all duration-300 border-2 min-h-[56px] w-full sm:w-auto hover:bg-amber-200 hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.5)] hover:scale-105"
                     style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
-                    onMouseEnter={(e) => {
-                      (e.target as HTMLElement).style.backgroundColor = '#FEF3C6';
-                      (e.target as HTMLElement).style.color = '#1A1612';
-                      (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.5)';
-                      (e.target as HTMLElement).style.transform = 'scale(1.05)';
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.target as HTMLElement).style.backgroundColor = '#C2B16D';
-                      (e.target as HTMLElement).style.color = '#1A1612';
-                      (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
-                      (e.target as HTMLElement).style.transform = 'scale(1)';
-                    }}
                   >
                     <Mail className="mr-3 h-6 w-6" />
                     Jetzt Kontaktieren
