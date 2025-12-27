@@ -240,7 +240,7 @@ export default function HomePage() {
               <div key={index} className="group relative">
                 
                 {/* Card with vintage paper styling */}
-                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 rounded-sm p-8 transition-all duration-500 ease-out shadow-lg hover:shadow-xl overflow-hidden`} onMouseEnter={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.4)'} onMouseLeave={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.08)'}>
+                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 hover:border-[#C2B16D]/40 rounded-sm p-8 transition-all duration-500 ease-out shadow-lg hover:shadow-xl overflow-hidden`}>
                   
                   {/* Vintage paper texture overlay */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-800">
@@ -253,42 +253,42 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-800 ease-out opacity-10" />
                   
                   {/* Old-style corner decorations */}
-                  <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-200" style={{borderColor: 'rgba(254, 243, 198, 0.4)'}} />
-                  <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-300" style={{borderColor: 'rgba(254, 243, 198, 0.4)'}} />
-                  <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-400" style={{borderColor: 'rgba(254, 243, 198, 0.4)'}} />
-                  <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-500" style={{borderColor: 'rgba(254, 243, 198, 0.4)'}} />
-                  
+                  <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-[#FEF3C6]/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-200" />
+                  <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-[#FEF3C6]/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-300" />
+                  <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-[#FEF3C6]/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-400" />
+                  <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-[#FEF3C6]/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-500" />
+
                   <div className="relative z-10">
                     <div className="text-center mb-8">
                       {/* Vintage medallion style icon */}
                       <div className="relative">
-                        <div className="w-20 h-20 mx-auto mb-6 bg-white/8 rounded-full flex items-center justify-center transition-all duration-700 backdrop-blur-sm border border-white/10" onMouseEnter={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(194, 177, 109, 0.2)'; (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.4)';}} onMouseLeave={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.08)'; (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.1)';}}>
-                          <service.icon className="h-10 w-10 text-white/90 transition-colors duration-700" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.9)'} />
+                        <div className="w-20 h-20 mx-auto mb-6 bg-white/8 hover:bg-[#C2B16D]/20 rounded-full flex items-center justify-center transition-all duration-700 backdrop-blur-sm border border-white/10 hover:border-[#C2B16D]/40">
+                          <service.icon className="h-10 w-10 text-white/90 group-hover:text-[#FEF3C6] transition-colors duration-700" />
                         </div>
                         {/* Vintage circle decoration */}
                         <div className="absolute inset-0 rounded-full border border-dashed border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-800 delay-200 animate-pulse" />
                       </div>
-                      
+
                       {/* Title with typewriter effect */}
-                      <h3 className="text-2xl font-serif font-bold text-white/95 mb-3 transition-colors duration-700 group-hover:tracking-wider" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.95)'}>
+                      <h3 className="text-2xl font-serif font-bold text-white/95 group-hover:text-[#FEF3C6] mb-3 transition-colors duration-700 group-hover:tracking-wider">
                         {service.title}
                       </h3>
                     </div>
-                    
+
                     {/* Description with fade-in */}
-                    <p className="text-gray-300 font-mono text-sm text-center mb-6 leading-relaxed transition-all duration-700 opacity-90 group-hover:opacity-100" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'}>
+                    <p className="text-gray-300 group-hover:text-[#FEF3C6]/80 font-mono text-sm text-center mb-6 leading-relaxed transition-all duration-700 opacity-90 group-hover:opacity-100">
                       {service.description}
                     </p>
-                    
+
                     {/* Features list with staggered reveal */}
                     <div className="space-y-3">
-                      <h4 className="font-mono text-white/90 text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 pb-2 transition-colors duration-700" onMouseEnter={(e) => {(e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.4)'; (e.target as HTMLElement).style.color = '#FEF3C6';}} onMouseLeave={(e) => {(e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.15)'; (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.9)';}}>
+                      <h4 className="font-mono text-white/90 group-hover:text-[#FEF3C6] text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 group-hover:border-[#C2B16D]/40 pb-2 transition-colors duration-700">
                         Hauptdienste
                       </h4>
                       <ul className="text-xs font-mono text-gray-400 space-y-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center transition-all duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}>
-                            <div className="w-1.5 h-1.5 bg-white/60 rounded-full mr-3 transition-colors duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#C2B16D'} onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.6)'} />
+                          <li key={featureIndex} className="flex items-center transition-all duration-700 group-hover:text-[#FEF3C6]/80" style={{transitionDelay: `${featureIndex * 100}ms`}}>
+                            <div className="w-1.5 h-1.5 bg-white/60 group-hover:bg-[#C2B16D] rounded-full mr-3 transition-colors duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} />
                             <span className="tracking-wide">{feature}</span>
                           </li>
                         ))}
@@ -395,15 +395,15 @@ export default function HomePage() {
             ].map((caseFile, index) => (
               <div key={index} className="group relative">
                 {/* Case File Folder */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm overflow-hidden transition-all duration-700 hover:scale-105 hover:-rotate-1 shadow-2xl" onMouseEnter={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(254, 243, 198, 0.1)'; (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.4)'; (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.2)';}} onMouseLeave={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.05)'; (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.1)'; (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';}}>
-                  
+                <div className="bg-white/5 hover:bg-[#FEF3C6]/10 backdrop-blur-sm border border-white/10 hover:border-[#C2B16D]/40 hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.2)] rounded-sm overflow-hidden transition-all duration-700 hover:scale-105 hover:-rotate-1 shadow-2xl">
+
                   {/* File Tab */}
-                  <div className="bg-white/10 px-4 py-2 border-b border-white/20 transition-colors duration-500" onMouseEnter={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(194, 177, 109, 0.2)'; (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.3)';}} onMouseLeave={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.2)';}}>
+                  <div className="bg-white/10 group-hover:bg-[#C2B16D]/20 px-4 py-2 border-b border-white/20 group-hover:border-[#C2B16D]/30 transition-colors duration-500">
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-mono text-white font-bold tracking-widest transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'white'}>
+                      <span className="text-xs font-mono text-white group-hover:text-[#FEF3C6] font-bold tracking-widest transition-colors duration-500">
                         AKTE {caseFile.caseNumber}
                       </span>
-                      <div className="text-xs font-mono text-gray-300 transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.7)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'}>
+                      <div className="text-xs font-mono text-gray-300 group-hover:text-[#FEF3C6]/70 transition-colors duration-500">
                         {caseFile.classification}
                       </div>
                     </div>
@@ -413,28 +413,28 @@ export default function HomePage() {
                   <div className="p-6 space-y-4">
                     {/* Case Title with Typewriter Effect */}
                     <div className="space-y-2">
-                      <h3 className="text-xl font-serif font-bold text-white group-hover:tracking-wider transition-all duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'white'}>
+                      <h3 className="text-xl font-serif font-bold text-white group-hover:text-[#FEF3C6] group-hover:tracking-wider transition-all duration-500">
                         {caseFile.title}
                       </h3>
-                      <div className="inline-block bg-white/10 text-white px-2 py-1 rounded text-xs font-mono transition-colors duration-500" onMouseEnter={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(194, 177, 109, 0.1)'; (e.target as HTMLElement).style.color = '#FEF3C6';}} onMouseLeave={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; (e.target as HTMLElement).style.color = 'white';}}>
+                      <div className="inline-block bg-white/10 group-hover:bg-[#C2B16D]/10 text-white group-hover:text-[#FEF3C6] px-2 py-1 rounded text-xs font-mono transition-colors duration-500">
                         {caseFile.service}
                       </div>
                     </div>
 
                     {/* Case Description */}
-                    <p className="text-gray-300 font-mono text-sm leading-relaxed transition-colors duration-500 mb-6" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'}>
+                    <p className="text-gray-300 group-hover:text-[#FEF3C6]/80 font-mono text-sm leading-relaxed transition-colors duration-500 mb-6">
                       {caseFile.description}
                     </p>
 
                     {/* Case Details */}
-                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20 transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.2)'} onMouseLeave={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.2)'}>
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20 group-hover:border-[#C2B16D]/20 transition-colors duration-500">
                       <div>
-                        <div className="text-xs font-mono text-gray-400 transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.7)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}> Ort:</div>
-                        <div className="text-xs font-mono text-white transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'white'}>{caseFile.location}</div>
+                        <div className="text-xs font-mono text-gray-400 group-hover:text-[#FEF3C6]/70 transition-colors duration-500"> Ort:</div>
+                        <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">{caseFile.location}</div>
                       </div>
                       <div>
-                        <div className="text-xs font-mono text-gray-400 transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.7)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}> Dauer:</div>
-                        <div className="text-xs font-mono text-white transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'white'}>{caseFile.duration}</div>
+                        <div className="text-xs font-mono text-gray-400 group-hover:text-[#FEF3C6]/70 transition-colors duration-500"> Dauer:</div>
+                        <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">{caseFile.duration}</div>
                       </div>
                     </div>
                   </div>
@@ -494,7 +494,8 @@ export default function HomePage() {
             <Link href="/blog">
               <Button
                 size="lg"
-                className="font-serif text-lg px-10 py-6 bg-amber-600 hover:bg-amber-700 text-black transition-all duration-300 shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.3)] hover:scale-105"
+                className="font-serif text-lg px-10 py-6 transition-all duration-300 shadow-2xl hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.3)] hover:scale-105 border-2"
+                style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
               >
                 Zum Fallarchiv
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -535,7 +536,7 @@ export default function HomePage() {
               }
             ].map((testimonial, index) => (
               <div key={index} className="group relative">
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-6 transition-all duration-700 hover:scale-105 shadow-2xl" onMouseEnter={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(254, 243, 198, 0.08)'; (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.4)'; (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(194, 177, 109, 0.25)';}} onMouseLeave={(e) => {(e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.05)'; (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.1)'; (e.target as HTMLElement).style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';}}>
+                <div className="bg-white/5 hover:bg-[#FEF3C6]/08 backdrop-blur-sm border border-white/10 hover:border-[#C2B16D]/40 hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.25)] rounded-sm p-6 transition-all duration-700 hover:scale-105 shadow-2xl">
 
                   {/* Vintage Paper Texture */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-800">
@@ -547,19 +548,19 @@ export default function HomePage() {
                   {/* Rating Stars */}
                   <div className="flex justify-center mb-4 space-x-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+                      <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500 group-hover:fill-[#C2B16D] group-hover:text-[#C2B16D] transition-colors duration-500" />
                     ))}
                   </div>
 
                   {/* Testimonial Text */}
-                  <p className="text-gray-300 font-mono text-sm leading-relaxed mb-6 italic transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'}>
+                  <p className="text-gray-300 group-hover:text-[#FEF3C6]/80 font-mono text-sm leading-relaxed mb-6 italic transition-colors duration-500">
                     &ldquo;{testimonial.text}&rdquo;
                   </p>
 
                   {/* Client Info */}
-                  <div className="space-y-2 border-t border-white/20 pt-4 transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.3)'} onMouseLeave={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.2)'}>
+                  <div className="space-y-2 border-t border-white/20 group-hover:border-[#C2B16D]/30 pt-4 transition-colors duration-500">
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-white font-bold text-sm transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'white'}>
+                      <span className="font-mono text-white group-hover:text-[#FEF3C6] font-bold text-sm transition-colors duration-500">
                         {testimonial.initials}
                       </span>
                       <span className="font-mono text-gray-400 text-xs">
@@ -573,8 +574,8 @@ export default function HomePage() {
 
                   {/* Vintage Stamp */}
                   <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-70 transition-all duration-700 delay-200">
-                    <div className="w-12 h-12 border-2 border-dashed rounded-full flex items-center justify-center transform -rotate-12" style={{borderColor: 'rgba(194, 177, 109, 0.5)'}}>
-                      <span className="text-[10px] font-mono font-bold tracking-tight" style={{color: '#FEF3C6'}}>VERIFIZIERT</span>
+                    <div className="w-12 h-12 border-2 border-dashed border-[#C2B16D]/50 rounded-full flex items-center justify-center transform -rotate-12">
+                      <span className="text-[10px] font-mono font-bold tracking-tight text-[#FEF3C6]">VERIFIZIERT</span>
                     </div>
                   </div>
                 </div>
@@ -628,13 +629,13 @@ export default function HomePage() {
                 answer: "Wir sind ehrlich: Nicht jeder Fall führt zum gewünschten Ergebnis. Wenn keine Beweise gefunden werden, informieren wir Sie sofort und besprechen weitere Optionen. Viele Pauschalpreise beinhalten eine 'Kein Ergebnis, reduzierte Gebühr'-Garantie."
               }
             ].map((faq, index) => (
-              <div key={index} className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm transition-all duration-500 hover:bg-white/8" onMouseEnter={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(194, 177, 109, 0.3)'} onMouseLeave={(e) => (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.1)'}>
+              <div key={index} className="group bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#C2B16D]/30 rounded-sm transition-all duration-500 hover:bg-white/8">
                 <details className="group/details">
-                  <summary className="cursor-pointer p-6 font-mono text-white font-bold flex justify-between items-center transition-colors duration-500 hover:text-[#FEF3C6] list-none">
+                  <summary className="cursor-pointer p-6 font-mono text-white group-hover:text-[#FEF3C6] font-bold flex justify-between items-center transition-colors duration-500 list-none">
                     <span className="text-sm md:text-base">{faq.question}</span>
                     <span className="ml-4 text-2xl transition-transform duration-300 group-open/details:rotate-45">+</span>
                   </summary>
-                  <div className="px-6 pb-6 font-mono text-sm text-gray-300 leading-relaxed border-t border-white/10 pt-4 transition-colors duration-500" onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'rgba(254, 243, 198, 0.8)'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(209, 213, 219)'}>
+                  <div className="px-6 pb-6 font-mono text-sm text-gray-300 group-hover:text-[#FEF3C6]/80 leading-relaxed border-t border-white/10 pt-4 transition-colors duration-500">
                     {faq.answer}
                   </div>
                 </details>
