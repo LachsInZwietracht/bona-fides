@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Playfair_Display, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { HashNavigationHandler } from "@/components/hash-navigation-handler"
 import "./globals.css"
 
 const playfair = Playfair_Display({
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body className={`${playfair.variable} ${jetbrains.variable} font-serif antialiased`}>
+        <HashNavigationHandler />
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>

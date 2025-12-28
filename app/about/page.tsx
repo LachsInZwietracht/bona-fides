@@ -194,7 +194,7 @@ useEffect(() => {
   useEffect(() => {
     const timeouts: ReturnType<typeof setTimeout>[] = [];
     if (dossierActive) {
-      [1, 2, 3].forEach((stage, idx) => {
+      [1, 2, 3, 4].forEach((stage, idx) => {
         timeouts[idx] = setTimeout(() => setDossierStage(stage), (idx + 1) * 180);
       });
     } else {
@@ -208,7 +208,7 @@ useEffect(() => {
 
   useEffect(() => {
     if (dialStage >= combinationAngles.length && !vaultUnlocked) {
-      const timeout = setTimeout(() => setVaultUnlocked(true), 600);
+      const timeout = setTimeout(() => setVaultUnlocked(true), 200);
       dialTimeoutRef.current = timeout;
     }
     return () => {
@@ -221,20 +221,24 @@ useEffect(() => {
   const dossierPages = useMemo(
     () => [
       {
-        heading: 'Mandantenbriefing',
-        content:
-          'Hypothesen-Workshop, Gefährdungslage und operative Ziele werden innerhalb von 12 Stunden fixiert.',
+        heading: '35 Bundesweite Ermittler',
+        content: 'Ermittlernetzwerk in ganz Deutschland',
+        stamp: 'BUNDESWEIT',
+      },
+      {
+        heading: '100% Diskrete Beweise',
+        content: 'Gerichtsfeste Dokumentation garantiert',
+        stamp: 'GERICHTSFEST',
+      },
+      {
+        heading: '#1 Digital',
+        content: 'Führend in digitaler Ermittlung',
+        stamp: 'MARKTFÜHRER',
+      },
+      {
+        heading: '100% Vertraulich',
+        content: 'Alle Fälle werden mit völliger Diskretion behandelt',
         stamp: 'VERTRAULICH',
-      },
-      {
-        heading: 'Einsatzteam',
-        content: 'Strike-Team aus Fallleiterin, Analyst, Observations-Spezialist und Forensiker.',
-        stamp: 'CLASSIFIED',
-      },
-      {
-        heading: 'Methodik',
-        content: 'OSINT-Layer, Observation, Supabase-Fallakte mit Zero-Knowledge-Protokollierung.',
-        stamp: 'FREIGABE A',
       },
     ],
     []
@@ -245,7 +249,7 @@ useEffect(() => {
     setDialRotation(combinationAngles[dialStage]);
     const timeout = setTimeout(() => {
       setDialStage((prev) => prev + 1);
-    }, 700);
+    }, 300);
     dialTimeoutRef.current = timeout;
   };
 
@@ -325,29 +329,6 @@ useEffect(() => {
                 IT-Forensik-Technologie und jahrzehntelanger Erfahrung lösen wir komplexe Cybercrime-Fälle,
                 Identitätsdiebstahl und Wirtschaftsspionage für Unternehmen und Privatpersonen deutschlandweit.
               </p>
-              <div className="grid grid-cols-3 gap-4 lg:flex lg:flex-wrap lg:items-center lg:gap-6 text-gray-400">
-                <div className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-serif text-white">85+</div>
-                  <div className="font-mono text-[10px] sm:text-xs uppercase tracking-wide text-gray-500 leading-tight">
-                    <span className="block lg:inline">spezialisierte</span>
-                    <span className="block lg:inline"> Cyber-Ermittler</span>
-                  </div>
-                </div>
-                <div className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-serif text-white">24/7</div>
-                  <div className="font-mono text-[10px] sm:text-xs uppercase tracking-wide text-gray-500 leading-tight">
-                    <span className="block lg:inline">digitale Forensik</span>
-                    <span className="block lg:inline"> verfügbar</span>
-                  </div>
-                </div>
-                <div className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-serif text-white">98%</div>
-                  <div className="font-mono text-[10px] sm:text-xs uppercase tracking-wide text-gray-500 leading-tight">
-                    <span className="block lg:inline">Mandanten-</span>
-                    <span className="block lg:inline">Zufriedenheit</span>
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div
@@ -365,11 +346,11 @@ useEffect(() => {
                     <div className="rounded-full border border-white/20 p-3">
                       <FileSignature className="h-6 w-6 text-white" />
                     </div>
-                    <h2 className="font-serif text-2xl font-semibold text-white">Mandantenbriefing</h2>
+                    <h2 className="font-serif text-2xl font-semibold text-white">Unsere Stärken</h2>
                   </div>
                   <p className="text-sm text-gray-400">
-                    Jeder Auftrag beginnt mit einem vertraulichen Deep-Dive, in dem wir Hypothesen, Risiken und operative Ziele
-                    definieren. Ein Fallprotokoll in Supabase hält alle Entscheidungspunkte revisionssicher fest.
+                    Diese Zahlen sprechen für unsere Expertise und unser Engagement. Jeder Fall wird mit der gleichen
+                    Professionalität und Diskretion behandelt, die uns zur führenden Digital-Detektei Deutschlands macht.
                   </p>
                   <div className="relative mt-6 flex flex-col gap-4">
                     {dossierPages.map((page, index) => (

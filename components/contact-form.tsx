@@ -164,10 +164,6 @@ export function ContactForm() {
                   <p className="text-red-600 font-bold">Bereit für Aufnahme</p>
                 </div>
 
-                <div className="border-b border-gray-300 pb-2">
-                  <span className="font-bold text-gray-700">Ermittler:</span>
-                  <p className="text-black">Agent verfügbar</p>
-                </div>
               </div>
 
               {/* Quote section - playful and matching landing page */}

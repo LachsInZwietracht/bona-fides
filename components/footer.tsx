@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, Building, Shield } from "lucide-react";
+import { Shield } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="relative z-10 bg-gray-900 border-t border-white/10">
       <div className="container mx-auto px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
 
           {/* Company Info */}
           <div className="space-y-4">
@@ -15,12 +15,12 @@ export function Footer() {
               BONA FIDES
             </h3>
             <p className="font-mono text-sm text-gray-400 leading-relaxed">
-              Deutschlands beste und größte Detektei für digitale Ermittlungen. Lizenziert, versichert und auf Ergebnisse ausgerichtet.
+              Deutschlands beste und größte Detektei für digitale Ermittlungen. Professionell, diskret und auf Ergebnisse ausgerichtet.
             </p>
             <div className="flex items-center space-x-2">
               <Shield className="h-4 w-4 text-white" />
               <span className="font-mono text-xs text-gray-400 uppercase tracking-wide">
-                Zertifiziert & Versichert
+                Professionell & Vertrauensvoll
               </span>
             </div>
           </div>
@@ -74,22 +74,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="font-mono text-white font-bold uppercase tracking-wide text-sm">
-              Kontakt
-            </h4>
-            <ul className="space-y-3 font-mono text-sm text-gray-400">
-              <li className="flex items-start space-x-2">
-                <Mail className="h-4 w-4 mt-1 shrink-0" />
-                <span>ermittlungen@bonafides.agency</span>
-              </li>
-              <li className="flex items-start space-x-2">
-                <Building className="h-4 w-4 mt-1 shrink-0" />
-                <span>Deutschlandweit tätig</span>
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Bottom Bar */}
