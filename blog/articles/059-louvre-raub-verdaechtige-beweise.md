@@ -3,7 +3,7 @@ title: "Louvre-Raub: Die Verdächtigen und Beweise - Wer stahl die Mona Lisa?"
 slug: louvre-raub-verdaechtige-beweise
 keyword: Louvre Raub Verdächtige Beweise Mona Lisa
 category: Louvre Heist
-date: 2025-12-30
+date: 2025-10-30
 excerpt: "Ein Jahr nach dem Raub: Vier Hauptverdächtige, 147 Beweisstücke, eine spektakuläre forensische Analyse. Wer waren die Täter? Was verraten DNA, Glasfragmente und Malware-Code? Die komplette Beweiskette im berühmtesten Kunstraub der Geschichte."
 ---
 

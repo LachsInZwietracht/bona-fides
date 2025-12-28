@@ -1,4 +1,4 @@
-import { getAllArticles, getLatestArticles } from "@/lib/blog";
+import { getAllArticles } from "@/lib/blog";
 import Link from "next/link";
 import { Metadata } from "next";
 import { Header } from "@/components/header";
@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { BlogCard } from "@/components/blog-card";
 import { Badge } from "@/components/ui/badge";
 import { Search } from "lucide-react";
+import { RecentArticlesSection } from "@/components/recent-articles-section";
 
 export const metadata: Metadata = {
   title: "Blog | Bona Fides Detektei - Expertise in Digitalen Ermittlungen",
@@ -51,7 +52,6 @@ interface BlogIndexProps {
 export default async function BlogIndex({ searchParams }: BlogIndexProps) {
   const { category: filterCategory } = await searchParams;
   const articles = getAllArticles();
-  const latestArticles = getLatestArticles(6);
 
   // Filter by category if specified
   const filteredArticles = filterCategory
@@ -146,25 +146,8 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
         </div>
       </section>
 
-      {/* Aktuelle Akten Section */}
-      <section className="relative z-10 py-20 border-b border-white/10">
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-6 mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white">
-              AKTUELLE AKTEN
-            </h2>
-            <p className="font-mono text-gray-400">
-              Die neuesten Fachartikel aus unserem Archiv
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {latestArticles.map((article) => (
-              <BlogCard key={article.metadata.slug} article={article} />
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Aktuelle Akten Section with Load More */}
+      <RecentArticlesSection articles={articles} />
 
       {/* Articles by Category */}
       <section className="relative z-10 py-20">
