@@ -300,23 +300,18 @@ export function ContactForm() {
 
                 {/* Submit button with case file styling */}
                 <div className="mt-6 pt-4 border-t border-gray-300">
-                  <div className="flex items-center justify-between mb-4 text-xs font-mono text-gray-600">
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center gap-1">
-                        <Lock className="h-3 w-3 text-green-600" />
-                        <span>VERSCHLÜSSELT</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Shield className="h-3 w-3 text-blue-600" />
-                        <span>DSGVO-KONFORM</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <AlertCircle className="h-3 w-3" style={{color: '#C2B16D'}} />
-                        <span>STRENG VERTRAULICH</span>
-                      </div>
+                  <div className="flex items-center gap-4 mb-4 text-xs font-mono text-gray-600">
+                    <div className="flex items-center gap-1">
+                      <Lock className="h-3 w-3 text-green-600" />
+                      <span>VERSCHLÜSSELT</span>
                     </div>
-                    <div className="text-gray-500">
-                      EINGANGSDATUM: Bei Übermittlung erfasst
+                    <div className="flex items-center gap-1">
+                      <Shield className="h-3 w-3 text-blue-600" />
+                      <span>DSGVO-KONFORM</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <AlertCircle className="h-3 w-3" style={{color: '#C2B16D'}} />
+                      <span>STRENG VERTRAULICH</span>
                     </div>
                   </div>
 
@@ -344,10 +339,6 @@ export function ContactForm() {
                 </div>
               </form>
 
-              {/* GEHEIM stamp - matching landing page */}
-              <div className="absolute -bottom-2 -right-2 md:-bottom-3 md:-right-3 w-12 h-12 md:w-16 md:h-16 border-2 border-red-600 rounded-full flex items-center justify-center transform rotate-12 bg-white shadow-lg">
-                <span className="text-red-600 font-bold text-xs">GEHEIM</span>
-              </div>
 
               {/* Security icons like landing page */}
               <div className="absolute top-6 right-6 flex gap-2 opacity-20">
