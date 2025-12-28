@@ -9,10 +9,18 @@ import { Phone, Search, Shield, Eye, Building, UserCheck, Award, Users, Star, Ma
 import { Footer } from "@/components/footer"
 import { BlogCard } from "@/components/blog-card"
 import { ContactForm } from "@/components/contact-form"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 import type { Article } from "@/lib/blog"
 
 export default function HomePage() {
   const [latestArticles, setLatestArticles] = useState<Article[]>([])
+  const isMobile = useIsMobile()
+
+  // Individual intersection observers for each service card
+  const service1Observer = useIntersectionObserver({ threshold: 0.2, rootMargin: '-10% 0px' })
+  const service2Observer = useIntersectionObserver({ threshold: 0.2, rootMargin: '-10% 0px' })
+  const service3Observer = useIntersectionObserver({ threshold: 0.2, rootMargin: '-10% 0px' })
 
   // Fetch latest articles for the Aktuelles section
   useEffect(() => {
@@ -67,10 +75,10 @@ export default function HomePage() {
       <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-white/20 via-white/5 to-transparent blur-sm" />
 
       {/* Hero section */}
-      <div className="relative z-10 min-h-screen flex items-center pt-20">
+      <div className="relative z-10 min-h-screen flex items-center pt-16 sm:pt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+            <div className="space-y-6 sm:space-y-8">
               {/* Header with classic noir styling */}
               <div className="space-y-4">
                 <div className="space-y-2">
@@ -93,29 +101,29 @@ export default function HomePage() {
               </div>
 
               {/* Services with digital focus icons */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 py-8">
-                <div className="text-center space-y-2">
-                  <div className="w-12 h-12 mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
-                    <Search className="w-6 h-6 text-white" />
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 py-4 sm:py-8">
+                <div className="flex items-center space-x-3 sm:flex-col sm:text-center sm:space-x-0 sm:space-y-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 sm:mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm flex-shrink-0">
+                    <Search className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <p className="text-sm font-mono text-gray-400 uppercase tracking-wide">Cyber-Forensik</p>
+                  <p className="text-xs sm:text-sm font-mono text-gray-400 uppercase tracking-wide">Cyber-Forensik</p>
                 </div>
-                <div className="text-center space-y-2">
-                  <div className="w-12 h-12 mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
-                    <Eye className="w-6 h-6 text-white" />
+                <div className="flex items-center space-x-3 sm:flex-col sm:text-center sm:space-x-0 sm:space-y-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 sm:mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm flex-shrink-0">
+                    <Eye className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <p className="text-sm font-mono text-gray-400 uppercase tracking-wide">Digitale Ermittlungen</p>
+                  <p className="text-xs sm:text-sm font-mono text-gray-400 uppercase tracking-wide">Digitale Ermittlungen</p>
                 </div>
-                <div className="text-center space-y-2">
-                  <div className="w-12 h-12 mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
-                    <Lock className="w-6 h-6 text-white" />
+                <div className="flex items-center space-x-3 sm:flex-col sm:text-center sm:space-x-0 sm:space-y-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 sm:mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm flex-shrink-0">
+                    <Lock className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <p className="text-sm font-mono text-gray-400 uppercase tracking-wide">Online Sicherheit</p>
+                  <p className="text-xs sm:text-sm font-mono text-gray-400 uppercase tracking-wide">Online Sicherheit</p>
                 </div>
               </div>
 
               {/* Call to action */}
-              <div className="space-y-12 sm:space-y-16">
+              <div className="space-y-8 sm:space-y-12">
                 <Link href="#contact">
                   <Button
                     size="lg"
@@ -126,13 +134,13 @@ export default function HomePage() {
                     Vertrauliche Beratung
                   </Button>
                 </Link>
-                <p className="text-sm font-mono text-gray-500 tracking-wide mt-8 sm:mt-12">
+                <p className="hidden sm:block text-sm font-mono text-gray-500 tracking-wide mt-8 sm:mt-12">
                   Kostenlose Erstberatung • Absolute Verschwiegenheit
                 </p>
               </div>
             </div>
 
-            <div className="relative lg:flex lg:justify-center">
+            <div className="relative hidden lg:flex lg:justify-center">
               <div className="relative max-w-xs sm:max-w-sm mx-auto lg:max-w-md">
                 {/* Multiple paper layers for depth */}
                 <div className="absolute inset-0 bg-gray-200 transform rotate-1 shadow-lg rounded-sm opacity-60" />
@@ -237,59 +245,163 @@ export default function HomePage() {
                 features: ["Online-Screening", "Digitale Forensik", "Dark Web Recherche", "Identitätsprüfung"],
                 gradient: "from-zinc-800/30 to-zinc-700/15"
               }
-            ].map((service, index) => (
-              <div key={index} className="group relative">
-                
+            ].map((service, index) => {
+              // Get the appropriate observer for this service
+              const observers = [service1Observer, service2Observer, service3Observer]
+              const observer = observers[index]
+
+              // Determine if the mobile scroll animation should be active
+              const shouldAnimateOnMobile = isMobile && observer.isVisible
+
+              return (
+                <div
+                  key={index}
+                  ref={observer.elementRef}
+                  className={`group relative ${
+                    isMobile ? (shouldAnimateOnMobile ? 'group-active' : '') : ''
+                  }`}
+                >
+
                 {/* Card with vintage paper styling */}
-                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 hover:border-[#C2B16D]/40 rounded-sm p-8 transition-all duration-500 ease-out shadow-lg hover:shadow-xl overflow-hidden`}>
+                <div className={`relative bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/8 rounded-sm p-8 transition-all duration-500 ease-out shadow-lg overflow-hidden ${
+                  isMobile
+                    ? shouldAnimateOnMobile
+                      ? 'border-[#C2B16D]/40 shadow-xl'
+                      : ''
+                    : 'hover:border-[#C2B16D]/40 hover:shadow-xl'
+                }`}>
                   
                   {/* Vintage paper texture overlay */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-800">
+                  <div className={`absolute inset-0 opacity-0 transition-opacity duration-800 ${
+                    isMobile
+                      ? shouldAnimateOnMobile
+                        ? 'opacity-40'
+                        : ''
+                      : 'group-hover:opacity-40'
+                  }`}>
                     <div className="h-full w-full bg-amber-50/5" style={{
                       backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperTexture'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' result='noise' seed='2'/%3E%3CfeColorMatrix in='noise' type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperTexture)' opacity='0.4'/%3E%3C/svg%3E")`,
                     }} />
                   </div>
                   
                   {/* Typewriter reveal effect */}
-                  <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-800 ease-out opacity-10" />
+                  <div className={`absolute inset-0 bg-black transition-transform duration-800 ease-out opacity-10 ${
+                    isMobile
+                      ? shouldAnimateOnMobile
+                        ? 'translate-y-0'
+                        : 'translate-y-full'
+                      : 'translate-y-full group-hover:translate-y-0'
+                  }`} />
                   
                   {/* Old-style corner decorations */}
-                  <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-[#FEF3C6]/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-200" />
-                  <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-[#FEF3C6]/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-300" />
-                  <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-[#FEF3C6]/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-400" />
-                  <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-[#FEF3C6]/40 opacity-0 group-hover:opacity-100 transition-all duration-600 delay-500" />
+                  <div className={`absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-[#FEF3C6]/40 opacity-0 transition-all duration-600 delay-200 ${
+                    isMobile
+                      ? shouldAnimateOnMobile
+                        ? 'opacity-100'
+                        : ''
+                      : 'group-hover:opacity-100'
+                  }`} />
+                  <div className={`absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-[#FEF3C6]/40 opacity-0 transition-all duration-600 delay-300 ${
+                    isMobile
+                      ? shouldAnimateOnMobile
+                        ? 'opacity-100'
+                        : ''
+                      : 'group-hover:opacity-100'
+                  }`} />
+                  <div className={`absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-[#FEF3C6]/40 opacity-0 transition-all duration-600 delay-400 ${
+                    isMobile
+                      ? shouldAnimateOnMobile
+                        ? 'opacity-100'
+                        : ''
+                      : 'group-hover:opacity-100'
+                  }`} />
+                  <div className={`absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-[#FEF3C6]/40 opacity-0 transition-all duration-600 delay-500 ${
+                    isMobile
+                      ? shouldAnimateOnMobile
+                        ? 'opacity-100'
+                        : ''
+                      : 'group-hover:opacity-100'
+                  }`} />
 
                   <div className="relative z-10">
                     <div className="text-center mb-8">
                       {/* Vintage medallion style icon */}
                       <div className="relative">
-                        <div className="w-20 h-20 mx-auto mb-6 bg-white/8 hover:bg-[#C2B16D]/20 rounded-full flex items-center justify-center transition-all duration-700 backdrop-blur-sm border border-white/10 hover:border-[#C2B16D]/40">
-                          <service.icon className="h-10 w-10 text-white/90 group-hover:text-[#FEF3C6] transition-colors duration-700" />
+                        <div className={`w-20 h-20 mx-auto mb-6 bg-white/8 rounded-full flex items-center justify-center transition-all duration-700 backdrop-blur-sm border border-white/10 ${
+                          isMobile
+                            ? shouldAnimateOnMobile
+                              ? 'bg-[#C2B16D]/20 border-[#C2B16D]/40'
+                              : ''
+                            : 'hover:bg-[#C2B16D]/20 hover:border-[#C2B16D]/40'
+                        }`}>
+                          <service.icon className={`h-10 w-10 text-white/90 transition-colors duration-700 ${
+                            isMobile
+                              ? shouldAnimateOnMobile
+                                ? 'text-[#FEF3C6]'
+                                : ''
+                              : 'group-hover:text-[#FEF3C6]'
+                          }`} />
                         </div>
                         {/* Vintage circle decoration */}
-                        <div className="absolute inset-0 rounded-full border border-dashed border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-800 delay-200 animate-pulse" />
+                        <div className={`absolute inset-0 rounded-full border border-dashed border-white/20 opacity-0 transition-opacity duration-800 delay-200 animate-pulse ${
+                          isMobile
+                            ? shouldAnimateOnMobile
+                              ? 'opacity-100'
+                              : ''
+                            : 'group-hover:opacity-100'
+                        }`} />
                       </div>
 
                       {/* Title with typewriter effect */}
-                      <h3 className="text-2xl font-serif font-bold text-white/95 group-hover:text-[#FEF3C6] mb-3 transition-colors duration-700 group-hover:tracking-wider">
+                      <h3 className={`text-2xl font-serif font-bold text-white/95 mb-3 transition-colors duration-700 ${
+                        isMobile
+                          ? shouldAnimateOnMobile
+                            ? 'text-[#FEF3C6] tracking-wider'
+                            : ''
+                          : 'group-hover:text-[#FEF3C6] group-hover:tracking-wider'
+                      }`}>
                         {service.title}
                       </h3>
                     </div>
 
                     {/* Description with fade-in */}
-                    <p className="text-gray-300 group-hover:text-[#FEF3C6]/80 font-mono text-sm text-center mb-6 leading-relaxed transition-all duration-700 opacity-90 group-hover:opacity-100">
+                    <p className={`text-gray-300 font-mono text-sm text-center mb-6 leading-relaxed transition-all duration-700 opacity-90 ${
+                      isMobile
+                        ? shouldAnimateOnMobile
+                          ? 'text-[#FEF3C6]/80 opacity-100'
+                          : ''
+                        : 'group-hover:text-[#FEF3C6]/80 group-hover:opacity-100'
+                    }`}>
                       {service.description}
                     </p>
 
                     {/* Features list with staggered reveal */}
                     <div className="space-y-3">
-                      <h4 className="font-mono text-white/90 group-hover:text-[#FEF3C6] text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 group-hover:border-[#C2B16D]/40 pb-2 transition-colors duration-700">
+                      <h4 className={`font-mono text-white/90 text-xs font-bold uppercase tracking-widest text-center border-b border-white/15 pb-2 transition-colors duration-700 ${
+                        isMobile
+                          ? shouldAnimateOnMobile
+                            ? 'text-[#FEF3C6] border-[#C2B16D]/40'
+                            : ''
+                          : 'group-hover:text-[#FEF3C6] group-hover:border-[#C2B16D]/40'
+                      }`}>
                         Hauptdienste
                       </h4>
                       <ul className="text-xs font-mono text-gray-400 space-y-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center transition-all duration-700 group-hover:text-[#FEF3C6]/80" style={{transitionDelay: `${featureIndex * 100}ms`}}>
-                            <div className="w-1.5 h-1.5 bg-white/60 group-hover:bg-[#C2B16D] rounded-full mr-3 transition-colors duration-700" style={{transitionDelay: `${featureIndex * 100}ms`}} />
+                          <li key={featureIndex} className={`flex items-center transition-all duration-700 ${
+                            isMobile
+                              ? shouldAnimateOnMobile
+                                ? 'text-[#FEF3C6]/80'
+                                : ''
+                              : 'group-hover:text-[#FEF3C6]/80'
+                          }`} style={{transitionDelay: `${featureIndex * 100}ms`}}>
+                            <div className={`w-1.5 h-1.5 bg-white/60 rounded-full mr-3 transition-colors duration-700 ${
+                              isMobile
+                                ? shouldAnimateOnMobile
+                                  ? 'bg-[#C2B16D]'
+                                  : ''
+                                : 'group-hover:bg-[#C2B16D]'
+                            }`} style={{transitionDelay: `${featureIndex * 100}ms`}} />
                             <span className="tracking-wide">{feature}</span>
                           </li>
                         ))}
@@ -297,13 +409,20 @@ export default function HomePage() {
                     </div>
 
                     {/* Vintage file tab */}
-                    <div className="absolute -top-2 left-8 w-16 h-6 border border-white/20 rounded-t opacity-0 group-hover:opacity-100 transition-all duration-500 delay-400" style={{backgroundColor: 'rgba(194, 177, 109, 0.2)'}}>
+                    <div className={`absolute -top-2 left-8 w-16 h-6 border border-white/20 rounded-t opacity-0 transition-all duration-500 delay-400 ${
+                      isMobile
+                        ? shouldAnimateOnMobile
+                          ? 'opacity-100'
+                          : ''
+                        : 'group-hover:opacity-100'
+                    }`} style={{backgroundColor: 'rgba(194, 177, 109, 0.2)'}}>
                       <div className="text-[10px] font-mono text-center pt-1" style={{color: '#FEF3C6'}}>FILE</div>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </div>
