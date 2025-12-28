@@ -443,8 +443,8 @@ export default function HomePage() {
           {/* Trust Metrics */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
-              { icon: Users, number: "3", label: "Kern-Agenten", description: "Experten mit großem Netzwerk" },
-              { icon: Award, number: "Beste", label: "Detektei DE", description: "Die beste und größte Detektei in Deutschland" },
+              { icon: Users, number: "35", label: "Bundesweite Ermittler", description: "Ermittlernetzwerk in ganz Deutschland" },
+              { icon: Award, number: "100%", label: "Diskrete Beweise", description: "Gerichtsfeste Dokumentation garantiert" },
               { icon: Star, number: "#1", label: "Digital", description: "Führend in digitaler Ermittlung" },
               { icon: Shield, number: "100%", label: "Vertraulich", description: "Alle Fälle werden mit völliger Diskretion behandelt" }
             ].map((metric, index) => (
