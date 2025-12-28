@@ -32,8 +32,9 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden relative">
+    <div>
       <Header dark />
+      <div className="min-h-screen bg-black text-white relative">
 
       {/* Film grain texture */}
       <div
@@ -126,7 +127,7 @@ export default function HomePage() {
                   </Button>
                 </Link>
                 <p className="text-sm font-mono text-gray-500 tracking-wide mt-8 sm:mt-12">
-                  24/7 • Kostenlose Erstberatung • Absolute Verschwiegenheit
+                  Kostenlose Erstberatung • Absolute Verschwiegenheit
                 </p>
               </div>
             </div>
@@ -439,12 +440,6 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  {/* Bottom Right GELÖST Stamp */}
-                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300 transform rotate-12 group-hover:rotate-6">
-                    <div className="bg-red-600 text-white px-3 py-2 rounded-lg border-2 border-red-500 shadow-xl">
-                      <span className="text-sm font-mono font-bold tracking-wide">GELÖST</span>
-                    </div>
-                  </div>
 
                   {/* Vintage Paper Clips */}
                   <div className="absolute top-2 left-2 w-8 h-4 border-2 border-gray-400/30 rounded-full opacity-0 group-hover:opacity-60 transition-opacity duration-500 delay-400" />
@@ -646,7 +641,9 @@ export default function HomePage() {
       </div>
 
       {/* Contact Section */}
-      <ContactForm />
+      <section id="kontakt-section">
+        <ContactForm />
+      </section>
 
       {/* Final CTA Section */}
       <div className="relative z-10 py-32 bg-gradient-to-b from-black to-gray-900">
@@ -682,7 +679,7 @@ export default function HomePage() {
 
               <div className="pt-6 border-t border-white/20 mt-8">
                 <p className="font-mono text-sm text-gray-400 tracking-widest">
-                  24/7 VERFÜGBAR • KOSTENLOSE ERSTBERATUNG
+                  KOSTENLOSE ERSTBERATUNG
                 </p>
               </div>
 
@@ -701,6 +698,7 @@ export default function HomePage() {
 
       {/* Vignette effect */}
       <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black opacity-60 pointer-events-none" />
+      </div>
     </div>
   )
 }

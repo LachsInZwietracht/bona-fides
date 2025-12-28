@@ -122,6 +122,13 @@ const [dialStage, setDialStage] = useState(0);
 const [vaultUnlocked, setVaultUnlocked] = useState(false);
 const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
 
+// Reset vault state on component mount to ensure it always starts locked
+useEffect(() => {
+  setDialStage(0);
+  setDialRotation(0);
+  setVaultUnlocked(false);
+}, []);
+
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
@@ -222,8 +229,9 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
 
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-black text-white">
+    <div>
       <Header dark />
+      <div className="relative min-h-screen overflow-hidden bg-black text-white">
 
       <div
         className="pointer-events-none absolute inset-0 opacity-15 mix-blend-screen"
@@ -280,33 +288,42 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
       <div className="absolute top-0 right-1/4 h-full w-px bg-gradient-to-b from-white/30 via-white/10 to-transparent blur-sm" />
       <div className="absolute top-0 right-1/3 h-full w-px bg-gradient-to-b from-white/20 via-white/5 to-transparent blur-sm" />
       <main className="relative z-20">
-        <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-24 pt-28">
-          <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="space-y-8">
-              <h1 className="text-5xl font-serif font-bold tracking-tight text-white drop-shadow-xl md:text-6xl">
+        <section className="container mx-auto px-6 sm:px-6 lg:px-8 pb-16 lg:pb-24 pt-20 lg:pt-28">
+          <div className="grid gap-12 lg:gap-16 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="space-y-6 lg:space-y-8">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold tracking-tight text-white drop-shadow-xl">
                 Wer wir sind, wofür wir stehen
               </h1>
-              <p className="text-base sm:text-lg font-mono uppercase tracking-[0.3em] text-gray-400">
+              <p className="text-xs sm:text-sm lg:text-base font-mono uppercase tracking-[0.2em] lg:tracking-[0.3em] text-gray-400">
                 Deutschlands führende Digital-Detektei mit dem größten Expertenteam
               </p>
-              <p className="max-w-xl text-base sm:text-lg text-gray-300">
+              <p className="max-w-xl text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
                 Als eine der führenden Digital-Detekteien Deutschlands verfügen wir über das größte spezialisierte
                 Expertenteam für Cyber-Ermittlungen, Online-Forensik und digitale Beweissicherung. Mit modernster
                 IT-Forensik-Technologie und jahrzehntelanger Erfahrung lösen wir komplexe Cybercrime-Fälle,
                 Identitätsdiebstahl und Wirtschaftsspionage für Unternehmen und Privatpersonen deutschlandweit.
               </p>
-              <div className="flex flex-wrap items-center gap-6 text-gray-400">
-                <div>
-                  <div className="text-3xl sm:text-4xl font-serif text-white">85+</div>
-                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">spezialisierte Cyber-Ermittler</div>
+              <div className="grid grid-cols-3 gap-4 lg:flex lg:flex-wrap lg:items-center lg:gap-6 text-gray-400">
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-serif text-white">85+</div>
+                  <div className="font-mono text-[10px] sm:text-xs uppercase tracking-wide text-gray-500 leading-tight">
+                    <span className="block lg:inline">spezialisierte</span>
+                    <span className="block lg:inline"> Cyber-Ermittler</span>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-3xl sm:text-4xl font-serif text-white">24/7</div>
-                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">digitale Forensik verfügbar</div>
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-serif text-white">24/7</div>
+                  <div className="font-mono text-[10px] sm:text-xs uppercase tracking-wide text-gray-500 leading-tight">
+                    <span className="block lg:inline">digitale Forensik</span>
+                    <span className="block lg:inline"> verfügbar</span>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-3xl sm:text-4xl font-serif text-white">98%</div>
-                  <div className="font-mono text-xs uppercase tracking-wide text-gray-500">Mandanten-Zufriedenheit</div>
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-serif text-white">98%</div>
+                  <div className="font-mono text-[10px] sm:text-xs uppercase tracking-wide text-gray-500 leading-tight">
+                    <span className="block lg:inline">Mandanten-</span>
+                    <span className="block lg:inline">Zufriedenheit</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -362,21 +379,21 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
           </div>
         </section>
 
-        <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-white">Unsere Ermittlungsphilosophie</h2>
-              <p className="text-gray-400">
+        <section className="container mx-auto px-6 sm:px-6 lg:px-8 pb-16 lg:pb-24">
+          <div className="grid gap-8 lg:gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="space-y-4 lg:space-y-6">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif font-semibold text-white">Unsere Ermittlungsphilosophie</h2>
+              <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                 Unsere Arbeit basiert auf gerichtsverwertbarer Beweisführung und respektvollem Umgang mit allen Beteiligten.
                 Sorgfältige Recherche, mehrstufige Verifikation und dokumentierte Abläufe garantieren belastbare Ergebnisse.
               </p>
-              <p className="text-gray-400">
+              <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                 Moderne Tools unterstützen uns, ersetzen aber nie die Erfahrung unserer Ermittler. Wir kalibrieren jedes Mandat
                 entlang eines Risiko-Rahmens, der Compliance, Reputation und Sicherheit gleichwertig berücksichtigt.
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
               {principles.map((principle, index) => {
                 const Icon = principle.icon;
                 const isVisible = visiblePrinciples.has(index);
@@ -387,13 +404,13 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
                       principleRefs.current[index] = el;
                     }}
                     data-index={index}
-                    className={`rounded-sm border border-white/10 bg-black/60 p-6 shadow-[0_20px_50px_-25px_rgba(0,0,0,0.8)] transition-all duration-700 ${
+                    className={`rounded-sm border border-white/10 bg-black/60 p-4 lg:p-6 shadow-[0_20px_50px_-25px_rgba(0,0,0,0.8)] transition-all duration-700 ${
                       isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
                     }`}
                   >
-                    <Icon className="mb-4 h-8 w-8 text-white" />
-                    <h3 className="font-serif text-xl font-semibold text-white">{principle.title}</h3>
-                    <p className="text-sm text-gray-400">{principle.body}</p>
+                    <Icon className="mb-3 lg:mb-4 h-6 lg:h-8 w-6 lg:w-8 text-white" />
+                    <h3 className="font-serif text-lg lg:text-xl font-semibold text-white mb-2">{principle.title}</h3>
+                    <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{principle.body}</p>
                   </div>
                 );
               })}
@@ -401,21 +418,65 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
           </div>
         </section>
 
-        <section className="relative border-y border-white/5 bg-white/5 py-24">
+        <section className="relative border-y border-white/5 bg-white/5 py-16 lg:py-24">
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent" />
-          <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="space-y-12">
+          <div className="container relative mx-auto px-6 sm:px-6 lg:px-8">
+            <div className="space-y-8 lg:space-y-12">
               {/* Title and Description */}
-              <div className="space-y-6">
-                <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-white">Chronik der Wahrheitssuche</h2>
-                <p className="text-gray-400">
+              <div className="space-y-4 lg:space-y-6">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif font-semibold text-white">Chronik der Wahrheitssuche</h2>
+                <p className="text-sm sm:text-base text-gray-400">
                   Jeder Auftrag folgt einem strukturierten fünfstufigen Prozess – von der vertraulichen Erstberatung bis zur
                   abschließenden Beweisübergabe. Systematische Methodik und transparente Kommunikation garantieren optimale Ergebnisse.
                 </p>
               </div>
 
-              {/* Main Content: Left Column (Slider + Featured Card) | Right Column (Overview Cards) */}
-              <div className="grid gap-8 lg:grid-cols-[0.55fr_0.45fr]">
+              {/* Mobile: Simple Tab Interface */}
+              <div className="lg:hidden space-y-6">
+                {/* Mobile Tab Navigation */}
+                <div className="grid grid-cols-5 gap-1">
+                  {milestones.map((milestone, index) => (
+                    <button
+                      key={milestone.year}
+                      className={`px-1 py-2 rounded-sm border text-[10px] font-mono uppercase tracking-[0.1em] transition-all duration-300 text-center ${
+                        index === activeMilestoneIndex
+                          ? 'border-[#C2B16D] bg-[#C2B16D]/20 text-white'
+                          : 'border-white/20 bg-black/40 text-gray-400 hover:border-white/30'
+                      }`}
+                      onClick={() => setActiveMilestoneIndex(index)}
+                    >
+                      P{index + 1}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Mobile Content Card */}
+                <div className="rounded-sm border border-white/10 bg-black/70 p-4 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.9)]">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-500">{activeMilestone.year}</div>
+                      <h3 className="mt-1 font-serif text-lg text-white">{activeMilestone.title}</h3>
+                    </div>
+                    <span className="rounded-sm border border-white/20 px-2 py-1 text-xs font-mono tracking-[0.2em] text-gray-400">
+                      {activeMilestone.evidence.tag}
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-400 mb-4">{activeMilestone.description}</p>
+
+                  {/* Mobile Evidence Card */}
+                  <div className="rounded-sm border border-white/10 bg-black/60 p-3">
+                    <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-[0.2em] text-gray-500 mb-2">
+                      <Fingerprint className="h-3 w-3" />
+                      <span>Beweisdokument</span>
+                    </div>
+                    <h4 className="font-serif text-sm text-white">{activeMilestone.evidence.title}</h4>
+                    <p className="mt-2 text-xs text-gray-400">{activeMilestone.evidence.summary}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Desktop: Original Complex Layout */}
+              <div className="hidden lg:grid gap-8 lg:grid-cols-[0.55fr_0.45fr]">
                 {/* Left Column: Slider + Featured Card */}
                 <div className="space-y-8">
                   {/* Slider Control */}
@@ -505,31 +566,31 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
           </div>
         </section>
 
-        <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-white">Ihr Auftrag, unser Mandat</h2>
-              <p className="text-gray-400">
+        <section className="container mx-auto px-6 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div className="grid gap-8 lg:gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="space-y-4 lg:space-y-6">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif font-semibold text-white">Ihr Auftrag, unser Mandat</h2>
+              <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                 Wir begleiten Sie von der ersten Risikoanalyse bis zur abschließenden Beweisübergabe. Alle Maßnahmen werden
                 dokumentiert, rechtlich geprüft und erst nach Ihrer Freigabe umgesetzt.
               </p>
-              <p className="text-gray-400">
+              <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                 Sprechen Sie mit unserem Fallannahme-Team über Ihr Anliegen. In einem unverbindlichen Erstgespräch entwickeln wir
                 einen strukturierten Fahrplan und prüfen notwendige Ressourcen.
               </p>
-              <div className="flex flex-col gap-6 rounded-sm border border-white/10 bg-black/60 p-6 shadow-[0_30px_80px_-25px_rgba(0,0,0,0.8)]">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <Disc3 className="h-6 w-6 text-white" />
-                    <span className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400">
+              <div className="flex flex-col gap-4 lg:gap-6 rounded-sm border border-white/10 bg-black/60 p-4 lg:p-6 shadow-[0_30px_80px_-25px_rgba(0,0,0,0.8)]">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                  <div className="flex items-center space-x-2 lg:space-x-3">
+                    <Disc3 className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
+                    <span className="font-mono text-[10px] lg:text-xs uppercase tracking-[0.2em] lg:tracking-[0.3em] text-gray-400">
                       Tresor-Authentifizierung
                     </span>
                   </div>
-                  <span className="text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                  <span className="text-[10px] lg:text-xs font-mono uppercase tracking-[0.2em] lg:tracking-[0.3em] text-gray-500">
                     {vaultUnlocked ? 'FREIGESCHALTET' : `KOMBI ${dialStage + 1}/${combinationAngles.length}`}
                   </span>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center py-2">
                   <button
                     type="button"
                     onClick={advanceDial}
@@ -542,36 +603,56 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
                     </div>
                   </button>
                 </div>
-                <div className="rounded-sm border border-white/10 bg-black/70 p-4 text-center text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
-                  {vaultUnlocked ? 'Tresor geöffnet – Zugriff auf sichere Kontaktaufnahme aktiviert.' : 'Drehen Sie den Wahlscheibenschutz, um den Zugriff freizuschalten.'}
+                <div className="rounded-sm border border-white/10 bg-black/70 p-3 lg:p-4 text-center text-[10px] lg:text-xs font-mono uppercase tracking-[0.2em] lg:tracking-[0.3em] text-gray-500">
+                  <span className="hidden sm:inline">
+                    {vaultUnlocked ? 'Tresor geöffnet – Zugriff auf sichere Kontaktaufnahme aktiviert.' : 'Drehen Sie den Wahlscheibenschutz, um den Zugriff freizuschalten.'}
+                  </span>
+                  <span className="sm:hidden">
+                    {vaultUnlocked ? 'Tresor geöffnet – Kontakt aktiviert.' : 'Wahlscheibenschutz drehen zum Freischalten.'}
+                  </span>
                 </div>
-                <Button
-                  className="border text-black disabled:cursor-not-allowed disabled:opacity-60"
-                  style={{ backgroundColor: '#C2B16D', borderColor: '#C2B16D', width: 'fit-content' }}
-                  asChild
-                  disabled={!vaultUnlocked}
-                >
-                  <Link href="/#contact">Kontakt aufnehmen</Link>
-                </Button>
+{vaultUnlocked ? (
+                  <Link
+                    href="/#contact"
+                    className={`inline-block w-full sm:w-fit px-6 py-3 border rounded-sm text-center transition-all duration-300 text-black hover:scale-105 font-medium`}
+                    style={{
+                      backgroundColor: '#C2B16D',
+                      borderColor: '#C2B16D'
+                    }}
+                  >
+                    Kontakt aufnehmen
+                  </Link>
+                ) : (
+                  <button
+                    className="w-full sm:w-fit px-6 py-3 border rounded-sm transition-all duration-300 text-gray-500 cursor-not-allowed opacity-40 font-medium"
+                    style={{
+                      backgroundColor: '#4a4a4a',
+                      borderColor: '#666666'
+                    }}
+                    disabled
+                  >
+                    🔒 Tresor zuerst freischalten
+                  </button>
+                )}
               </div>
             </div>
-            <div className="rounded-sm border border-white/10 bg-black/60 p-8 shadow-[0_30px_80px_-25px_rgba(0,0,0,0.8)]">
-              <div className="space-y-5 text-sm text-gray-400">
+            <div className="rounded-sm border border-white/10 bg-black/60 p-4 lg:p-8 shadow-[0_30px_80px_-25px_rgba(0,0,0,0.8)]">
+              <div className="space-y-4 lg:space-y-5 text-xs sm:text-sm text-gray-400">
                 <div className="flex items-start space-x-3">
-                  <Shield className="mt-1 h-5 w-5 text-white" />
-                  <span>ISO 27001-konforme Datenhaltung in unserem Supabase-Mandanten.</span>
+                  <Shield className="mt-1 h-4 lg:h-5 w-4 lg:w-5 text-white flex-shrink-0" />
+                  <span className="leading-relaxed">ISO 27001-konforme Datenhaltung in unserem Supabase-Mandanten.</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Users className="mt-1 h-5 w-5 text-white" />
-                  <span>Taskforces mit klaren Zugriffsrechten und signierten Einsatzberichten.</span>
+                  <Users className="mt-1 h-4 lg:h-5 w-4 lg:w-5 text-white flex-shrink-0" />
+                  <span className="leading-relaxed">Taskforces mit klaren Zugriffsrechten und signierten Einsatzberichten.</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Target className="mt-1 h-5 w-5 text-white" />
-                  <span>Evidence Kits mit Kettennachweis, bereit für anwaltliche Übergabe.</span>
+                  <Target className="mt-1 h-4 lg:h-5 w-4 lg:w-5 text-white flex-shrink-0" />
+                  <span className="leading-relaxed">Evidence Kits mit Kettennachweis, bereit für anwaltliche Übergabe.</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Award className="mt-1 h-5 w-5 text-white" />
-                  <span>Jährliche Rezertifizierung durch den Bundesverband Deutscher Detektive.</span>
+                  <Award className="mt-1 h-4 lg:h-5 w-4 lg:w-5 text-white flex-shrink-0" />
+                  <span className="leading-relaxed">Jährliche Rezertifizierung durch den Bundesverband Deutscher Detektive.</span>
                 </div>
               </div>
             </div>
@@ -665,8 +746,8 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
           transform: scale(1.05);
         }
         .dial {
-          width: 140px;
-          height: 140px;
+          width: 100px;
+          height: 100px;
           border-radius: 9999px;
           border: 2px solid rgba(255, 255, 255, 0.2);
           background: radial-gradient(circle at center, rgba(194, 177, 109, 0.25), rgba(0, 0, 0, 0.8));
@@ -676,17 +757,28 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
           overflow: hidden;
           transition: border 0.3s ease, box-shadow 0.3s ease;
         }
+        @media (min-width: 1024px) {
+          .dial {
+            width: 140px;
+            height: 140px;
+          }
+        }
         .dial:before {
           content: '';
           position: absolute;
-          inset: 12px;
+          inset: 8px;
           border-radius: 9999px;
           border: 1px dashed rgba(255, 255, 255, 0.2);
           opacity: 0.8;
         }
+        @media (min-width: 1024px) {
+          .dial:before {
+            inset: 12px;
+          }
+        }
         .dial-inner {
-          width: 100px;
-          height: 100px;
+          width: 70px;
+          height: 70px;
           border-radius: 9999px;
           border: 2px solid rgba(255, 255, 255, 0.25);
           display: grid;
@@ -695,21 +787,43 @@ const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
           background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.45), rgba(0, 0, 0, 0.9));
           position: relative;
         }
+        @media (min-width: 1024px) {
+          .dial-inner {
+            width: 100px;
+            height: 100px;
+          }
+        }
         .dial-notch {
-          width: 6px;
-          height: 26px;
-          border-radius: 3px;
+          width: 4px;
+          height: 18px;
+          border-radius: 2px;
           background: rgba(0, 0, 0, 0.9);
           border: 1px solid rgba(255, 255, 255, 0.4);
-          box-shadow: 0 12px 18px -12px rgba(0, 0, 0, 0.85);
+          box-shadow: 0 8px 12px -8px rgba(0, 0, 0, 0.85);
+        }
+        @media (min-width: 1024px) {
+          .dial-notch {
+            width: 6px;
+            height: 26px;
+            border-radius: 3px;
+            box-shadow: 0 12px 18px -12px rgba(0, 0, 0, 0.85);
+          }
         }
         .dial:active {
           border-color: rgba(194, 177, 109, 0.6);
           box-shadow: 0 0 30px -10px rgba(194, 177, 109, 0.8);
         }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
       `}</style>
 
       <Footer />
+      </div>
     </div>
   );
 }

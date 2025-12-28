@@ -119,8 +119,9 @@ export default function TeamPage() {
   );
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#07090f] text-white">
+    <div>
       <Header dark />
+      <div className="relative min-h-screen overflow-hidden bg-[#07090f] text-white">
 
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(254,243,198,0.1),transparent_55%)]" />
@@ -152,12 +153,12 @@ export default function TeamPage() {
             <div className="relative">
               <h1 className="mb-4 font-serif text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">Agentenübersicht</h1>
               <span className="typewriter absolute left-1/2 top-full mt-2 hidden -translate-x-1/2 whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.6em] text-[#c2b16d]/80 sm:block">
-                Netzwerk wird initialisiert …
+                Deutschlandweites Netzwerk aktiv …
               </span>
             </div>
             <p className="mt-8 max-w-2xl text-center text-base text-gray-300">
-              Kurierter Zugriff auf aktive Ermittlerkreise. Datenansicht automatisch anonymisiert, Statusmeldungen werden in
-              Echtzeit synchronisiert.
+              Übersicht über unser deutschlandweites Ermittlernetzwerk. Zeigt alle für uns verfügbaren Ermittler -
+              Datenansicht automatisch anonymisiert, Statusmeldungen werden in Echtzeit synchronisiert.
             </p>
           </header>
 
@@ -356,6 +357,7 @@ export default function TeamPage() {
       </main>
 
       <Footer />
+      </div>
     </div>
   );
 }
