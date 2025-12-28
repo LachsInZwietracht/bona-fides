@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
 import {
   Shield,
   Target,
@@ -110,6 +111,8 @@ export default function AboutPage() {
   const [dossierActive, setDossierActive] = useState(false);
   const [dossierStage, setDossierStage] = useState(0);
   const dossierTimeoutRef = useRef<Array<ReturnType<typeof setTimeout>>>([]);
+  const dossierRef = useRef<HTMLDivElement | null>(null);
+  const isMobile = useIsMobile();
 
   const principleRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [visiblePrinciples, setVisiblePrinciples] = useState<Set<number>>(new Set());
@@ -168,6 +171,25 @@ useEffect(() => {
     principleRefs.current.forEach((ref) => ref && observer.observe(ref));
     return () => observer.disconnect();
   }, []);
+
+  // Intersection observer for dossier section on mobile
+  useEffect(() => {
+    if (!isMobile || !dossierRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !dossierActive) {
+            setDossierActive(true);
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: '0px' }
+    );
+
+    observer.observe(dossierRef.current);
+    return () => observer.disconnect();
+  }, [isMobile, dossierActive]);
 
   useEffect(() => {
     const timeouts: ReturnType<typeof setTimeout>[] = [];
@@ -329,11 +351,12 @@ useEffect(() => {
             </div>
 
             <div
+              ref={dossierRef}
               className="relative"
-              onMouseEnter={() => setDossierActive(true)}
-              onMouseLeave={() => setDossierActive(false)}
-              onFocus={() => setDossierActive(true)}
-              onBlur={() => setDossierActive(false)}
+              onMouseEnter={!isMobile ? () => setDossierActive(true) : undefined}
+              onMouseLeave={!isMobile ? () => setDossierActive(false) : undefined}
+              onFocus={!isMobile ? () => setDossierActive(true) : undefined}
+              onBlur={!isMobile ? () => setDossierActive(false) : undefined}
             >
               <div className="absolute inset-0 translate-x-6 translate-y-6 rounded-sm border border-white/10 bg-white/5 backdrop-blur" />
               <div className="relative overflow-hidden rounded-sm border border-white/10 bg-black/60 p-6 sm:p-8 md:p-10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
