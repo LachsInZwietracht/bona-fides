@@ -22,6 +22,14 @@ export default function HomePage() {
   const service2Observer = useIntersectionObserver({ threshold: 0.2, rootMargin: '-10% 0px' })
   const service3Observer = useIntersectionObserver({ threshold: 0.2, rootMargin: '-10% 0px' })
 
+  // Individual intersection observers for article cards (up to 6 articles to be safe)
+  const article1Observer = useIntersectionObserver({ threshold: 0.3, rootMargin: '-20% 0px' })
+  const article2Observer = useIntersectionObserver({ threshold: 0.3, rootMargin: '-20% 0px' })
+  const article3Observer = useIntersectionObserver({ threshold: 0.3, rootMargin: '-20% 0px' })
+  const article4Observer = useIntersectionObserver({ threshold: 0.3, rootMargin: '-20% 0px' })
+  const article5Observer = useIntersectionObserver({ threshold: 0.3, rootMargin: '-20% 0px' })
+  const article6Observer = useIntersectionObserver({ threshold: 0.3, rootMargin: '-20% 0px' })
+
   // Fetch latest articles for the Aktuelles section
   useEffect(() => {
     const fetchLatestArticles = async () => {
@@ -599,9 +607,27 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {latestArticles.map((article) => (
-              <BlogCard key={article.metadata.slug} article={article} />
-            ))}
+            {(isMobile ? latestArticles.slice(0, 3) : latestArticles).map((article, index) => {
+              // Get the appropriate observer for this article
+              const observers = [
+                article1Observer, article2Observer, article3Observer,
+                article4Observer, article5Observer, article6Observer
+              ]
+              const observer = observers[index]
+
+              // Determine if the mobile scroll animation should be active
+              const shouldAnimateOnMobile = isMobile && observer && observer.isVisible
+
+              return (
+                <div key={article.metadata.slug} ref={observer?.elementRef}>
+                  <BlogCard
+                    article={article}
+                    isMobile={isMobile}
+                    shouldAnimateOnMobile={shouldAnimateOnMobile || false}
+                  />
+                </div>
+              )
+            })}
           </div>
 
           <div className="text-center">
