@@ -257,6 +257,6 @@ TOMs: Verschlüsselung, Zugriffskontrolle, Audit-Log
 
 **Rechtlicher Hinweis**: Die Informationen in diesem Artikel dienen der allgemeinen Aufklärung und ersetzen keine rechtliche Beratung. Arbeitsrechtliche Maßnahmen sollten immer in Abstimmung mit Rechtsanwälten erfolgen.
 
-**Sofort-Hilfe bei Betrugsverdacht**: 📞 +49 (0)30 12345678 | 📧 fraud@bona-fides.de | 24/7 verfügbar
+**Sofort-Hilfe bei Betrugsverdacht**: [Jetzt Kontakt aufnehmen](/#contact) | 📧 fraud@bona-fides.de | 24/7 verfügbar
 
 **Über Bona Fides Detektei**: Spezialisiert auf interne Ermittlungen seit 2010. BetrVG-konforme Methodik, DSGVO-sichere Beweissicherung, 89% Erfolgsquote bei Betrugsnachweisen.

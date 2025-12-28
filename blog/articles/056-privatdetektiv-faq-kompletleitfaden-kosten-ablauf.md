@@ -32,7 +32,6 @@ Dieser FAQ-Kompletleitfaden räumt mit allen Mythen auf und gibt Ihnen die Infor
 **Wichtig:** Legal ist nur die Beauftragung seriöser Detekteien, die rechtssicher arbeiten. Illegale Methoden (Hacking, GPS-Tracker ohne Einwilligung, Wohnungseinbruch) sind strafbar – auch für Auftraggeber.
 
 **Seriositätskriterien:**
-- BDD-Mitgliedschaft (Bundesverband Deutscher Detektive)
 - Transparente Kostenvoranschläge
 - Aufklärung über rechtliche Grenzen
 - Keine Erfolgsgarantien
@@ -495,7 +494,6 @@ Bei Vermögensrückführung (Betrugsschäden, versteckte Assets): Erfolgshonorar
 **Qualitätskriterien:**
 
 **Formal:**
-✓ **BDD-Mitgliedschaft** (Bundesverband Deutscher Detektive)
 ✓ **Gewerbeanmeldung** nach § 34a GeWO
 ✓ **Haftpflichtversicherung** mindestens 1 Million Euro
 ✓ **Impressum** mit Geschäftsführer-Namen und Adressen
@@ -567,7 +565,6 @@ Bei Vermögensrückführung (Betrugsschäden, versteckte Assets): Erfolgshonorar
 - **Mängelbehebung** oder Kostenerstattung fordern
 
 **Stufe 3: Externe Stellen**
-- **BDD-Beschwerdestelle** (bei Mitgliedern)
 - **Verbraucherzentralen**
 - **Rechtsanwalt** für Schadenersatzforderungen
 - **Bewertungsportale** als letztes Mittel
@@ -595,6 +592,6 @@ Bei Vermögensrückführung (Betrugsschäden, versteckte Assets): Erfolgshonorar
 
 **Rechtlicher Hinweis**: Dieser FAQ-Leitfaden dient der allgemeinen Information und stellt keine Rechtsberatung dar. Jeder Fall ist individuell zu bewerten.
 
-**Kostenlose Beratung**: 📞 +49 (0)30 12345678 | 📧 beratung@bona-fides.de | 24/7 verfügbar
+**Kostenlose Beratung**: [Jetzt Kontakt aufnehmen](/#contact) | 📧 beratung@bona-fides.de | 24/7 verfügbar
 
-**Über Bona Fides Detektei**: Transparente, rechtssichere Ermittlungen seit 2010. BDD-Mitglied, DSGVO-konform, keine versteckten Kosten. Ehrliche Beratung ohne Verkaufsrhetorik.
+**Über Bona Fides Detektei**: Transparente, rechtssichere Ermittlungen seit 2010. DSGVO-konform, keine versteckten Kosten. Ehrliche Beratung ohne Verkaufsrhetorik.

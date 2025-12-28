@@ -17,7 +17,7 @@ Detektivarbeit in Deutschland bewegt sich in einem komplexen rechtlichen Rahmenw
 
 **Die juristische Realität 2025:** Eine Mandantin beauftragt eine Detektei zur Observation ihres untreuen Ehemanns. Die Detektei installiert heimlich GPS-Tracker am Auto, hackt sein E-Mail-Konto und fotografiert ihn durch Wohnungsfenster. Die "Beweise" sind perfekt – aber rechtlich wertlos. Schlimmer: Die Mandantin wird wegen Beihilfe zur Datenspionage (§ 202a StGB), Verletzung der Privatsphäre (§ 201a StGB) und DSGVO-Verstößen strafrechtlich verfolgt. Ihr Scheidungsverfahren ist kompromittiert, ihr Ruf ruiniert.
 
-Diese Szenarien sind häufiger als gedacht. Das BKA meldet 2024 einen Anstieg der Ermittlungsverfahren gegen Detekteien um 23% – oft mit Mandanten als Mittätern. Von geschätzten 4.000-5.000 deutschen Detekteien arbeiten nur etwa 1.200 im Bundesverband Deutscher Detektive (BDD) und verpflichten sich zu ethischen Standards. Die anderen? Rechtsicherheit variiert erheblich.
+Diese Szenarien sind häufiger als gedacht. Das BKA meldet 2024 einen Anstieg der Ermittlungsverfahren gegen Detekteien um 23% – oft mit Mandanten als Mittätern. Von geschätzten 4.000-5.000 deutschen Detekteien verpflichtet sich nur ein Bruchteil zu verbindlichen ethischen Standards. Die anderen? Rechtsicherheit variiert erheblich.
 
 *Detektivarbeit in Deutschland ist wie ein Hochseilakt: Ohne genaue Kenntnis des rechtlichen Rahmens stürzen Sie und Ihr Mandant ab – mit schweren juristischen Verletzungen.*
 
@@ -348,6 +348,6 @@ A: Höhere Schutzstandards nach UN-Kinderrechtskonvention. Elterliche Sorgerecht
 
 **Rechtlicher Hinweis**: Dieser Artikel dient der allgemeinen Information und stellt keine Rechtsberatung dar. Bei konkreten rechtlichen Fragen konsultieren Sie einen Fachanwalt für Strafrecht oder IT-Recht.
 
-**Rechtssichere Ermittlungen**: 📞 +49 (0)30 12345678 | 📧 legal@bona-fides.de | 24/7 verfügbar
+**Rechtssichere Ermittlungen**: [Jetzt Kontakt aufnehmen](/#contact) | 📧 legal@bona-fides.de | 24/7 verfügbar
 
 **Über Bona Fides Detektei**: DSGVO-konforme Ermittlungen seit 2010. Vollständige Compliance mit deutschem und EU-Recht. Gerichtsverwertbare Beweissicherung, keine illegalen Methoden.

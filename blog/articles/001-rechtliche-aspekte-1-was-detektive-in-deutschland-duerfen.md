@@ -19,7 +19,7 @@ Sie beauftragen eine Detektei, einen Fall aufzuklären. Einige Wochen später er
 
 Oder: Sie beauftragen eine "Billig-Detektei", die GPS-Tracker am Auto Ihres untreuen Partners anbringt. Ihr Partner entdeckt den Tracker, zeigt Sie an – und plötzlich stehen Sie wegen Verletzung der Privatsphäre (§ 201a StGB) vor Gericht. Ihre Scheidungsklage ist gefährdet, Ihr Ruf beschädigt.
 
-Diese Szenarien sind real. Laut Bundesverband Deutscher Detektive (BDD) arbeiten in Deutschland geschätzte 4.000-5.000 Detekteien – aber nur etwa 1.200 sind im BDD organisiert und verpflichten sich zu ethischen und rechtlichen Standards. Die restlichen? Qualität und Rechtssicherheit variieren erheblich. Manche nutzen illegale Methoden, die Auftraggeber in rechtliche Schwierigkeiten bringen.
+Diese Szenarien sind real. In Deutschland arbeiten geschätzte 4.000-5.000 Detekteien – doch die Qualität und Rechtssicherheit variieren erheblich. Manche nutzen illegale Methoden, die Auftraggeber in rechtliche Schwierigkeiten bringen.
 
 Das Problem: Laien können kaum unterscheiden, welche Methoden legal sind und welche nicht. Und selbst wenn eine Detektei "Erfolg" verspricht – wenn die Beweise illegal beschafft wurden, sind sie wertlos oder schaden Ihnen sogar.
 
@@ -81,7 +81,7 @@ A: Direkt nein – Bankdaten sind hochgeschützt. Indirekt ja: Durch Lifestyle-A
 A: Google-Recherchen sind ein Anfang, aber limitiert. Professionelle OSINT nutzt kostenpflichtige Datenbanken, internationale Quellen, forensische Tools und Verknüpfungsmethoden, die Laien nicht zugänglich sind. Zudem: Wir wissen, wie man Beweise rechtssicher dokumentiert. Ein Screenshot allein reicht vor Gericht oft nicht – unsere forensisch abgesicherten Beweise schon.
 
 **F: Was passiert, wenn eine von Ihnen beauftragte Detektei illegale Methoden nutzt?**
-A: Seriöse Detekteien wie Bona Fides nutzen niemals illegale Methoden – unser Ruf und Ihre Rechtssicherheit stehen auf dem Spiel. Sollten Sie eine Detektei beauftragen, die illegal arbeitet, riskieren Sie, dass Beweise abgelehnt werden und Sie selbst als Anstifter haften. Prüfen Sie daher immer: Ist die Detektei im BDD organisiert? Hat sie Referenzen? Erklärt sie transparent ihre Methoden?
+A: Seriöse Detekteien wie Bona Fides nutzen niemals illegale Methoden – unser Ruf und Ihre Rechtssicherheit stehen auf dem Spiel. Sollten Sie eine Detektei beauftragen, die illegal arbeitet, riskieren Sie, dass Beweise abgelehnt werden und Sie selbst als Anstifter haften. Prüfen Sie daher immer: Hat sie Referenzen? Erklärt sie transparent ihre Methoden? Ist sie ordnungsgemäß gewerblich angemeldet?
 
 ---
 
@@ -98,9 +98,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Deutschlandweite Ermittlungen** – Mit internationalen Partnern
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
-
-Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
+**[Kostenlose Beratung anfragen](/#contact)**
 
 ---
 

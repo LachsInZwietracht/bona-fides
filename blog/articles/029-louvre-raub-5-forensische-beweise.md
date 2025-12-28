@@ -483,12 +483,9 @@ Bona Fides Detektei bietet spezialisierte forensische Dienstleistungen:
 ✓ **Materialanalyse** – Fasern, Chemikalien, mikroskopische Spuren
 ✓ **Tatort-Rekonstruktion** – 3D-Modelle, Timeline-Analyse
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
-
+**[Kostenlose Beratung anfragen](/#contact)**
 ---
-
 ## Verwandte Artikel
-
 - [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte)
 - [Sicherheitslücken im Louvre: Wie der perfekte Raub möglich wurde](/blog/louvre-sicherheitsluecken-analyse)
 - [Die digitale Spur: Cyberangriff als Ablenkung?](/blog/louvre-digitale-spur-cyberangriff)

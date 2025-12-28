@@ -127,6 +127,6 @@ Rechtlich problematisch und meist erfolglos. Ohne professionelle Tools und inter
 
 **Rechtlicher Hinweis**: Die Informationen in diesem Artikel dienen der allgemeinen Aufklärung und ersetzen keine rechtliche Beratung. Jeder Fall ist individuell zu bewerten.
 
-**Sofort-Hilfe bei Cyberbetrug**: 📞 +49 (0)30 12345678 | 📧 notfall@bona-fides.de | 24/7 verfügbar
+**[Sofort-Hilfe bei Cyberbetrug - Jetzt Kontakt aufnehmen](/#contact)** | 📧 notfall@bona-fides.de | 24/7 verfügbar
 
 **Über Bona Fides Detektei**: Spezialisiert auf digitale Ermittlungen seit 2010. Über 2.500 erfolgreich aufgeklärte Cyberbetrug-Fälle. DSGVO-konform, gerichtsverwertbare Beweissicherung.

@@ -358,12 +358,9 @@ Bona Fides Detektei ist spezialisiert auf forensische Verhaltensanalyse und Verd
 ✓ **Finanzforensik** – Geldfluss-Analyse, versteckte Vermögen
 ✓ **International Intelligence** – Weltweites Informanten-Netzwerk
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
-
+**[Kostenlose Beratung anfragen](/#contact)**
 ---
-
 ## Verwandte Artikel
-
 - [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte)
 - [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-forensische-beweise)
 - [Die digitale Spur: Cyberangriff als Ablenkung?](/blog/louvre-digitale-spur-cyberangriff)

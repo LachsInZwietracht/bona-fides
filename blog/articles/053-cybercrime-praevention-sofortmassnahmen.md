@@ -220,7 +220,7 @@ A: Ressourcenmangel und Prioritätensetzung. Bei Bagatellfällen (<50.000€) er
 A: Absolut. Ein einziger erfolgreicher Cyberangriff kann ein KMU existenziell bedrohen. Basis-Schutzmaßnahmen (Schulungen, Updates, Backups) kosten Hunderte Euro, verhindern aber Schäden im fünf- bis sechsstelligen Bereich.
 
 **F: Wie erkenne ich seriöse Detekteien bei Cybercrime-Fällen?**
-A: Achten Sie auf: Mitgliedschaft in Berufsverbänden (BDD, IKD), nachweisbare IT-Security-Zertifizierungen, transparente Preisgestaltung, kostenlose Erstberatung, echtes Impressum mit Gewerbeanmeldung. Meiden Sie: Erfolgsgarantien, Vorauskasse ohne Vertrag, anonyme Anbieter.
+A: Achten Sie auf: Mitgliedschaft in Berufsverbänden (IKD), nachweisbare IT-Security-Zertifizierungen, transparente Preisgestaltung, kostenlose Erstberatung, echtes Impressum mit Gewerbeanmeldung. Meiden Sie: Erfolgsgarantien, Vorauskasse ohne Vertrag, anonyme Anbieter.
 
 **F: Was tun bei emotionaler Belastung nach Cybercrime?**
 A: Cybercrime-Opfer leiden oft unter Scham, Selbstvorwürfen, Vertrauensverlust. Professionelle Beratung (Opferhilfe-Vereine, spezialisierte Psychologen) hilft bei der Verarbeitung. Wichtig: Sie sind nicht schuld – Sie sind Opfer professioneller Krimineller geworden.
@@ -236,6 +236,6 @@ A: Cybercrime-Opfer leiden oft unter Scham, Selbstvorwürfen, Vertrauensverlust.
 
 **Rechtlicher Hinweis**: Die Informationen in diesem Artikel dienen der allgemeinen Aufklärung und ersetzen keine rechtliche oder technische Beratung. Jeder Fall ist individuell zu bewerten.
 
-**24/7 Cybercrime-Notfall-Hotline**: 📞 +49 (0)30 12345678 | 📧 notfall@bona-fides.de
+**[24/7 Cybercrime-Notfall-Kontakt](/#contact)** | 📧 notfall@bona-fides.de
 
 **Über Bona Fides Detektei**: Spezialisiert auf digitale Ermittlungen seit 2010. Über 2.500 erfolgreich aufgeklärte Cybercrime-Fälle. DSGVO-konform, modernste Forensik-Tools, internationale Partnernetzwerke.

@@ -362,9 +362,7 @@ Der Louvre-Raub zeigt: Selbst die besten Sicherheitssysteme können überwunden 
 ✓ **Diskrete Recherche** – Absolute Vertraulichkeit garantiert
 ✓ **Kunstdiebstahl-Expertise** – 15 erfolgreich gelöste Fälle seit 2019
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
-
-Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
+**[Kostenlose Beratung anfragen](/#contact)**
 
 ---
 

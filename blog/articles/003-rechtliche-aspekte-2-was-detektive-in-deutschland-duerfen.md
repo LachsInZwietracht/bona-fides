@@ -78,7 +78,7 @@ A: Die Polizei darf bei begründetem Tatverdacht und mit richterlichem Beschluss
 A: In Strafverfahren: meist nein (Beweisverwertungsverbot). In Zivilverfahren: umstritten, oft abgewogen zwischen Persönlichkeitsrecht und Beweisinteresse. Risiko: Sie machen sich selbst strafbar. Fazit: Nutzen Sie legale Methoden.
 
 **F: Wie kann ich sicher sein, dass eine Detektei legal arbeitet?**
-A: Prüfen Sie: (1) Mitgliedschaft in Berufsverbänden (BDD, IKD), (2) Gewerbeanmeldung nach § 34a GewO, (3) Transparente Darstellung der Methoden, (4) DSGVO-Hinweise auf Website, (5) Keine Erfolgsgarantien oder Versprechen illegaler Methoden.
+A: Prüfen Sie: (1) Mitgliedschaft in Berufsverbänden (IKD), (2) Gewerbeanmeldung nach § 34a GewO, (3) Transparente Darstellung der Methoden, (4) DSGVO-Hinweise auf Website, (5) Keine Erfolgsgarantien oder Versprechen illegaler Methoden.
 
 **F: Was passiert, wenn eine Detektei illegal ermittelt und ich die Beweise nutze?**
 A: Sie riskieren: (1) Beweise werden nicht anerkannt, (2) Sie werden als Anstifter/Mittäter mitbel angt, (3) Schadenersatzforderungen gegen Sie, (4) Ihr Ruf wird beschädigt. Arbeiten Sie nur mit seriösen, lizenzierten Detekteien.
@@ -98,9 +98,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **100% Rechtssicherheit** – DSGVO-konform, gerichtsverwertbar
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
-
-Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
+**[Kostenlose Beratung anfragen](/#contact)**
 
 ---
 

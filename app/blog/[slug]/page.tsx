@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, ArrowLeft, FileText } from "lucide-react";
+import { Calendar, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 
 interface ArticlePageProps {
@@ -238,17 +238,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     )}
                   </div>
 
-                  {/* Classification Stamp */}
-                  <div className="absolute top-8 right-8 transform rotate-12">
-                    <div className="w-20 h-20 border-4 border-dashed border-red-500/70 rounded-full flex items-center justify-center backdrop-blur-sm bg-black/30">
-                      <div className="text-center">
-                        <FileText className="h-8 w-8 text-red-500 mx-auto mb-1" />
-                        <div className="text-[10px] font-mono font-bold text-red-500 tracking-tight">
-                          GEHEIM
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

@@ -217,6 +217,6 @@ A: Auch interne Kandidaten sollten bei kritischen Positionen überprüft werden.
 
 **Rechtlicher Hinweis**: Die Informationen in diesem Artikel dienen der allgemeinen Aufklärung und ersetzen keine rechtliche Beratung. Jeder Fall ist individuell zu bewerten.
 
-**Sofort-Hilfe bei Background Checks**: 📞 +49 (0)30 12345678 | 📧 background@bona-fides.de | 24/7 verfügbar
+**[Sofort-Hilfe bei Background Checks - Jetzt Kontakt aufnehmen](/#contact)** | 📧 background@bona-fides.de | 24/7 verfügbar
 
 **Über Bona Fides Detektei**: Spezialisiert auf DSGVO-konforme Background Checks seit 2010. Über 15.000 erfolgreich durchgeführte Hintergrundprüfungen. Partnernetzwerk in 45 Ländern, gerichtsverwertbare Dokumentation.

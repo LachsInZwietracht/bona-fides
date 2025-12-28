@@ -155,7 +155,7 @@ Ja, spezialisierte Detekteien (wie Bona Fides) bieten digitale Forensik, OSINT-R
 **20. Wie finde ich eine seriöse Detektei?**
 
 Prüfkriterien:
-- Mitgliedschaft in Berufsverbänden (BDD, IKD)
+- Mitgliedschaft in Berufsverbänden (IKD)
 - Gewerbeanmeldung nach § 34a GewO
 - Transparente Website mit Impressum
 - DSGVO-Hinweise
@@ -191,9 +191,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **100% Rechtssicherheit** – DSGVO-konform, gerichtsverwertbar
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
-
-Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
+**[Kostenlose Beratung anfragen](/#contact)**
 
 ---
 

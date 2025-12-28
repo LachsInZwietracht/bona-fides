@@ -119,9 +119,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Berlin-Expertise** – Über 10 Jahre Erfahrung in der Hauptstadt
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
-
-Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
+**[Kostenlose Beratung anfragen](/#contact)**
 
 ---
 

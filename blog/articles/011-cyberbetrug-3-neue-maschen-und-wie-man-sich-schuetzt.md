@@ -84,7 +84,7 @@ A: Das müssen Sie entscheiden. Unsere Ermittlungen kosten ab 1.500€. Wenn die
 A: Die Polizei ermittelt, aber mit begrenzten Ressourcen. Bei Bagatellfällen (unter 50.000€) werden oft nur Aktenzeichen vergeben. Zudem: bei internationalen Fällen stoßen deutsche Behörden an Grenzen. Private Ermittlungen können schneller und flexibler agieren.
 
 **F: Wie erkenne ich seriöse Detekteien?**
-A: Achten Sie auf: Mitgliedschaft in Berufsverbänden (BDD, IKD), transparente Preise, kostenlose Erstberatung, nachweisbare Expertise (Zertifikate), echtes Impressum mit Gewerbeanmeldung. Meiden Sie: Erfolgsgarantien, Vorauskasse ohne Vertrag, anonyme Anbieter.
+A: Achten Sie auf: Mitgliedschaft in Berufsverbänden (IKD), transparente Preise, kostenlose Erstberatung, nachweisbare Expertise (Zertifikate), echtes Impressum mit Gewerbeanmeldung. Meiden Sie: Erfolgsgarantien, Vorauskasse ohne Vertrag, anonyme Anbieter.
 
 ---
 
@@ -101,9 +101,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 ✓ **Verschlüsselte Kommunikation** – Ihre Daten sind sicher
 ✓ **Deutschlandweite Ermittlungen** – Mit internationalen Partnern
 
-**[Kostenlose Beratung anfragen](https://bona-fides.vercel.app/contact)**
-
-Oder rufen Sie uns direkt an: **+49 (0) 30 555-DETECT**
+**[Kostenlose Beratung anfragen](/#contact)**
 
 ---
 

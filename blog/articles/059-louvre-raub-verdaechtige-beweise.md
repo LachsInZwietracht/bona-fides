@@ -553,6 +553,6 @@ Mit jedem Monat wird eine Aufklärung unwahrscheinlicher. Nach einem Jahr ohne D
 
 **Rechtlicher Hinweis**: Dies ist eine fiktionale Darstellung zu Bildungszwecken. Die Mona Lisa ist sicher im Louvre Museum. Alle Personen und Ereignisse sind erfunden.
 
-**Ermittlungsanfragen**: 📞 +49 (0)30 12345678 | 📧 cases@bona-fides.de | 24/7 verfügbar
+**Ermittlungsanfragen**: [Jetzt Kontakt aufnehmen](/#contact) | 📧 cases@bona-fides.de | 24/7 verfügbar
 
 **Über Bona Fides Detektei**: Spezialisiert auf Kunstkriminalität und forensische Analyse seit 2010. Internationale Ermittlungserfahrung, modernste forensische Technik, gerichtsverwertbare Beweissicherung.
