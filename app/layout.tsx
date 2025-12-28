@@ -4,6 +4,8 @@ import { Playfair_Display, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { HashNavigationHandler } from "@/components/hash-navigation-handler"
+import { CookiesProvider } from "@/hooks/use-cookies"
+import { CookieBanner } from "@/components/cookie-banner"
 import "./globals.css"
 
 const playfair = Playfair_Display({
@@ -33,9 +35,12 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body className={`${playfair.variable} ${jetbrains.variable} font-serif antialiased`}>
-        <HashNavigationHandler />
-        <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
+        <CookiesProvider>
+          <HashNavigationHandler />
+          <Suspense fallback={null}>{children}</Suspense>
+          <CookieBanner />
+          <Analytics />
+        </CookiesProvider>
       </body>
     </html>
   )

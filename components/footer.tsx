@@ -2,8 +2,11 @@
 
 import Link from "next/link";
 import { Shield } from "lucide-react";
+import { useCookies } from "@/hooks/use-cookies";
 
 export function Footer() {
+  const { reopenBanner } = useCookies();
+
   return (
     <footer className="relative z-10 bg-gray-900 border-t border-white/10">
       <div className="container mx-auto px-8 py-12">
@@ -107,6 +110,14 @@ export function Footer() {
               >
                 AGB
               </Link>
+              <button
+                onClick={reopenBanner}
+                className="hover:text-white transition-colors cursor-pointer"
+                onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#FEF3C6'}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'rgb(156, 163, 175)'}
+              >
+                Cookies
+              </button>
             </div>
           </div>
         </div>
