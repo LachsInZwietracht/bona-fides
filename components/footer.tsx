@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="relative z-10 bg-gray-900 border-t border-white/10">
       <div className="container mx-auto px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
 
           {/* Company Info */}
           <div className="space-y-4">
@@ -18,7 +18,8 @@ export function Footer() {
               BONA FIDES
             </h3>
             <p className="font-mono text-sm text-gray-400 leading-relaxed">
-              Deutschlands beste und größte Detektei für digitale Ermittlungen. Professionell, diskret und auf Ergebnisse ausgerichtet.
+              Eine von Deutschlands führenden Detekteien für digitale Ermittlungen. <br />
+              Professionell, diskret und auf Ergebnisse ausgerichtet.
             </p>
             <div className="flex items-center space-x-2">
               <Shield className="h-4 w-4 text-white" />
@@ -29,7 +30,7 @@ export function Footer() {
           </div>
 
           {/* Company Links */}
-          <div className="space-y-4">
+          <div className="space-y-4 md:text-right">
             <h4 className="font-mono text-white font-bold uppercase tracking-wide text-sm">
               Unternehmen
             </h4>

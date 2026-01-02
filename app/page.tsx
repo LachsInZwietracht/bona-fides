@@ -226,7 +226,7 @@ export default function HomePage() {
             </h2>
             
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Deutschlands beste und größte Detektei – Spezialisiert auf internationale Online-Ermittlungen
+              Eine von Deutschlands führenden Detekteien – Spezialisiert auf internationale Online-Ermittlungen
             </p>
           </div>
 
@@ -444,16 +444,16 @@ export default function HomePage() {
             </h2>
             
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Deutschlands beste und größte Detektei mit digitalem Schwerpunkt und weltweitem Netzwerk
+              Eine von Deutschlands führenden Detekteien mit digitalem Schwerpunkt und weltweitem Netzwerk
             </p>
           </div>
 
           {/* Trust Metrics */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
-              { icon: Users, number: "35", label: "Bundesweite Ermittler", description: "Ermittlernetzwerk in ganz Deutschland" },
-              { icon: Award, number: "100%", label: "Diskrete Beweise", description: "Gerichtsfeste Dokumentation garantiert" },
               { icon: Star, number: "#1", label: "Digital", description: "Führend in digitaler Ermittlung" },
+              { icon: Award, number: "100%", label: "Diskrete Beweise", description: "Gerichtsfeste Dokumentation garantiert" },
+              { icon: Users, number: "35", label: "Bundesweite Ermittler", description: "Ermittlernetzwerk in ganz Deutschland" },
               { icon: Shield, number: "100%", label: "Vertraulich", description: "Alle Fälle werden mit völliger Diskretion behandelt" }
             ].map((metric, index) => (
               <div key={index} className="text-center group">

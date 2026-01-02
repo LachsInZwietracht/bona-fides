@@ -42,8 +42,19 @@ export default function ImpressumPage() {
                   </h2>
                   <div className="space-y-2">
                     <p className="font-serif text-lg text-white">BONA FIDES Private Detektei</p>
-                    <p>Deutschlands beste und größte Detektei für digitale Ermittlungen</p>
+                    <p>Eine von Deutschlands führenden Detekteien für digitale Ermittlungen</p>
                     <p>Deutschlandweit tätig</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-serif font-bold text-white mb-3">
+                    Anschrift
+                  </h3>
+                  <div className="space-y-2">
+                    <p>Hahnenstraße 23</p>
+                    <p>50354 Hürth</p>
+                    <p>Deutschland</p>
                   </div>
                 </div>
 
@@ -54,17 +65,6 @@ export default function ImpressumPage() {
                   <div className="space-y-2">
                     <p>E-Mail: ermittlungen@bonafides.agency</p>
                     <p>Web: https://bona-fides.vercel.app</p>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-serif font-bold text-white mb-3">
-                    Berufliche Qualifikation
-                  </h3>
-                  <div className="space-y-2">
-                    <p>Lizenzierte Detektei</p>
-                    <p>Zertifiziert nach Bundesverband Deutscher Detektive</p>
-                    <p>Spezialisierung: Digitale Ermittlungen und Cybercrime-Aufklärung</p>
                   </div>
                 </div>
 
