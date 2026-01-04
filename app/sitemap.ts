@@ -2,7 +2,9 @@ import { MetadataRoute } from 'next'
 import { getAllArticles } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://bona-fides-detektei.de'
+  // Dynamic URL detection with fallbacks
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://bona-fides-detektei.de')
 
   // Static pages with their priorities and change frequencies
   const staticPages: MetadataRoute.Sitemap = [
