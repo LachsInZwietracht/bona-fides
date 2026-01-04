@@ -3,6 +3,7 @@ import { getAllArticles } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic URL detection with fallbacks
+  // NEXT_PUBLIC_SITE_URL is now configured in Vercel production environment
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ||
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://bona-fides-detektei.de')
 
