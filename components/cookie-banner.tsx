@@ -129,7 +129,7 @@ export function CookieBanner() {
                   </Button>
                   <Button
                     onClick={handleAccept}
-                    className="flex-1 bg-[#C2B16D] hover:bg-amber-700 text-[#1A1612] font-mono text-xs uppercase tracking-wider hover:scale-105 transition-transform duration-300 shadow-[0_8px_25px_-8px_rgba(194,177,109,0.4)]"
+                    className="flex-1 bg-[#C2B16D] hover:bg-[#D4C47A] text-[#1A1612] font-mono text-xs uppercase tracking-wider hover:scale-105 transition-transform duration-300 shadow-[0_8px_25px_-8px_rgba(194,177,109,0.4)]"
                   >
                     Alle Akzeptieren
                   </Button>

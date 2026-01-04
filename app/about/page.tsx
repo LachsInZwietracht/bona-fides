@@ -12,7 +12,6 @@ import {
   FileSignature,
   Users,
   Compass,
-  Award,
   Camera,
   Fingerprint,
   Newspaper,
@@ -221,9 +220,9 @@ useEffect(() => {
   const dossierPages = useMemo(
     () => [
       {
-        heading: '35 Bundesweite Ermittler',
-        content: 'Ermittlernetzwerk in ganz Deutschland',
-        stamp: 'BUNDESWEIT',
+        heading: '#1 Digital',
+        content: 'Führend in digitaler Ermittlung',
+        stamp: 'MARKTFÜHRER',
       },
       {
         heading: '100% Diskrete Beweise',
@@ -231,9 +230,9 @@ useEffect(() => {
         stamp: 'GERICHTSFEST',
       },
       {
-        heading: '#1 Digital',
-        content: 'Führend in digitaler Ermittlung',
-        stamp: 'MARKTFÜHRER',
+        heading: '35 Bundesweite Ermittler',
+        content: 'Ermittlernetzwerk in ganz Deutschland',
+        stamp: 'BUNDESWEIT',
       },
       {
         heading: '100% Vertraulich',
@@ -371,12 +370,14 @@ useEffect(() => {
                       </div>
                     ))}
                   </div>
-                  <Button
-                    className="relative z-40 w-full border text-black"
-                    style={{ backgroundColor: '#C2B16D', borderColor: '#C2B16D' }}
-                  >
-                    Vertrauliche Erstberatung sichern
-                  </Button>
+                  <Link href="/#contact" className="block">
+                    <Button
+                      className="relative z-40 w-full border text-black hover:scale-105 transition-all duration-300"
+                      style={{ backgroundColor: '#C2B16D', borderColor: '#C2B16D' }}
+                    >
+                      Vertrauliche Erstberatung sichern
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -638,26 +639,6 @@ useEffect(() => {
                     🔒 Tresor zuerst freischalten
                   </button>
                 )}
-              </div>
-            </div>
-            <div className="rounded-sm border border-white/10 bg-black/60 p-4 lg:p-8 shadow-[0_30px_80px_-25px_rgba(0,0,0,0.8)]">
-              <div className="space-y-4 lg:space-y-5 text-xs sm:text-sm text-gray-400">
-                <div className="flex items-start space-x-3">
-                  <Shield className="mt-1 h-4 lg:h-5 w-4 lg:w-5 text-white flex-shrink-0" />
-                  <span className="leading-relaxed">ISO 27001-konforme Datenhaltung in unserem Supabase-Mandanten.</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Users className="mt-1 h-4 lg:h-5 w-4 lg:w-5 text-white flex-shrink-0" />
-                  <span className="leading-relaxed">Taskforces mit klaren Zugriffsrechten und signierten Einsatzberichten.</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Target className="mt-1 h-4 lg:h-5 w-4 lg:w-5 text-white flex-shrink-0" />
-                  <span className="leading-relaxed">Evidence Kits mit Kettennachweis, bereit für anwaltliche Übergabe.</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Award className="mt-1 h-4 lg:h-5 w-4 lg:w-5 text-white flex-shrink-0" />
-                  <span className="leading-relaxed">Jährliche Rezertifizierung durch den Bundesverband Deutscher Detektive.</span>
-                </div>
               </div>
             </div>
           </div>
