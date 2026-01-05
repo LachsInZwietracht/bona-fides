@@ -84,7 +84,7 @@ export function Footer() {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="font-mono text-xs text-gray-500">
-              © 2024 BONA FIDES Private Detektei. Alle Rechte vorbehalten.
+              © BONA FIDES Private Detektei. Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 font-mono text-xs text-gray-400">
               <Link

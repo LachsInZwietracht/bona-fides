@@ -6,6 +6,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { getTeamMemberCount } from '@/lib/team-data';
 import {
   Shield,
   Target,
@@ -95,7 +96,7 @@ const principles = [
   {
     icon: Compass,
     title: 'Internationale Reichweite',
-    body: 'Europaweite Einsätze durch verifizierte Partnerbüros und gemeinsame Compliance-Standards.',
+    body: 'Europaweite Einsätze durch grenzüberschreitendes Partnernetzwerk und gemeinsame Compliance-Standards.',
   },
 ];
 
@@ -230,7 +231,7 @@ useEffect(() => {
         stamp: 'GERICHTSFEST',
       },
       {
-        heading: '35 Bundesweite Ermittler',
+        heading: `${getTeamMemberCount()} Bundesweite Ermittler`,
         content: 'Ermittlernetzwerk in ganz Deutschland',
         stamp: 'BUNDESWEIT',
       },
@@ -319,9 +320,9 @@ useEffect(() => {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold tracking-tight text-white drop-shadow-xl">
                 Wer wir sind, wofür wir stehen
               </h1>
-              <p className="text-xs sm:text-sm lg:text-base font-mono uppercase tracking-[0.2em] lg:tracking-[0.3em] text-gray-400">
-                Deutschlands führende Digital-Detektei mit dem größten Expertenteam
-              </p>
+              <h2 className="text-xs sm:text-sm lg:text-base font-mono uppercase tracking-[0.2em] lg:tracking-[0.3em] text-gray-400">
+                Spezialisierte Digital-Detektei mit interdisziplinärem Experten-Netzwerk
+              </h2>
               <p className="max-w-xl text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
                 Als eine der führenden Digital-Detekteien Deutschlands verfügen wir über das größte spezialisierte
                 Expertenteam für Cyber-Ermittlungen, Online-Forensik und digitale Beweissicherung. Mit modernster
@@ -349,7 +350,7 @@ useEffect(() => {
                   </div>
                   <p className="text-sm text-gray-400">
                     Diese Zahlen sprechen für unsere Expertise und unser Engagement. Jeder Fall wird mit der gleichen
-                    Professionalität und Diskretion behandelt, die uns zur führenden Digital-Detektei Deutschlands macht.
+                    Professionalität und Diskretion behandelt, die unser spezialisiertes Experten-Netzwerk auszeichnet.
                   </p>
                   <div className="relative mt-6 flex flex-col gap-4">
                     {dossierPages.map((page, index) => (
@@ -362,9 +363,6 @@ useEffect(() => {
                       >
                         <div className="flex items-center justify-between">
                           <h3 className="font-serif text-lg text-white">{page.heading}</h3>
-                          <span className="rounded-sm border border-white/20 px-2 py-0.5 text-xs font-mono tracking-[0.3em] text-gray-400">
-                            {page.stamp}
-                          </span>
                         </div>
                         <p className="mt-3 text-sm text-gray-400">{page.content}</p>
                       </div>
