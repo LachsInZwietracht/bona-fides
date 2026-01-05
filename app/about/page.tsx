@@ -221,7 +221,7 @@ useEffect(() => {
     () => [
       {
         heading: '#1 Digital',
-        content: 'Führend in digitaler Ermittlung',
+        content: 'Experten in Digitalen Ermittlungen',
         stamp: 'MARKTFÜHRER',
       },
       {

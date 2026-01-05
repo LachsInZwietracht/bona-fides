@@ -7,83 +7,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, MapPin, PenSquare, Phone, Radar } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { teamMembers } from '@/lib/team-data';
 
-const detectiveMockImage = '/detective-silhouette.png';
-
-const teamMembers = [
-  {
-    id: 'A-01',
-    name: 'Klaus Hoffmann',
-    codename: 'Fallleiter',
-    role: 'Leitender Ermittler',
-    base: 'Feldbüro Hamburg',
-    division: 'field',
-    specialties: ['Verhörtechnik', 'Taktische Planung'],
-    status: 'Aktiv',
-    image: detectiveMockImage,
-    note: 'Legendär beim Aufbrechen geschlossener Aussagen. Misstraut zu linearen Zeitabläufen.'
-  },
-  {
-    id: 'A-02',
-    name: 'Dr. Sarah Müller',
-    codename: 'Trace',
-    role: 'Digitale Forensikerin',
-    base: 'Analysezentrum Wiesbaden',
-    division: 'digital',
-    specialties: ['OSINT', 'Speicherforensik'],
-    status: 'Bereit',
-    image: detectiveMockImage,
-    note: 'Sieht Muster in Störgeräuschen. Hinweis: Kaffee streng filtriert liefern.'
-  },
-  {
-    id: 'A-03',
-    name: 'Michael Weber',
-    codename: 'Locator',
-    role: 'Umfeldanalyst',
-    base: 'Operationshub Berlin',
-    division: 'field',
-    specialties: ['Netzwerkrecherche', 'Personensuche'],
-    status: 'Im Einsatz',
-    image: detectiveMockImage,
-    note: 'Typische Bewegungsmuster der Zielperson in 6 Min skizziert. Mag analoge Karten.'
-  },
-  {
-    id: 'A-04',
-    name: 'Isabella Rossi',
-    codename: 'Mirage',
-    role: 'Undercover Spezialistin',
-    base: 'Mobile Einheit NRW',
-    division: 'undercover',
-    specialties: ['Cover-Aufbau', 'Human Intelligence'],
-    status: 'Verdeckt',
-    image: detectiveMockImage,
-    note: 'Archiv führt fünf bestätigte Identitäten. Kein Kontakt nach 23:00 Uhr.'
-  },
-  {
-    id: 'A-05',
-    name: 'Jonas Richter',
-    codename: 'Cipher',
-    role: 'Threat Analyst',
-    base: 'Signals Lab München',
-    division: 'digital',
-    specialties: ['Signalaufklärung', 'Pattern Mining'],
-    status: 'Analyse',
-    image: detectiveMockImage,
-    note: 'Ersetzt Whiteboards durch Post-Quantum-Notizen. Immer mit Funkkopfhörer.'
-  },
-  {
-    id: 'A-06',
-    name: 'Lina Petrovic',
-    codename: 'Ghostline',
-    role: 'Tarnidentität-Expertin',
-    base: 'Backchannel Prag',
-    division: 'undercover',
-    specialties: ['Legendenbau', 'Psychologie'],
-    status: 'Standby',
-    image: detectiveMockImage,
-    note: 'Verhandelt nur über handschriftliche Notizen. Lacht selten, erinnert alles.'
-  }
-];
 
 const unitFilters = [
   { label: 'Alle Einheiten', value: 'all' },
@@ -157,8 +82,8 @@ export default function TeamPage() {
               </span>
             </div>
             <p className="mt-8 max-w-2xl text-center text-base text-gray-300">
-              Übersicht über unser deutschlandweites Kooperationsnetzwerk. Zeigt alle verfügbaren Ermittler-Partner, die wir fallspezifisch koordinieren -
-              Datenansicht automatisch anonymisiert, Statusmeldungen werden in Echtzeit synchronisiert.
+              Übersicht über unser deutschlandweites Kooperationsnetzwerk. Zeigt alle verfügbaren Ermittler-Partner, die wir fallspezifisch koordinieren.
+              Statusmeldungen werden in Echtzeit synchronisiert.
             </p>
           </header>
 
@@ -315,15 +240,15 @@ export default function TeamPage() {
               </div>
               <div className="relative z-10 text-center">
                 <h2 className="mb-8 font-serif text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
-                  Deutschlands führende <br className="hidden sm:block" />
-                  <span className="text-[#c2b16d]">Digital-Ermittler</span>
+                  Digitale Ermittlungen. <br className="hidden sm:block" />
+                  <span className="text-[#c2b16d]">Präzise. Diskret. Professionell.</span>
                 </h2>
                 <div className="mx-auto max-w-4xl space-y-6 text-left">
                   <p className="text-lg leading-relaxed text-gray-300">
                     Unser kuratiertes <strong className="text-white">Partnernetzwerk</strong> vereint langjährige Ermittlungserfahrung mit modernster Cyber-Forensik-Technologie. Als koordinierende <strong className="text-white">Online-Detektei</strong> greifen wir auf ein handverlesenes Team von Spezialisten zurück, die wir für Ihre komplexen digitalen Fälle aktivieren - für Privatpersonen und Unternehmen in Hamburg, Berlin, München und bundesweit.
                   </p>
                   <p className="text-lg leading-relaxed text-gray-300">
-                    Von <strong className="text-white">OSINT-Ermittlungen</strong> bis hin zu Dark Web Recherchen – unser Netzwerk spezialisierter Partner ermöglicht uns flexible und zielgerichtete Lösungsansätze. Durch kontinuierliche Weiterbildung in Datenforensik und modernsten Analyseverfahren garantieren wir höchste Standards in der digitalen Beweissicherung.
+                    Von <strong className="text-white">OSINT-Ermittlungen</strong> bis hin zu Dark Web Recherchen – unser Netzwerk spezialisierter Partner ermöglicht uns flexible und zielgerichtete Lösungsansätze. Durch kontinuierliche Weiterbildung in Datenforensik und modernsten Analyseverfahren orientieren uns an anerkannten Standards der digitalen Forensik.
                   </p>
                 </div>
               </div>

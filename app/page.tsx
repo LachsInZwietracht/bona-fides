@@ -12,6 +12,7 @@ import { ContactForm } from "@/components/contact-form"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
 import type { Article } from "@/lib/blog"
+import { getTeamMemberCount } from "@/lib/team-data"
 
 export default function HomePage() {
   const [latestArticles, setLatestArticles] = useState<Article[]>([])
@@ -444,16 +445,16 @@ export default function HomePage() {
             </h2>
             
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Eine von Deutschlands führenden Detekteien mit digitalem Schwerpunkt und weltweitem Netzwerk
+              Eine von Deutschlands führenden Detekteien mit digitalem Schwerpunkt und nationalem Netzwerk
             </p>
           </div>
 
           {/* Trust Metrics */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
-              { icon: Star, number: "#1", label: "Digital", description: "Führend in digitaler Ermittlung" },
+              { icon: Star, number: "#1", label: "Digital", description: "Experten in Digitalen Ermittlungen" },
               { icon: Award, number: "100%", label: "Diskrete Beweise", description: "Gerichtsfeste Dokumentation garantiert" },
-              { icon: Users, number: "35", label: "Bundesweite Ermittler", description: "Ermittlernetzwerk in ganz Deutschland" },
+              { icon: Users, number: getTeamMemberCount().toString(), label: "Bundesweite Ermittler", description: "Ermittlernetzwerk in ganz Deutschland" },
               { icon: Shield, number: "100%", label: "Vertraulich", description: "Alle Fälle werden mit völliger Diskretion behandelt" }
             ].map((metric, index) => (
               <div key={index} className="text-center group">
