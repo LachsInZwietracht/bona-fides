@@ -759,7 +759,7 @@ export default function HomePage() {
               },
               {
                 question: "In welchen Regionen sind Sie tätig?",
-                answer: "Als beste und größte Detektei Deutschlands mit Fokus auf digitale Ermittlungen arbeiten wir international. Unser großes Netzwerk ermöglicht weltweite Online-Recherchen. Für lokale, hands-on Ermittlungen empfehlen wir spezialisierte Partner."
+                answer: "Als eine der führenden Digital-Detekteien Deutschlands arbeiten wir international. Unser großes Netzwerk ermöglicht weltweite Online-Recherchen. Für lokale, hands-on Ermittlungen empfehlen wir spezialisierte Partner."
               },
               {
                 question: "Wie erhalte ich meine Ermittlungsergebnisse?",
