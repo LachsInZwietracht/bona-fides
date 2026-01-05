@@ -157,7 +157,7 @@ export default function TeamPage() {
               </span>
             </div>
             <p className="mt-8 max-w-2xl text-center text-base text-gray-300">
-              Übersicht über unser deutschlandweites Ermittlernetzwerk. Zeigt alle für uns verfügbaren Ermittler -
+              Übersicht über unser deutschlandweites Kooperationsnetzwerk. Zeigt alle verfügbaren Ermittler-Partner, die wir fallspezifisch koordinieren -
               Datenansicht automatisch anonymisiert, Statusmeldungen werden in Echtzeit synchronisiert.
             </p>
           </header>
@@ -320,13 +320,10 @@ export default function TeamPage() {
                 </h2>
                 <div className="mx-auto max-w-4xl space-y-6 text-left">
                   <p className="text-lg leading-relaxed text-gray-300">
-                    Unser spezialisiertes <strong className="text-white">Digitale Detektei Team</strong> vereint langjährige Ermittlungserfahrung mit modernster Cyber-Forensik-Technologie. Als führende <strong className="text-white">Online-Detektive in Deutschland</strong> lösen wir komplexe digitale Fälle für Privatpersonen und Unternehmen in Hamburg, Berlin, München und bundesweit.
+                    Unser kuratiertes <strong className="text-white">Partnernetzwerk</strong> vereint langjährige Ermittlungserfahrung mit modernster Cyber-Forensik-Technologie. Als koordinierende <strong className="text-white">Online-Detektei</strong> greifen wir auf ein handverlesenes Team von Spezialisten zurück, die wir für Ihre komplexen digitalen Fälle aktivieren - für Privatpersonen und Unternehmen in Hamburg, Berlin, München und bundesweit.
                   </p>
                   <p className="text-lg leading-relaxed text-gray-300">
-                    Von <strong className="text-white">OSINT-Ermittlungen</strong> und Social Media Investigations bis hin zu Blockchain-Forensik und Dark Web Recherchen – unsere zertifizierten <strong className="text-white">Cyber-Ermittler</strong> decken das gesamte Spektrum der digitalen Aufklärung ab. Durch kontinuierliche Weiterbildung in Datenforensik und modernsten Analyseverfahren garantieren wir höchste Standards in der digitalen Beweissicherung.
-                  </p>
-                  <p className="text-lg leading-relaxed text-gray-300">
-                    Vertrauen Sie auf unser eingespieltes Team aus IT-Forensikern, Cyber-Security-Experten und erfahrenen Privatdetektiven. Gemeinsam bieten wir diskrete und rechtssichere Lösungen für Identitätsdiebstahl, Online-Betrug, Cyberstalking und Corporate Investigations.
+                    Von <strong className="text-white">OSINT-Ermittlungen</strong> bis hin zu Dark Web Recherchen – unser Netzwerk spezialisierter Partner ermöglicht uns flexible und zielgerichtete Lösungsansätze. Durch kontinuierliche Weiterbildung in Datenforensik und modernsten Analyseverfahren garantieren wir höchste Standards in der digitalen Beweissicherung.
                   </p>
                 </div>
               </div>
