@@ -324,9 +324,9 @@ useEffect(() => {
                 Spezialisierte Digital-Detektei mit interdisziplinärem Experten-Netzwerk
               </h2>
               <p className="max-w-xl text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
-                Als eine der führenden Digital-Detekteien Deutschlands verfügen wir über das größte spezialisierte
+                Als spezialisierte Digital-Detektei verfügen wir über ein hochqualifiziertes
                 Expertenteam für Cyber-Ermittlungen, Online-Forensik und digitale Beweissicherung. Mit modernster
-                IT-Forensik-Technologie und jahrzehntelanger Erfahrung lösen wir komplexe Cybercrime-Fälle,
+                IT-Forensik-Technologie und einem interdisziplinären Netzwerk erfahrener Ermittler lösen wir komplexe Cybercrime-Fälle,
                 Identitätsdiebstahl und Wirtschaftsspionage für Unternehmen und Privatpersonen deutschlandweit.
               </p>
             </div>

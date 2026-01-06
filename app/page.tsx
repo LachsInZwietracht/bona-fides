@@ -23,13 +23,10 @@ export default function HomePage() {
   const service2Observer = useIntersectionObserver({ threshold: 0.2, rootMargin: '-10% 0px' })
   const service3Observer = useIntersectionObserver({ threshold: 0.2, rootMargin: '-10% 0px' })
 
-  // Individual intersection observers for article cards (up to 6 articles to be safe)
+  // Individual intersection observers for article cards (3 articles)
   const article1Observer = useIntersectionObserver({ threshold: 0.3, rootMargin: '-20% 0px' })
   const article2Observer = useIntersectionObserver({ threshold: 0.3, rootMargin: '-20% 0px' })
   const article3Observer = useIntersectionObserver({ threshold: 0.3, rootMargin: '-20% 0px' })
-  const article4Observer = useIntersectionObserver({ threshold: 0.3, rootMargin: '-20% 0px' })
-  const article5Observer = useIntersectionObserver({ threshold: 0.3, rootMargin: '-20% 0px' })
-  const article6Observer = useIntersectionObserver({ threshold: 0.3, rootMargin: '-20% 0px' })
 
   // Fetch latest articles for the Aktuelles section
   useEffect(() => {
@@ -103,9 +100,9 @@ export default function HomePage() {
               {/* Tagline with dramatic styling */}
               <div className="border-l-4 border-white pl-6 sm:pl-8">
                 <p className="text-lg sm:text-xl md:text-xl lg:text-2xl font-serif italic text-gray-300 leading-relaxed">
-                  „Jede Wahrheit
+                  „Jede Wahrheit verdient es,
                   <br />
-                  <span className="text-white font-bold">verdient es, gefunden zu werden.&rdquo;</span>
+                  <span className="text-white font-bold">gefunden zu werden.&rdquo;</span>
                 </p>
               </div>
 
@@ -227,7 +224,7 @@ export default function HomePage() {
             </h2>
             
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Eine von Deutschlands führenden Detekteien – Spezialisiert auf internationale Online-Ermittlungen
+              Spezialisiert auf internationale Online-Ermittlungen und digitale Forensik
             </p>
           </div>
 
@@ -445,7 +442,7 @@ export default function HomePage() {
             </h2>
             
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Eine von Deutschlands führenden Detekteien mit digitalem Schwerpunkt und nationalem Netzwerk
+              Digitale Detektei mit spezialisierten Experten und bundesweitem Netzwerk
             </p>
           </div>
 
@@ -496,29 +493,29 @@ export default function HomePage() {
             {[
               {
                 caseNumber: "DE-047",
-                title: "Dubai-Betrugsring gesprengt",
-                service: "Internationale Ermittlungen",
-                description: "Geldwäsche-Netzwerk in Dubai aufgedeckt, das EU- und UK-Kunden betrog. Fall wurde an Behörden übergeben.",
-                location: "Dubai / EU / UK",
+                title: "Dubai-Betrugsring: Internationale Finanzermittlungen",
+                service: "Internationale Wirtschaftsermittlungen",
+                description: "Geldwäsche-Netzwerk in Dubai aufgedeckt, das EU- und UK-Kunden betrog. Verbindungen zu Sheikh und UK-Limited identifiziert. Fall wurde an deutsche Zollbehörde übergeben.",
+                location: "Dubai / EU / UK / Deutschland",
                 duration: "Mehrere Monate",
                 classification: "STRENG GEHEIM"
               },
               {
-                caseNumber: "SM-123",
-                title: "Gestohlener Social-Media-Account",
-                service: "Digitale Forensik",
-                description: "Account eines Millionen-Euro-Unternehmens zurückverfolgt. Täter in Thailand identifiziert.",
-                location: "Europa / Thailand",
-                duration: "Intensive Recherche",
-                classification: "VERTRAULICH"
+                caseNumber: "1993-067",
+                title: "Der Schatten im Vorstand",
+                service: "Unternehmenssicherheit",
+                description: "Wirtschaftsspionage in DAX-Konzern aufgedeckt. 50 Mio. € Schaden verhindert durch verdeckte Ermittlungen und Beweissicherung.",
+                location: "Frankfurt",
+                duration: "3 Monate",
+                classification: "STRENG GEHEIM"
               },
               {
-                caseNumber: "PH-089",
-                title: "Personensuche via Fotomaterial",
-                service: "Digitale Ermittlungen",
-                description: "Vermisste Personen durch Online-Recherche und Fotomaterial-Analyse erfolgreich lokalisiert.",
-                location: "International",
-                duration: "Variiert",
+                caseNumber: "2021-598",
+                title: "Digitale Spuren",
+                service: "Hintergrundprüfungen",
+                description: "Cyberkrimineller Hintergrund von Führungskraft aufgedeckt. Datenschutz gewährleistet und Unternehmenssicherheit gesichert.",
+                location: "Stuttgart",
+                duration: "3 Wochen",
                 classification: "VERTRAULICH"
               }
             ].map((caseFile, index) => (
@@ -608,11 +605,10 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {(isMobile ? latestArticles.slice(0, 3) : latestArticles).map((article, index) => {
+            {latestArticles.slice(0, 3).map((article, index) => {
               // Get the appropriate observer for this article
               const observers = [
-                article1Observer, article2Observer, article3Observer,
-                article4Observer, article5Observer, article6Observer
+                article1Observer, article2Observer, article3Observer
               ]
               const observer = observers[index]
 
@@ -759,7 +755,7 @@ export default function HomePage() {
               },
               {
                 question: "In welchen Regionen sind Sie tätig?",
-                answer: "Als eine der führenden Digital-Detekteien Deutschlands arbeiten wir international. Unser großes Netzwerk ermöglicht weltweite Online-Recherchen. Für lokale, hands-on Ermittlungen empfehlen wir spezialisierte Partner."
+                answer: "Als spezialisierte Digital-Detektei arbeiten wir international. Unser Netzwerk ermöglicht weltweite Online-Recherchen und digitale Ermittlungen. Für lokale, hands-on Ermittlungen empfehlen wir spezialisierte Partner aus unserem Netzwerk."
               },
               {
                 question: "Wie erhalte ich meine Ermittlungsergebnisse?",
@@ -787,7 +783,7 @@ export default function HomePage() {
       </div>
 
       {/* Contact Section */}
-      <section id="kontakt-section">
+      <section id="contact">
         <ContactForm />
       </section>
 
