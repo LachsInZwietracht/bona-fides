@@ -476,69 +476,148 @@ export default function HomePage() {
 
       {/* Case Study Section */}
       <div className="relative z-10 py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center space-y-6 mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
-              FALLSTUDIE
-            </h2>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
 
-            <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Ein Beispiel aus unserer Praxis
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1 mb-6">
+              <span className="text-xs font-mono text-gray-300 tracking-widest">FALLSTUDIE</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
+              Due Diligence mit Konsequenzen.
+            </h2>
+            <p className="text-lg font-mono text-gray-400">
+              Internationale Wirtschaftsermittlung · 2024
             </p>
           </div>
 
-          {/* Single Case Study - Centered */}
-          <div className="max-w-2xl mx-auto">
-            <div className="group relative">
-              <div className="bg-white/5 hover:bg-[#FEF3C6]/10 backdrop-blur-sm border border-white/10 hover:border-[#C2B16D]/40 hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.2)] rounded-sm overflow-hidden transition-all duration-700 shadow-2xl">
+          {/* Two Column Layout */}
+          <div className="grid md:grid-cols-2 gap-8">
 
-                {/* File Tab */}
-                <div className="bg-white/10 group-hover:bg-[#C2B16D]/20 px-4 py-2 border-b border-white/20 group-hover:border-[#C2B16D]/30 transition-colors duration-500">
-                  <div className="flex justify-between items-center">
-                    <span className="text-xs font-mono text-white group-hover:text-[#FEF3C6] font-bold tracking-widest transition-colors duration-500">
-                      AKTE DE-047
-                    </span>
-                    <div className="text-xs font-mono text-gray-300 group-hover:text-[#FEF3C6]/70 transition-colors duration-500">
-                      VERTRAULICH
+            {/* Left Column */}
+            <div className="space-y-6">
+              {/* Ausgangssituation */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
+                <h3 className="text-xl font-serif font-semibold text-white mb-4">Ausgangssituation</h3>
+                <p className="text-gray-300 font-mono text-sm leading-relaxed">
+                  Ein Mandant suchte Unterstützung bei der Erschließung des deutschen Marktes für sein Finanzdienstleistungsunternehmen. Er bat uns, potenzielle Geschäftspartner zu identifizieren. Was als einfache Marktrecherche begann, entwickelte sich zu einer umfassenden Ermittlung.
+                </p>
+              </div>
+
+              {/* Timeline / Verlauf */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
+                <h3 className="text-lg font-serif font-semibold text-white mb-6">Verlauf der Ermittlung</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+                      <span className="text-xs font-mono text-gray-400">1</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-mono text-gray-400">Erstgespräch & Auftrag</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+                      <span className="text-xs font-mono text-gray-400">2</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-mono text-gray-400">Due-Diligence-Prüfung</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+                      <span className="text-xs font-mono text-gray-400">3</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-mono text-gray-400">Auffälligkeiten identifiziert</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C2B16D]/30 flex items-center justify-center">
+                      <span className="text-xs font-mono text-[#C2B16D]">4</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-mono text-[#C2B16D]">Rechtliche Beratung & Behördenmeldung</p>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                {/* Case Content */}
-                <div className="p-6 space-y-4">
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-serif font-bold text-white group-hover:text-[#FEF3C6] transition-all duration-500">
-                      Internationale Due Diligence
-                    </h3>
-                    <div className="inline-block bg-white/10 group-hover:bg-[#C2B16D]/10 text-white group-hover:text-[#FEF3C6] px-2 py-1 rounded text-xs font-mono transition-colors duration-500">
-                      Wirtschaftsermittlungen
+              {/* Key Facts */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-serif font-bold text-[#C2B16D]">3</p>
+                  <p className="text-xs font-mono text-gray-400 mt-1">Jurisdiktionen</p>
+                </div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-serif font-bold text-[#C2B16D]">5+</p>
+                  <p className="text-xs font-mono text-gray-400 mt-1">Monate Dauer</p>
+                </div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-serif font-bold text-[#C2B16D]">1</p>
+                  <p className="text-xs font-mono text-gray-400 mt-1">Behördenmeldung</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="space-y-6">
+              {/* Was wir festgestellt haben */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
+                <h3 className="text-xl font-serif font-semibold text-white mb-6">Was wir festgestellt haben</h3>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C2B16D]/20 flex items-center justify-center">
+                      <span className="text-sm font-mono text-[#C2B16D] font-bold">1</span>
+                    </div>
+                    <div>
+                      <p className="text-white font-medium mb-1">Auffällige Unternehmensstruktur</p>
+                      <p className="text-sm font-mono text-gray-400">UK-Limited mit Geschäftsadresse einer benachbarten Kanzlei</p>
                     </div>
                   </div>
-
-                  <p className="text-gray-300 group-hover:text-[#FEF3C6]/80 font-mono text-sm leading-relaxed transition-colors duration-500 mb-6">
-                    Ein Mandant beauftragte uns, potenzielle Geschäftspartner für sein Finanzdienstleistungsunternehmen zu prüfen. Bei der Due-Diligence-Prüfung stießen wir auf Unstimmigkeiten in der Unternehmensstruktur – eine UK-Limited mit auffälligen internationalen Verbindungen. Nach rechtlicher Beratung haben wir die Erkenntnisse an die zuständige Behörde weitergeleitet.
-                  </p>
-
-                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20 group-hover:border-[#C2B16D]/20 transition-colors duration-500">
-                    <div>
-                      <div className="text-xs font-mono text-gray-400 group-hover:text-[#FEF3C6]/70 transition-colors duration-500">Ort:</div>
-                      <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">Dubai / UK / Deutschland</div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C2B16D]/20 flex items-center justify-center">
+                      <span className="text-sm font-mono text-[#C2B16D] font-bold">2</span>
                     </div>
                     <div>
-                      <div className="text-xs font-mono text-gray-400 group-hover:text-[#FEF3C6]/70 transition-colors duration-500">Dauer:</div>
-                      <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">Mehrere Monate</div>
+                      <p className="text-white font-medium mb-1">Internationale Verbindungen</p>
+                      <p className="text-sm font-mono text-gray-400">Geschäftsbeziehungen nach Dubai mit unklaren Finanzströmen</p>
                     </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C2B16D]/20 flex items-center justify-center">
+                      <span className="text-sm font-mono text-[#C2B16D] font-bold">3</span>
+                    </div>
+                    <div>
+                      <p className="text-white font-medium mb-1">Rechtliche Einschätzung</p>
+                      <p className="text-sm font-mono text-gray-400">Nach Konsultation mit Fachanwälten: Meldepflicht identifiziert</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ergebnis */}
+              <div className="bg-[#C2B16D]/10 backdrop-blur-sm border border-[#C2B16D]/30 rounded-lg p-6">
+                <p className="text-gray-300 font-mono text-sm leading-relaxed italic mb-4">
+                  &ldquo;Gründliche Hintergrundprüfungen schützen nicht nur vor finanziellen Risiken – sie können auch rechtliche Konsequenzen verhindern. In diesem Fall führte unsere Sorgfalt zu einer Behördenmeldung.&rdquo;
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                    <span className="text-lg">🔍</span>
+                  </div>
+                  <div>
+                    <p className="text-white font-medium text-sm">Bona Fides</p>
+                    <p className="text-xs font-mono text-gray-400">Ermittlungsteam</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Footer */}
-          <div className="text-center mt-16 p-6 backdrop-blur-sm border rounded-sm max-w-4xl mx-auto" style={{backgroundColor: 'rgba(254, 243, 198, 0.05)', borderColor: 'rgba(194, 177, 109, 0.2)'}}>
+          {/* Footer CTA */}
+          <div className="text-center mt-16 p-8 backdrop-blur-sm border rounded-lg max-w-3xl mx-auto" style={{backgroundColor: 'rgba(254, 243, 198, 0.05)', borderColor: 'rgba(194, 177, 109, 0.2)'}}>
             <h3 className="text-2xl font-serif font-bold mb-3" style={{color: '#FEF3C6'}}>
-              Ihr Anliegen verdient Aufmerksamkeit
+              Ihr Anliegen verdient Sorgfalt
             </h3>
             <p className="font-mono text-gray-300 mb-4">
               Jeder Fall ist einzigartig. Sprechen Sie vertraulich mit uns.
