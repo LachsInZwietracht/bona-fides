@@ -474,119 +474,153 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Case Studies Section - Evidence Board Style */}
+      {/* Case Study Section */}
       <div className="relative z-10 py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center space-y-6 mb-20">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
-              GELÖSTE FÄLLE
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1 mb-6">
+              <span className="text-xs font-mono text-gray-300 tracking-widest">FALLSTUDIE</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
+              Due Diligence mit Konsequenzen.
             </h2>
-            
-            <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Ausgewählte Erfolgsgeschichten aus unserem Archiv – Jeder Fall ein Triumph der Wahrheit
+            <p className="text-lg font-mono text-gray-400">
+              Internationale Wirtschaftsermittlung · 2024
             </p>
           </div>
 
-          {/* Evidence Board Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                caseNumber: "DE-047",
-                title: "Dubai-Betrugsring: Internationale Finanzermittlungen",
-                service: "Internationale Wirtschaftsermittlungen",
-                description: "Geldwäsche-Netzwerk in Dubai aufgedeckt, das EU- und UK-Kunden betrog. Verbindungen zu Sheikh und UK-Limited identifiziert. Fall wurde an deutsche Zollbehörde übergeben.",
-                location: "Dubai / EU / UK / Deutschland",
-                duration: "Mehrere Monate",
-                classification: "STRENG GEHEIM"
-              },
-              {
-                caseNumber: "1993-067",
-                title: "Der Schatten im Vorstand",
-                service: "Unternehmenssicherheit",
-                description: "Wirtschaftsspionage in DAX-Konzern aufgedeckt. 50 Mio. € Schaden verhindert durch verdeckte Ermittlungen und Beweissicherung.",
-                location: "Frankfurt",
-                duration: "3 Monate",
-                classification: "STRENG GEHEIM"
-              },
-              {
-                caseNumber: "2021-598",
-                title: "Digitale Spuren",
-                service: "Hintergrundprüfungen",
-                description: "Cyberkrimineller Hintergrund von Führungskraft aufgedeckt. Datenschutz gewährleistet und Unternehmenssicherheit gesichert.",
-                location: "Stuttgart",
-                duration: "3 Wochen",
-                classification: "VERTRAULICH"
-              }
-            ].map((caseFile, index) => (
-              <div key={index} className="group relative">
-                {/* Case File Folder */}
-                <div className="bg-white/5 hover:bg-[#FEF3C6]/10 backdrop-blur-sm border border-white/10 hover:border-[#C2B16D]/40 hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.2)] rounded-sm overflow-hidden transition-all duration-700 hover:scale-105 hover:-rotate-1 shadow-2xl">
+          {/* Two Column Layout */}
+          <div className="grid md:grid-cols-2 gap-8">
 
-                  {/* File Tab */}
-                  <div className="bg-white/10 group-hover:bg-[#C2B16D]/20 px-4 py-2 border-b border-white/20 group-hover:border-[#C2B16D]/30 transition-colors duration-500">
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs font-mono text-white group-hover:text-[#FEF3C6] font-bold tracking-widest transition-colors duration-500">
-                        AKTE {caseFile.caseNumber}
-                      </span>
-                      <div className="text-xs font-mono text-gray-300 group-hover:text-[#FEF3C6]/70 transition-colors duration-500">
-                        {caseFile.classification}
-                      </div>
+            {/* Left Column */}
+            <div className="space-y-6">
+              {/* Ausgangssituation */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
+                <h3 className="text-xl font-serif font-semibold text-white mb-4">Ausgangssituation</h3>
+                <p className="text-gray-300 font-mono text-sm leading-relaxed">
+                  Ein Mandant suchte Unterstützung bei der Erschließung des deutschen Marktes für sein Finanzdienstleistungsunternehmen. Er bat uns, potenzielle Geschäftspartner zu identifizieren. Was als einfache Marktrecherche begann, entwickelte sich zu einer umfassenden Ermittlung.
+                </p>
+              </div>
+
+              {/* Timeline / Verlauf */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
+                <h3 className="text-lg font-serif font-semibold text-white mb-6">Verlauf der Ermittlung</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+                      <span className="text-xs font-mono text-gray-400">1</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-mono text-gray-400">Erstgespräch & Auftrag</p>
                     </div>
                   </div>
-
-                  {/* Case Content */}
-                  <div className="p-6 space-y-4">
-                    {/* Case Title with Typewriter Effect */}
-                    <div className="space-y-2">
-                      <h3 className="text-xl font-serif font-bold text-white group-hover:text-[#FEF3C6] group-hover:tracking-wider transition-all duration-500">
-                        {caseFile.title}
-                      </h3>
-                      <div className="inline-block bg-white/10 group-hover:bg-[#C2B16D]/10 text-white group-hover:text-[#FEF3C6] px-2 py-1 rounded text-xs font-mono transition-colors duration-500">
-                        {caseFile.service}
-                      </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+                      <span className="text-xs font-mono text-gray-400">2</span>
                     </div>
-
-                    {/* Case Description */}
-                    <p className="text-gray-300 group-hover:text-[#FEF3C6]/80 font-mono text-sm leading-relaxed transition-colors duration-500 mb-6">
-                      {caseFile.description}
-                    </p>
-
-                    {/* Case Details */}
-                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20 group-hover:border-[#C2B16D]/20 transition-colors duration-500">
-                      <div>
-                        <div className="text-xs font-mono text-gray-400 group-hover:text-[#FEF3C6]/70 transition-colors duration-500"> Ort:</div>
-                        <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">{caseFile.location}</div>
-                      </div>
-                      <div>
-                        <div className="text-xs font-mono text-gray-400 group-hover:text-[#FEF3C6]/70 transition-colors duration-500"> Dauer:</div>
-                        <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">{caseFile.duration}</div>
-                      </div>
+                    <div>
+                      <p className="text-sm font-mono text-gray-400">Due-Diligence-Prüfung</p>
                     </div>
                   </div>
-
-
-                  {/* Vintage Paper Clips */}
-                  <div className="absolute top-2 left-2 w-8 h-4 border-2 border-gray-400/30 rounded-full opacity-0 group-hover:opacity-60 transition-opacity duration-500 delay-400" />
-                  <div className="absolute top-6 left-4 w-6 h-3 border-2 border-gray-400/30 rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-500 delay-500" />
-
-                  {/* Evidence String Effect */}
-                  <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                    <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-800 delay-600" />
-                    <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-800 delay-700" />
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+                      <span className="text-xs font-mono text-gray-400">3</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-mono text-gray-400">Auffälligkeiten identifiziert</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C2B16D]/30 flex items-center justify-center">
+                      <span className="text-xs font-mono text-[#C2B16D]">4</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-mono text-[#C2B16D]">Rechtliche Beratung & Behördenmeldung</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            ))}
+
+              {/* Key Facts */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-serif font-bold text-[#C2B16D]">3</p>
+                  <p className="text-xs font-mono text-gray-400 mt-1">Jurisdiktionen</p>
+                </div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-serif font-bold text-[#C2B16D]">5+</p>
+                  <p className="text-xs font-mono text-gray-400 mt-1">Monate Dauer</p>
+                </div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 text-center">
+                  <p className="text-2xl font-serif font-bold text-[#C2B16D]">1</p>
+                  <p className="text-xs font-mono text-gray-400 mt-1">Behördenmeldung</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="space-y-6">
+              {/* Was wir festgestellt haben */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
+                <h3 className="text-xl font-serif font-semibold text-white mb-6">Was wir festgestellt haben</h3>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C2B16D]/20 flex items-center justify-center">
+                      <span className="text-sm font-mono text-[#C2B16D] font-bold">1</span>
+                    </div>
+                    <div>
+                      <p className="text-white font-medium mb-1">Auffällige Unternehmensstruktur</p>
+                      <p className="text-sm font-mono text-gray-400">UK-Limited mit Geschäftsadresse einer benachbarten Kanzlei</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C2B16D]/20 flex items-center justify-center">
+                      <span className="text-sm font-mono text-[#C2B16D] font-bold">2</span>
+                    </div>
+                    <div>
+                      <p className="text-white font-medium mb-1">Internationale Verbindungen</p>
+                      <p className="text-sm font-mono text-gray-400">Geschäftsbeziehungen nach Dubai mit unklaren Finanzströmen</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#C2B16D]/20 flex items-center justify-center">
+                      <span className="text-sm font-mono text-[#C2B16D] font-bold">3</span>
+                    </div>
+                    <div>
+                      <p className="text-white font-medium mb-1">Rechtliche Einschätzung</p>
+                      <p className="text-sm font-mono text-gray-400">Nach Konsultation mit Fachanwälten: Meldepflicht identifiziert</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ergebnis */}
+              <div className="bg-[#C2B16D]/10 backdrop-blur-sm border border-[#C2B16D]/30 rounded-lg p-6">
+                <p className="text-gray-300 font-mono text-sm leading-relaxed italic mb-4">
+                  &ldquo;Gründliche Hintergrundprüfungen schützen nicht nur vor finanziellen Risiken – sie können auch rechtliche Konsequenzen verhindern. In diesem Fall führte unsere Sorgfalt zu einer Behördenmeldung.&rdquo;
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                    <span className="text-lg">🔍</span>
+                  </div>
+                  <div>
+                    <p className="text-white font-medium text-sm">Bona Fides</p>
+                    <p className="text-xs font-mono text-gray-400">Ermittlungsteam</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Archive Footer */}
-          <div className="text-center mt-16 p-6 backdrop-blur-sm border rounded-sm max-w-4xl mx-auto" style={{backgroundColor: 'rgba(254, 243, 198, 0.05)', borderColor: 'rgba(194, 177, 109, 0.2)'}}>
+          {/* Footer CTA */}
+          <div className="text-center mt-16 p-8 backdrop-blur-sm border rounded-lg max-w-3xl mx-auto" style={{backgroundColor: 'rgba(254, 243, 198, 0.05)', borderColor: 'rgba(194, 177, 109, 0.2)'}}>
             <h3 className="text-2xl font-serif font-bold mb-3" style={{color: '#FEF3C6'}}>
-              IHR FALL KÖNNTE DER NÄCHSTE SEIN
+              Ihr Anliegen verdient Sorgfalt
             </h3>
             <p className="font-mono text-gray-300 mb-4">
-              Jeder Fall ist einzigartig. Jede Wahrheit verdient es, gefunden zu werden.
+              Jeder Fall ist einzigartig. Sprechen Sie vertraulich mit uns.
             </p>
           </div>
         </div>
