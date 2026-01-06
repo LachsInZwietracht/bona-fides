@@ -16,75 +16,51 @@ const detectiveMockImage = '/detective-silhouette.png';
 export const teamMembers: TeamMember[] = [
   {
     id: 'A-01',
-    name: 'Klaus Hoffmann',
-    codename: 'Fallleiter',
+    name: 'Fabian Radlow',
+    codename: 'Ghostreader',
     role: 'Leitender Ermittler',
-    base: 'Feldbüro Hamburg',
-    division: 'field',
-    specialties: ['Verhörtechnik', 'Taktische Planung'],
+    base: 'Cyber Command Berlin',
+    division: 'digital',
+    specialties: ['OSINT', 'Cyber-Ermittlungen', 'Wirtschaftsspionage'],
     status: 'Aktiv',
-    image: detectiveMockImage,
-    note: 'Legendär beim Aufbrechen geschlossener Aussagen. Misstraut zu linearen Zeitabläufen.'
+    image: '/fabian.png',
+    note: 'Findet deine LinkedIn-Aktivität schneller als du "Datenschutz" sagen kannst. Behauptet, der Algorithmus sei sein bester Freund.'
   },
   {
     id: 'A-02',
-    name: 'Dr. Sarah Müller',
-    codename: 'Trace',
-    role: 'Digitale Forensikerin',
-    base: 'Analysezentrum Wiesbaden',
+    name: 'Patrick Wenk',
+    codename: 'Profiler',
+    role: 'Leitender Ermittler',
+    base: 'Forensik Hub München',
     division: 'digital',
-    specialties: ['OSINT', 'Speicherforensik'],
-    status: 'Bereit',
-    image: detectiveMockImage,
-    note: 'Sieht Muster in Störgeräuschen. Hinweis: Kaffee streng filtriert liefern.'
+    specialties: ['Criminal Profiling', 'Cyber-Ermittlungen', 'Digitale Forensik'],
+    status: 'Aktiv',
+    image: '/patrick.png',
+    note: 'Analysiert Täterprofile während andere noch Kaffee kochen. Warnung: Stellt unbequeme Fragen beim Smalltalk.'
   },
   {
     id: 'A-03',
-    name: 'Michael Weber',
-    codename: 'Locator',
-    role: 'Umfeldanalyst',
-    base: 'Operationshub Berlin',
-    division: 'field',
-    specialties: ['Netzwerkrecherche', 'Personensuche'],
-    status: 'Im Einsatz',
+    name: 'Franzi',
+    codename: 'Cipher',
+    role: 'Operative Analystin',
+    base: 'Intel Center Frankfurt',
+    division: 'digital',
+    specialties: ['Datenanalyse', 'Pattern Recognition', 'Social Engineering'],
+    status: 'Bereit',
     image: detectiveMockImage,
-    note: 'Typische Bewegungsmuster der Zielperson in 6 Min skizziert. Mag analoge Karten.'
+    note: 'Entschlüsselt verschlüsselte Kommunikation beim Frühstück. Mag Rätsel mehr als Menschen.'
   },
   {
     id: 'A-04',
-    name: 'Isabella Rossi',
-    codename: 'Mirage',
-    role: 'Undercover Spezialistin',
-    base: 'Mobile Einheit NRW',
-    division: 'undercover',
-    specialties: ['Cover-Aufbau', 'Human Intelligence'],
-    status: 'Verdeckt',
+    name: 'Moritz Brandes',
+    codename: 'Networker',
+    role: 'Field Investigator',
+    base: 'Operations Hamburg',
+    division: 'field',
+    specialties: ['Verdeckte Ermittlung', 'Observation', 'Informantennetzwerk'],
+    status: 'Im Einsatz',
     image: detectiveMockImage,
-    note: 'Archiv führt fünf bestätigte Identitäten. Kein Kontakt nach 23:00 Uhr.'
-  },
-  {
-    id: 'A-05',
-    name: 'Jonas Richter',
-    codename: 'Cipher',
-    role: 'Threat Analyst',
-    base: 'Signals Lab München',
-    division: 'digital',
-    specialties: ['Signalaufklärung', 'Pattern Mining'],
-    status: 'Analyse',
-    image: detectiveMockImage,
-    note: 'Ersetzt Whiteboards durch Post-Quantum-Notizen. Immer mit Funkkopfhörer.'
-  },
-  {
-    id: 'A-06',
-    name: 'Lina Petrovic',
-    codename: 'Ghostline',
-    role: 'Tarnidentität-Expertin',
-    base: 'Backchannel Prag',
-    division: 'undercover',
-    specialties: ['Legendenbau', 'Psychologie'],
-    status: 'Standby',
-    image: detectiveMockImage,
-    note: 'Verhandelt nur über handschriftliche Notizen. Lacht selten, erinnert alles.'
+    note: 'Kennt jemanden, der jemanden kennt. Hat in drei Städten gleichzeitig Stammtisch-Status.'
   }
 ];
 

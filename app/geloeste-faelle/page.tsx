@@ -257,43 +257,37 @@ export default function GeloesteFaellePage() {
             </p>
           </div>
 
-          {/* Featured Case: Dubai Investigation */}
-          {solvedCases[0].isFeatured && (
-            <div className="mb-20 bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm overflow-hidden shadow-2xl">
-              {/* Case Header */}
-              <div className="bg-white/10 px-6 py-4 border-b border-white/20">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-mono text-white font-bold tracking-widest">
-                    🔍 FALLAKTE {solvedCases[0].caseNumber}
-                  </span>
-                  <div className="text-sm font-mono text-gray-300 flex items-center gap-2">
-                    <span className="px-3 py-1 bg-red-500/20 border border-red-500/40 rounded text-red-300">
-                      {solvedCases[0].classification}
-                    </span>
-                  </div>
+          {/* Featured Case: Dubai Investigation - Full Screen */}
+          <div className="max-w-6xl mx-auto space-y-12">
+            {/* Title Header */}
+            <div className="text-center space-y-6">
+              <div className="inline-block bg-red-500/20 border border-red-500/40 rounded px-4 py-2">
+                <span className="text-sm font-mono text-red-300 font-bold tracking-widest">
+                  AKTE {solvedCases[0].caseNumber} • {solvedCases[0].classification}
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
+                {solvedCases[0].title}
+              </h2>
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="inline-block bg-white/10 text-white px-4 py-2 rounded text-base font-mono border border-white/20">
+                  🏢 {solvedCases[0].service}
+                </div>
+                <div className="inline-block bg-white/10 text-white px-4 py-2 rounded text-base font-mono border border-white/20">
+                  📅 {solvedCases[0].year}
                 </div>
               </div>
+            </div>
 
-              {/* Case Content */}
-              <div className="p-8 md:p-12 space-y-8">
-                {/* Title Section */}
-                <div className="space-y-4">
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-white">
-                    {solvedCases[0].title}
-                  </h2>
-                  <div className="flex flex-wrap gap-3">
-                    <div className="inline-block bg-white/10 text-white px-3 py-1.5 rounded text-sm font-mono border border-white/20">
-                      🏢 {solvedCases[0].service}
-                    </div>
-                    <div className="inline-block bg-white/10 text-white px-3 py-1.5 rounded text-sm font-mono border border-white/20">
-                      📅 {solvedCases[0].year}
-                    </div>
-                  </div>
-                </div>
-
+            {/* Main Content Grid */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Left Column: Background & Context */}
+              <div className="space-y-8">
                 {/* Background */}
-                <div className="space-y-3">
-                  <h3 className="text-xl font-serif font-semibold text-[#FEF3C6]">Ausgangslage</h3>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8 space-y-4">
+                  <h3 className="text-2xl font-serif font-semibold text-[#FEF3C6] border-b border-[#C2B16D]/30 pb-3">
+                    Ausgangslage
+                  </h3>
                   <p className="text-gray-300 font-mono text-base leading-relaxed">
                     {solvedCases[0].description}
                   </p>
@@ -302,195 +296,86 @@ export default function GeloesteFaellePage() {
                   </p>
                 </div>
 
+                {/* Case Details */}
+                <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8">
+                  <h3 className="text-xl font-serif font-semibold text-[#FEF3C6] mb-6">Falldetails</h3>
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <div className="text-sm font-mono text-gray-400 uppercase tracking-wider">📍 Ort</div>
+                      <div className="text-base font-mono text-white">{solvedCases[0].location}</div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="text-sm font-mono text-gray-400 uppercase tracking-wider">⏱️ Dauer</div>
+                      <div className="text-base font-mono text-white">{solvedCases[0].duration}</div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="text-sm font-mono text-gray-400 uppercase tracking-wider">✅ Status</div>
+                      <div className="text-base font-mono text-white">{solvedCases[0].outcome}</div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="text-sm font-mono text-gray-400 uppercase tracking-wider">🔎 Methoden</div>
+                      <div className="text-base font-mono text-white">{solvedCases[0].evidence}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Findings & Actions */}
+              <div className="space-y-8">
                 {/* Findings */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-serif font-semibold text-[#FEF3C6]">Ermittlungsergebnisse</h3>
-                  <div className="grid gap-4 md:grid-cols-3">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8 space-y-6">
+                  <h3 className="text-2xl font-serif font-semibold text-[#FEF3C6] border-b border-[#C2B16D]/30 pb-3">
+                    Ermittlungsergebnisse
+                  </h3>
+                  <div className="space-y-4">
                     {solvedCases[0].detailedReport.findings.map((finding: { title: string; description: string }, idx: number) => (
-                      <div key={idx} className="bg-black/40 border border-white/10 rounded-sm p-5 space-y-2">
-                        <h4 className="font-mono font-bold text-white text-sm">
-                          ⚠️ {finding.title}
+                      <div key={idx} className="bg-black/40 border border-yellow-500/30 rounded-sm p-5 space-y-2">
+                        <h4 className="font-mono font-bold text-yellow-300 text-sm uppercase tracking-wide flex items-center gap-2">
+                          <span className="text-yellow-500">⚠️</span>
+                          {finding.title}
                         </h4>
-                        <p className="text-gray-400 font-mono text-xs leading-relaxed">
+                        <p className="text-gray-300 font-mono text-sm leading-relaxed">
                           {finding.description}
                         </p>
                       </div>
                     ))}
                   </div>
                 </div>
+              </div>
+            </div>
 
-                {/* Actions Taken */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-serif font-semibold text-[#FEF3C6]">Durchgeführte Maßnahmen</h3>
-                  <div className="bg-black/40 border border-white/10 rounded-sm p-6">
-                    <ul className="space-y-3">
-                      {solvedCases[0].detailedReport.actions.map((action: string, idx: number) => (
-                        <li key={idx} className="flex items-start gap-3 text-gray-300 font-mono text-sm">
-                          <span className="text-[#C2B16D] mt-1">✓</span>
-                          <span>{action}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Outcome */}
-                <div className="space-y-3">
-                  <h3 className="text-xl font-serif font-semibold text-[#FEF3C6]">Ergebnis</h3>
-                  <div className="bg-gradient-to-br from-green-900/20 to-black/40 border border-green-500/30 rounded-sm p-6">
-                    <p className="text-gray-300 font-mono text-base leading-relaxed">
-                      {solvedCases[0].detailedReport.outcome}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Case Details Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-white/20">
-                  <div className="space-y-1">
-                    <div className="text-xs font-mono text-gray-400">📍 Ort:</div>
-                    <div className="text-sm font-mono text-white">{solvedCases[0].location}</div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-xs font-mono text-gray-400">⏱️ Dauer:</div>
-                    <div className="text-sm font-mono text-white">{solvedCases[0].duration}</div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-xs font-mono text-gray-400">✅ Status:</div>
-                    <div className="text-sm font-mono text-white">{solvedCases[0].outcome}</div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-xs font-mono text-gray-400">🔎 Methoden:</div>
-                    <div className="text-sm font-mono text-white">{solvedCases[0].evidence}</div>
-                  </div>
+            {/* Full Width: Actions & Outcome */}
+            <div className="space-y-8">
+              {/* Actions Taken */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8">
+                <h3 className="text-2xl font-serif font-semibold text-[#FEF3C6] border-b border-[#C2B16D]/30 pb-3 mb-6">
+                  Durchgeführte Maßnahmen
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {solvedCases[0].detailedReport.actions.map((action: string, idx: number) => (
+                    <div key={idx} className="flex items-start gap-3 bg-black/20 border border-white/10 rounded-sm p-4">
+                      <span className="text-[#C2B16D] text-xl mt-0.5 flex-shrink-0">✓</span>
+                      <span className="text-gray-300 font-mono text-sm leading-relaxed">{action}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Case Status Stamp */}
-              <div className="absolute top-8 right-8 opacity-20 transform rotate-12 pointer-events-none">
-                <div className="bg-green-600 text-white px-4 py-2 rounded border-2 border-green-500 text-lg font-bold shadow-lg">
-                  ✓ ABGESCHLOSSEN
+              {/* Outcome */}
+              <div className="bg-gradient-to-br from-green-900/30 to-black/40 border-2 border-green-500/40 rounded-sm p-10 text-center">
+                <div className="space-y-4">
+                  <div className="inline-block bg-green-500/20 border border-green-500/40 rounded-full px-6 py-2">
+                    <span className="text-sm font-mono text-green-300 font-bold tracking-widest uppercase">
+                      ✓ Erfolgreich abgeschlossen
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-serif font-semibold text-[#FEF3C6]">Ergebnis</h3>
+                  <p className="text-gray-200 font-mono text-lg leading-relaxed max-w-4xl mx-auto">
+                    {solvedCases[0].detailedReport.outcome}
+                  </p>
                 </div>
               </div>
             </div>
-          )}
-
-          {/* Section Divider */}
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-2xl md:text-3xl font-serif font-bold text-white">
-              Weitere Erfolgsgeschichten
-            </h2>
-            <p className="text-base font-mono text-gray-400 max-w-2xl mx-auto">
-              Einblicke in unser vielfältiges Fallarchiv
-            </p>
-          </div>
-
-          {/* Evidence Board Grid - Detective Case Files */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solvedCases.slice(1).map((caseFile, index) => {
-              const isVisible = visibleCases.has(index);
-              const slideDirection = index % 2 === 0 ? 'left' : 'right';
-              
-              return (
-                <div 
-                  key={index} 
-                  ref={(el) => { caseRefs.current[index] = el; }}
-                  data-index={index}
-                  className={`group relative transition-all duration-1000 ease-out ${
-                    isVisible 
-                      ? 'translate-x-0 opacity-100' 
-                      : slideDirection === 'left' 
-                        ? '-translate-x-full opacity-0' 
-                        : 'translate-x-full opacity-0'
-                  }`}
-                  style={{
-                    transitionDelay: isVisible ? `${index * 150}ms` : '0ms'
-                  }}
-                >
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm overflow-hidden transition-all duration-500 hover:scale-105 hover:rotate-1 shadow-2xl hover:shadow-yellow-500/20 relative">
-                    
-                    {/* File Edge Effect */}
-                    <div className={`absolute ${slideDirection === 'left' ? 'left-0' : 'right-0'} top-0 w-1 h-full bg-gradient-to-b from-yellow-400/50 via-yellow-300/30 to-transparent`} />
-                    
-                    {/* File Tab */}
-                    <div className="bg-white/10 px-4 py-2 border-b border-white/20 relative">
-                      <div className="flex justify-between items-center">
-                        <span className="text-xs font-mono text-white font-bold tracking-widest">
-                          📁 AKTE {caseFile.caseNumber}
-                        </span>
-                        <div className="text-xs font-mono text-gray-300 flex items-center gap-1">
-                          🔍 {caseFile.classification}
-                        </div>
-                      </div>
-                      
-                      {/* File Status Indicator */}
-                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-black" />
-                    </div>
-
-                    {/* Case Content */}
-                    <div className="p-6 space-y-4">
-                      {/* Case Title */}
-                      <div className="space-y-2">
-                        <h3 className="text-xl font-serif font-bold text-white group-hover:tracking-wider transition-all duration-500">
-                          {caseFile.title}
-                        </h3>
-                        <div className="flex flex-wrap gap-2">
-                          <div className="inline-block bg-white/10 text-white px-2 py-1 rounded text-xs font-mono border border-white/20">
-                            🏢 {caseFile.service}
-                          </div>
-                          <div className="inline-block bg-white/10 text-white px-2 py-1 rounded text-xs font-mono border border-white/20">
-                            📅 {caseFile.year}
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Case Description */}
-                      <p className="text-gray-300 font-mono text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
-                        {caseFile.description}
-                      </p>
-
-                      {/* Case Details */}
-                      <div className="space-y-3 pt-4 border-t border-white/20">
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="space-y-1">
-                            <div className="text-xs font-mono text-gray-400 flex items-center gap-1">
-                              📍 Ort:
-                            </div>
-                            <div className="text-xs font-mono text-white">{caseFile.location}</div>
-                          </div>
-                          <div className="space-y-1">
-                            <div className="text-xs font-mono text-gray-400 flex items-center gap-1">
-                              ⏱️ Dauer:
-                            </div>
-                            <div className="text-xs font-mono text-white">{caseFile.duration}</div>
-                          </div>
-                        </div>
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="space-y-1">
-                            <div className="text-xs font-mono text-gray-400 flex items-center gap-1">
-                              ✅ Ergebnis:
-                            </div>
-                            <div className="text-xs font-mono text-white">{caseFile.outcome}</div>
-                          </div>
-                          <div className="space-y-1">
-                            <div className="text-xs font-mono text-gray-400 flex items-center gap-1">
-                              🔎 Beweise:
-                            </div>
-                            <div className="text-xs font-mono text-white">{caseFile.evidence}</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Case Status Stamp */}
-                      <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-70 transition-all duration-500 transform rotate-12 group-hover:rotate-6">
-                        <div className="bg-green-600 text-white px-2 py-1 rounded border-2 border-green-500 text-xs font-bold shadow-lg">
-                          ✓ GELÖST
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
           </div>
 
           {/* Archive Footer */}
