@@ -187,13 +187,13 @@ export default function TeamPage() {
                     <span className="absolute left-1/2 top-5 h-4 w-4 -translate-x-1/2 rounded-full bg-[#cf524f] shadow-[0_6px_12px_rgba(0,0,0,0.45)]" />
                     <span className="absolute left-1/2 top-8 h-2 w-12 -translate-x-1/2 rotate-[3deg] bg-[#281d14]/70 opacity-80" />
                     <div className="relative overflow-hidden rounded-md border border-black/10 bg-[#f4efe4]/95 p-5 text-[#1f1712] shadow-[0_24px_40px_rgba(18,12,8,0.38)] transition duration-500 group-hover:shadow-[0_32px_56px_rgba(18,12,8,0.48)]">
-                      <div className="relative h-40 w-full overflow-hidden rounded-sm bg-black/10">
+                      <div className="relative aspect-square w-full overflow-hidden rounded-sm bg-black/10">
                         <Image
                           src={member.image}
                           alt={`Agent ${member.name}`}
                           fill
                           sizes="(max-width: 768px) 240px, 260px"
-                          className="object-cover transition duration-700 ease-out group-hover:scale-105"
+                          className="object-cover object-top transition duration-700 ease-out group-hover:scale-105"
                         />
                         <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/45 to-transparent" />
                       </div>
