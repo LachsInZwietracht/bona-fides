@@ -474,119 +474,74 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Case Studies Section - Evidence Board Style */}
+      {/* Case Study Section */}
       <div className="relative z-10 py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center space-y-6 mb-20">
+          <div className="text-center space-y-6 mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
-              GELÖSTE FÄLLE
+              FALLSTUDIE
             </h2>
-            
+
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Ausgewählte Erfolgsgeschichten aus unserem Archiv – Jeder Fall ein Triumph der Wahrheit
+              Ein Beispiel aus unserer Praxis
             </p>
           </div>
 
-          {/* Evidence Board Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                caseNumber: "DE-047",
-                title: "Dubai-Betrugsring: Internationale Finanzermittlungen",
-                service: "Internationale Wirtschaftsermittlungen",
-                description: "Geldwäsche-Netzwerk in Dubai aufgedeckt, das EU- und UK-Kunden betrog. Verbindungen zu Sheikh und UK-Limited identifiziert. Fall wurde an deutsche Zollbehörde übergeben.",
-                location: "Dubai / EU / UK / Deutschland",
-                duration: "Mehrere Monate",
-                classification: "STRENG GEHEIM"
-              },
-              {
-                caseNumber: "1993-067",
-                title: "Der Schatten im Vorstand",
-                service: "Unternehmenssicherheit",
-                description: "Wirtschaftsspionage in DAX-Konzern aufgedeckt. 50 Mio. € Schaden verhindert durch verdeckte Ermittlungen und Beweissicherung.",
-                location: "Frankfurt",
-                duration: "3 Monate",
-                classification: "STRENG GEHEIM"
-              },
-              {
-                caseNumber: "2021-598",
-                title: "Digitale Spuren",
-                service: "Hintergrundprüfungen",
-                description: "Cyberkrimineller Hintergrund von Führungskraft aufgedeckt. Datenschutz gewährleistet und Unternehmenssicherheit gesichert.",
-                location: "Stuttgart",
-                duration: "3 Wochen",
-                classification: "VERTRAULICH"
-              }
-            ].map((caseFile, index) => (
-              <div key={index} className="group relative">
-                {/* Case File Folder */}
-                <div className="bg-white/5 hover:bg-[#FEF3C6]/10 backdrop-blur-sm border border-white/10 hover:border-[#C2B16D]/40 hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.2)] rounded-sm overflow-hidden transition-all duration-700 hover:scale-105 hover:-rotate-1 shadow-2xl">
+          {/* Single Case Study - Centered */}
+          <div className="max-w-2xl mx-auto">
+            <div className="group relative">
+              <div className="bg-white/5 hover:bg-[#FEF3C6]/10 backdrop-blur-sm border border-white/10 hover:border-[#C2B16D]/40 hover:shadow-[0_25px_50px_-12px_rgba(194,177,109,0.2)] rounded-sm overflow-hidden transition-all duration-700 shadow-2xl">
 
-                  {/* File Tab */}
-                  <div className="bg-white/10 group-hover:bg-[#C2B16D]/20 px-4 py-2 border-b border-white/20 group-hover:border-[#C2B16D]/30 transition-colors duration-500">
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs font-mono text-white group-hover:text-[#FEF3C6] font-bold tracking-widest transition-colors duration-500">
-                        AKTE {caseFile.caseNumber}
-                      </span>
-                      <div className="text-xs font-mono text-gray-300 group-hover:text-[#FEF3C6]/70 transition-colors duration-500">
-                        {caseFile.classification}
-                      </div>
+                {/* File Tab */}
+                <div className="bg-white/10 group-hover:bg-[#C2B16D]/20 px-4 py-2 border-b border-white/20 group-hover:border-[#C2B16D]/30 transition-colors duration-500">
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs font-mono text-white group-hover:text-[#FEF3C6] font-bold tracking-widest transition-colors duration-500">
+                      AKTE DE-047
+                    </span>
+                    <div className="text-xs font-mono text-gray-300 group-hover:text-[#FEF3C6]/70 transition-colors duration-500">
+                      VERTRAULICH
+                    </div>
+                  </div>
+                </div>
+
+                {/* Case Content */}
+                <div className="p-6 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-serif font-bold text-white group-hover:text-[#FEF3C6] transition-all duration-500">
+                      Internationale Due Diligence
+                    </h3>
+                    <div className="inline-block bg-white/10 group-hover:bg-[#C2B16D]/10 text-white group-hover:text-[#FEF3C6] px-2 py-1 rounded text-xs font-mono transition-colors duration-500">
+                      Wirtschaftsermittlungen
                     </div>
                   </div>
 
-                  {/* Case Content */}
-                  <div className="p-6 space-y-4">
-                    {/* Case Title with Typewriter Effect */}
-                    <div className="space-y-2">
-                      <h3 className="text-xl font-serif font-bold text-white group-hover:text-[#FEF3C6] group-hover:tracking-wider transition-all duration-500">
-                        {caseFile.title}
-                      </h3>
-                      <div className="inline-block bg-white/10 group-hover:bg-[#C2B16D]/10 text-white group-hover:text-[#FEF3C6] px-2 py-1 rounded text-xs font-mono transition-colors duration-500">
-                        {caseFile.service}
-                      </div>
+                  <p className="text-gray-300 group-hover:text-[#FEF3C6]/80 font-mono text-sm leading-relaxed transition-colors duration-500 mb-6">
+                    Ein Mandant beauftragte uns, potenzielle Geschäftspartner für sein Finanzdienstleistungsunternehmen zu prüfen. Bei der Due-Diligence-Prüfung stießen wir auf Unstimmigkeiten in der Unternehmensstruktur – eine UK-Limited mit auffälligen internationalen Verbindungen. Nach rechtlicher Beratung haben wir die Erkenntnisse an die zuständige Behörde weitergeleitet.
+                  </p>
+
+                  <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20 group-hover:border-[#C2B16D]/20 transition-colors duration-500">
+                    <div>
+                      <div className="text-xs font-mono text-gray-400 group-hover:text-[#FEF3C6]/70 transition-colors duration-500">Ort:</div>
+                      <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">Dubai / UK / Deutschland</div>
                     </div>
-
-                    {/* Case Description */}
-                    <p className="text-gray-300 group-hover:text-[#FEF3C6]/80 font-mono text-sm leading-relaxed transition-colors duration-500 mb-6">
-                      {caseFile.description}
-                    </p>
-
-                    {/* Case Details */}
-                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20 group-hover:border-[#C2B16D]/20 transition-colors duration-500">
-                      <div>
-                        <div className="text-xs font-mono text-gray-400 group-hover:text-[#FEF3C6]/70 transition-colors duration-500"> Ort:</div>
-                        <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">{caseFile.location}</div>
-                      </div>
-                      <div>
-                        <div className="text-xs font-mono text-gray-400 group-hover:text-[#FEF3C6]/70 transition-colors duration-500"> Dauer:</div>
-                        <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">{caseFile.duration}</div>
-                      </div>
+                    <div>
+                      <div className="text-xs font-mono text-gray-400 group-hover:text-[#FEF3C6]/70 transition-colors duration-500">Dauer:</div>
+                      <div className="text-xs font-mono text-white group-hover:text-gray-300 transition-colors duration-500">Mehrere Monate</div>
                     </div>
-                  </div>
-
-
-                  {/* Vintage Paper Clips */}
-                  <div className="absolute top-2 left-2 w-8 h-4 border-2 border-gray-400/30 rounded-full opacity-0 group-hover:opacity-60 transition-opacity duration-500 delay-400" />
-                  <div className="absolute top-6 left-4 w-6 h-3 border-2 border-gray-400/30 rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-500 delay-500" />
-
-                  {/* Evidence String Effect */}
-                  <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                    <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-800 delay-600" />
-                    <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-800 delay-700" />
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
 
-          {/* Archive Footer */}
+          {/* Footer */}
           <div className="text-center mt-16 p-6 backdrop-blur-sm border rounded-sm max-w-4xl mx-auto" style={{backgroundColor: 'rgba(254, 243, 198, 0.05)', borderColor: 'rgba(194, 177, 109, 0.2)'}}>
             <h3 className="text-2xl font-serif font-bold mb-3" style={{color: '#FEF3C6'}}>
-              IHR FALL KÖNNTE DER NÄCHSTE SEIN
+              Ihr Anliegen verdient Aufmerksamkeit
             </h3>
             <p className="font-mono text-gray-300 mb-4">
-              Jeder Fall ist einzigartig. Jede Wahrheit verdient es, gefunden zu werden.
+              Jeder Fall ist einzigartig. Sprechen Sie vertraulich mit uns.
             </p>
           </div>
         </div>
