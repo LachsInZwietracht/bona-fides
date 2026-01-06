@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Impressum | Bona Fides Detektei",
-  description: "Impressum und Anbieterkennung der Bona Fides Detektei - Deutschlands führende Detektei für digitale Ermittlungen.",
+  description: "Impressum und Anbieterkennung der Bona Fides Detektei - Spezialisierte Detektei für digitale Ermittlungen.",
 };
 
 export default function ImpressumPage() {
@@ -42,7 +42,7 @@ export default function ImpressumPage() {
                   </h2>
                   <div className="space-y-2">
                     <p className="font-serif text-lg text-white">BONA FIDES Private Detektei</p>
-                    <p>Eine von Deutschlands führenden Detekteien für digitale Ermittlungen</p>
+                    <p>Spezialisierte Detektei für digitale Ermittlungen und Online-Forensik</p>
                     <p>Deutschlandweit tätig</p>
                   </div>
                 </div>

@@ -76,7 +76,7 @@ export function Header({ dark = false }: { dark?: boolean }) {
               }
               size={dark ? "sm" : undefined}
             >
-              <Link href="/#contact">Contact Us</Link>
+              <Link href="/#contact">Kontakt</Link>
             </Button>
           </nav>
 
@@ -149,7 +149,7 @@ export function Header({ dark = false }: { dark?: boolean }) {
                 }
               >
                 <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>
-                  Contact Us
+                  Kontakt
                 </Link>
               </Button>
             </div>
