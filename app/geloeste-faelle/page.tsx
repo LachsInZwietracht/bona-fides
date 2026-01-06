@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Phone, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 
@@ -145,34 +145,12 @@ const solvedCases = [
 ];
 
 export default function GeloesteFaellePage() {
-  const [visibleCases, setVisibleCases] = useState<Set<number>>(new Set());
   const [scrollY, setScrollY] = useState(0);
-  const caseRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = parseInt(entry.target.getAttribute('data-index') || '0');
-          if (entry.isIntersecting) {
-            setVisibleCases(prev => new Set([...prev, index]));
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '50px' }
-    );
-
-    caseRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => observer.disconnect();
   }, []);
 
   return (
@@ -291,9 +269,11 @@ export default function GeloesteFaellePage() {
                   <p className="text-gray-300 font-mono text-base leading-relaxed">
                     {solvedCases[0].description}
                   </p>
-                  <p className="text-gray-300 font-mono text-base leading-relaxed">
-                    {solvedCases[0].detailedReport.background}
-                  </p>
+                  {solvedCases[0].detailedReport && (
+                    <p className="text-gray-300 font-mono text-base leading-relaxed">
+                      {solvedCases[0].detailedReport.background}
+                    </p>
+                  )}
                 </div>
 
                 {/* Case Details */}
@@ -328,7 +308,7 @@ export default function GeloesteFaellePage() {
                     Ermittlungsergebnisse
                   </h3>
                   <div className="space-y-4">
-                    {solvedCases[0].detailedReport.findings.map((finding: { title: string; description: string }, idx: number) => (
+                    {solvedCases[0].detailedReport?.findings.map((finding: { title: string; description: string }, idx: number) => (
                       <div key={idx} className="bg-black/40 border border-yellow-500/30 rounded-sm p-5 space-y-2">
                         <h4 className="font-mono font-bold text-yellow-300 text-sm uppercase tracking-wide flex items-center gap-2">
                           <span className="text-yellow-500">⚠️</span>
@@ -352,7 +332,7 @@ export default function GeloesteFaellePage() {
                   Durchgeführte Maßnahmen
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
-                  {solvedCases[0].detailedReport.actions.map((action: string, idx: number) => (
+                  {solvedCases[0].detailedReport?.actions.map((action: string, idx: number) => (
                     <div key={idx} className="flex items-start gap-3 bg-black/20 border border-white/10 rounded-sm p-4">
                       <span className="text-[#C2B16D] text-xl mt-0.5 flex-shrink-0">✓</span>
                       <span className="text-gray-300 font-mono text-sm leading-relaxed">{action}</span>
@@ -370,9 +350,11 @@ export default function GeloesteFaellePage() {
                     </span>
                   </div>
                   <h3 className="text-2xl font-serif font-semibold text-[#FEF3C6]">Ergebnis</h3>
-                  <p className="text-gray-200 font-mono text-lg leading-relaxed max-w-4xl mx-auto">
-                    {solvedCases[0].detailedReport.outcome}
-                  </p>
+                  {solvedCases[0].detailedReport?.outcome && (
+                    <p className="text-gray-200 font-mono text-lg leading-relaxed max-w-4xl mx-auto">
+                      {solvedCases[0].detailedReport.outcome}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
