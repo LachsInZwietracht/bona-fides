@@ -3,8 +3,28 @@ import { Footer } from "@/components/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressum | Bona Fides Detektei",
-  description: "Impressum und Anbieterkennung der Bona Fides Detektei - Spezialisierte Detektei für digitale Ermittlungen.",
+  title: "Impressum | BONA FIDES Detektei - Rechtliche Informationen",
+  description: "Impressum und Anbieterkennung der BONA FIDES Detektei nach § 5 TMG. Spezialisierte Digital-Detektei für Cyber-Ermittlungen und Online-Forensik.",
+  keywords: "Impressum, Anbieterkennzeichnung, Kontakt, BONA FIDES Detektei",
+  alternates: {
+    canonical: 'https://bona-fides.vercel.app/impressum',
+  },
+  openGraph: {
+    title: "Impressum - BONA FIDES Detektei",
+    description: "Impressum und Anbieterkennung der BONA FIDES Detektei nach § 5 TMG.",
+    url: 'https://bona-fides.vercel.app/impressum',
+    siteName: 'Bona Fides Detektei',
+    locale: 'de_DE',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function ImpressumPage() {
