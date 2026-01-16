@@ -19,6 +19,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run typecheck` - Run TypeScript type checking
 - `npm run test` - Run Playwright end-to-end tests
 
+## Git Workflow
+
+**ALWAYS** use pull requests instead of pushing directly to main:
+
+1. Create a new feature branch: `git checkout -b feature/your-feature-name`
+2. Make your changes and commit them
+3. Push the branch to remote: `git push -u origin feature/your-feature-name`
+4. Create a pull request using `gh pr create`
+5. Wait for review and approval before merging
+
+**NEVER** push directly to main branch. All changes must go through pull requests for code review and quality control.
+
 ## Framework and Library Recommendations
 
 For this web application project, use the following technologies:
