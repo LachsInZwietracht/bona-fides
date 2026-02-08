@@ -11,7 +11,7 @@ import { RecentArticlesSection } from "@/components/recent-articles-section";
 export const metadata: Metadata = {
   title: "Blog | Bona Fides Detektei - Expertise in Digitalen Ermittlungen",
   description:
-    "200+ Fachartikel zu digitalen Ermittlungen, Cyberkriminalität, Betrugsaufklärung und Hintergrundprüfungen. DSGVO-konform, rechtssicher und praxisnah von Deutschlands führender Detektei.",
+    "Fachartikel zu digitalen Ermittlungen, Cyberkriminalität, Betrugsaufklärung und Hintergrundprüfungen. DSGVO-konform, rechtssicher und praxisnah von spezialisierten Ermittlungsexperten.",
   keywords: "Detektei Blog, digitale Ermittlungen, Cyberkriminalität, Betrugsaufklärung, OSINT, forensische Analysen, Hintergrundprüfungen",
   alternates: {
     canonical: 'https://bona-fides.vercel.app/blog',
@@ -134,7 +134,7 @@ export default async function BlogIndex({ searchParams }: BlogIndexProps) {
               </h1>
 
               <p className="mx-auto max-w-3xl text-gray-300 text-xl font-mono leading-relaxed">
-                Expertenwissen, Fallstudien und Ermittlungstechniken – Von Deutschlands führender Detektei für digitale Ermittlungen
+                Expertenwissen, Fallstudien und Ermittlungstechniken – Von spezialisierten Digital-Ermittlern
               </p>
 
               <div className="flex items-center justify-center gap-2 text-gray-400 font-mono text-sm">

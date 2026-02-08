@@ -1,0 +1,34 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark noir background -->
+  <rect width="512" height="512" fill="#1a1a1a"/>
+
+  <!-- Subtle detective hat silhouette as background element -->
+  <path d="M 100 120 Q 100 100 120 100 L 392 100 Q 412 100 412 120 L 412 140 L 100 140 Z" fill="#2a2a2a" opacity="0.5"/>
+  <ellipse cx="256" cy="140" rx="180" ry="15" fill="#2a2a2a" opacity="0.5"/>
+
+  <!-- Golden accent border -->
+  <rect x="8" y="8" width="496" height="496" fill="none" stroke="#d4af37" stroke-width="3" opacity="0.6"/>
+
+  <!-- BF Monogram -->
+  <text
+    x="256"
+    y="340"
+    font-family="Georgia, serif"
+    font-size="280"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="#d4af37"
+    letter-spacing="-15">BF</text>
+
+  <!-- Subtle shadow for depth -->
+  <text
+    x="258"
+    y="342"
+    font-family="Georgia, serif"
+    font-size="280"
+    font-weight="bold"
+    text-anchor="middle"
+    fill="#000000"
+    letter-spacing="-15"
+    opacity="0.3">BF</text>
+</svg>

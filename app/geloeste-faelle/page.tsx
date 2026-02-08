@@ -4,150 +4,54 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Phone, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 
-const solvedCases = [
-  {
-    caseNumber: "1978-284",
-    title: "Operation Midnight Rose",
-    service: "Private Ermittlungen",
-    description: "Vermisste Erbin nach 20 Jahren aufgespürt. Millionenschweres Erbe wiedervereinigt mit rechtmäßiger Besitzerin durch akribische Recherche und internationale Kontakte.",
-    location: "Hamburg",
-    duration: "6 Monate",
-    classification: "VERTRAULICH",
-    outcome: "Erfolgreiche Wiedervereinigung",
-    evidence: "Dokumentenanalyse, Zeugenbefragungen",
-    year: "1978"
-  },
-  {
-    caseNumber: "1993-067",
-    title: "Der Schatten im Vorstand",
-    service: "Unternehmenssicherheit",
-    description: "Wirtschaftsspionage in DAX-Konzern aufgedeckt. 50 Mio. € Schaden verhindert durch verdeckte Ermittlungen und Beweissicherung in multinationalem Unternehmen.",
-    location: "Frankfurt",
-    duration: "3 Monate",
-    classification: "STRENG GEHEIM",
-    outcome: "Spionagenetz zerschlagen",
-    evidence: "Überwachung, Digitalforensik",
-    year: "1993"
-  },
-  {
-    caseNumber: "2008-451",
-    title: "Die falsche Identität",
-    service: "Hintergrundprüfungen",
-    description: "Hochstapler mit gefälschten Zeugnissen entlarvt. Millionenbetrug verhindert durch umfassende Identitätsprüfung und Dokumentenverifikation.",
-    location: "München",
-    duration: "2 Wochen",
-    classification: "VERTRAULICH",
-    outcome: "Betrug verhindert",
-    evidence: "Dokumentenprüfung, Referenzvalidierung",
-    year: "2008"
-  },
-  {
-    caseNumber: "1985-139",
-    title: "Verschwundene Millionen",
-    service: "Private Ermittlungen",
-    description: "Versteckte Offshore-Konten aufgespürt. 15 Mio. € für Geschädigte sichergestellt durch internationale Finanzermittlungen und Vermögenssuche.",
-    location: "Berlin",
-    duration: "8 Monate",
-    classification: "GEHEIM",
-    outcome: "Vermögen sichergestellt",
-    evidence: "Finanzanalyse, Internationale Recherche",
-    year: "1985"
-  },
-  {
-    caseNumber: "2015-372",
-    title: "Der unsichtbare Feind",
-    service: "Unternehmenssicherheit",
-    description: "Insider-Betrugsnetz in Pharmaunternehmen zerschlagen. Produktfälschungen gestoppt und Compliance-Verstöße aufgedeckt.",
-    location: "Köln",
-    duration: "4 Monate",
-    classification: "STRENG GEHEIM",
-    outcome: "Netzwerk aufgedeckt",
-    evidence: "Verdeckte Ermittlung, Laboranalysen",
-    year: "2015"
-  },
-  {
-    caseNumber: "2021-598",
-    title: "Digitale Spuren",
-    service: "Hintergrundprüfungen",
-    description: "Cyberkrimineller Hintergrund von Führungskraft aufgedeckt. Datenschutz gewährleistet und Unternehmenssicherheit gesichert.",
-    location: "Stuttgart",
-    duration: "3 Wochen",
-    classification: "VERTRAULICH",
-    outcome: "Sicherheitslücke geschlossen",
-    evidence: "IT-Forensik, Dark Web Monitoring",
-    year: "2021"
-  },
-  {
-    caseNumber: "1967-091",
-    title: "Der verschwundene Zeuge",
-    service: "Private Ermittlungen",
-    description: "Schlüsselzeuge in Mordfall nach 5 Jahren ausfindig gemacht. Justizirrtum verhindert und wahrer Täter überführt.",
-    location: "Düsseldorf",
-    duration: "1 Jahr",
-    classification: "GEHEIM",
-    outcome: "Justizirrtum verhindert",
-    evidence: "Personensuche, Zeugenvernehmung",
-    year: "1967"
-  },
-  {
-    caseNumber: "2019-756",
-    title: "Das Familiengeheimnis",
-    service: "Private Ermittlungen",
-    description: "Versteckte Adoption und biologische Eltern gefunden. 40-jährige Identitätssuche erfolgreich abgeschlossen.",
-    location: "Hannover",
-    duration: "5 Monate",
-    classification: "VERTRAULICH",
-    outcome: "Familie wiedervereinigt",
-    evidence: "Genealogische Recherche, DNA-Analyse",
-    year: "2019"
-  },
-  {
-    caseNumber: "1981-427",
-    title: "Operation Goldfinger",
-    service: "Unternehmenssicherheit",
-    description: "Edelmetalldiebstahl-Ring in Juweliergeschäften aufgedeckt. Internationale Hehlerorganisation zerschlagen.",
-    location: "Essen",
-    duration: "7 Monate",
-    classification: "STRENG GEHEIM",
-    outcome: "Ring zerschlagen",
-    evidence: "Überwachung, Verdeckte Käufe",
-    year: "1981"
+const dubaiCase = {
+  caseNumber: "DE-047",
+  title: "Internationale Due Diligence",
+  service: "Wirtschaftsermittlungen",
+  description: "Ein Mandant beauftragte uns, potenzielle Geschäftspartner im deutschen Markt für sein Finanzdienstleistungsunternehmen zu identifizieren.",
+  location: "Dubai / UK / Deutschland",
+  duration: "Mehrere Monate",
+  classification: "VERTRAULICH",
+  outcome: "An Behörden übergeben",
+  evidence: "Unternehmensrecherche, Rechtsanalyse, Behördenmeldung",
+  year: "2024",
+  detailedReport: {
+    background: "Im Rahmen unserer standardmäßigen Sorgfaltsprüfung fielen uns Unstimmigkeiten in der Unternehmensstruktur auf, die eine vertiefte Analyse erforderten.",
+    findings: [
+      {
+        title: "Auffällige Unternehmensstruktur",
+        description: "Die UK-Limited des Mandanten teilte sich die Geschäftsadresse mit einer benachbarten Kanzlei – ein Umstand, der weitere Nachforschungen erforderte."
+      },
+      {
+        title: "Internationale Verbindungen",
+        description: "Unsere Recherchen offenbarten Geschäftsbeziehungen nach Dubai sowie ungewöhnliche Finanzströme zwischen mehreren Jurisdiktionen."
+      },
+      {
+        title: "Gesamtbewertung",
+        description: "Die Summe der Erkenntnisse – intransparente Strukturen, unklare Geschäftsbeziehungen und die Art der angebotenen Dienstleistung – erforderte eine rechtliche Einschätzung."
+      }
+    ],
+    actions: [
+      "Konsultation spezialisierter Rechtsanwälte",
+      "Analyse der Unternehmensstrukturen und Verbindungen",
+      "Sorgfältige Dokumentation aller Erkenntnisse",
+      "Meldung an die zuständige deutsche Behörde"
+    ],
+    outcome: "Nach gründlicher Prüfung und rechtlicher Beratung haben wir die Erkenntnisse an die deutsche Zollbehörde weitergeleitet. Der Fall verdeutlicht den Wert professioneller Due Diligence im internationalen Geschäftsverkehr."
   }
-];
+};
 
 export default function GeloesteFaellePage() {
-  const [visibleCases, setVisibleCases] = useState<Set<number>>(new Set());
   const [scrollY, setScrollY] = useState(0);
-  const caseRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const index = parseInt(entry.target.getAttribute('data-index') || '0');
-          if (entry.isIntersecting) {
-            setVisibleCases(prev => new Set([...prev, index]));
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '50px' }
-    );
-
-    caseRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => observer.disconnect();
   }, []);
 
   return (
@@ -212,133 +116,144 @@ export default function GeloesteFaellePage() {
 
           {/* Page Header - Centered */}
           <div className="text-center space-y-6 mb-20">
-            <Badge 
-              className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border" 
+            <Badge
+              className="font-mono text-xs tracking-widest px-4 py-2 backdrop-blur-sm border"
               style={{
-                backgroundColor: 'rgba(194, 177, 109, 0.2)', 
-                color: '#FEF3C6', 
+                backgroundColor: 'rgba(194, 177, 109, 0.2)',
+                color: '#FEF3C6',
                 borderColor: 'rgba(194, 177, 109, 0.3)'
               }}
             >
-              FALLARCHIV • KLASSIFIZIERT
+              FALLSTUDIE
             </Badge>
-            
+
             <h1 className="text-5xl md:text-6xl font-serif font-bold text-white mb-4">
-              GELÖSTE FÄLLE
+              REFERENZFALL
             </h1>
-            
+
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Ausgewählte Erfolgsgeschichten aus unserem Archiv – Jeder Fall ein Triumph der Wahrheit
+              Ein Beispiel aus unserer Praxis
             </p>
           </div>
 
-          {/* Evidence Board Grid - Detective Case Files */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solvedCases.map((caseFile, index) => {
-              const isVisible = visibleCases.has(index);
-              const slideDirection = index % 2 === 0 ? 'left' : 'right';
-              
-              return (
-                <div 
-                  key={index} 
-                  ref={(el) => { caseRefs.current[index] = el; }}
-                  data-index={index}
-                  className={`group relative transition-all duration-1000 ease-out ${
-                    isVisible 
-                      ? 'translate-x-0 opacity-100' 
-                      : slideDirection === 'left' 
-                        ? '-translate-x-full opacity-0' 
-                        : 'translate-x-full opacity-0'
-                  }`}
-                  style={{
-                    transitionDelay: isVisible ? `${index * 150}ms` : '0ms'
-                  }}
-                >
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm overflow-hidden transition-all duration-500 hover:scale-105 hover:rotate-1 shadow-2xl hover:shadow-yellow-500/20 relative">
-                    
-                    {/* File Edge Effect */}
-                    <div className={`absolute ${slideDirection === 'left' ? 'left-0' : 'right-0'} top-0 w-1 h-full bg-gradient-to-b from-yellow-400/50 via-yellow-300/30 to-transparent`} />
-                    
-                    {/* File Tab */}
-                    <div className="bg-white/10 px-4 py-2 border-b border-white/20 relative">
-                      <div className="flex justify-between items-center">
-                        <span className="text-xs font-mono text-white font-bold tracking-widest">
-                          📁 AKTE {caseFile.caseNumber}
-                        </span>
-                        <div className="text-xs font-mono text-gray-300 flex items-center gap-1">
-                          🔍 {caseFile.classification}
-                        </div>
-                      </div>
-                      
-                      {/* File Status Indicator */}
-                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-black" />
+          {/* Featured Case: Dubai Investigation - Full Screen */}
+          <div className="max-w-6xl mx-auto space-y-12">
+            {/* Title Header */}
+            <div className="text-center space-y-6">
+              <div className="inline-block bg-white/10 border border-white/20 rounded px-4 py-2">
+                <span className="text-sm font-mono text-gray-300 tracking-widest">
+                  AKTE {dubaiCase.caseNumber} • {dubaiCase.classification}
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
+                {dubaiCase.title}
+              </h2>
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="inline-block bg-white/10 text-white px-4 py-2 rounded text-base font-mono border border-white/20">
+                  {dubaiCase.service}
+                </div>
+                <div className="inline-block bg-white/10 text-white px-4 py-2 rounded text-base font-mono border border-white/20">
+                  {dubaiCase.year}
+                </div>
+              </div>
+            </div>
+
+            {/* Main Content Grid */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Left Column: Background & Context */}
+              <div className="space-y-8">
+                {/* Background */}
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8 space-y-4">
+                  <h3 className="text-2xl font-serif font-semibold text-[#FEF3C6] border-b border-[#C2B16D]/30 pb-3">
+                    Ausgangslage
+                  </h3>
+                  <p className="text-gray-300 font-mono text-base leading-relaxed">
+                    {dubaiCase.description}
+                  </p>
+                  <p className="text-gray-300 font-mono text-base leading-relaxed">
+                    {dubaiCase.detailedReport.background}
+                  </p>
+                </div>
+
+                {/* Case Details */}
+                <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8">
+                  <h3 className="text-xl font-serif font-semibold text-[#FEF3C6] mb-6">Falldetails</h3>
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <div className="text-sm font-mono text-gray-400 uppercase tracking-wider">Ort</div>
+                      <div className="text-base font-mono text-white">{dubaiCase.location}</div>
                     </div>
-
-                    {/* Case Content */}
-                    <div className="p-6 space-y-4">
-                      {/* Case Title */}
-                      <div className="space-y-2">
-                        <h3 className="text-xl font-serif font-bold text-white group-hover:tracking-wider transition-all duration-500">
-                          {caseFile.title}
-                        </h3>
-                        <div className="flex flex-wrap gap-2">
-                          <div className="inline-block bg-white/10 text-white px-2 py-1 rounded text-xs font-mono border border-white/20">
-                            🏢 {caseFile.service}
-                          </div>
-                          <div className="inline-block bg-white/10 text-white px-2 py-1 rounded text-xs font-mono border border-white/20">
-                            📅 {caseFile.year}
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Case Description */}
-                      <p className="text-gray-300 font-mono text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
-                        {caseFile.description}
-                      </p>
-
-                      {/* Case Details */}
-                      <div className="space-y-3 pt-4 border-t border-white/20">
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="space-y-1">
-                            <div className="text-xs font-mono text-gray-400 flex items-center gap-1">
-                              📍 Ort:
-                            </div>
-                            <div className="text-xs font-mono text-white">{caseFile.location}</div>
-                          </div>
-                          <div className="space-y-1">
-                            <div className="text-xs font-mono text-gray-400 flex items-center gap-1">
-                              ⏱️ Dauer:
-                            </div>
-                            <div className="text-xs font-mono text-white">{caseFile.duration}</div>
-                          </div>
-                        </div>
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="space-y-1">
-                            <div className="text-xs font-mono text-gray-400 flex items-center gap-1">
-                              ✅ Ergebnis:
-                            </div>
-                            <div className="text-xs font-mono text-white">{caseFile.outcome}</div>
-                          </div>
-                          <div className="space-y-1">
-                            <div className="text-xs font-mono text-gray-400 flex items-center gap-1">
-                              🔎 Beweise:
-                            </div>
-                            <div className="text-xs font-mono text-white">{caseFile.evidence}</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Case Status Stamp */}
-                      <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-70 transition-all duration-500 transform rotate-12 group-hover:rotate-6">
-                        <div className="bg-green-600 text-white px-2 py-1 rounded border-2 border-green-500 text-xs font-bold shadow-lg">
-                          ✓ GELÖST
-                        </div>
-                      </div>
+                    <div className="space-y-2">
+                      <div className="text-sm font-mono text-gray-400 uppercase tracking-wider">Dauer</div>
+                      <div className="text-base font-mono text-white">{dubaiCase.duration}</div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="text-sm font-mono text-gray-400 uppercase tracking-wider">Status</div>
+                      <div className="text-base font-mono text-white">{dubaiCase.outcome}</div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="text-sm font-mono text-gray-400 uppercase tracking-wider">Methoden</div>
+                      <div className="text-base font-mono text-white">{dubaiCase.evidence}</div>
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+
+              {/* Right Column: Findings & Actions */}
+              <div className="space-y-8">
+                {/* Findings */}
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8 space-y-6">
+                  <h3 className="text-2xl font-serif font-semibold text-[#FEF3C6] border-b border-[#C2B16D]/30 pb-3">
+                    Erkenntnisse
+                  </h3>
+                  <div className="space-y-4">
+                    {dubaiCase.detailedReport.findings.map((finding: { title: string; description: string }, idx: number) => (
+                      <div key={idx} className="bg-black/40 border border-white/20 rounded-sm p-5 space-y-2">
+                        <h4 className="font-mono font-bold text-[#FEF3C6] text-sm uppercase tracking-wide">
+                          {finding.title}
+                        </h4>
+                        <p className="text-gray-300 font-mono text-sm leading-relaxed">
+                          {finding.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Full Width: Actions & Outcome */}
+            <div className="space-y-8">
+              {/* Actions Taken */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-8">
+                <h3 className="text-2xl font-serif font-semibold text-[#FEF3C6] border-b border-[#C2B16D]/30 pb-3 mb-6">
+                  Unser Vorgehen
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {dubaiCase.detailedReport.actions.map((action: string, idx: number) => (
+                    <div key={idx} className="flex items-start gap-3 bg-black/20 border border-white/10 rounded-sm p-4">
+                      <span className="text-[#C2B16D] text-lg mt-0.5 flex-shrink-0">{idx + 1}.</span>
+                      <span className="text-gray-300 font-mono text-sm leading-relaxed">{action}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Outcome */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-sm p-10 text-center">
+                <div className="space-y-4">
+                  <div className="inline-block bg-white/10 border border-white/20 rounded-full px-6 py-2">
+                    <span className="text-sm font-mono text-gray-300 tracking-widest uppercase">
+                      Abgeschlossen
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-serif font-semibold text-[#FEF3C6]">Ergebnis</h3>
+                  <p className="text-gray-200 font-mono text-lg leading-relaxed max-w-4xl mx-auto">
+                    {dubaiCase.detailedReport.outcome}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Archive Footer */}
