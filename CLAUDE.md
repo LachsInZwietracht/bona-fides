@@ -10,14 +10,36 @@ This is a professional website for Bona Fides, a detective agency specializing i
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Development Commands
+## Repository Guidelines
 
-- `npm run dev` - Start development server on http://localhost:3000
-- `npm run build` - Build production application
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run typecheck` - Run TypeScript type checking
-- `npm run test` - Run Playwright end-to-end tests
+### Project Structure & Module Organization
+- Next.js App Router lives in `app/`; each route (for example `app/team/page.tsx`) owns its layout and defaults to server components.
+- Shared UI is split between composable sections in `components/` and the shadcn-derived primitives in `components/ui/`; utilities go to `lib/` and hooks to `hooks/`.
+- Static assets belong in `public/`, Supabase settings and deployment metadata live in `supabase/`.
+- End-to-end tests sit in `tests/`; keep fixtures next to their consuming specs to mirror the route structure.
+
+### Build, Test, and Development Commands
+- `npm run dev` starts the hot-reloading Next.js server on http://localhost:3000
+- `npm run build` compiles the optimized production bundle—run it before shipping
+- `npm run start` serves the last production build for smoke tests
+- `npm run lint` enforces the Next.js/TypeScript ESLint ruleset
+- `npm run typecheck` executes strict TypeScript checking (`tsc --noEmit`)
+- `npx playwright test` runs the Playwright suite (`--headed` or `--ui` are available during debugging)
+
+### Coding Style & Naming Conventions
+- Write TypeScript with React functional components; client interactivity requires the `"use client"` directive at the file top.
+- Compose Tailwind CSS utilities and keep class lists alphabetized when practical to make diffs easier.
+- Routes use kebab-case folders (e.g., `app/geloeste-faelle/page.tsx`), shared components are lowercase-with-hyphens, exports stay PascalCase.
+- Use two-space indentation and lean on ESLint/editor formatting for import order and JSX spacing consistency.
+
+### Testing Guidelines
+- Playwright specs live in `tests/*.spec.ts`; scope each `test.describe` to a page route and name tests imperatively (e.g., `"renders hero copy"`).
+- Tests assume a dev server on port 3000. Prefer `data-testid` selectors over brittle visual text for resilience.
+- Generate traces for flaky tests with `npx playwright test --trace on-first-retry` and attach them when requesting review.
+
+### Commit & Pull Request Guidelines
+- Use concise, sentence-case, imperative commit subjects (`Add`, `Fix`, `Refine`) aligned with existing history.
+- PRs should summarize intent, list regression/functional test results, link related issues, and include UI screenshots or Supabase changes when relevant.
 
 ## Git Workflow
 
@@ -131,7 +153,7 @@ CONTACT_EMAIL=your-email@example.com
 
 ### Complete Validation (run only after all tasks are complete)
 4. **Build**: `npm run build` - Full production build verification
-5. **Complete test suite**: `npm run test` - All Playwright end-to-end tests
+5. **Complete test suite**: `npx playwright test` - All Playwright end-to-end tests
 
 ### Testing Guidelines
 - **ALWAYS** write tests for new functionality - this is required for validation
