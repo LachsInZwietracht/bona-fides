@@ -19,7 +19,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Fabian Radlow',
     codename: 'Ghostreader',
     role: 'Leitender Ermittler',
-    base: 'Cyber Command Berlin',
+    base: 'Cyber Command Köln',
     division: 'digital',
     specialties: ['OSINT', 'Cyber-Ermittlungen', 'Wirtschaftsspionage'],
     status: 'Aktiv',
