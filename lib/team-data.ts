@@ -11,7 +11,6 @@ export interface TeamMember {
   note: string;
 }
 
-const detectiveMockImage = '/detective-silhouette.png';
 
 export const teamMembers: TeamMember[] = [
   {
@@ -40,18 +39,6 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 'A-03',
-    name: 'Franzi',
-    codename: 'Cipher',
-    role: 'Operative Analystin',
-    base: 'Intel Center Frankfurt',
-    division: 'digital',
-    specialties: ['Datenanalyse', 'Pattern Recognition', 'Social Engineering'],
-    status: 'Bereit',
-    image: detectiveMockImage,
-    note: 'Entschlüsselt verschlüsselte Kommunikation beim Frühstück. Mag Rätsel mehr als Menschen.'
-  },
-  {
-    id: 'A-04',
     name: 'Moritz Brandes',
     codename: 'Networker',
     role: 'Field Investigator',
@@ -59,8 +46,32 @@ export const teamMembers: TeamMember[] = [
     division: 'field',
     specialties: ['Verdeckte Ermittlung', 'Observation', 'Informantennetzwerk'],
     status: 'Im Einsatz',
-    image: detectiveMockImage,
+    image: '/moritz.png',
     note: 'Kennt jemanden, der jemanden kennt. Hat in drei Städten gleichzeitig Stammtisch-Status.'
+  },
+  {
+    id: 'A-04',
+    name: 'Timo',
+    codename: 'Sentinel',
+    role: 'Cyber-Ermittler',
+    base: 'Sicherheitszentrale Berlin',
+    division: 'digital',
+    specialties: ['Netzwerk-Forensik', 'Incident Response', 'Threat Intelligence'],
+    status: 'Aktiv',
+    image: '/timo.png',
+    note: 'Sieht Sicherheitslücken, bevor sie entstehen. Schläft angeblich mit offenen Firewalls.'
+  },
+  {
+    id: 'A-05',
+    name: 'Alex Camu',
+    codename: 'Phantom',
+    role: 'Undercover-Spezialist',
+    base: 'Außenstelle Frankfurt',
+    division: 'undercover',
+    specialties: ['Verdeckte Operationen', 'Social Engineering', 'Identitätsanalyse'],
+    status: 'Aktiv',
+    image: '/alex.png',
+    note: 'Wechselt Identitäten wie andere Hemden. Selbst sein Friseur weiß nicht, wer er wirklich ist.'
   }
 ];
 
