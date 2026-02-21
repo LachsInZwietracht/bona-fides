@@ -40,27 +40,39 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 'A-03',
-    name: 'Franzi',
-    codename: 'Cipher',
-    role: 'Operative Analystin',
-    base: 'Intel Center Frankfurt',
+    name: 'Moritz Brandes',
+    codename: 'Architect',
+    role: 'Senior Tech Analyst',
+    base: 'Tech Hub Oldenburg',
     division: 'digital',
-    specialties: ['Datenanalyse', 'Pattern Recognition', 'Social Engineering'],
-    status: 'Bereit',
-    image: detectiveMockImage,
-    note: 'Entschlüsselt verschlüsselte Kommunikation beim Frühstück. Mag Rätsel mehr als Menschen.'
+    specialties: ['System Architecture', 'Backend Engineering', 'Security Analysis'],
+    status: 'Im Einsatz',
+    image: '/moritz.jpg',
+    note: 'Debuggt Systeme, bevor sie merken, dass sie kaputt sind. Hat mehr offene Tabs als die meisten Menschen Gedanken haben.'
   },
   {
     id: 'A-04',
-    name: 'Moritz Brandes',
-    codename: 'Networker',
-    role: 'Field Investigator',
-    base: 'Operations Hamburg',
-    division: 'field',
-    specialties: ['Verdeckte Ermittlung', 'Observation', 'Informantennetzwerk'],
-    status: 'Im Einsatz',
-    image: detectiveMockImage,
-    note: 'Kennt jemanden, der jemanden kennt. Hat in drei Städten gleichzeitig Stammtisch-Status.'
+    name: 'Alex Camu',
+    codename: 'Catalyst',
+    role: 'Digital Operative',
+    base: 'Field Base Hamburg',
+    division: 'digital',
+    specialties: ['Full Stack Development', 'Social Engineering', 'Open Source Intel'],
+    status: 'Aktiv',
+    image: '/alex.png',
+    note: 'Schreibt sauberen Code und macht trotzdem jede Party lebendig. Hat auf jedem Kontinent mindestens einen Kontakt, der "das regeln kann" – Details werden diskret übergangen.'
+  },
+  {
+    id: 'A-05',
+    name: 'Timo',
+    codename: 'Broadcast',
+    role: 'Informationsoperator',
+    base: 'Media Center Bremen',
+    division: 'digital',
+    specialties: ['Content Intelligence', 'Narrative Analyse', 'Medienoperationen'],
+    status: 'Aktiv',
+    image: '/timo.png',
+    note: 'Dreht Videobeweis-Sequenzen, die viral gehen, bevor der Täter verhaftet ist. Kann jede Geschichte in 8 Minuten erzählen – oder 3 Stunden, wenn nötig.'
   }
 ];
 

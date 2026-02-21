@@ -123,7 +123,7 @@ export function AboutPageClient() {
 const [dialRotation, setDialRotation] = useState(0);
 const [dialStage, setDialStage] = useState(0);
 const [vaultUnlocked, setVaultUnlocked] = useState(false);
-const dialTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
+const dialTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
 // Reset vault state on component mount to ensure it always starts locked
 useEffect(() => {
