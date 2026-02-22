@@ -3,7 +3,7 @@ title: "Biometrische Fälschungen erkennen: Fingerabdruck- und Gesichtsbetrug au
 slug: biometrische-faelschungen-erkennen-fingerabdruck-gesichtsbetrug
 keyword: biometrische fälschung identitätsbetrug
 category: Cybercrime & Fraud
-date: 2026-02-12
+date: 2026-02-17
 excerpt: "Biometrische Sicherheitssysteme gelten als unknackbar – doch Kriminelle fälschen Fingerabdrücke, täuschen Gesichtserkennung und klonen Stimmen. Erfahren Sie, wie Bona Fides Detektei biometrischen Identitätsbetrug aufdeckt."
 ---
 

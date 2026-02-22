@@ -3,7 +3,7 @@ title: "Stalking-Schutz 2026: Digitale und physische Bedrohungen abwehren"
 slug: stalking-schutz-2026-digitale-physische-bedrohungen
 keyword: stalking schutz cyberstalking
 category: Digital Investigations
-date: 2026-02-12
+date: 2026-02-25
 excerpt: "Stalking hat sich in die digitale Welt verlagert – GPS-Tracker, Spyware und Social-Media-Überwachung bedrohen Betroffene rund um die Uhr. Erfahren Sie, wie Bona Fides Detektei Stalker identifiziert und Beweise für Schutzanordnungen sichert."
 ---
 

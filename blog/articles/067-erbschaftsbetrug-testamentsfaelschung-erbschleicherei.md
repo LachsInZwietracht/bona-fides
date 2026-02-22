@@ -3,7 +3,7 @@ title: "Erbschaftsbetrug verhindern: Testamentsfälschung und Erbschleicherei au
 slug: erbschaftsbetrug-testamentsfaelschung-erbschleicherei
 keyword: erbschaftsbetrug testamentsfälschung erbschleicherei
 category: Legal & Regulatory Topics
-date: 2026-02-12
+date: 2026-02-28
 excerpt: "Erbschleicherei und Testamentsfälschung sind häufiger als gedacht – und oft schwer zu beweisen. Erfahren Sie, wie Bona Fides Detektei manipulierte Testamente, unzulässige Einflussnahme und Erbschaftsbetrug aufdeckt."
 ---
 

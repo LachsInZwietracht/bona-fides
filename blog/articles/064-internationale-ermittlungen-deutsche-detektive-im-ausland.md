@@ -3,7 +3,7 @@ title: "Internationale Ermittlungen: Deutsche Detektive im Ausland"
 slug: internationale-ermittlungen-deutsche-detektive-im-ausland
 keyword: internationale ermittlungen detektiv ausland
 category: International Investigations
-date: 2026-02-12
+date: 2026-02-19
 excerpt: "Grenzüberschreitende Ermittlungen erfordern Expertise in internationalem Recht, lokale Netzwerke und diplomatisches Geschick. Erfahren Sie, wie Bona Fides Detektei weltweit diskret und rechtssicher ermittelt."
 ---
 

@@ -3,7 +3,7 @@ title: "Quantencomputer-Bedrohung 2026: Wie Detektive verschlüsselte Daten sch�
 slug: quantencomputer-bedrohung-2026-wie-detektive-verschluesselte-daten-schuetzen
 keyword: quantencomputer sicherheit detektiv
 category: Technology & Tools
-date: 2026-02-12
+date: 2026-02-14
 excerpt: "Quantencomputer bedrohen klassische Verschlüsselung – und damit auch digitale Beweismittel. Erfahren Sie, wie Bona Fides Detektei Ermittlungsdaten quantensicher schützt und Beweisketten zukunftsfest macht."
 ---
 

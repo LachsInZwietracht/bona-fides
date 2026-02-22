@@ -3,7 +3,7 @@ title: "Supply Chain Fraud: Gefälschte Produkte in der Lieferkette erkennen"
 slug: supply-chain-fraud-gefaelschte-produkte-lieferkette
 keyword: supply chain betrug lieferkette
 category: Corporate Fraud & Employee Misconduct
-date: 2026-02-12
+date: 2026-02-22
 excerpt: "Produktfälschungen in der Lieferkette kosten die deutsche Wirtschaft jährlich Milliarden. Erfahren Sie, wie Bona Fides Detektei gefälschte Produkte, betrügerische Lieferanten und Qualitätsbetrug aufdeckt."
 ---
 
