@@ -765,39 +765,43 @@ export function HomePageClient() {
             </h2>
 
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Alles, was Sie über unsere Dienstleistungen wissen müssen
+              Häufig gestellte Fragen zur Detektei-Beauftragung
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-4">
             {[
               {
-                question: "Wie gewährleisten Sie absolute Vertraulichkeit?",
-                answer: "Alle unsere Ermittler unterliegen strengen Verschwiegenheitspflichten und rechtlichen Bindungen. Wir verwenden verschlüsselte Kommunikation, sichere Dokumentenspeicherung und anonymisierte Berichterstattung. Ihre Privatsphäre ist unsere oberste Priorität."
+                question: "Wie wird Vertraulichkeit bei einer Detektei sichergestellt?",
+                answer: "Alle Ermittler unterliegen strengen Verschwiegenheitspflichten und rechtlichen Bindungen. Es wird ausschließlich mit verschlüsselter Kommunikation, sicherer Dokumentenspeicherung und anonymisierter Berichterstattung gearbeitet. Diskretion und Datenschutz haben oberste Priorität."
               },
               {
-                question: "Wie lange dauert eine durchschnittliche Ermittlung?",
-                answer: "Die Dauer variiert je nach Komplexität des Falls. Einfache Hintergrundprüfungen können 1-2 Wochen dauern, während komplexe Unternehmensermittlungen 3-6 Monate benötigen können. Wir geben Ihnen nach der Erstberatung eine realistische Zeitschätzung."
+                question: "Wie lange dauert eine Ermittlung durch einen Privatdetektiv?",
+                answer: "Die Dauer variiert je nach Komplexität des Falls. Einfache Hintergrundprüfungen können 1-2 Wochen dauern, während komplexe Unternehmensermittlungen 3-6 Monate in Anspruch nehmen. Nach der kostenlosen Erstberatung wird eine realistische Zeitschätzung gegeben."
               },
               {
-                question: "Wie sind Ihre Preise strukturiert?",
-                answer: "Wir bieten transparente Preisgestaltung basierend auf der Art und dem Umfang der Ermittlung. Sie erhalten ein detailliertes Angebot vor Beginn der Arbeit. Wir arbeiten mit Pauschalpreisen oder Stundensätzen, je nach Ihren Bedürfnissen. Kostenlose Erstberatung inklusive."
+                question: "Was kostet ein Privatdetektiv in Deutschland?",
+                answer: "Die Preise richten sich nach Art und Umfang der Ermittlung. Es wird ein detailliertes Angebot vor Beginn der Arbeit erstellt – wahlweise als Pauschalpreis oder auf Stundenbasis. Die Erstberatung ist kostenlos und unverbindlich."
               },
               {
-                question: "Welche Informationen benötigen Sie, um zu beginnen?",
-                answer: "Für den Start benötigen wir grundlegende Informationen über Ihren Fall: Namen, Daten, Orte und spezifische Anliegen. Je mehr Details Sie uns geben können, desto effizienter können wir arbeiten. Alle Informationen werden streng vertraulich behandelt."
+                question: "Welche Informationen werden für eine Ermittlung benötigt?",
+                answer: "Für den Start werden grundlegende Informationen zum Fall benötigt: Namen, Daten, Orte und spezifische Anliegen. Je mehr Details vorliegen, desto effizienter kann gearbeitet werden. Alle Informationen werden streng vertraulich behandelt."
               },
               {
-                question: "In welchen Regionen sind Sie tätig?",
-                answer: "Als spezialisierte Digital-Detektei arbeiten wir international. Unser Netzwerk ermöglicht weltweite Online-Recherchen und digitale Ermittlungen. Für lokale, hands-on Ermittlungen empfehlen wir spezialisierte Partner aus unserem Netzwerk."
+                question: "Kann eine Detektei deutschlandweit und international ermitteln?",
+                answer: "Als spezialisierte Digital-Detektei wird international ermittelt. Ein breites Netzwerk ermöglicht weltweite Online-Recherchen und digitale Ermittlungen. Für lokale Einsätze vor Ort stehen spezialisierte Partner aus dem Ermittlungsnetzwerk zur Verfügung."
               },
               {
-                question: "Wie erhalte ich meine Ermittlungsergebnisse?",
-                answer: "Sie erhalten einen umfassenden, schriftlichen Bericht mit allen Erkenntnissen, Beweisen und Dokumentationen. Je nach Präferenz können wir auch persönliche Briefings durchführen. Alle Materialien werden sicher übermittelt und sind gerichtsfest aufbereitet."
+                question: "Wie werden Ermittlungsergebnisse übermittelt?",
+                answer: "Es wird ein umfassender, schriftlicher Bericht mit allen Erkenntnissen, Beweisen und Dokumentationen erstellt. Auf Wunsch können auch persönliche Briefings durchgeführt werden. Alle Materialien werden sicher übermittelt und sind gerichtsfest aufbereitet."
               },
               {
-                question: "Was passiert, wenn Sie keine Ergebnisse finden?",
-                answer: "Wir sind ehrlich: Nicht jeder Fall führt zum gewünschten Ergebnis. Wenn keine Beweise gefunden werden, informieren wir Sie sofort und besprechen weitere Optionen. Viele Pauschalpreise beinhalten eine 'Kein Ergebnis, reduzierte Gebühr'-Garantie."
+                question: "Sind Detektiv-Beweise vor Gericht verwertbar?",
+                answer: "Ja – alle Ermittlungen werden rechtssicher nach deutschem Recht durchgeführt. Beweise werden forensisch dokumentiert, mit Hash-Werten und Zeitstempeln gesichert und sind vor Zivil-, Straf- und Familiengerichten verwertbar. Bei Prozessen kann auch als Zeuge ausgesagt werden."
+              },
+              {
+                question: "Was passiert, wenn bei der Ermittlung keine Beweise gefunden werden?",
+                answer: "Nicht jeder Fall führt zum gewünschten Ergebnis – Transparenz und Ehrlichkeit stehen an erster Stelle. Wird kein Ergebnis erzielt, erfolgt eine sofortige Information mit Besprechung weiterer Optionen. Viele Pauschalpreise beinhalten eine 'Kein Ergebnis, reduzierte Gebühr'-Garantie."
               }
             ].map((faq, index) => (
               <div key={index} className="group bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#C2B16D]/30 rounded-sm transition-all duration-500 hover:bg-white/8">
