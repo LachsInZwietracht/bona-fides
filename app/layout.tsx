@@ -21,10 +21,26 @@ const jetbrains = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "BONA FIDES Detektei - Professionelle Ermittlungsdienste",
+  metadataBase: new URL("https://www.bona-fides-detektei.de"),
+  title: {
+    default: "BONA FIDES Detektei - Digitale Ermittlungen & Cyber-Forensik",
+    template: "%s | BONA FIDES Detektei - Digitale Ermittlungsexperten",
+  },
   description:
-    "Lizenzierte Detektei seit 1965. Diskrete und professionelle Ermittlungsdienste mit Integrität und Ergebnissen.",
-  generator: "v0.app",
+    "Spezialisierte Digital-Detektei für Cyber-Ermittlungen, Online-Forensik und Betrugsaufklärung. Bundesweites Expertennetzwerk für diskrete digitale Ermittlungen.",
+  applicationName: "BONA FIDES Detektei",
+  alternates: {
+    canonical: "https://www.bona-fides-detektei.de",
+  },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    siteName: "BONA FIDES Detektei",
+    title: "BONA FIDES Detektei - Digitale Ermittlungen & Cyber-Forensik",
+    description:
+      "Spezialisierte Digital-Detektei für Cyber-Ermittlungen, Online-Forensik und Betrugsaufklärung.",
+    url: "https://www.bona-fides-detektei.de",
+  },
 }
 
 export default function RootLayout({
