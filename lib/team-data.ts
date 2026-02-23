@@ -24,7 +24,7 @@ export const teamMembers: TeamMember[] = [
     specialties: ['OSINT', 'Cyber-Ermittlungen', 'Wirtschaftsspionage'],
     status: 'Aktiv',
     image: '/fabian.png',
-    note: 'Findet deine LinkedIn-Aktivität schneller als du "Datenschutz" sagen kannst. Behauptet, der Algorithmus sei sein bester Freund.'
+    note: 'Weiß, was du letzten Sommer gepostet hast – und mit welchem Gerät. Während du noch dein Passwort zurücksetzt, hat er dein digitales Ich bereits kartografiert.'
   },
   {
     id: 'A-02',
@@ -35,8 +35,8 @@ export const teamMembers: TeamMember[] = [
     division: 'digital',
     specialties: ['Criminal Profiling', 'Cyber-Ermittlungen', 'Digitale Forensik'],
     status: 'Aktiv',
-    image: '/patrick.png',
-    note: 'Analysiert Täterprofile während andere noch Kaffee kochen. Warnung: Stellt unbequeme Fragen beim Smalltalk.'
+    image: '/patrickv2.png',
+    note: 'Liest Verhalten wie andere Beipackzettel – nur schneller und mit besseren Schlussfolgerungen.'
   },
   {
     id: 'A-03',
@@ -60,19 +60,19 @@ export const teamMembers: TeamMember[] = [
     specialties: ['Full Stack Development', 'Social Engineering', 'Open Source Intel'],
     status: 'Aktiv',
     image: '/alex.png',
-    note: 'Schreibt sauberen Code und macht trotzdem jede Party lebendig. Hat auf jedem Kontinent mindestens einen Kontakt, der "das regeln kann" – Details werden diskret übergangen.'
+    note: 'Baut nachts APIs und morgens Vertrauen auf. Kennt in jeder Stadt jemanden – und diese Leute kennen jemanden der "das regeln kann".'
   },
   {
     id: 'A-05',
-    name: 'Timo',
+    name: 'Timo Woitzyk',
     codename: 'Broadcast',
     role: 'Informationsoperator',
     base: 'Media Center Bremen',
     division: 'digital',
     specialties: ['Content Intelligence', 'Narrative Analyse', 'Medienoperationen'],
     status: 'Aktiv',
-    image: '/timo.png',
-    note: 'Dreht Videobeweis-Sequenzen, die viral gehen, bevor der Täter verhaftet ist. Kann jede Geschichte in 8 Minuten erzählen – oder 3 Stunden, wenn nötig.'
+    image: '/timov2.png',
+    note: 'Filmt, schneidet, liefert – bevor die Gegenseite weiß, dass eine Kamera lief. Jedes Frame ist ein Beweisstück.'
   }
 ];
 
