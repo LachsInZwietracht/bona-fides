@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description: "Impressum und Anbieterkennung der BONA FIDES Detektei nach § 5 TMG. Spezialisierte Digital-Detektei für Cyber-Ermittlungen und Online-Forensik.",
   keywords: "Impressum, Anbieterkennzeichnung, Kontakt, BONA FIDES Detektei",
   alternates: {
-    canonical: 'https://bona-fides.vercel.app/impressum',
+    canonical: '/impressum',
   },
   openGraph: {
     title: "Impressum - BONA FIDES Detektei",
     description: "Impressum und Anbieterkennung der BONA FIDES Detektei nach § 5 TMG.",
-    url: 'https://bona-fides.vercel.app/impressum',
+    url: '/impressum',
     siteName: 'Bona Fides Detektei',
     locale: 'de_DE',
     type: 'website',
@@ -84,7 +84,7 @@ export default function ImpressumPage() {
                   </h3>
                   <div className="space-y-2">
                     <p>E-Mail: ermittlungen@bonafides.agency</p>
-                    <p>Web: https://bona-fides.vercel.app</p>
+                    <p>Web: https://www.bona-fides-detektei.de</p>
                   </div>
                 </div>
 
