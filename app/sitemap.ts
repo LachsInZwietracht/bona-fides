@@ -2,10 +2,7 @@ import { MetadataRoute } from 'next'
 import { getAllArticles } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Dynamic URL detection with fallbacks
-  // NEXT_PUBLIC_SITE_URL is now configured in Vercel production environment
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://bona-fides-detektei.de')
+  const baseUrl = 'https://www.bona-fides-detektei.de'
 
   // Static pages with their priorities and change frequencies
   const staticPages: MetadataRoute.Sitemap = [
