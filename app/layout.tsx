@@ -48,8 +48,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "BONA FIDES Detektei",
+    alternateName: "Bona Fides",
+    url: "https://www.bona-fides-detektei.de",
+  }
+
   return (
     <html lang="de">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+      </head>
       <body className={`${playfair.variable} ${jetbrains.variable} font-serif antialiased`}>
         <CookiesProvider>
           <HashNavigationHandler />
