@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description: "Datenschutzerklärung der BONA FIDES Detektei gemäß DSGVO. Ihre Privatsphäre und der Schutz Ihrer Daten haben oberste Priorität. Transparente Informationen zur Datenverarbeitung.",
   keywords: "Datenschutz, DSGVO, Datenschutzerklärung, Privatsphäre, Bona Fides Detektei",
   alternates: {
-    canonical: 'https://bona-fides.vercel.app/datenschutz',
+    canonical: '/datenschutz',
   },
   openGraph: {
     title: "Datenschutz - BONA FIDES Detektei",
     description: "Datenschutzerklärung der BONA FIDES Detektei gemäß DSGVO. Transparente Informationen zur Datenverarbeitung.",
-    url: 'https://bona-fides.vercel.app/datenschutz',
+    url: '/datenschutz',
     siteName: 'Bona Fides Detektei',
     locale: 'de_DE',
     type: 'website',

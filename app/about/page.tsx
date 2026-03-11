@@ -6,18 +6,18 @@ export const metadata: Metadata = {
   description: "Spezialisierte Digital-Detektei mit interdisziplinärem Experten-Netzwerk für Cyber-Ermittlungen, Online-Forensik und digitale Beweissicherung. Erfahren Sie mehr über unsere Philosophie und fünfstufigen Ermittlungsprozess.",
   keywords: "Detektei Team, Digital-Detektei, Cyber-Ermittler, Online-Forensik, Ermittlungsprozess, Detektiv Netzwerk, Deutschland",
   alternates: {
-    canonical: 'https://bona-fides.vercel.app/about',
+    canonical: '/about',
   },
   openGraph: {
     title: "Über BONA FIDES - Spezialisierte Digital-Detektei",
     description: "Interdisziplinäres Experten-Netzwerk für Cyber-Ermittlungen, Online-Forensik und digitale Beweissicherung mit fünfstufigem Ermittlungsprozess.",
-    url: 'https://bona-fides.vercel.app/about',
+    url: '/about',
     siteName: 'Bona Fides Detektei',
     locale: 'de_DE',
     type: 'website',
     images: [
       {
-        url: 'https://bona-fides.vercel.app/og-about.jpg',
+        url: '/og-about.jpg',
         width: 1200,
         height: 630,
         alt: 'BONA FIDES Detektei Team - Digitale Ermittlungsexperten',
