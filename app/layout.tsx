@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Spezialisierte Digital-Detektei für Cyber-Ermittlungen, Online-Forensik und Betrugsaufklärung. Bundesweites Expertennetzwerk für diskrete digitale Ermittlungen.",
   applicationName: "BONA FIDES Detektei",
   alternates: {
-    canonical: "https://www.bona-fides-detektei.de",
+    canonical: "/",
   },
   openGraph: {
     type: "website",

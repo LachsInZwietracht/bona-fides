@@ -6,18 +6,18 @@ export const metadata: Metadata = {
   description: "Spezialisierte Digital-Detektei für Cyber-Ermittlungen, Online-Forensik und Betrugsaufklärung. Bundesweites Expertennetzwerk für diskrete digitale Ermittlungen in Hamburg, Berlin, München. Kostenlose Erstberatung.",
   keywords: "Detektei, Privatdetektei, digitale Ermittlungen, Cyber-Forensik, Online-Betrug, Cybercrime, Hintergrundprüfung, Deutschland, Hamburg, Berlin, München",
   alternates: {
-    canonical: 'https://bona-fides.vercel.app',
+    canonical: '/',
   },
   openGraph: {
     title: "BONA FIDES Detektei - Digitale Ermittlungen & Cyber-Forensik",
     description: "Spezialisierte Digital-Detektei für Cyber-Ermittlungen und Online-Forensik. Bundesweites Expertennetzwerk für diskrete digitale Ermittlungen.",
-    url: 'https://bona-fides.vercel.app',
+    url: '/',
     siteName: 'Bona Fides Detektei',
     locale: 'de_DE',
     type: 'website',
     images: [
       {
-        url: 'https://bona-fides.vercel.app/og-image.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'BONA FIDES Detektei - Professionelle digitale Ermittlungen',

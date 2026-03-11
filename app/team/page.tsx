@@ -6,18 +6,18 @@ export const metadata: Metadata = {
   description: "Deutschlandweites Kooperationsnetzwerk spezialisierter Digital-Ermittler für Cyber-Forensik, Online-Recherchen und digitale Beweissicherung. Experten in Hamburg, Berlin, München und bundesweit verfügbar.",
   keywords: "Detektei Team, Ermittler Netzwerk, Cyber-Ermittler, Digital-Detektive, Deutschland, Hamburg, Berlin, München, bundesweit",
   alternates: {
-    canonical: 'https://bona-fides.vercel.app/team',
+    canonical: '/team',
   },
   openGraph: {
     title: "BONA FIDES Team - Bundesweites Ermittler-Netzwerk",
     description: "Deutschlandweites Kooperationsnetzwerk spezialisierter Digital-Ermittler für Cyber-Forensik und Online-Recherchen.",
-    url: 'https://bona-fides.vercel.app/team',
+    url: '/team',
     siteName: 'Bona Fides Detektei',
     locale: 'de_DE',
     type: 'website',
     images: [
       {
-        url: 'https://bona-fides.vercel.app/og-team.jpg',
+        url: '/og-team.jpg',
         width: 1200,
         height: 630,
         alt: 'BONA FIDES Detektei - Bundesweites Ermittler-Netzwerk',
