@@ -54,7 +54,7 @@ export const teamMembers: TeamMember[] = [
     id: 'A-04',
     name: 'Alex Camu',
     codename: 'Catalyst',
-    role: 'Digital Operative',
+    role: 'IT Forensiker',
     base: 'Field Base Hamburg',
     division: 'digital',
     specialties: ['Full Stack Development', 'Social Engineering', 'Open Source Intel'],
@@ -71,7 +71,7 @@ export const teamMembers: TeamMember[] = [
     division: 'digital',
     specialties: ['Content Intelligence', 'Narrative Analyse', 'Medienoperationen'],
     status: 'Aktiv',
-    image: '/timov2.png',
+    image: '/timo.png',
     note: 'Filmt, schneidet, liefert – bevor die Gegenseite weiß, dass eine Kamera lief. Jedes Frame ist ein Beweisstück.'
   }
 ];
