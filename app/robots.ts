@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://bona-fides.vercel.app/sitemap.xml',
+    sitemap: 'https://www.bona-fides-detektei.de/sitemap.xml',
   }
 }

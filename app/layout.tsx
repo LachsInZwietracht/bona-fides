@@ -21,10 +21,14 @@ const jetbrains = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.bona-fides-detektei.de"),
   title: "BONA FIDES Detektei - Professionelle Ermittlungsdienste",
   description:
     "Lizenzierte Detektei seit 1965. Diskrete und professionelle Ermittlungsdienste mit Integrität und Ergebnissen.",
-  generator: "v0.app",
+  applicationName: "BONA FIDES Detektei",
+  alternates: {
+    canonical: "/",
+  },
 }
 
 export default function RootLayout({

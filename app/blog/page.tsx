@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     "Fachartikel zu digitalen Ermittlungen, Cyberkriminalität, Betrugsaufklärung und Hintergrundprüfungen. DSGVO-konform, rechtssicher und praxisnah von spezialisierten Ermittlungsexperten.",
   keywords: "Detektei Blog, digitale Ermittlungen, Cyberkriminalität, Betrugsaufklärung, OSINT, forensische Analysen, Hintergrundprüfungen",
   alternates: {
-    canonical: 'https://bona-fides.vercel.app/blog',
+    canonical: '/blog',
   },
   openGraph: {
     title: "Bona Fides Blog - Expertise in Digitalen Ermittlungen",
     description: "200+ Fachartikel zu digitalen Ermittlungen, Cyberkriminalität und Betrugsaufklärung",
-    url: 'https://bona-fides.vercel.app/blog',
+    url: '/blog',
     siteName: 'Bona Fides Detektei',
     locale: 'de_DE',
     type: 'website',

@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description: "Allgemeine Geschäftsbedingungen der BONA FIDES Detektei. Transparente Konditionen für professionelle digitale Ermittlungsdienstleistungen, Cyber-Forensik und Online-Recherchen.",
   keywords: "AGB, Geschäftsbedingungen, Detektei Konditionen, Ermittlungsdienstleistungen, Bona Fides",
   alternates: {
-    canonical: 'https://bona-fides.vercel.app/agb',
+    canonical: '/agb',
   },
   openGraph: {
     title: "AGB - BONA FIDES Detektei",
     description: "Allgemeine Geschäftsbedingungen für professionelle digitale Ermittlungsdienstleistungen.",
-    url: 'https://bona-fides.vercel.app/agb',
+    url: '/agb',
     siteName: 'Bona Fides Detektei',
     locale: 'de_DE',
     type: 'website',

@@ -30,7 +30,7 @@ export async function generateMetadata({
     return { title: "Artikel nicht gefunden" };
   }
 
-  const baseUrl = 'https://bona-fides.vercel.app';
+  const baseUrl = 'https://www.bona-fides-detektei.de';
   const articleUrl = `${baseUrl}/blog/${slug}`;
 
   return {
@@ -110,7 +110,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       name: "Bona Fides Detektei",
       logo: {
         "@type": "ImageObject",
-        url: "https://bona-fides.vercel.app/logo.png",
+        url: "https://www.bona-fides-detektei.de/logo.png",
       },
     },
     keywords: article.metadata.keyword,
