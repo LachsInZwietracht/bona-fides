@@ -28,14 +28,14 @@ export const metadata: Metadata = {
   },
   description:
     "Spezialisierte Digital-Detektei für Cyber-Ermittlungen, Online-Forensik und Betrugsaufklärung. Bundesweites Expertennetzwerk für diskrete digitale Ermittlungen.",
-  applicationName: "BONA FIDES Detektei",
+  applicationName: "Bona Fides Detektei",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "BONA FIDES Detektei",
+    siteName: "Bona Fides Detektei",
     title: "BONA FIDES Detektei - Digitale Ermittlungen & Cyber-Forensik",
     description:
       "Spezialisierte Digital-Detektei für Cyber-Ermittlungen, Online-Forensik und Betrugsaufklärung.",
@@ -51,7 +51,7 @@ export default function RootLayout({
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "BONA FIDES Detektei",
+    name: "Bona Fides Detektei",
     alternateName: "Bona Fides",
     url: "https://www.bona-fides-detektei.de",
   }
