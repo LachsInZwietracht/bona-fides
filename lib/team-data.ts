@@ -67,12 +67,24 @@ export const teamMembers: TeamMember[] = [
     name: 'Timo Woitzyk',
     codename: 'Broadcast',
     role: 'Informationsoperator',
-    base: 'Media Center Bremen',
+    base: 'Media Center Berlin',
     division: 'digital',
     specialties: ['Content Intelligence', 'Narrative Analyse', 'Medienoperationen'],
     status: 'Aktiv',
     image: '/timo.png',
     note: 'Filmt, schneidet, liefert – bevor die Gegenseite weiß, dass eine Kamera lief. Jedes Frame ist ein Beweisstück.'
+  },
+  {
+    id: 'A-06',
+    name: 'Franziska Marei',
+    codename: 'Phantom',
+    role: 'Detektivin',
+    base: 'Field Base Münster',
+    division: 'field',
+    specialties: ['Betrugsaufklärung', 'Personensuche', 'Vermisstenfälle'],
+    status: 'Aktiv',
+    image: detectiveMockImage,
+    note: 'Betrüger und Tunichtgute in Hiltrup, nehmt euch in Acht.'
   }
 ];
 
