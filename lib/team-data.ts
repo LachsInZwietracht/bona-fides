@@ -86,7 +86,19 @@ export const teamMembers: TeamMember[] = [
     status: 'Aktiv',
     image: detectiveMockImage,
     isUndercover: true,
-    note: 'Betrüger und Tunichtgute in Hiltrup, nehmt euch in Acht.'
+    note: 'Lässt Betrüger und Tunichtgute in Münster Nachts nicht schlafen.'
+  },
+  {
+    id: 'A-07',
+    name: 'Nils Presidente',
+    codename: 'Presidente',
+    role: 'Detektiv',
+    base: 'Field Base Köln',
+    division: 'field',
+    specialties: ['Feldermittlung', 'Undercovermissionen', 'Personensuche'],
+    status: 'Aktiv',
+    image: '/Nils_detective.png',
+    note: 'Verschwindet in jeder Menschenmenge – und taucht genau dort wieder auf, wo man ihn am wenigsten erwartet.'
   }
 ];
 
