@@ -9,6 +9,7 @@ export interface TeamMember {
   status: string;
   image: string;
   note: string;
+  isUndercover?: boolean;
 }
 
 const detectiveMockImage = '/detective-silhouette.png';
@@ -84,6 +85,7 @@ export const teamMembers: TeamMember[] = [
     specialties: ['Betrugsaufklärung', 'Personensuche', 'Vermisstenfälle'],
     status: 'Aktiv',
     image: detectiveMockImage,
+    isUndercover: true,
     note: 'Betrüger und Tunichtgute in Hiltrup, nehmt euch in Acht.'
   }
 ];

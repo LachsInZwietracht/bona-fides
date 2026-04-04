@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, MapPin, PenSquare, Phone, Radar } from 'lucide-react';
+import { ArrowLeft, MapPin, PenSquare, Phone, Radar, Shield } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { teamMembers } from '@/lib/team-data';
@@ -201,6 +201,14 @@ export function TeamPageClient() {
                         <h2 className="font-serif text-2xl leading-tight text-[#23190f]">{member.name}</h2>
                         <div className="flex flex-col gap-1 font-mono text-[10px] uppercase tracking-[0.4em] text-[#5c4a39]">
                           <span>{member.role}</span>
+                          {member.isUndercover && (
+                            <span className="flex items-center gap-2 text-[#392d20]">
+                              <Shield className="h-3.5 w-3.5 text-[#b04d3e]" />
+                              <span className="rounded-sm border border-[#b04d3e]/30 bg-[#b04d3e]/10 px-2 py-0.5 text-[10px] font-semibold tracking-[0.4em] text-[#8b3a2e]">
+                                Verdeckte Ermittlerin
+                              </span>
+                            </span>
+                          )}
                           <span className="flex items-center gap-2 text-[#392d20]">
                             <MapPin className="h-3.5 w-3.5 text-[#b04d3e]" />
                             {member.base}
