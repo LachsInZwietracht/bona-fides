@@ -190,15 +190,17 @@ export function TeamPageClient() {
                       <div className="relative aspect-square w-full overflow-hidden rounded-sm bg-black/10">
                         <Image
                           src={member.image}
-                          alt={`Agent ${member.name}`}
+                          alt={`Agent ${member.name.split(' ')[0]}`}
                           fill
                           sizes="(max-width: 768px) 240px, 260px"
-                          className="object-cover object-top transition duration-700 ease-out group-hover:scale-105"
+                          className={`object-cover object-top transition duration-700 ease-out group-hover:scale-105 ${
+                            member.id === 'A-07' ? 'scale-[1.35] group-hover:scale-[1.4]' : ''
+                          }`}
                         />
                         <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black/45 to-transparent" />
                       </div>
                       <div className="mt-4 flex flex-col gap-3 text-left">
-                        <h2 className="font-serif text-2xl leading-tight text-[#23190f]">{member.name}</h2>
+                        <h2 className="font-serif text-2xl leading-tight text-[#23190f]">{member.name.split(' ')[0]}</h2>
                         <div className="flex flex-col gap-1 font-mono text-[10px] uppercase tracking-[0.4em] text-[#5c4a39]">
                           <span>{member.role}</span>
                           {member.isUndercover && (
