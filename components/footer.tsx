@@ -18,13 +18,13 @@ export function Footer() {
               BONA FIDES
             </h3>
             <p className="font-mono text-sm text-gray-400 leading-relaxed">
-              Eine von Deutschlands führenden Detekteien für digitale Ermittlungen. <br />
+              Deutschlands führende digitale Detektei für Unternehmen und Versicherer. <br />
               Professionell, diskret und auf Ergebnisse ausgerichtet.
             </p>
             <div className="flex items-center space-x-2">
               <Shield className="h-4 w-4 text-white" />
               <span className="font-mono text-xs text-gray-400 uppercase tracking-wide">
-                Professionell & Vertrauensvoll
+                Vertrauenswürdig & DSGVO-konform
               </span>
             </div>
           </div>
@@ -84,7 +84,7 @@ export function Footer() {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="font-mono text-xs text-gray-500">
-              © BONA FIDES Private Detektei. Alle Rechte vorbehalten.
+              © BONA FIDES Detektei. Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 font-mono text-xs text-gray-400">
               <Link

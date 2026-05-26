@@ -93,7 +93,7 @@ export function HomePageClient() {
                     <br />
                     <span className="text-gray-300">FIDES</span>
                   </h1>
-                  <h2 className="text-lg sm:text-xl md:text-lg lg:text-xl font-mono tracking-widest text-gray-400 uppercase">Private Detektei</h2>
+                  <h2 className="text-lg sm:text-xl md:text-lg lg:text-xl font-mono tracking-widest text-gray-400 uppercase">Digitale Detektei</h2>
                 </div>
               </div>
 
@@ -112,19 +112,19 @@ export function HomePageClient() {
                   <div className="w-10 h-10 sm:w-12 sm:h-12 sm:mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm flex-shrink-0">
                     <Search className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <p className="text-xs sm:text-sm font-mono text-gray-400 uppercase tracking-wide">Cyber-Forensik</p>
+                  <p className="text-xs sm:text-sm font-mono text-gray-400 uppercase tracking-wide">Unternehmensermittlung</p>
                 </div>
                 <div className="flex items-center space-x-3 sm:flex-col sm:text-center sm:space-x-0 sm:space-y-2">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 sm:mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm flex-shrink-0">
                     <Eye className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <p className="text-xs sm:text-sm font-mono text-gray-400 uppercase tracking-wide">Digitale Ermittlungen</p>
+                  <p className="text-xs sm:text-sm font-mono text-gray-400 uppercase tracking-wide">Cyber-Forensik</p>
                 </div>
                 <div className="flex items-center space-x-3 sm:flex-col sm:text-center sm:space-x-0 sm:space-y-2">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 sm:mx-auto bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm flex-shrink-0">
                     <Lock className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <p className="text-xs sm:text-sm font-mono text-gray-400 uppercase tracking-wide">Online Sicherheit</p>
+                  <p className="text-xs sm:text-sm font-mono text-gray-400 uppercase tracking-wide">Due Diligence</p>
                 </div>
               </div>
 
@@ -137,11 +137,11 @@ export function HomePageClient() {
                     style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
                   >
                     <Phone className="mr-3 h-5 w-5" />
-                    Vertrauliche Beratung
+                    Vertrauliches Erstgespräch
                   </Button>
                 </Link>
                 <p className="hidden sm:block text-sm font-mono text-gray-500 tracking-wide mt-8 sm:mt-12">
-                  Kostenlose Erstberatung • Absolute Verschwiegenheit
+                  Diskret • DSGVO-konform • Bundesweit
                 </p>
               </div>
             </div>
@@ -220,11 +220,11 @@ export function HomePageClient() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">
-              ERMITTLUNGSDIENSTE
+              ERMITTLUNGSLEISTUNGEN
             </h2>
 
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Spezialisiert auf internationale Online-Ermittlungen und digitale Forensik
+              Vertrauliche Ermittlungen für Unternehmen, Versicherer und Family Offices
             </p>
           </div>
 
@@ -232,23 +232,23 @@ export function HomePageClient() {
             {[
               {
                 icon: Search,
-                title: "Digitale Ermittlungen",
-                description: "Online-Recherchen, Social-Media-Analyse und digitale Spurensuche mit modernster Technologie.",
-                features: ["Online-Personensuche", "Social Media Forensik", "Digitale Spuren", "Internationale Recherche"],
+                title: "Unternehmensermittlungen",
+                description: "Strukturierte Aufklärung von internem Fehlverhalten, Wirtschaftsdelikten und sensiblen Sachverhalten – rechtssicher dokumentiert.",
+                features: ["Interne Untersuchungen", "Mitarbeiterfehlverhalten", "Whistleblower-Verifikation", "Beweissicherung"],
                 gradient: "from-gray-800/30 to-gray-700/15"
               },
               {
                 icon: Building,
-                title: "Cybercrime & Betrug",
-                description: "Aufdeckung von Online-Betrug, Geldwäsche und digitalen Betrugsnetzwerken im internationalen Raum.",
-                features: ["Geldwäsche-Aufklärung", "Online-Betrug", "Account-Diebstahl", "Internationale Fälle"],
+                title: "Fraud & Cyber-Forensik",
+                description: "Aufklärung von internem und externem Betrug, Cyber-Vorfällen und Versicherungsbetrug – mit forensisch gesicherter Beweiskette.",
+                features: ["Interner Betrug", "Cyber Fraud", "Digital Forensics", "Versicherungs- & Schadenermittlung"],
                 gradient: "from-slate-800/30 to-slate-700/15"
               },
               {
                 icon: UserCheck,
-                title: "Hintergrundprüfungen",
-                description: "Online-Hintergrundchecks und digitale Due-Diligence für Unternehmen und Privatpersonen.",
-                features: ["Online-Screening", "Digitale Forensik", "Dark Web Recherche", "Identitätsprüfung"],
+                title: "Due Diligence & OSINT",
+                description: "Geschäftspartner, Investments und Zielpersonen unabhängig prüfen – vor der Unterschrift.",
+                features: ["Business Partner Due Diligence", "OSINT-Recherche", "Asset Tracing", "Reputationsanalyse"],
                 gradient: "from-zinc-800/30 to-zinc-700/15"
               }
             ].map((service, index) => {
@@ -442,17 +442,17 @@ export function HomePageClient() {
             </h2>
 
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Digitale Detektei mit spezialisierten Experten und bundesweitem Netzwerk
+              Unabhängig. DSGVO-konform. Entscheidungsreif aufbereitet.
             </p>
           </div>
 
           {/* Trust Metrics */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
-              { icon: Star, number: "#1", label: "Digital", description: "Experten in Digitalen Ermittlungen" },
-              { icon: Award, number: "100%", label: "Diskrete Beweise", description: "Gerichtsfeste Dokumentation garantiert" },
-              { icon: Users, number: getTeamMemberCount().toString(), label: "Bundesweite Ermittler", description: "Ermittlernetzwerk in ganz Deutschland" },
-              { icon: Shield, number: "100%", label: "Vertraulich", description: "Alle Fälle werden mit völliger Diskretion behandelt" }
+              { icon: Star, number: "#1", label: "Digital", description: "Deutschlands führende digitale Detektei" },
+              { icon: Award, number: "100%", label: "Rechtssicher", description: "Dokumentation nach Beweiskettenstandard" },
+              { icon: Users, number: getTeamMemberCount().toString(), label: "Ermittler bundesweit", description: "Koordiniertes Ermittlernetzwerk in Deutschland" },
+              { icon: Shield, number: "100%", label: "Vertraulich", description: "NDA, verschlüsselte Kommunikation, DSGVO-konform" }
             ].map((metric, index) => (
               <div key={index} className="text-center group">
                 <div className="bg-white/10 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-white/20 transition-colors backdrop-blur-sm">
@@ -681,29 +681,29 @@ export function HomePageClient() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">
-              KUNDENSTIMMEN
+              MANDANTENSTIMMEN
             </h2>
 
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Vertrauen Sie nicht nur uns – hören Sie von denen, denen wir geholfen haben
+              Stimmen aus Unternehmen, Versicherern und Compliance-Teams.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
-                initials: "M.K.",
-                location: "Hamburg",
-                caseType: "Untreue-Ermittlung",
+                initials: "Compliance-Leitung",
+                location: "Mittelstand",
+                caseType: "Interne Untersuchung",
                 rating: 5,
-                text: "Diskret, professionell und schnell. Die Wahrheit war schmerzhaft, aber notwendig. BONA FIDES hat mir geholfen, Klarheit zu finden."
+                text: "Sauber dokumentiert, rechtssicher aufbereitet und jederzeit ansprechbar. Das Ergebnis hat unsere Entscheidung im Vorstand getragen."
               },
               {
-                initials: "T.S.",
-                location: "Frankfurt",
-                caseType: "Unternehmensbetrug",
+                initials: "Schadenabteilung",
+                location: "Versicherer",
+                caseType: "Versicherungsbetrug",
                 rating: 5,
-                text: "Unglaubliche Detektivarbeit. Sie fanden Beweise, die wir für unmöglich hielten. Haben unserem Unternehmen Millionen gespart."
+                text: "Belastbare Beweise in einem komplexen Schadenfall. Die Ermittlung hat uns eine Auszahlung in sechsstelliger Höhe erspart – sauber dokumentiert."
               }
             ].map((testimonial, index) => (
               <div key={index} className="group relative">
@@ -765,43 +765,43 @@ export function HomePageClient() {
             </h2>
 
             <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-              Häufig gestellte Fragen zur Detektei-Beauftragung
+              Häufige Fragen von Unternehmen und Versicherern zur Mandatsvergabe
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-4">
             {[
               {
-                question: "Wie wird Vertraulichkeit bei einer Detektei sichergestellt?",
-                answer: "Alle Ermittler unterliegen strengen Verschwiegenheitspflichten und rechtlichen Bindungen. Es wird ausschließlich mit verschlüsselter Kommunikation, sicherer Dokumentenspeicherung und anonymisierter Berichterstattung gearbeitet. Diskretion und Datenschutz haben oberste Priorität."
+                question: "Wie schützen Sie Mandatsdaten und Vertraulichkeit?",
+                answer: "NDA vor dem ersten Briefing, verschlüsselte Kommunikation, getrennte Mandatsumgebungen und Need-to-know-Zugriff im Team. Die Verarbeitung erfolgt DSGVO-konform, die Aufbewahrung nur über die vereinbarte Mandatsdauer."
               },
               {
-                question: "Wie lange dauert eine Ermittlung durch einen Privatdetektiv?",
-                answer: "Die Dauer variiert je nach Komplexität des Falls. Einfache Hintergrundprüfungen können 1-2 Wochen dauern, während komplexe Unternehmensermittlungen 3-6 Monate in Anspruch nehmen. Nach der kostenlosen Erstberatung wird eine realistische Zeitschätzung gegeben."
+                question: "Wie lange dauert ein Ermittlungsmandat?",
+                answer: "Abhängig von Komplexität und Jurisdiktion. Eine fokussierte Due Diligence kann in 1–2 Wochen vorliegen, eine interne Untersuchung mehrere Monate. Nach dem Erstgespräch erhalten Sie einen Scope mit Zeit- und Kostenrahmen."
               },
               {
-                question: "Was kostet ein Privatdetektiv in Deutschland?",
-                answer: "Die Preise richten sich nach Art und Umfang der Ermittlung. Es wird ein detailliertes Angebot vor Beginn der Arbeit erstellt – wahlweise als Pauschalpreis oder auf Stundenbasis. Die Erstberatung ist kostenlos und unverbindlich."
+                question: "Wie sieht das Honorarmodell aus?",
+                answer: "Wahlweise Festpreis je Phase oder transparenter Tagessatz, jeweils mit definierten Deliverables. Vor Mandatsannahme erhalten Sie ein schriftliches Angebot. Das Erstgespräch ist unverbindlich."
               },
               {
-                question: "Welche Informationen werden für eine Ermittlung benötigt?",
-                answer: "Für den Start werden grundlegende Informationen zum Fall benötigt: Namen, Daten, Orte und spezifische Anliegen. Je mehr Details vorliegen, desto effizienter kann gearbeitet werden. Alle Informationen werden streng vertraulich behandelt."
+                question: "Welche Informationen benötigen Sie für ein Mandat?",
+                answer: "Sachverhalt, Beteiligte, bisherige Erkenntnisse und Ihr Ziel (z. B. Entscheidungs-, Prozess- oder Compliance-Vorbereitung). Je präziser der Auftrag, desto schärfer die Ermittlungsstrategie."
               },
               {
-                question: "Kann eine Detektei deutschlandweit und international ermitteln?",
-                answer: "Als spezialisierte Digital-Detektei wird international ermittelt. Ein breites Netzwerk ermöglicht weltweite Online-Recherchen und digitale Ermittlungen. Für lokale Einsätze vor Ort stehen spezialisierte Partner aus dem Ermittlungsnetzwerk zur Verfügung."
+                question: "Arbeiten Sie bundesweit und international?",
+                answer: "Ja. Bundesweite Feldarbeit über unser koordiniertes Ermittlernetzwerk, internationale Mandate über geprüfte Partner mit lokaler Compliance."
               },
               {
-                question: "Wie werden Ermittlungsergebnisse übermittelt?",
-                answer: "Es wird ein umfassender, schriftlicher Bericht mit allen Erkenntnissen, Beweisen und Dokumentationen erstellt. Auf Wunsch können auch persönliche Briefings durchgeführt werden. Alle Materialien werden sicher übermittelt und sind gerichtsfest aufbereitet."
+                question: "In welcher Form erhalten wir die Ergebnisse?",
+                answer: "Schriftlicher Abschlussbericht mit Executive Summary, Beweismitteln, Methodendokumentation und Handlungsempfehlungen. Auf Wunsch persönliches Briefing für Ihr Entscheider- oder Compliance-Team."
               },
               {
-                question: "Sind Detektiv-Beweise vor Gericht verwertbar?",
-                answer: "Ja – alle Ermittlungen werden rechtssicher nach deutschem Recht durchgeführt. Beweise werden forensisch dokumentiert, mit Hash-Werten und Zeitstempeln gesichert und sind vor Zivil-, Straf- und Familiengerichten verwertbar. Bei Prozessen kann auch als Zeuge ausgesagt werden."
+                question: "Sind die Ergebnisse vor Gericht verwendbar?",
+                answer: "Wir dokumentieren forensisch – mit Beweiskette, Hash-Werten und Zeitstempeln – sodass Ergebnisse in zivil-, straf- und arbeitsrechtlichen Verfahren eingebracht werden können. Die Zulässigkeit im Einzelfall prüft Ihre Rechtsvertretung."
               },
               {
-                question: "Was passiert, wenn bei der Ermittlung keine Beweise gefunden werden?",
-                answer: "Nicht jeder Fall führt zum gewünschten Ergebnis – Transparenz und Ehrlichkeit stehen an erster Stelle. Wird kein Ergebnis erzielt, erfolgt eine sofortige Information mit Besprechung weiterer Optionen. Viele Pauschalpreise beinhalten eine 'Kein Ergebnis, reduzierte Gebühr'-Garantie."
+                question: "Was, wenn ein Mandat keine belastbaren Erkenntnisse liefert?",
+                answer: "Auch eine fundierte Nichtfeststellung ist ein Ergebnis und entlastet Entscheider. Sie erhalten transparent dokumentiert, was geprüft wurde, mit welcher Methode und mit welchem Befund."
               }
             ].map((faq, index) => (
               <div key={index} className="group bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#C2B16D]/30 rounded-sm transition-all duration-500 hover:bg-white/8">
@@ -835,13 +835,13 @@ export function HomePageClient() {
 
             <div className="relative z-10 space-y-8">
               <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-serif font-bold text-white leading-tight">
-                Die Wahrheit wartet nicht.
+                Risiken sichtbar machen.
                 <br />
-                <span className="text-gray-300">Handeln Sie jetzt.</span>
+                <span className="text-gray-300">Entscheidungen absichern.</span>
               </h2>
 
               <p className="text-sm sm:text-base md:text-lg lg:text-2xl font-mono text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Jeder Tag ohne Antworten ist ein verlorener Tag. Unsere Ermittler stehen bereit, Ihren Fall mit Diskretion und Professionalität zu lösen.
+                Schildern Sie uns vertraulich Ihren Fall. Sie erhalten in der Regel binnen 24 Stunden eine belastbare Erstbewertung – inkl. Ressourcen-, Zeit- und Kostenrahmen.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
@@ -852,14 +852,14 @@ export function HomePageClient() {
                     style={{backgroundColor: '#C2B16D', color: '#1A1612', borderColor: '#C2B16D'}}
                   >
                     <Mail className="mr-3 h-6 w-6" />
-                    Jetzt Kontaktieren
+                    Vertrauliches Erstgespräch
                   </Button>
                 </Link>
               </div>
 
               <div className="pt-6 border-t border-white/20 mt-8">
                 <p className="font-mono text-sm text-gray-400 tracking-widest">
-                  KOSTENLOSE ERSTBERATUNG
+                  VERTRAULICH · DSGVO-KONFORM
                 </p>
               </div>
 

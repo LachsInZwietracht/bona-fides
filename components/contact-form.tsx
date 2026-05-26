@@ -116,11 +116,11 @@ export function ContactForm() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white drop-shadow-2xl">
-            ERSTBERATUNG ANFORDERN
+            FALL VERTRAULICH SCHILDERN
           </h2>
 
           <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-            Diskret. Professionell. Ergebnisorientiert.
+            Vertraulich · DSGVO-konform · Antwort binnen 24 Stunden.
           </p>
         </div>
 
@@ -156,7 +156,7 @@ export function ContactForm() {
               <div className="space-y-3 md:space-y-4 font-mono text-xs md:text-sm mb-6">
                 <div className="border-b border-gray-300 pb-2">
                   <span className="font-bold text-gray-700">Art:</span>
-                  <p className="text-black">Erstberatung anfordern</p>
+                  <p className="text-black">Vertrauliches Erstgespräch</p>
                 </div>
 
                 <div className="border-b border-gray-300 pb-2">
@@ -169,7 +169,7 @@ export function ContactForm() {
               {/* Quote section - playful and matching landing page */}
               <div className="mt-4 md:mt-6 p-3 md:p-4 bg-gray-100 border-l-4 rounded-sm mb-6" style={{borderColor: '#C2B16D'}}>
                 <p className="text-xs italic text-gray-700 leading-relaxed">
-                  &ldquo;Jede Wahrheit verdient es, gefunden zu werden. Ihre Anfrage ist der erste Schritt.&rdquo;
+                  &ldquo;Klarheit beginnt mit dem ersten Gespräch. Ihre Anfrage wird vertraulich behandelt.&rdquo;
                 </p>
               </div>
 
@@ -178,7 +178,7 @@ export function ContactForm() {
                 <div className="grid md:grid-cols-2 gap-4">
                   {/* Name */}
                   <div className="border-b border-gray-300 pb-2">
-                    <div className="font-bold text-gray-700 text-sm mb-1">MANDANT:</div>
+                    <div className="font-bold text-gray-700 text-sm mb-1">UNTERNEHMEN / NAME:</div>
                     <Input
                       id="name"
                       type="text"
@@ -207,7 +207,7 @@ export function ContactForm() {
                         errors.email ? 'text-red-600' : ''
                       }`}
                       style={{borderBottom: errors.email ? '2px solid #dc2626' : '1px solid transparent'}}
-                      placeholder="agent@beispiel.de"
+                      placeholder="name@unternehmen.de"
                     />
                     {errors.email && (
                       <p className="text-red-500 text-xs mt-1 font-mono">{errors.email}</p>
@@ -238,11 +238,12 @@ export function ContactForm() {
                       <SelectValue placeholder="[KLASSIFIZIERUNG AUSWÄHLEN]" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="digital-investigation">Digitale Ermittlungen</SelectItem>
-                      <SelectItem value="cybercrime">Cyberkriminalität</SelectItem>
-                      <SelectItem value="background-check">Hintergrundprüfung</SelectItem>
-                      <SelectItem value="corporate-fraud">Unternehmensbetrug</SelectItem>
-                      <SelectItem value="infidelity">Untreue-Verdacht</SelectItem>
+                      <SelectItem value="corporate-investigation">Unternehmensermittlung / Interne Untersuchung</SelectItem>
+                      <SelectItem value="due-diligence">Business Partner Due Diligence</SelectItem>
+                      <SelectItem value="fraud">Fraud / Wirtschaftsdelikt</SelectItem>
+                      <SelectItem value="cyber-forensics">Cyber-Vorfall & Digital Forensics</SelectItem>
+                      <SelectItem value="insurance-fraud">Versicherungs- & Schadenermittlung</SelectItem>
+                      <SelectItem value="osint-asset-tracing">OSINT / Asset Tracing</SelectItem>
                       <SelectItem value="other">Sonstiges</SelectItem>
                     </SelectContent>
                   </Select>
@@ -263,7 +264,7 @@ export function ContactForm() {
                       className={`bg-transparent border-0 text-black font-mono placeholder:text-gray-500 focus:ring-0 resize-none p-0 ${
                         errors.message ? 'text-red-600' : ''
                       }`}
-                      placeholder="Beschreiben Sie Ihren Fall mit allen verfügbaren Details. Alle Informationen unterliegen der Schweigepflicht und werden verschlüsselt übertragen."
+                      placeholder="Skizzieren Sie Sachverhalt, Beteiligte und Ihr Ziel. Übertragung verschlüsselt, Bearbeitung DSGVO-konform. Auf Wunsch NDA vor dem Erstgespräch."
                     />
                   </div>
                   {errors.message && (

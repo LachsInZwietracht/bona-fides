@@ -26,7 +26,7 @@ export function Header({ dark = false }: { dark?: boolean }) {
               BONA FIDES
             </div>
             {dark && (
-              <span className="text-sm font-mono text-gray-400 uppercase tracking-wide">Detective Agency</span>
+              <span className="text-sm font-mono text-gray-400 uppercase tracking-wide">Digitale Detektei</span>
             )}
           </Link>
 

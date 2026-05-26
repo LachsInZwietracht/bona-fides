@@ -2,15 +2,15 @@ import { Metadata } from "next"
 import { HomePageClient } from "./home-page-client"
 
 export const metadata: Metadata = {
-  title: "BONA FIDES Detektei | Digitale Ermittlungen & Cyber-Forensik in Deutschland",
-  description: "Spezialisierte Digital-Detektei für Cyber-Ermittlungen, Online-Forensik und Betrugsaufklärung. Bundesweites Expertennetzwerk für diskrete digitale Ermittlungen in Hamburg, Berlin, München. Kostenlose Erstberatung.",
-  keywords: "Detektei, Privatdetektei, digitale Ermittlungen, Cyber-Forensik, Online-Betrug, Cybercrime, Hintergrundprüfung, Deutschland, Hamburg, Berlin, München",
+  title: "BONA FIDES Detektei | Digitale Ermittlungen für Unternehmen & Versicherer",
+  description: "Deutschlands führende digitale Detektei für Unternehmen und Versicherer. Vertrauliche Ermittlungen, Cyber-Forensik, Due Diligence, Asset Tracing und Versicherungsbetrug – DSGVO-konform, bundesweit, entscheidungsreif aufbereitet.",
+  keywords: "Detektei, digitale Ermittlungen, Unternehmensermittlung, Wirtschaftsermittlung, Due Diligence, Compliance, Fraud, interne Untersuchung, Cyber-Forensik, OSINT, Asset Tracing, Versicherungsbetrug, Deutschland, Hamburg, Berlin, München",
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "BONA FIDES Detektei - Digitale Ermittlungen & Cyber-Forensik",
-    description: "Spezialisierte Digital-Detektei für Cyber-Ermittlungen und Online-Forensik. Bundesweites Expertennetzwerk für diskrete digitale Ermittlungen.",
+    title: "BONA FIDES Detektei – Digitale Ermittlungen für Unternehmen & Versicherer",
+    description: "Deutschlands führende digitale Detektei für Unternehmen und Versicherer. Vertrauliche Ermittlungen, Cyber-Forensik, Due Diligence und Versicherungsbetrug.",
     url: '/',
     siteName: 'Bona Fides Detektei',
     locale: 'de_DE',
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'BONA FIDES Detektei - Professionelle digitale Ermittlungen',
+        alt: 'BONA FIDES Detektei – Digitale Ermittlungen für Unternehmen und Versicherer',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "BONA FIDES Detektei - Digitale Ermittlungen",
-    description: "Spezialisierte Digital-Detektei für Cyber-Ermittlungen und Online-Forensik in Deutschland",
+    title: "BONA FIDES Detektei – Digitale Ermittlungen für Unternehmen & Versicherer",
+    description: "Deutschlands führende digitale Detektei für Unternehmen und Versicherer.",
     creator: '@bonafides',
     site: '@bonafides',
   },
