@@ -23,11 +23,11 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bona-fides-detektei.de"),
   title: {
-    default: "BONA FIDES Detektei - Digitale Ermittlungen & Cyber-Forensik",
-    template: "%s | BONA FIDES Detektei - Digitale Ermittlungsexperten",
+    default: "BONA FIDES Detektei – Digitale Ermittlungen für Unternehmen & Versicherer",
+    template: "%s | BONA FIDES Detektei – Digitale Ermittlungen",
   },
   description:
-    "Spezialisierte Digital-Detektei für Cyber-Ermittlungen, Online-Forensik und Betrugsaufklärung. Bundesweites Expertennetzwerk für diskrete digitale Ermittlungen.",
+    "Deutschlands führende digitale Detektei für Unternehmen und Versicherer. Vertrauliche Ermittlungen, Cyber-Forensik, Due Diligence und Versicherungsbetrug – DSGVO-konform und entscheidungsreif aufbereitet.",
   applicationName: "Bona Fides Detektei",
   alternates: {
     canonical: "/",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     siteName: "Bona Fides Detektei",
-    title: "BONA FIDES Detektei - Digitale Ermittlungen & Cyber-Forensik",
+    title: "BONA FIDES Detektei – Digitale Ermittlungen für Unternehmen & Versicherer",
     description:
-      "Spezialisierte Digital-Detektei für Cyber-Ermittlungen, Online-Forensik und Betrugsaufklärung.",
+      "Deutschlands führende digitale Detektei für Unternehmen und Versicherer. Vertrauliche Ermittlungen, Cyber-Forensik, Due Diligence und Versicherungsbetrug.",
     url: "https://www.bona-fides-detektei.de",
   },
 }

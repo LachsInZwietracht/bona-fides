@@ -26,13 +26,13 @@ export async function POST(request: NextRequest) {
 
     // Create case type mapping for better readability
     const caseTypeMap: Record<string, string> = {
-      private: 'Private Ermittlungen',
-      corporate: 'Unternehmenssicherheit',
-      background: 'Hintergrundprüfungen',
-      infidelity: 'Untreue-Ermittlungen',
-      fraud: 'Betrugserkennung',
-      missing: 'Vermisste Personen',
-      other: 'Sonstige Ermittlungen'
+      'corporate-investigation': 'Unternehmensermittlung / Interne Untersuchung',
+      'due-diligence': 'Business Partner Due Diligence',
+      'fraud': 'Fraud / Wirtschaftsdelikt',
+      'cyber-forensics': 'Cyber-Vorfall & Digital Forensics',
+      'insurance-fraud': 'Versicherungs- & Schadenermittlung',
+      'osint-asset-tracing': 'OSINT / Asset Tracing',
+      'other': 'Sonstiges'
     };
 
     const caseTypeLabel = caseTypeMap[caseType] || caseType;

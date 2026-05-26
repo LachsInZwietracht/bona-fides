@@ -82,8 +82,8 @@ export function TeamPageClient() {
               </span>
             </div>
             <p className="mt-8 max-w-2xl text-center text-base text-gray-300">
-              Übersicht über unser deutschlandweites Kooperationsnetzwerk. Zeigt alle verfügbaren Ermittler-Partner, die wir fallspezifisch koordinieren.
-              Statusmeldungen werden in Echtzeit synchronisiert.
+              Übersicht unseres bundesweiten Ermittlernetzwerks. Wir koordinieren mandatsspezifisch – Feldarbeit, digitale Forensik
+              und Recherche – unter einheitlichen Compliance- und Dokumentationsstandards.
             </p>
           </header>
 
@@ -250,15 +250,15 @@ export function TeamPageClient() {
               </div>
               <div className="relative z-10 text-center">
                 <h2 className="mb-8 font-serif text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
-                  Digitale Ermittlungen. <br className="hidden sm:block" />
-                  <span className="text-[#c2b16d]">Präzise. Diskret. Professionell.</span>
+                  Ermittlungen mit Substanz. <br className="hidden sm:block" />
+                  <span className="text-[#c2b16d]">Präzise. Vertraulich. Rechtssicher dokumentiert.</span>
                 </h2>
                 <div className="mx-auto max-w-4xl space-y-6 text-left">
                   <p className="text-lg leading-relaxed text-gray-300">
-                    Unser kuratiertes <strong className="text-white">Partnernetzwerk</strong> vereint langjährige Ermittlungserfahrung mit modernster Cyber-Forensik-Technologie. Als koordinierende <strong className="text-white">Online-Detektei</strong> greifen wir auf ein handverlesenes Team von Spezialisten zurück, die wir für Ihre komplexen digitalen Fälle aktivieren - für Privatpersonen und Unternehmen in Hamburg, Berlin, München und bundesweit.
+                    Unser kuratiertes <strong className="text-white">Ermittlernetzwerk</strong> verbindet langjährige Ermittlungserfahrung mit moderner digitaler Forensik. Als koordinierende <strong className="text-white">digitale Detektei</strong> aktivieren wir mandatsspezifisch die Spezialisten, die Ihr Fall erfordert – für Unternehmen, Versicherer und Family Offices in Hamburg, Berlin, München und bundesweit.
                   </p>
                   <p className="text-lg leading-relaxed text-gray-300">
-                    Von <strong className="text-white">OSINT-Ermittlungen</strong> bis hin zu Dark Web Recherchen – unser Netzwerk spezialisierter Partner ermöglicht uns flexible und zielgerichtete Lösungsansätze. Durch kontinuierliche Weiterbildung in Datenforensik und modernsten Analyseverfahren orientieren uns an anerkannten Standards der digitalen Forensik.
+                    Von <strong className="text-white">OSINT-Recherche</strong> und Asset Tracing bis hin zu Cyber-Forensik und Beweissicherung – wir arbeiten nach anerkannten Standards der digitalen Forensik, DSGVO-konform und entscheidungsreif aufbereitet.
                   </p>
                 </div>
               </div>
@@ -269,10 +269,10 @@ export function TeamPageClient() {
             <div className="absolute inset-x-0 -top-8 h-px bg-gradient-to-r from-transparent via-[#c2b16d]/40 to-transparent" />
             <div className="relative mx-auto max-w-4xl overflow-hidden rounded-sm border border-white/10 bg-[#0d1018]/80 p-6 sm:p-8 lg:p-10 text-center shadow-[0_18px_60px_rgba(3,7,16,0.75)]">
               <div className="absolute inset-0 border border-white/5 pointer-events-none" style={{ mixBlendMode: 'overlay' }} />
-              <h2 className="font-serif text-2xl font-semibold text-white sm:text-3xl md:text-4xl">Bereit für Ihren Fall?</h2>
+              <h2 className="font-serif text-2xl font-semibold text-white sm:text-3xl md:text-4xl">Ihr Mandat, klar strukturiert.</h2>
               <p className="mt-4 text-base text-gray-300">
-                Teilen Sie uns vertraulich Ihr Anliegen mit. Wir analysieren die Lage, definieren ein passendes Einsatzteam und
-                liefern Ihnen binnen 24 Stunden eine belastbare Erstbewertung.
+                Schildern Sie uns vertraulich Sachverhalt und Ziel. Sie erhalten in der Regel binnen 24 Stunden eine belastbare
+                Erstbewertung mit Vorschlag für Team, Vorgehen und Rahmen.
               </p>
               <Link href="/#contact">
                 <Button
@@ -280,7 +280,7 @@ export function TeamPageClient() {
                   className="mt-8 border border-[#c2b16d] bg-[#c2b16d] hover:bg-[#a89a5a] px-6 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-6 font-serif text-lg text-[#1a1612] hover:text-[#1a1612] shadow-[0_15px_45px_rgba(194,177,109,0.45)] transition-all duration-300 hover:scale-[1.02]"
                 >
                   <Phone className="mr-3 h-5 w-5" />
-                  Kontakt aufnehmen
+                  Vertrauliches Erstgespräch
                 </Button>
               </Link>
             </div>

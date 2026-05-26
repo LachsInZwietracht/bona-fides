@@ -22,7 +22,7 @@ import {
 const milestones = [
   {
     year: 'PHASE 1',
-    title: 'Erstberatung & Fallaufnahme',
+    title: 'Erstgespräch & Mandatsaufnahme',
     description:
       'Vertrauliches Erstgespräch zur Risikoanalyse, Zielsetzung und Budgetrahmen. Gemeinsame Erarbeitung der Ermittlungsstrategie.',
     evidence: {
@@ -91,12 +91,12 @@ const principles = [
   {
     icon: Users,
     title: 'Interdisziplinäres Team',
-    body: 'Juristen, Analytikerinnen und ehemalige Kriminalbeamte arbeiten in kleinen Strike-Teams zusammen.',
+    body: 'Erfahrene Ermittler, Analystinnen und Forensik-Spezialisten arbeiten in kleinen, fokussierten Einsatzteams zusammen.',
   },
   {
     icon: Compass,
     title: 'Internationale Reichweite',
-    body: 'Europaweite Einsätze durch grenzüberschreitendes Partnernetzwerk und gemeinsame Compliance-Standards.',
+    body: 'Europaweite Mandate durch grenzüberschreitendes Partnernetzwerk und gemeinsame Compliance-Standards.',
   },
 ];
 
@@ -221,24 +221,24 @@ useEffect(() => {
   const dossierPages = useMemo(
     () => [
       {
-        heading: '#1 Digital',
-        content: 'Experten in Digitalen Ermittlungen',
-        stamp: 'MARKTFÜHRER',
+        heading: 'Interdisziplinär',
+        content: 'Ermittler, Analystinnen und Forensik-Spezialisten in einem Team',
+        stamp: 'TEAM',
       },
       {
-        heading: '100% Diskrete Beweise',
-        content: 'Gerichtsfeste Dokumentation garantiert',
-        stamp: 'GERICHTSFEST',
+        heading: 'Rechtssicher',
+        content: 'Dokumentation nach Beweiskettenstandard – mit Hash und Zeitstempel',
+        stamp: 'FORENSIK',
       },
       {
-        heading: `${getTeamMemberCount()} Bundesweite Ermittler`,
-        content: 'Ermittlernetzwerk in ganz Deutschland',
+        heading: `${getTeamMemberCount()} Ermittler bundesweit`,
+        content: 'Koordiniertes Ermittlernetzwerk in ganz Deutschland',
         stamp: 'BUNDESWEIT',
       },
       {
-        heading: '100% Vertraulich',
-        content: 'Alle Fälle werden mit völliger Diskretion behandelt',
-        stamp: 'VERTRAULICH',
+        heading: 'Vertraulich',
+        content: 'NDA, verschlüsselte Kommunikation und DSGVO-konforme Verarbeitung',
+        stamp: 'DSGVO-KONFORM',
       },
     ],
     []
@@ -321,13 +321,13 @@ useEffect(() => {
                 Wer wir sind, wofür wir stehen
               </h1>
               <h2 className="text-xs sm:text-sm lg:text-base font-mono uppercase tracking-[0.2em] lg:tracking-[0.3em] text-gray-400">
-                Spezialisierte Digital-Detektei mit interdisziplinärem Experten-Netzwerk
+                Spezialisierte digitale Detektei mit interdisziplinärem Experten-Netzwerk
               </h2>
               <p className="max-w-xl text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
-                Als spezialisierte Digital-Detektei verfügen wir über ein hochqualifiziertes
-                Expertenteam für Cyber-Ermittlungen, Online-Forensik und digitale Beweissicherung. Mit modernster
-                IT-Forensik-Technologie und einem interdisziplinären Netzwerk erfahrener Ermittler lösen wir komplexe Cybercrime-Fälle,
-                Identitätsdiebstahl und Wirtschaftsspionage für Unternehmen und Privatpersonen deutschlandweit.
+                BONA FIDES begleitet Unternehmen, Versicherer und Family Offices bei
+                Sachverhalten, in denen Klarheit, Diskretion und Belastbarkeit zählen. Wir verbinden klassische Ermittlung mit
+                digitaler Forensik und strukturierter Analyse – vom internen Hinweis bis zur grenzüberschreitenden
+                Due Diligence. Bundesweit aktiv, DSGVO-konform und rechtssicher dokumentiert.
               </p>
             </div>
 
@@ -349,8 +349,8 @@ useEffect(() => {
                     <h2 className="font-serif text-2xl font-semibold text-white">Unsere Stärken</h2>
                   </div>
                   <p className="text-sm text-gray-400">
-                    Diese Zahlen sprechen für unsere Expertise und unser Engagement. Jeder Fall wird mit der gleichen
-                    Professionalität und Diskretion behandelt, die unser spezialisiertes Experten-Netzwerk auszeichnet.
+                    Jedes Mandat folgt demselben Standard: vertraulich, DSGVO-konform, rechtssicher dokumentiert und
+                    entscheidungsreif aufbereitet.
                   </p>
                   <div className="relative mt-6 flex flex-col gap-4">
                     {dossierPages.map((page, index) => (
@@ -373,7 +373,7 @@ useEffect(() => {
                       className="relative z-40 w-full border text-black hover:scale-105 transition-all duration-300"
                       style={{ backgroundColor: '#C2B16D', borderColor: '#C2B16D' }}
                     >
-                      Vertrauliche Erstberatung sichern
+                      Vertrauliches Erstgespräch vereinbaren
                     </Button>
                   </Link>
                 </div>
@@ -387,11 +387,11 @@ useEffect(() => {
             <div className="space-y-4 lg:space-y-6">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif font-semibold text-white">Unsere Ermittlungsphilosophie</h2>
               <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                Unsere Arbeit basiert auf gerichtsverwertbarer Beweisführung und respektvollem Umgang mit allen Beteiligten.
-                Sorgfältige Recherche, mehrstufige Verifikation und dokumentierte Abläufe garantieren belastbare Ergebnisse.
+                Unsere Arbeit basiert auf rechtssicher dokumentierter Beweisführung und respektvollem Umgang mit allen Beteiligten.
+                Sorgfältige Recherche, mehrstufige Verifikation und nachvollziehbar protokollierte Abläufe sorgen für belastbare Ergebnisse.
               </p>
               <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                Moderne Tools unterstützen uns, ersetzen aber nie die Erfahrung unserer Ermittler. Wir kalibrieren jedes Mandat
+                Moderne Tools unterstützen uns, ersetzen aber nie die Erfahrung unserer Ermittler. Jedes Mandat kalibrieren wir
                 entlang eines Risiko-Rahmens, der Compliance, Reputation und Sicherheit gleichwertig berücksichtigt.
               </p>
             </div>
@@ -427,10 +427,10 @@ useEffect(() => {
             <div className="space-y-8 lg:space-y-12">
               {/* Title and Description */}
               <div className="space-y-4 lg:space-y-6">
-                <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif font-semibold text-white">Chronik der Wahrheitssuche</h2>
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif font-semibold text-white">Unser Mandatsprozess</h2>
                 <p className="text-sm sm:text-base text-gray-400">
-                  Jeder Auftrag folgt einem strukturierten fünfstufigen Prozess – von der vertraulichen Erstberatung bis zur
-                  abschließenden Beweisübergabe. Systematische Methodik und transparente Kommunikation garantieren optimale Ergebnisse.
+                  Fünf strukturierte Phasen – vom vertraulichen Erstgespräch über die Ermittlung bis zur Übergabe der
+                  rechtssicher dokumentierten Fallakte. Systematische Methodik und transparente Kommunikation in jedem Schritt.
                 </p>
               </div>
 
@@ -575,11 +575,11 @@ useEffect(() => {
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif font-semibold text-white">Ihr Auftrag, unser Mandat</h2>
               <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                 Wir begleiten Sie von der ersten Risikoanalyse bis zur abschließenden Beweisübergabe. Alle Maßnahmen werden
-                dokumentiert, rechtlich geprüft und erst nach Ihrer Freigabe umgesetzt.
+                dokumentiert und erst nach Ihrer Freigabe umgesetzt.
               </p>
               <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-                Sprechen Sie mit unserem Fallannahme-Team über Ihr Anliegen. In einem unverbindlichen Erstgespräch entwickeln wir
-                einen strukturierten Fahrplan und prüfen notwendige Ressourcen.
+                Im vertraulichen Erstgespräch klären wir Ziel, Sachverhalt und Rahmen – und entwickeln einen strukturierten
+                Mandatsfahrplan inkl. Ressourcen-, Zeit- und Kostenschätzung.
               </p>
               <div className="flex flex-col gap-4 lg:gap-6 rounded-sm border border-white/10 bg-black/60 p-4 lg:p-6 shadow-[0_30px_80px_-25px_rgba(0,0,0,0.8)]">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
