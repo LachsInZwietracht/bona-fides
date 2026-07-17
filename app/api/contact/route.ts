@@ -1,6 +1,17 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
+const contactRecipients = [...new Set(
+  [
+    process.env.CONTACT_EMAIL || 'fabianradlow@gmail.com',
+    'patrick.k.wenk@gmail.com',
+    'mb@brandes-it.com'
+  ]
+    .flatMap((recipients) => recipients.split(','))
+    .map((recipient) => recipient.trim())
+    .filter(Boolean)
+)];
+
 export async function POST(request: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
@@ -39,7 +50,7 @@ export async function POST(request: NextRequest) {
     // Send email
     await resend.emails.send({
       from: 'Bona Fides Contact Form <onboarding@resend.dev>', // You'll update this with your domain
-      to: [process.env.CONTACT_EMAIL || 'your-email@example.com'], // Uses environment variable
+      to: contactRecipients,
       subject: `Neue Fallanfrage: ${caseTypeLabel}`,
       html: `
         <div style="font-family: 'Courier New', monospace; max-width: 600px; margin: 0 auto; background-color: #f8f8f8; border: 1px solid #ddd; padding: 20px;">

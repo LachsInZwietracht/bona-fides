@@ -150,7 +150,7 @@ The site features a fully functional contact form with professional email delive
 ### Setup Requirements
 1. Create Resend account at [resend.com](https://resend.com)
 2. Generate API key and add to environment variables
-3. Configure contact email in `CONTACT_EMAIL` environment variable
+3. Configure one or more comma-separated contact emails in the `CONTACT_EMAIL` environment variable
 4. Deploy environment variables to Vercel for production use
 
 # General
