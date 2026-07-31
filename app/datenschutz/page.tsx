@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Datenschutz | BONA FIDES Detektei - DSGVO-konforme Datenverarbeitung",
+  title: "Datenschutz – DSGVO-konforme Verarbeitung",
   description: "Datenschutzerklärung der BONA FIDES Detektei gemäß DSGVO. Ihre Privatsphäre und der Schutz Ihrer Daten haben oberste Priorität. Transparente Informationen zur Datenverarbeitung.",
   keywords: "Datenschutz, DSGVO, Datenschutzerklärung, Privatsphäre, Bona Fides Detektei",
   alternates: {

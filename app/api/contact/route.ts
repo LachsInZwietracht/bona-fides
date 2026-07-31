@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
+import { caseTypes, labelFor, urgencyOptions } from '@/lib/contact-options';
 
 const contactRecipients = [...new Set(
   [
@@ -12,93 +13,114 @@ const contactRecipients = [...new Set(
     .filter(Boolean)
 )];
 
+/** Anfragen landen unescaped in einer HTML-Mail – hier wird das entschärft. */
+function escapeHtml(value: unknown): string {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function row(label: string, value: string, highlight = false): string {
+  return `
+    <tr>
+      <td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold; color: #666; width: 34%;">${label}</td>
+      <td style="padding: 8px; border-bottom: 1px solid #eee;${
+        highlight ? ' color: #8f8047; font-weight: bold;' : ''
+      }">${value}</td>
+    </tr>`;
+}
+
 export async function POST(request: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
-    const { name, email, phone, caseType, message } = await request.json();
+    const {
+      name,
+      company,
+      role,
+      email,
+      phone,
+      caseType,
+      urgency,
+      message,
+      nda,
+      consent,
+    } = await request.json();
 
-    // Basic validation
     if (!name || !email || !caseType || !message) {
-      return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-    // Email validation
+    if (consent !== true) {
+      return NextResponse.json({ error: 'Consent required' }, { status: 400 });
+    }
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: 'Invalid email format' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
     }
 
-    // Create case type mapping for better readability
-    const caseTypeMap: Record<string, string> = {
-      'corporate-investigation': 'Unternehmensermittlung / Interne Untersuchung',
-      'due-diligence': 'Business Partner Due Diligence',
-      'fraud': 'Fraud / Wirtschaftsdelikt',
-      'cyber-forensics': 'Cyber-Vorfall & Digital Forensics',
-      'insurance-fraud': 'Versicherungs- & Schadenermittlung',
-      'osint-asset-tracing': 'OSINT / Asset Tracing',
-      'other': 'Sonstiges'
-    };
+    const caseTypeLabel = labelFor(caseTypes, caseType);
+    const urgencyLabel = urgency ? labelFor(urgencyOptions, urgency) : 'Keine Angabe';
+    const isUrgent = urgency === 'immediate';
+    const subjectPrefix = isUrgent ? '[EILT] ' : '';
+    const organisation = company ? String(company) : 'Keine Angabe (ggf. Privatmandat)';
 
-    const caseTypeLabel = caseTypeMap[caseType] || caseType;
-
-    // Send email
     await resend.emails.send({
-      from: 'Bona Fides Contact Form <onboarding@resend.dev>', // You'll update this with your domain
+      from: 'Bona Fides Kontaktformular <onboarding@resend.dev>',
       to: contactRecipients,
-      subject: `Neue Fallanfrage: ${caseTypeLabel}`,
+      replyTo: email,
+      subject: `${subjectPrefix}Neue Fallanfrage: ${caseTypeLabel}${company ? ` – ${company}` : ''}`,
       html: `
-        <div style="font-family: 'Courier New', monospace; max-width: 600px; margin: 0 auto; background-color: #f8f8f8; border: 1px solid #ddd; padding: 20px;">
+        <div style="font-family: 'Courier New', monospace; max-width: 640px; margin: 0 auto; background-color: #f8f8f8; border: 1px solid #ddd; padding: 20px;">
           <div style="background-color: #1a1a1a; color: #C2B16D; padding: 15px; text-align: center; margin-bottom: 20px;">
-            <h1 style="margin: 0; font-size: 24px; letter-spacing: 2px;">FALLAUFNAHME-PROTOKOLL</h1>
-            <p style="margin: 5px 0 0 0; font-size: 12px; letter-spacing: 1px;">OPERATION BONA FIDES</p>
+            <h1 style="margin: 0; font-size: 22px; letter-spacing: 2px;">FALLAUFNAHME-PROTOKOLL</h1>
+            <p style="margin: 5px 0 0 0; font-size: 12px; letter-spacing: 1px;">BONA FIDES DETEKTEI</p>
           </div>
+
+          ${
+            isUrgent
+              ? `<div style="background-color: #b91c1c; color: white; padding: 10px; text-align: center; margin-bottom: 20px; font-weight: bold; letter-spacing: 1px;">
+                   EILT – ANFRAGENDE PARTEI NENNT LAUFENDE FRISTEN
+                 </div>`
+              : ''
+          }
 
           <div style="background-color: white; padding: 20px; border: 1px solid #ddd;">
             <div style="border-bottom: 2px solid #C2B16D; padding-bottom: 10px; margin-bottom: 20px;">
-              <h2 style="margin: 0; color: #333; font-size: 18px;">MANDANTENDATEN</h2>
+              <h2 style="margin: 0; color: #333; font-size: 17px;">MANDANTENDATEN</h2>
             </div>
 
             <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-              <tr>
-                <td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold; color: #666; width: 30%;">NAME:</td>
-                <td style="padding: 8px; border-bottom: 1px solid #eee;">${name}</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold; color: #666;">E-MAIL:</td>
-                <td style="padding: 8px; border-bottom: 1px solid #eee;"><a href="mailto:${email}" style="color: #C2B16D;">${email}</a></td>
-              </tr>
-              ${phone ? `
-                <tr>
-                  <td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold; color: #666;">TELEFON:</td>
-                  <td style="padding: 8px; border-bottom: 1px solid #eee;">${phone}</td>
-                </tr>
-              ` : ''}
-              <tr>
-                <td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold; color: #666;">FALLTYP:</td>
-                <td style="padding: 8px; border-bottom: 1px solid #eee; color: #C2B16D; font-weight: bold;">${caseTypeLabel}</td>
-              </tr>
+              ${row('ANSPRECHPARTNER:', escapeHtml(name))}
+              ${row('UNTERNEHMEN:', escapeHtml(organisation))}
+              ${role ? row('FUNKTION:', escapeHtml(role)) : ''}
+              ${row(
+                'E-MAIL:',
+                `<a href="mailto:${escapeHtml(email)}" style="color: #8f8047;">${escapeHtml(email)}</a>`,
+              )}
+              ${phone ? row('TELEFON:', escapeHtml(phone)) : ''}
+              ${row('FALLTYP:', escapeHtml(caseTypeLabel), true)}
+              ${row('DRINGLICHKEIT:', escapeHtml(urgencyLabel), isUrgent)}
+              ${row('NDA GEWÜNSCHT:', nda ? 'JA – vor dem Erstgespräch zusenden' : 'Nein', Boolean(nda))}
             </table>
 
             <div style="border-bottom: 2px solid #C2B16D; padding-bottom: 10px; margin-bottom: 15px;">
-              <h2 style="margin: 0; color: #333; font-size: 18px;">FALLBESCHREIBUNG</h2>
+              <h2 style="margin: 0; color: #333; font-size: 17px;">SACHVERHALT</h2>
             </div>
 
             <div style="background-color: #f8f8f8; padding: 15px; border-left: 4px solid #C2B16D; margin-bottom: 20px;">
-              <p style="margin: 0; line-height: 1.6; white-space: pre-wrap;">${message}</p>
+              <p style="margin: 0; line-height: 1.6; white-space: pre-wrap;">${escapeHtml(message)}</p>
             </div>
 
             <div style="border-top: 2px solid #ddd; padding-top: 15px; text-align: center;">
               <p style="margin: 0; color: #666; font-size: 12px; letter-spacing: 1px;">
-                ⏰ EINGANGSDATUM: ${new Date().toLocaleDateString('de-DE')} ${new Date().toLocaleTimeString('de-DE')}
+                EINGANG: ${new Date().toLocaleDateString('de-DE')} ${new Date().toLocaleTimeString('de-DE')}
               </p>
-              <p style="margin: 5px 0 0 0; color: #C2B16D; font-weight: bold; font-size: 12px;">
-                📧 AUTOMATISCHE BENACHRICHTIGUNG - ANTWORT BINNEN 24H
+              <p style="margin: 5px 0 0 0; color: #8f8047; font-weight: bold; font-size: 12px;">
+                ZUGESAGTE ERSTBEWERTUNG: BINNEN 24 STUNDEN
               </p>
             </div>
           </div>
@@ -106,16 +128,9 @@ export async function POST(request: NextRequest) {
       `
     });
 
-    return NextResponse.json(
-      { message: 'Email sent successfully' },
-      { status: 200 }
-    );
-
+    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
   } catch (error) {
     console.error('Error sending email:', error);
-    return NextResponse.json(
-      { error: 'Failed to send email' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
   }
 }

@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AGB | BONA FIDES Detektei - Geschäftsbedingungen für Ermittlungsdienste",
+  title: "AGB – Geschäftsbedingungen für Ermittlungsmandate",
   description: "Allgemeine Geschäftsbedingungen der BONA FIDES Detektei. Transparente Konditionen für professionelle digitale Ermittlungsdienstleistungen, Cyber-Forensik und Online-Recherchen.",
   keywords: "AGB, Geschäftsbedingungen, Detektei Konditionen, Ermittlungsdienstleistungen, Bona Fides",
   alternates: {

@@ -1,348 +1,386 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
+import { AlertCircle, CheckCircle2, Clock, Lock, Mail, Send, ShieldCheck, UserCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Mail, Lock, Send, CheckCircle2, AlertCircle, Shield } from "lucide-react"
+import { Checkbox } from "@/components/ui/checkbox"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { caseTypes, urgencyOptions } from "@/lib/contact-options"
+import { mailtoLink, siteConfig } from "@/lib/site-config"
+
+const initialForm = {
+  name: "",
+  company: "",
+  role: "",
+  email: "",
+  phone: "",
+  caseType: "",
+  urgency: "",
+  message: "",
+  nda: false,
+  consent: false,
+}
+
+const reassurance = [
+  {
+    icon: Clock,
+    title: "Antwort binnen 24 Stunden",
+    text: "Sie erhalten eine erste Einschätzung zur Machbarkeit – werktags meist deutlich schneller.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "NDA vor dem Detail",
+    text: "Auf Wunsch unterzeichnen wir eine Vertraulichkeitsvereinbarung, bevor Sie Namen nennen.",
+  },
+  {
+    icon: UserCheck,
+    title: "Ehrliche Einschätzung",
+    text: "Wenn sich ein Mandat für Sie nicht rechnet oder rechtlich nicht trägt, sagen wir das.",
+  },
+]
 
 export function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    caseType: '',
-    message: ''
-  })
-  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const [formData, setFormData] = useState(initialForm)
+  const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
   const [errors, setErrors] = useState<Record<string, string>>({})
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {}
 
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name ist erforderlich'
-    }
+    if (!formData.name.trim()) newErrors.name = "Bitte geben Sie einen Ansprechpartner an"
     if (!formData.email.trim()) {
-      newErrors.email = 'E-Mail ist erforderlich'
+      newErrors.email = "E-Mail ist erforderlich"
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Ungültiges E-Mail-Format'
+      newErrors.email = "Ungültiges E-Mail-Format"
     }
-    if (!formData.caseType) {
-      newErrors.caseType = 'Falltyp ist erforderlich'
-    }
-    if (!formData.message.trim()) {
-      newErrors.message = 'Nachricht ist erforderlich'
-    }
+    if (!formData.caseType) newErrors.caseType = "Bitte wählen Sie einen Falltyp"
+    if (!formData.message.trim()) newErrors.message = "Bitte skizzieren Sie den Sachverhalt"
+    if (!formData.consent) newErrors.consent = "Ohne Einwilligung können wir Ihre Anfrage nicht bearbeiten"
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault()
     if (!validateForm()) return
 
-    setFormStatus('submitting')
+    setFormStatus("submitting")
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       })
 
       if (response.ok) {
-        setFormStatus('success')
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          caseType: '',
-          message: ''
-        })
+        setFormStatus("success")
+        setFormData(initialForm)
       } else {
-        setFormStatus('error')
+        setFormStatus("error")
       }
     } catch (error) {
-      console.error('Form submission error:', error)
-      setFormStatus('error')
+      console.error("Form submission error:", error)
+      setFormStatus("error")
     }
   }
 
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
+  const update = (field: keyof typeof initialForm, value: string | boolean) => {
+    setFormData((prev) => ({ ...prev, [field]: value }))
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: '' }))
+      setErrors((prev) => ({ ...prev, [field]: "" }))
     }
   }
+
+  const fieldClass = (field: string) =>
+    `bg-white/5 border-white/15 text-white placeholder:text-gray-500 focus-visible:border-brass focus-visible:ring-brass/30 ${
+      errors[field] ? "border-red-500" : ""
+    }`
 
   return (
-    <div className="relative z-10 py-20 bg-gradient-to-b from-gray-900 via-black to-gray-900 overflow-hidden" id="contact">
-      {/* Landing page style background effects */}
-      <div
-        className="absolute inset-0 opacity-15 mix-blend-screen pointer-events-none"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E")`,
-        }}
-      />
-
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div
-          className="h-full w-full"
-          style={{
-            background: `repeating-linear-gradient(
-              0deg,
-              transparent 0px,
-              transparent 15px,
-              rgba(255,255,255,0.08) 15px,
-              rgba(255,255,255,0.08) 18px,
-              transparent 18px,
-              transparent 35px
-            )`,
-          }}
-        />
-      </div>
-
-      {/* Dramatic lighting effects */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-radial from-white/20 via-white/5 to-transparent blur-3xl" />
-      <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-white/30 via-white/10 to-transparent blur-sm" />
-      <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-white/20 via-white/5 to-transparent blur-sm" />
-
+    <div className="relative z-10 py-20 sm:py-24 border-t border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-6 mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white drop-shadow-2xl">
-            FALL VERTRAULICH SCHILDERN
-          </h2>
+        <div className="grid lg:grid-cols-[1fr_1.35fr] gap-10 lg:gap-16 items-start">
+          {/* Vertrauensspalte */}
+          <div className="lg:sticky lg:top-24">
+            <p className="eyebrow text-brass mb-4">Erstgespräch</p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white leading-tight">
+              Schildern Sie uns Ihren Fall
+            </h2>
+            <p className="mt-4 text-lg text-gray-300 leading-relaxed">
+              Zwei Sätze genügen für den Anfang. Alles Weitere klären wir im vertraulichen Gespräch –
+              unverbindlich und ohne dass Sie sich festlegen.
+            </p>
 
-          <p className="text-xl font-mono text-gray-300 max-w-3xl mx-auto">
-            Vertraulich · DSGVO-konform · Antwort binnen 24 Stunden.
-          </p>
-        </div>
-
-        <div className="max-w-2xl mx-auto relative">
-          {/* Multiple paper layers for depth - matching landing page hero */}
-          <div className="absolute inset-0 bg-gray-200 transform rotate-1 shadow-lg rounded-sm opacity-60" />
-          <div className="absolute inset-0 bg-gray-300 transform -rotate-1 shadow-lg rounded-sm opacity-40" />
-
-          {/* Main case file document with wobble animation */}
-          <div className="bg-white text-black p-6 md:p-8 shadow-2xl transform rotate-2 hover:rotate-1 transition-transform duration-300 relative rounded-sm">
-            {/* Paper texture overlay */}
-            <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-yellow-100 to-gray-200 rounded-sm" />
-
-            {/* Subtle paper grain */}
-            <div
-              className="absolute inset-0 opacity-10 rounded-sm"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' result='noise' seed='1'/%3E%3CfeColorMatrix in='noise' type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperGrain)' opacity='0.4'/%3E%3C/svg%3E")`,
-              }}
-            />
-
-            {/* Case file content */}
-            <div className="relative z-10">
-              {/* Case file header - matching landing page style */}
-              <div className="flex justify-between items-start mb-4 md:mb-6">
-                <h3 className="text-lg md:text-2xl font-mono font-bold text-black tracking-tight">
-                  FALLAKTE #KONTAKT
-                </h3>
-                <div className="bg-red-500 text-white font-mono text-xs px-2 py-1 rounded-sm">AKTIV</div>
-              </div>
-
-              {/* Case file details - matching landing page layout */}
-              <div className="space-y-3 md:space-y-4 font-mono text-xs md:text-sm mb-6">
-                <div className="border-b border-gray-300 pb-2">
-                  <span className="font-bold text-gray-700">Art:</span>
-                  <p className="text-black">Vertrauliches Erstgespräch</p>
-                </div>
-
-                <div className="border-b border-gray-300 pb-2">
-                  <span className="font-bold text-gray-700">Status:</span>
-                  <p className="text-red-600 font-bold">Bereit für Aufnahme</p>
-                </div>
-
-              </div>
-
-              {/* Quote section - playful and matching landing page */}
-              <div className="mt-4 md:mt-6 p-3 md:p-4 bg-gray-100 border-l-4 rounded-sm mb-6" style={{borderColor: '#C2B16D'}}>
-                <p className="text-xs italic text-gray-700 leading-relaxed">
-                  &ldquo;Klarheit beginnt mit dem ersten Gespräch. Ihre Anfrage wird vertraulich behandelt.&rdquo;
-                </p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-4">
-                {/* Form fields in case file style */}
-                <div className="grid md:grid-cols-2 gap-4">
-                  {/* Name */}
-                  <div className="border-b border-gray-300 pb-2">
-                    <div className="font-bold text-gray-700 text-sm mb-1">UNTERNEHMEN / NAME:</div>
-                    <Input
-                      id="name"
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) => handleInputChange('name', e.target.value)}
-                      className={`border-0 bg-transparent text-black font-mono placeholder:text-gray-500 focus:ring-0 px-0 ${
-                        errors.name ? 'text-red-600' : ''
-                      }`}
-                      style={{borderBottom: errors.name ? '2px solid #dc2626' : '1px solid transparent'}}
-                      placeholder="[VERTRAULICH]"
-                    />
-                    {errors.name && (
-                      <p className="text-red-500 text-xs mt-1 font-mono">{errors.name}</p>
-                    )}
+            <ul className="mt-8 space-y-6">
+              {reassurance.map((item) => (
+                <li key={item.title} className="flex gap-4">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-brass/15">
+                    <item.icon className="h-5 w-5 text-brass" aria-hidden="true" />
                   </div>
-
-                  {/* Email */}
-                  <div className="border-b border-gray-300 pb-2">
-                    <div className="font-bold text-gray-700 text-sm mb-1">KONTAKT:</div>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => handleInputChange('email', e.target.value)}
-                      className={`border-0 bg-transparent text-black font-mono placeholder:text-gray-500 focus:ring-0 px-0 ${
-                        errors.email ? 'text-red-600' : ''
-                      }`}
-                      style={{borderBottom: errors.email ? '2px solid #dc2626' : '1px solid transparent'}}
-                      placeholder="name@unternehmen.de"
-                    />
-                    {errors.email && (
-                      <p className="text-red-500 text-xs mt-1 font-mono">{errors.email}</p>
-                    )}
+                  <div>
+                    <p className="font-medium text-white">{item.title}</p>
+                    <p className="mt-1 text-sm text-gray-400 leading-relaxed">{item.text}</p>
                   </div>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 border-t border-white/10 pt-6">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-gray-500">
+                Lieber direkt schreiben?
+              </p>
+              <a
+                href={mailtoLink}
+                className="mt-2 inline-flex items-center gap-2 text-brass hover:text-brass-light transition-colors"
+              >
+                <Mail className="h-4 w-4" />
+                {siteConfig.email}
+              </a>
+            </div>
+          </div>
+
+          {/* Formular */}
+          <div className="rounded-sm border border-white/10 bg-white/[0.03] p-6 sm:p-8 backdrop-blur-sm">
+            <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="name" className="mb-2 block text-sm font-medium text-gray-300">
+                    Ansprechpartner <span className="text-brass">*</span>
+                  </label>
+                  <Input
+                    id="name"
+                    value={formData.name}
+                    onChange={(event) => update("name", event.target.value)}
+                    className={fieldClass("name")}
+                    placeholder="Vor- und Nachname"
+                    aria-invalid={Boolean(errors.name)}
+                  />
+                  {errors.name && <p className="mt-1 text-xs text-red-400">{errors.name}</p>}
                 </div>
 
-                {/* Phone */}
-                <div className="border-b border-gray-300 pb-2">
-                  <div className="font-bold text-gray-700 text-sm mb-1">TELEFON:</div>
+                <div>
+                  <label htmlFor="company" className="mb-2 block text-sm font-medium text-gray-300">
+                    Unternehmen
+                  </label>
+                  <Input
+                    id="company"
+                    value={formData.company}
+                    onChange={(event) => update("company", event.target.value)}
+                    className={fieldClass("company")}
+                    placeholder="Firmenname"
+                  />
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="email" className="mb-2 block text-sm font-medium text-gray-300">
+                    E-Mail <span className="text-brass">*</span>
+                  </label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={(event) => update("email", event.target.value)}
+                    className={fieldClass("email")}
+                    placeholder="name@unternehmen.de"
+                    aria-invalid={Boolean(errors.email)}
+                  />
+                  {errors.email && <p className="mt-1 text-xs text-red-400">{errors.email}</p>}
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="mb-2 block text-sm font-medium text-gray-300">
+                    Telefon
+                  </label>
                   <Input
                     id="phone"
                     type="tel"
                     value={formData.phone}
-                    onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="border-0 bg-transparent text-black font-mono placeholder:text-gray-500 focus:ring-0 px-0"
-                    placeholder="+49 (0) XXX XXXXXXX [optional]"
+                    onChange={(event) => update("phone", event.target.value)}
+                    className={fieldClass("phone")}
+                    placeholder="für den schnellen Rückruf"
+                  />
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label htmlFor="role" className="mb-2 block text-sm font-medium text-gray-300">
+                    Ihre Funktion
+                  </label>
+                  <Input
+                    id="role"
+                    value={formData.role}
+                    onChange={(event) => update("role", event.target.value)}
+                    className={fieldClass("role")}
+                    placeholder="z. B. Geschäftsführung, HR, Compliance"
                   />
                 </div>
 
-                {/* Case Type */}
-                <div className="border-b border-gray-300 pb-2">
-                  <div className="font-bold text-gray-700 text-sm mb-1">FALLTYP:</div>
-                  <Select value={formData.caseType} onValueChange={(value) => handleInputChange('caseType', value)}>
-                    <SelectTrigger className={`border-0 bg-transparent text-black font-mono h-auto p-0 ${
-                      errors.caseType ? 'text-red-600' : ''
-                    }`} style={{color: formData.caseType ? '#C2B16D' : 'rgb(107 114 128)', fontWeight: formData.caseType ? 'bold' : 'normal'}}>
-                      <SelectValue placeholder="[KLASSIFIZIERUNG AUSWÄHLEN]" />
+                <div>
+                  <span className="mb-2 block text-sm font-medium text-gray-300">Dringlichkeit</span>
+                  <Select
+                    value={formData.urgency}
+                    onValueChange={(value) => update("urgency", value)}
+                  >
+                    <SelectTrigger
+                      data-testid="urgency-trigger"
+                      aria-label="Dringlichkeit"
+                      className="w-full bg-white/5 border-white/15 text-white"
+                    >
+                      <SelectValue placeholder="Zeitrahmen wählen" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="corporate-investigation">Unternehmensermittlung / Interne Untersuchung</SelectItem>
-                      <SelectItem value="due-diligence">Business Partner Due Diligence</SelectItem>
-                      <SelectItem value="fraud">Fraud / Wirtschaftsdelikt</SelectItem>
-                      <SelectItem value="cyber-forensics">Cyber-Vorfall & Digital Forensics</SelectItem>
-                      <SelectItem value="insurance-fraud">Versicherungs- & Schadenermittlung</SelectItem>
-                      <SelectItem value="osint-asset-tracing">OSINT / Asset Tracing</SelectItem>
-                      <SelectItem value="other">Sonstiges</SelectItem>
+                      {urgencyOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
-                  {errors.caseType && (
-                    <p className="text-red-500 text-xs mt-1 font-mono">{errors.caseType}</p>
-                  )}
                 </div>
-
-                {/* Message */}
-                <div className="mt-6">
-                  <div className="font-bold text-gray-700 text-sm mb-2">FALLBESCHREIBUNG:</div>
-                  <div className="bg-gray-50 border-l-4 p-4 mb-4" style={{borderColor: '#C2B16D'}}>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) => handleInputChange('message', e.target.value)}
-                      rows={6}
-                      className={`bg-transparent border-0 text-black font-mono placeholder:text-gray-500 focus:ring-0 resize-none p-0 ${
-                        errors.message ? 'text-red-600' : ''
-                      }`}
-                      placeholder="Skizzieren Sie Sachverhalt, Beteiligte und Ihr Ziel. Übertragung verschlüsselt, Bearbeitung DSGVO-konform. Auf Wunsch NDA vor dem Erstgespräch."
-                    />
-                  </div>
-                  {errors.message && (
-                    <p className="text-red-500 text-xs mb-4 font-mono">{errors.message}</p>
-                  )}
-                </div>
-
-                {/* Status Messages */}
-                {formStatus === 'success' && (
-                  <div className="bg-green-100 border-l-4 border-green-600 p-4 mb-4">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-green-600" />
-                      <p className="text-green-700 font-mono text-sm">
-                        ✓ FALLAKTE ERFOLGREICH ÜBERMITTELT - ANTWORT BINNEN 24H
-                      </p>
-                    </div>
-                  </div>
-                )}
-
-                {formStatus === 'error' && (
-                  <div className="bg-red-100 border-l-4 border-red-600 p-4 mb-4">
-                    <div className="flex items-center gap-2">
-                      <AlertCircle className="h-4 w-4 text-red-600" />
-                      <p className="text-red-700 font-mono text-sm">
-                        ⚠ ÜBERTRAGUNG FEHLGESCHLAGEN - BITTE WIEDERHOLEN
-                      </p>
-                    </div>
-                  </div>
-                )}
-
-                {/* Submit button with case file styling */}
-                <div className="mt-6 pt-4 border-t border-gray-300">
-                  <div className="flex items-center gap-4 mb-4 text-xs font-mono text-gray-600">
-                    <div className="flex items-center gap-1">
-                      <Lock className="h-3 w-3 text-green-600" />
-                      <span>VERSCHLÜSSELT</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Shield className="h-3 w-3 text-blue-600" />
-                      <span>DSGVO-KONFORM</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <AlertCircle className="h-3 w-3" style={{color: '#C2B16D'}} />
-                      <span>STRENG VERTRAULICH</span>
-                    </div>
-                  </div>
-
-                  <Button
-                    type="submit"
-                    disabled={formStatus === 'submitting'}
-                    className="w-full font-mono font-bold text-black transition-all duration-300 disabled:opacity-50 hover:scale-105"
-                    style={{
-                      backgroundColor: '#C2B16D',
-                      border: '2px solid #C2B16D'
-                    }}
-                  >
-                    {formStatus === 'submitting' ? (
-                      <>
-                        <Send className="mr-2 h-4 w-4 animate-spin" />
-                        ÜBERTRAGUNG LÄUFT...
-                      </>
-                    ) : (
-                      <>
-                        <Mail className="mr-2 h-4 w-4" />
-                        FALLAKTE ÜBERMITTELN
-                      </>
-                    )}
-                  </Button>
-                </div>
-              </form>
-
-
-              {/* Security icons like landing page */}
-              <div className="absolute top-6 right-6 flex gap-2 opacity-20">
-                <Lock className="h-4 w-4 text-gray-600" />
-                <Shield className="h-4 w-4 text-gray-600" />
               </div>
-            </div>
+
+              <div>
+                <span className="mb-2 block text-sm font-medium text-gray-300">
+                  Falltyp <span className="text-brass">*</span>
+                </span>
+                <Select value={formData.caseType} onValueChange={(value) => update("caseType", value)}>
+                  <SelectTrigger
+                    data-testid="case-type-trigger"
+                    aria-label="Falltyp"
+                    className={`w-full bg-white/5 text-white ${
+                      errors.caseType ? "border-red-500" : "border-white/15"
+                    }`}
+                  >
+                    <SelectValue placeholder="Worum geht es?" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {caseTypes.map((option) => (
+                      <SelectItem key={option.value} value={option.value}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                {errors.caseType && <p className="mt-1 text-xs text-red-400">{errors.caseType}</p>}
+              </div>
+
+              <div>
+                <label htmlFor="message" className="mb-2 block text-sm font-medium text-gray-300">
+                  Sachverhalt <span className="text-brass">*</span>
+                </label>
+                <Textarea
+                  id="message"
+                  rows={6}
+                  value={formData.message}
+                  onChange={(event) => update("message", event.target.value)}
+                  className={`${fieldClass("message")} resize-none`}
+                  placeholder="Was ist vorgefallen, wer ist beteiligt und was möchten Sie erreichen? Nennen Sie zunächst nur so viel, wie Sie ohne NDA nennen möchten."
+                  aria-invalid={Boolean(errors.message)}
+                />
+                {errors.message && <p className="mt-1 text-xs text-red-400">{errors.message}</p>}
+              </div>
+
+              <div className="space-y-3 border-t border-white/10 pt-5">
+                <div className="flex items-start gap-3">
+                  <Checkbox
+                    id="nda"
+                    checked={formData.nda}
+                    onCheckedChange={(checked) => update("nda", checked === true)}
+                    className="mt-0.5 border-white/30 data-[state=checked]:bg-brass data-[state=checked]:border-brass data-[state=checked]:text-black"
+                  />
+                  <label htmlFor="nda" className="text-sm text-gray-300 leading-relaxed">
+                    Bitte senden Sie mir vor dem Gespräch eine Vertraulichkeitsvereinbarung (NDA).
+                  </label>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Checkbox
+                    id="consent"
+                    checked={formData.consent}
+                    onCheckedChange={(checked) => update("consent", checked === true)}
+                    aria-invalid={Boolean(errors.consent)}
+                    className="mt-0.5 border-white/30 data-[state=checked]:bg-brass data-[state=checked]:border-brass data-[state=checked]:text-black"
+                  />
+                  <label htmlFor="consent" className="text-sm text-gray-300 leading-relaxed">
+                    Ich willige ein, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet
+                    werden. <span className="text-brass">*</span>{" "}
+                    <Link
+                      href="/datenschutz"
+                      className="underline underline-offset-4 hover:text-brass"
+                    >
+                      Datenschutzerklärung
+                    </Link>
+                  </label>
+                </div>
+                {errors.consent && <p className="text-xs text-red-400">{errors.consent}</p>}
+              </div>
+
+              {formStatus === "success" && (
+                <div
+                  role="status"
+                  className="flex items-start gap-3 rounded-sm border border-green-600/40 bg-green-600/10 p-4"
+                >
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-400" />
+                  <p className="text-sm text-green-200">
+                    Ihre Anfrage ist eingegangen. Sie erhalten in der Regel binnen 24 Stunden eine
+                    Erstbewertung – prüfen Sie sicherheitshalber auch Ihren Spam-Ordner.
+                  </p>
+                </div>
+              )}
+
+              {formStatus === "error" && (
+                <div
+                  role="alert"
+                  className="flex items-start gap-3 rounded-sm border border-red-600/40 bg-red-600/10 p-4"
+                >
+                  <AlertCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" />
+                  <p className="text-sm text-red-200">
+                    Die Übertragung ist fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben
+                    Sie direkt an{" "}
+                    <a href={mailtoLink} className="underline underline-offset-4">
+                      {siteConfig.email}
+                    </a>
+                    .
+                  </p>
+                </div>
+              )}
+
+              <Button
+                type="submit"
+                disabled={formStatus === "submitting"}
+                className="w-full bg-brass text-black hover:bg-brass-light font-semibold min-h-[52px] text-base disabled:opacity-60"
+              >
+                {formStatus === "submitting" ? (
+                  <>
+                    <Send className="mr-2 h-4 w-4 animate-pulse" />
+                    Wird übermittelt …
+                  </>
+                ) : (
+                  <>
+                    <Lock className="mr-2 h-4 w-4" />
+                    Vertrauliche Anfrage senden
+                  </>
+                )}
+              </Button>
+
+              <p className="text-center font-mono text-[11px] uppercase tracking-wider text-gray-500">
+                Verschlüsselte Übertragung · DSGVO-konform · Keine Weitergabe an Dritte
+              </p>
+            </form>
           </div>
         </div>
       </div>

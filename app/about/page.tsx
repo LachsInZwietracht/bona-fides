@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { AboutPageClient } from "./about-page-client"
 
 export const metadata: Metadata = {
-  title: "Über uns | BONA FIDES Detektei – Digitale Ermittlungen für Unternehmen",
+  title: "Über uns – Wirtschaftsdetektei mit Expertennetzwerk",
   description: "Spezialisierte digitale Detektei mit interdisziplinärem Experten-Netzwerk für Unternehmen und Versicherer. Strukturierter Mandatsprozess, DSGVO-konform und rechtssicher dokumentiert.",
   keywords: "Detektei, digitale Ermittlungen, Unternehmensermittlung, Wirtschaftsermittlung, Cyber-Forensik, OSINT, Asset Tracing, Versicherungsbetrug, Deutschland",
   alternates: {

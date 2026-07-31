@@ -9,7 +9,7 @@ import { Search } from "lucide-react";
 import { RecentArticlesSection } from "@/components/recent-articles-section";
 
 export const metadata: Metadata = {
-  title: "Blog | Bona Fides Detektei - Expertise in Digitalen Ermittlungen",
+  title: "Fachbeiträge zu Wirtschaftsermittlungen",
   description:
     "Fachartikel zu digitalen Ermittlungen, Cyberkriminalität, Betrugsaufklärung und Hintergrundprüfungen. DSGVO-konform, rechtssicher und praxisnah von spezialisierten Ermittlungsexperten.",
   keywords: "Detektei Blog, digitale Ermittlungen, Cyberkriminalität, Betrugsaufklärung, OSINT, forensische Analysen, Hintergrundprüfungen",

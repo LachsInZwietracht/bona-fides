@@ -113,6 +113,14 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Brand palette – noir + brass */
+@theme {
+  --color-brass: #c2b16d;
+  --color-brass-light: #fef3c6;
+  --color-brass-dark: #8f8047;
+  --color-ink: #0b0b0c;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -160,4 +168,36 @@
 
 .ticker-track:hover {
   animation-play-state: paused;
+}
+
+/* Shared noir surface used across landing and service pages */
+.noir-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E");
+}
+
+.noir-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 15px,
+    rgba(255, 255, 255, 0.08) 15px,
+    rgba(255, 255, 255, 0.08) 18px,
+    transparent 18px,
+    transparent 35px
+  );
+}
+
+/* Section eyebrow used to anchor scanning readers */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track,
+  .animate-pulse {
+    animation: none;
+  }
 }
