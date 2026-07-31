@@ -8,12 +8,17 @@ import {
 
 export const dynamicParams = false
 
+interface RedesignPageProps {
+  params: Promise<{ variant: string }>
+}
+
 export function generateStaticParams() {
   return Object.values(landingRedesigns).map((design) => ({ variant: design.reviewToken }))
 }
 
-export function generateMetadata({ params }: { params: { variant: string } }): Metadata {
-  const variant = getRedesignVariantByToken(params.variant)
+export async function generateMetadata({ params }: RedesignPageProps): Promise<Metadata> {
+  const { variant: token } = await params
+  const variant = getRedesignVariantByToken(token)
   if (!variant) return {}
   const design = landingRedesigns[variant]
   return {
@@ -35,8 +40,9 @@ export function generateMetadata({ params }: { params: { variant: string } }): M
   }
 }
 
-export default function RedesignPage({ params }: { params: { variant: string } }) {
-  const variant = getRedesignVariantByToken(params.variant)
+export default async function RedesignPage({ params }: RedesignPageProps) {
+  const { variant: token } = await params
+  const variant = getRedesignVariantByToken(token)
   if (!variant) notFound()
   return <LandingRedesignPage variant={variant} />
 }
