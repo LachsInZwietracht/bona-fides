@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 import { NoirShell } from "@/components/noir-shell"
 import { BlogCard } from "@/components/blog-card"
 import { ContactForm } from "@/components/contact-form"
-import { DamageCalculator } from "@/components/damage-calculator"
+import { LossLandscape } from "@/components/loss-landscape"
 import { StickyCta } from "@/components/sticky-cta"
 import { CtaBand } from "@/components/cta-band"
 import {
@@ -118,7 +118,7 @@ export default function HomePage() {
         <HeroSection />
         <SegmentsSection />
         <ServicesSection />
-        <DamageCalculator />
+        <LossLandscape />
         <ProcessSection />
         <PricingSection />
         <AssuranceSection />

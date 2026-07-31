@@ -44,42 +44,25 @@ test.describe("B2B-Startseite", () => {
     await expect(page.locator("h1")).toContainText("Lohnfortzahlungsbetrug");
   });
 
-  test("Rechner stellt Schadenssumme und Ermittlungsaufwand gegenüber", async ({ page }) => {
-    const calculator = page.locator("#rechner");
-    await calculator.scrollIntoViewIfNeeded();
+  test("belegt die Schadenslage mit verlinkten Quellen", async ({ page }) => {
+    const section = page.locator("#schadenslage");
+    await section.scrollIntoViewIfNeeded();
 
-    const effort = calculator.getByTestId("effort-range");
-    const effortBefore = await effort.textContent();
+    const figures = section.locator("article");
+    await expect(figures).toHaveCount(4);
 
-    // Fallart wechseln: Aufwandsspanne und Startwert müssen mitziehen
-    await calculator.getByTestId("calc-case-trigger").click();
-    await page.getByRole("option", { name: /Vorgetäuschte Arbeitsunfähigkeit/ }).click();
-
-    await expect(effort).not.toHaveText(effortBefore ?? "");
-    await expect(calculator.getByTestId("damage-value")).toContainText("9.000");
-
-    // Höherer Schaden verschiebt das Verhältnis nach oben
-    const ratioBefore = await calculator.getByTestId("calc-ratio").textContent();
-    const slider = calculator.getByTestId("damage-slider").locator('[role="slider"]');
-    await slider.focus();
-    for (let i = 0; i < 10; i += 1) {
-      await slider.press("ArrowRight");
+    // Jede Zahl muss eine anklickbare Quelle tragen – sonst ist sie wertlos
+    for (let i = 0; i < 4; i += 1) {
+      const figure = figures.nth(i);
+      await expect(figure.locator('a[target="_blank"]')).toHaveAttribute("href", /^https:\/\//);
+      await expect(figure.getByRole("link", { name: "Leistung" })).toHaveAttribute(
+        "href",
+        /^\/leistungen\//,
+      );
     }
-    await expect(calculator.getByTestId("calc-ratio")).not.toHaveText(ratioBefore ?? "");
 
-    await calculator.getByRole("link", { name: /Fall prüfen lassen/i }).click();
-    await expect(page.locator("#contact")).toBeInViewport({ timeout: 10000 });
-  });
-
-  test("rät bei zu kleinen Summen vom Mandat ab, statt es zu verkaufen", async ({ page }) => {
-    const calculator = page.locator("#rechner");
-    await calculator.scrollIntoViewIfNeeded();
-
-    const slider = calculator.getByTestId("damage-slider").locator('[role="slider"]');
-    await slider.focus();
-    await slider.press("Home");
-
-    await expect(calculator.getByTestId("calc-ratio")).toContainText("Hier lohnt erst das Gespräch");
+    // Die Einordnung, dass es Marktzahlen sind, darf nicht fehlen
+    await expect(section).toContainText(/keine Aussage über Ihren Fall/);
   });
 
   test("macht Honorarmodelle und Kostenerstattung sichtbar", async ({ page }) => {
