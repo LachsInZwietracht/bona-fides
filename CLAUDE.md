@@ -3,9 +3,9 @@
 Bona Fides — Wirtschaftsdetektei-Website. Noir-Ästhetik, alle Inhalte auf Deutsch,
 Fokus B2B (Unternehmen, Versicherer, Kanzleien), B2C als Nebenlinie.
 
-**Stack:** Next 14.2.25 App Router · React 18 · TypeScript strict · Tailwind 4 ·
-shadcn/ui (new-york, lucide) · Resend
-`package.json` fordert Next ^15 — installiert ist 14.2.25. Keine 15-only-APIs verwenden.
+**Stack:** Next 15.5.x App Router · React 19.2 · TypeScript strict · Tailwind 4 ·
+shadcn/ui (new-york, lucide) · Resend · Node 24 LTS
+Abhängigkeiten reproduzierbar mit `npm ci` aus dem Lockfile installieren.
 
 **Schriften:** Playfair (`font-serif`, Überschriften) · Inter (`font-sans`, Fließtext) ·
 JetBrains Mono (`font-mono`, Labels und Kennzahlen). Markenfarben: `brass`, `brass-light`.
