@@ -12,13 +12,16 @@ JetBrains Mono (`font-mono`, Labels und Kennzahlen). Markenfarben: `brass`, `bra
 
 ## Validierung
 
-`npm run lint` → `npm run typecheck` → `npm run test` → `npm run build`
+Zügig arbeiten, nicht jede Änderung durch die volle Kette schicken.
 
-- Playwright läuft gegen Port 3000; anderer Port via `PLAYWRIGHT_BASE_URL`.
-- Im Dev-Server flackern Tests durch Kompilierungslatenz — bei Zweifeln gegen
-  `next build && next start` prüfen.
+- Inhalts- und Textänderungen: `npm run lint` genügt, dann committen.
+- Logik, neue Komponenten, Routen: zusätzlich `npm run typecheck`.
+- Vor dem Merge auf `main`: einmal `npm run build`.
+- Tests (`npm run test`) nur laufen lassen, wenn die Änderung sie plausibel
+  betrifft, oder auf Zuruf. Playwright nutzt Port 3000, anderer Port via
+  `PLAYWRIGHT_BASE_URL`. Im Dev-Server flackern sie durch Kompilierungslatenz —
+  im Zweifel gegen `next build && next start` prüfen.
 - Fremde Tests fallen um: **STOPP und fragen**, nicht nebenbei reparieren.
-- Neue Funktionalität braucht Tests aus Nutzersicht. Keine reinen Sichtbarkeitsprüfungen.
 
 ## Nie
 

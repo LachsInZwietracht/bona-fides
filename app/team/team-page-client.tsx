@@ -272,7 +272,7 @@ export function TeamPageClient() {
               <h2 className="font-serif text-2xl font-semibold text-white sm:text-3xl md:text-4xl">Ihr Mandat, klar strukturiert.</h2>
               <p className="mt-4 text-base text-gray-300">
                 Schildern Sie uns vertraulich Sachverhalt und Ziel. Sie erhalten in der Regel binnen 24 Stunden eine belastbare
-                Erstbewertung mit Vorschlag für Team, Vorgehen und Rahmen.
+                Erste Einschätzung mit Vorschlag für Team, Vorgehen und Rahmen.
               </p>
               <Link href="/#contact">
                 <Button
