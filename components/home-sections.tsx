@@ -159,7 +159,7 @@ export function SegmentsSection() {
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {segments.map((segment) => (
-            <Link
+            <a
               key={segment.title}
               href={segment.href}
               className="group flex flex-col rounded-sm border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:border-brass/40 hover:bg-white/[0.06]"
@@ -171,7 +171,7 @@ export function SegmentsSection() {
                 {segment.linkLabel}
                 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
               </span>
-            </Link>
+            </a>
           ))}
         </div>
       </div>
