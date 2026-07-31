@@ -559,21 +559,6 @@ export function CaseStudySection() {
               </ol>
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
-              {[
-                ["3", "Jurisdiktionen"],
-                ["5+", "Monate Laufzeit"],
-                ["1", "Behördenmeldung"],
-              ].map(([value, label]) => (
-                <div
-                  key={label}
-                  className="rounded-sm border border-white/10 bg-white/[0.03] p-4 text-center"
-                >
-                  <p className="font-serif text-2xl font-bold text-brass">{value}</p>
-                  <p className="mt-1 font-mono text-[11px] text-gray-400">{label}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="space-y-6">
