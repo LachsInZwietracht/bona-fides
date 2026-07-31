@@ -8,6 +8,7 @@ interface CtaBandProps {
   subline: string
   /** Overrides the default primary button label */
   primaryLabel?: string
+  contactHref?: string
 }
 
 /**
@@ -18,6 +19,7 @@ export function CtaBand({
   headline,
   subline,
   primaryLabel = "Fall vertraulich schildern",
+  contactHref = "/#contact",
 }: CtaBandProps) {
   return (
     <section className="relative z-10 py-20 sm:py-24">
@@ -39,7 +41,7 @@ export function CtaBand({
                 size="lg"
                 className="bg-brass text-black hover:bg-brass-light font-semibold text-base px-8 py-6 min-h-[52px] transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(194,177,109,0.5)]"
               >
-                <Link href="/#contact">
+                <Link href={contactHref}>
                   {primaryLabel}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>

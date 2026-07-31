@@ -25,7 +25,7 @@ const euro = new Intl.NumberFormat("de-DE", {
  * Ermittlungsaufwand gegenüber – damit die Kosten als Investition und nicht als
  * weitere Belastung gelesen werden.
  */
-export function DamageCalculator() {
+export function DamageCalculator({ contactHref = "/#contact" }: { contactHref?: string }) {
   const [caseValue, setCaseValue] = useState(calculatorCases[0].value)
   const [damageByCase, setDamageByCase] = useState<Record<string, number>>(() =>
     Object.fromEntries(calculatorCases.map((item) => [item.value, item.defaultDamage])),
@@ -219,7 +219,7 @@ export function DamageCalculator() {
                 asChild
                 className="flex-1 bg-brass text-black hover:bg-brass-light font-semibold min-h-[48px]"
               >
-                <Link href="/#contact">
+                <Link href={contactHref}>
                   Fall prüfen lassen
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
