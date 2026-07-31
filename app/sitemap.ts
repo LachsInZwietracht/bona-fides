@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getAllArticles } from '@/lib/blog'
+import { services } from '@/lib/services-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.bona-fides-detektei.de'
@@ -48,6 +49,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/leistungen`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // Leistungsseiten sind die wichtigsten Einstiege für Unternehmensanfragen
+    ...services.map((service) => ({
+      url: `${baseUrl}/leistungen/${service.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: service.audience === 'b2b' ? 0.85 : 0.6,
+    })),
   ]
 
   // Get all blog articles dynamically

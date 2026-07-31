@@ -1,233 +1,127 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
+import { acceptCookiesUpfront } from "./helpers";
 
-test.describe('Bona Fides Detective Agency Homepage', () => {
+
+test.describe("B2B-Startseite", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
+    await acceptCookiesUpfront(page);
+    await page.goto("/");
   });
 
-  test('displays hero section with correct branding and content', async ({ page }) => {
-    // Check main heading
-    await expect(page.locator('h1')).toContainText('BONA');
-    await expect(page.locator('h1')).toContainText('FIDES');
-    
-    // Check subtitle
-    await expect(page.locator('text=Detective Agency')).toBeVisible();
-    
-    // Check description
-    await expect(page.locator('text=Professional investigation services with integrity')).toBeVisible();
-    
-    // Check CTA buttons are present and clickable
-    await expect(page.locator('button:has-text("Free Consultation")')).toBeVisible();
-    await expect(page.locator('button:has-text("View Our Services")')).toBeVisible();
-    
-    // Check trust indicators
-    await expect(page.locator('text=Confidential')).toBeVisible();
-    await expect(page.locator('text=Professional')).toBeVisible();
-    await expect(page.locator('text=Results Driven')).toBeVisible();
-    
-    // Check case file visual element
-    await expect(page.locator('text=CASE FILE #2024-001')).toBeVisible();
-    await expect(page.locator('text=ACTIVE')).toBeVisible();
+  test("positioniert sich in H1 und Metadaten als Wirtschaftsdetektei für Unternehmen", async ({
+    page,
+  }) => {
+    await expect(page).toHaveTitle(/Wirtschaftsdetektei für Unternehmen/i);
+
+    const h1 = page.locator("h1");
+    await expect(h1).toHaveCount(1);
+    await expect(h1).toContainText("Wirtschaftsdetektei für Unternehmen");
+    await expect(h1).toContainText("Versicherer und Kanzleien");
+
+    const description = page.locator('meta[name="description"]');
+    await expect(description).toHaveAttribute("content", /Unternehmen, Versicherer und Kanzleien/);
   });
 
-  test('navigation header works correctly', async ({ page }) => {
-    // Check logo is present and clickable
-    await expect(page.locator('text=BONA FIDES').first()).toBeVisible();
-    
-    // Check all navigation links are present
-    await expect(page.locator('nav >> text=Home')).toBeVisible();
-    await expect(page.locator('nav >> text=Services')).toBeVisible();
-    await expect(page.locator('nav >> text=About')).toBeVisible();
-    await expect(page.locator('nav >> text=Team')).toBeVisible();
-    await expect(page.locator('nav >> text=Contact Us')).toBeVisible();
-    
-    // Test Contact Us button functionality
-    await page.locator('nav >> button:has-text("Contact Us")').click();
-    await expect(page.locator('#contact')).toBeInViewport();
+  test("führt Besucher vom Hero-CTA in das Anfrageformular", async ({ page }) => {
+    await page.getByRole("link", { name: /Fall vertraulich schildern/i }).first().click();
+
+    const contact = page.locator("#contact");
+    await expect(contact).toBeInViewport({ timeout: 10000 });
+    await expect(contact.getByLabel(/Ansprechpartner/)).toBeVisible();
   });
 
-  test('services section displays all service cards', async ({ page }) => {
-    // Check section title
-    await expect(page.locator('text=INVESTIGATION SERVICES')).toBeVisible();
-    
-    // Check all 6 service cards are present
-    const services = [
-      'Private Investigations',
-      'Corporate Security', 
-      'Insurance Claims',
-      'Background Checks',
-      'Surveillance Services',
-      'Security Consulting'
-    ];
-    
-    for (const service of services) {
-      await expect(page.locator(`text=${service}`)).toBeVisible();
+  test("verlinkt jedes Käufersegment auf die passende Leistungsseite", async ({ page }) => {
+    const segments = page.locator("#fuer-wen a");
+    await expect(segments).toHaveCount(6);
+
+    await page
+      .locator("#fuer-wen")
+      .getByRole("link", { name: /Personalleitung & HR/ })
+      .click();
+
+    await expect(page).toHaveURL(/\/leistungen\/lohnfortzahlungsbetrug$/);
+    await expect(page.locator("h1")).toContainText("Lohnfortzahlungsbetrug");
+  });
+
+  test("Schadensrechner reagiert auf Eingaben und führt zum Kontakt", async ({ page }) => {
+    const calculator = page.locator("#schadensrechner");
+    await calculator.scrollIntoViewIfNeeded();
+
+    const total = calculator.getByTestId("damage-total");
+    const before = await total.textContent();
+
+    const daysSlider = calculator.getByTestId("days-slider").locator('[role="slider"]');
+    await daysSlider.focus();
+    for (let i = 0; i < 5; i += 1) {
+      await daysSlider.press("ArrowRight");
     }
-    
-    // Check service features are displayed
-    await expect(page.locator('text=Missing Persons')).toBeVisible();
-    await expect(page.locator('text=Employee Screening')).toBeVisible();
-    await expect(page.locator('text=Workers Comp')).toBeVisible();
-    
-    // Check CTA section
-    await expect(page.locator('text=NEED A CUSTOM INVESTIGATION?')).toBeVisible();
+
+    await expect(calculator.getByTestId("days-value")).toContainText("25 Tage");
+    await expect(total).not.toHaveText(before ?? "");
+
+    await calculator.getByRole("link", { name: /Fall prüfen lassen/i }).click();
+    await expect(page.locator("#contact")).toBeInViewport({ timeout: 10000 });
   });
 
-  test('trust section displays metrics and credentials', async ({ page }) => {
-    // Check section title
-    await expect(page.locator('text=WHY CHOOSE BONA FIDES')).toBeVisible();
-    
-    // Check trust metrics
-    await expect(page.locator('text=50+')).toBeVisible();
-    await expect(page.locator('text=Years Experience')).toBeVisible();
-    await expect(page.locator('text=2,500+')).toBeVisible();
-    await expect(page.locator('text=Cases Solved')).toBeVisible();
-    await expect(page.locator('text=98%')).toBeVisible();
-    await expect(page.locator('text=Client Satisfaction')).toBeVisible();
-    await expect(page.locator('text=100%')).toBeVisible();
-    await expect(page.locator('text=Confidential')).toBeVisible();
-    
-    // Check credentials section
-    await expect(page.locator('text=PROFESSIONAL CREDENTIALS')).toBeVisible();
-    await expect(page.locator('text=Licensed Private Investigators')).toBeVisible();
-    await expect(page.locator('text=Bonded & Insured')).toBeVisible();
-    await expect(page.locator('text=Confidentiality Guaranteed')).toBeVisible();
-    
-    // Check guarantee statement
-    await expect(page.locator('text=OUR GUARANTEE')).toBeVisible();
+  test("macht Honorarmodelle und Kostenerstattung sichtbar", async ({ page }) => {
+    const pricing = page.locator("#honorar");
+    await expect(pricing.getByRole("heading", { name: "Erstbewertung" })).toBeVisible();
+    await expect(pricing.getByRole("heading", { name: "Phasenfestpreis" })).toBeVisible();
+    await expect(pricing.getByRole("heading", { name: "Tagessatz" })).toBeVisible();
+    await expect(pricing).toContainText(/Kostenerstattung/);
   });
 
-  test('contact form validation and submission flow', async ({ page }) => {
-    // Navigate to contact section
-    await page.locator('#contact').scrollIntoViewIfNeeded();
-    
-    // Check form is visible
-    await expect(page.locator('text=CONFIDENTIAL CASE INQUIRY')).toBeVisible();
-    
-    // Test validation - submit empty form
-    await page.locator('button:has-text("Send Confidential Inquiry")').click();
-    
-    // Check validation messages appear
-    await expect(page.locator('text=Name must be at least 2 characters')).toBeVisible();
-    await expect(page.locator('text=Please enter a valid email address')).toBeVisible();
-    await expect(page.locator('text=Please enter a valid phone number')).toBeVisible();
-    
-    // Fill out form with valid data
-    await page.fill('input[id="name"]', 'John Detective');
-    await page.fill('input[id="email"]', 'john@example.com');
-    await page.fill('input[id="phone"]', '555-123-4567');
-    
-    // Select service type
-    await page.locator('[data-testid="service-type-trigger"], [role="combobox"]').first().click();
-    await page.locator('text=Private Investigation').click();
-    
-    // Select urgency
-    await page.locator('[data-testid="urgency-trigger"], [role="combobox"]').last().click();
-    await page.locator('text=Standard (1-2 weeks)').click();
-    
-    // Fill message
-    await page.fill('textarea[id="message"]', 'I need help investigating a missing person case. This is a confidential matter requiring discretion.');
-    
-    // Submit form
-    await page.locator('button:has-text("Send Confidential Inquiry")').click();
-    
-    // Check loading state
-    await expect(page.locator('text=Sending Securely...')).toBeVisible();
-    
-    // Wait for success message
-    await expect(page.locator('text=Message Sent Securely')).toBeVisible({ timeout: 10000 });
-    await expect(page.locator('text=We\'ve received your confidential inquiry')).toBeVisible();
+  test("liefert FAQPage-Structured-Data für die Startseite", async ({ page }) => {
+    const graphs = await page.locator('script[type="application/ld+json"]').allTextContents();
+    const parsed = graphs.map((graph) => JSON.parse(graph));
+
+    const faqPage = parsed
+      .flatMap((entry) => entry["@graph"] ?? [entry])
+      .find((node: { "@type"?: string }) => node["@type"] === "FAQPage");
+
+    expect(faqPage).toBeTruthy();
+    expect(faqPage.mainEntity.length).toBeGreaterThanOrEqual(8);
+    expect(faqPage.mainEntity[0].acceptedAnswer.text.length).toBeGreaterThan(50);
   });
 
-  test('mobile navigation works correctly', async ({ page }) => {
-    // Set mobile viewport
-    await page.setViewportSize({ width: 375, height: 667 });
-    
-    // Check that desktop nav is hidden and mobile button is visible
-    await expect(page.locator('nav.hidden')).toHaveCount(0); // Desktop nav should be hidden with md:flex
-    await expect(page.locator('button >> svg')).toBeVisible(); // Mobile menu button
-    
-    // Click mobile menu button
-    await page.locator('button').filter({ has: page.locator('svg') }).first().click();
-    
-    // Check mobile menu items are visible
-    await expect(page.locator('nav >> text=Home')).toBeVisible();
-    await expect(page.locator('nav >> text=Services')).toBeVisible();
-    await expect(page.locator('nav >> text=About')).toBeVisible();
-    await expect(page.locator('nav >> text=Team')).toBeVisible();
-    
-    // Close mobile menu by clicking a link
-    await page.locator('nav >> text=Home').click();
-    
-    // Check menu is closed (button should show menu icon again)
-    await expect(page.locator('button >> svg').first()).toBeVisible();
+  test("rendert Fachbeiträge serverseitig, damit sie indexierbar sind", async ({ request }) => {
+    const response = await request.get("/");
+    const html = await response.text();
+
+    expect(html).toContain("Erkenntnisse aus laufenden Mandaten");
+    expect(html).toMatch(/href="\/blog\/[a-z0-9-]+"/);
+  });
+});
+
+test.describe("Mobile Lead-Erfassung", () => {
+  test.use({ viewport: { width: 390, height: 844 } });
+
+  test.beforeEach(async ({ page }) => {
+    await acceptCookiesUpfront(page);
   });
 
-  test('footer contains all required information', async ({ page }) => {
-    // Scroll to footer
-    await page.locator('footer').scrollIntoViewIfNeeded();
-    
-    // Check agency info
-    await expect(page.locator('footer >> text=BONA FIDES')).toBeVisible();
-    await expect(page.locator('footer >> text=Licensed & Insured Since 1965')).toBeVisible();
-    
-    // Check services links
-    await expect(page.locator('footer >> text=Private Investigations')).toBeVisible();
-    await expect(page.locator('footer >> text=Corporate Security')).toBeVisible();
-    
-    // Check contact info
-    await expect(page.locator('footer >> text=(555) 123-CASE')).toBeVisible();
-    await expect(page.locator('footer >> text=info@bonafides.agency')).toBeVisible();
-    await expect(page.locator('footer >> text=123 Detective St')).toBeVisible();
-    
-    // Check legal links
-    await expect(page.locator('footer >> text=Impressum')).toBeVisible();
-    await expect(page.locator('footer >> text=Datenschutz')).toBeVisible();
-    
-    // Check copyright
-    await expect(page.locator('footer >> text=© 2024 Bona Fides Detective Agency')).toBeVisible();
+  test("blendet die Sticky-CTA nach dem Hero ein und am Formular wieder aus", async ({ page }) => {
+    await page.goto("/");
+
+    const stickyCta = page.getByTestId("sticky-cta");
+    await expect(stickyCta).toHaveClass(/translate-y-full/);
+
+    await page.evaluate(() => window.scrollTo(0, 2000));
+    await expect(stickyCta).toHaveClass(/translate-y-0/);
+
+    await page.locator("#contact").scrollIntoViewIfNeeded();
+    await expect(stickyCta).toHaveClass(/translate-y-full/);
   });
 
-  test('page loads with correct styling and typography', async ({ page }) => {
-    // Check that custom fonts are applied
-    const heroTitle = page.locator('h1').first();
-    
-    // Check that page has the expected visual elements
-    const fontElements = await page.locator('[class*="font-special-elite"]').count();
-    expect(fontElements).toBeGreaterThan(0);
+  test("öffnet die Leistungen im mobilen Menü", async ({ page }) => {
+    await page.goto("/");
 
-    const playfairElements = await page.locator('[class*="font-playfair"]').count();
-    expect(playfairElements).toBeGreaterThan(0);
+    await page.getByRole("button", { name: "Menü öffnen" }).click();
+    await page
+      .getByRole("navigation", { name: "Mobile Navigation" })
+      .getByRole("link", { name: "Due Diligence" })
+      .click();
 
-    const crimsonElements = await page.locator('[class*="font-crimson"]').count();
-    expect(crimsonElements).toBeGreaterThan(0);
-
-    // Check that color classes are applied
-    const blueElements = await page.locator('[class*="detective-blue"]').count();
-    expect(blueElements).toBeGreaterThan(0);
-
-    const brownElements = await page.locator('[class*="investigation-brown"]').count();
-    expect(brownElements).toBeGreaterThan(0);
-
-    const caseFileElements = await page.locator('[class*="case-file"]').count();
-    expect(caseFileElements).toBeGreaterThan(0);
-  });
-
-  test('page is accessible with keyboard navigation', async ({ page }) => {
-    // Test tab navigation through interactive elements
-    await page.keyboard.press('Tab'); // Should focus on first interactive element
-    
-    // Navigate through header links
-    for (let i = 0; i < 6; i++) {
-      await page.keyboard.press('Tab');
-    }
-    
-    // Check that focused element is visible
-    const focusedElement = await page.locator(':focus');
-    await expect(focusedElement).toBeVisible();
-    
-    // Test that Enter key works on buttons
-    await page.locator('button:has-text("Free Consultation")').focus();
-    await page.keyboard.press('Enter');
+    await expect(page).toHaveURL(/\/leistungen\/due-diligence$/);
   });
 });

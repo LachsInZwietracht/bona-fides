@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressum | BONA FIDES Detektei - Rechtliche Informationen",
+  title: "Impressum",
   description: "Impressum und Anbieterkennung der BONA FIDES Detektei nach § 5 TMG. Digitale Detektei für Unternehmen und Versicherer.",
   keywords: "Impressum, Anbieterkennzeichnung, Kontakt, BONA FIDES Detektei",
   alternates: {

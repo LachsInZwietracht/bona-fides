@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { TeamPageClient } from "./team-page-client"
 
 export const metadata: Metadata = {
-  title: "Unser Team | BONA FIDES Detektei - Bundesweites Ermittler-Netzwerk",
+  title: "Unser Team – bundesweites Ermittlernetzwerk",
   description: "Deutschlandweites Kooperationsnetzwerk spezialisierter Digital-Ermittler für Cyber-Forensik, Online-Recherchen und digitale Beweissicherung. Experten in Hamburg, Berlin, München und bundesweit verfügbar.",
   keywords: "Detektei Team, Ermittler Netzwerk, Cyber-Ermittler, Digital-Detektive, Deutschland, Hamburg, Berlin, München, bundesweit",
   alternates: {

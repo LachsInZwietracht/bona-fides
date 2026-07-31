@@ -1,11 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Playfair_Display, JetBrains_Mono } from "next/font/google"
+import { Inter, Playfair_Display, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { HashNavigationHandler } from "@/components/hash-navigation-handler"
 import { CookiesProvider } from "@/hooks/use-cookies"
 import { CookieBanner } from "@/components/cookie-banner"
+import { services } from "@/lib/services-data"
+import { siteConfig } from "@/lib/site-config"
 import "./globals.css"
 
 const playfair = Playfair_Display({
@@ -20,26 +22,32 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 })
 
+/** Fließtext in einer Grotesk – Mono bleibt Labels und Kennzahlen vorbehalten. */
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+})
+
+const description =
+  "Wirtschaftsdetektei für Unternehmen, Versicherer und Kanzleien: interne Untersuchungen, Lohnfortzahlungsbetrug, Due Diligence, IT-Forensik und Asset Tracing – gerichtsverwertbar dokumentiert, DSGVO-konform, bundesweit."
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.bona-fides-detektei.de"),
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "BONA FIDES Detektei – Digitale Ermittlungen für Unternehmen & Versicherer",
-    template: "%s | BONA FIDES Detektei – Digitale Ermittlungen",
+    default: "Wirtschaftsdetektei für Unternehmen | BONA FIDES Detektei",
+    template: "%s | BONA FIDES Detektei",
   },
-  description:
-    "Deutschlands führende digitale Detektei für Unternehmen und Versicherer. Vertrauliche Ermittlungen, Cyber-Forensik, Due Diligence und Versicherungsbetrug – DSGVO-konform und entscheidungsreif aufbereitet.",
-  applicationName: "Bona Fides Detektei",
-  alternates: {
-    canonical: "/",
-  },
+  description,
+  applicationName: siteConfig.name,
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "de_DE",
-    siteName: "Bona Fides Detektei",
-    title: "BONA FIDES Detektei – Digitale Ermittlungen für Unternehmen & Versicherer",
-    description:
-      "Deutschlands führende digitale Detektei für Unternehmen und Versicherer. Vertrauliche Ermittlungen, Cyber-Forensik, Due Diligence und Versicherungsbetrug.",
-    url: "https://www.bona-fides-detektei.de",
+    siteName: siteConfig.name,
+    title: "Wirtschaftsdetektei für Unternehmen | BONA FIDES Detektei",
+    description,
+    url: siteConfig.url,
   },
 }
 
@@ -48,12 +56,59 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const websiteJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Bona Fides Detektei",
-    alternateName: "Bona Fides",
-    url: "https://www.bona-fides-detektei.de",
+    "@graph": [
+      {
+        "@type": ["ProfessionalService", "Organization"],
+        "@id": `${siteConfig.url}/#organization`,
+        name: siteConfig.name,
+        alternateName: "Bona Fides",
+        description,
+        url: siteConfig.url,
+        email: siteConfig.email,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: siteConfig.street,
+          postalCode: siteConfig.postalCode,
+          addressLocality: siteConfig.city,
+          addressCountry: siteConfig.country,
+        },
+        areaServed: [
+          { "@type": "Country", name: "Deutschland" },
+          { "@type": "Country", name: "Österreich" },
+          { "@type": "Country", name: "Schweiz" },
+        ],
+        knowsLanguage: ["de", "en"],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Ermittlungsleistungen",
+          itemListElement: services.map((service) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: service.h1,
+              url: `${siteConfig.url}/leistungen/${service.slug}`,
+            },
+          })),
+        },
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "Mandatsanfragen",
+          email: siteConfig.email,
+          availableLanguage: ["de", "en"],
+          areaServed: "DE",
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteConfig.url}/#website`,
+        name: siteConfig.name,
+        url: siteConfig.url,
+        inLanguage: "de-DE",
+        publisher: { "@id": `${siteConfig.url}/#organization` },
+      },
+    ],
   }
 
   return (
@@ -61,10 +116,12 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${playfair.variable} ${jetbrains.variable} font-serif antialiased`}>
+      <body
+        className={`${playfair.variable} ${jetbrains.variable} ${inter.variable} font-sans antialiased`}
+      >
         <CookiesProvider>
           <HashNavigationHandler />
           <Suspense fallback={null}>{children}</Suspense>
