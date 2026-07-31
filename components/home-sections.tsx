@@ -31,22 +31,25 @@ const heroProof = [
 
 export function HeroSection() {
   return (
-    <section className="relative z-10 pt-12 pb-16 sm:pt-16 sm:pb-20 lg:pt-20">
+    <section className="relative z-10 pt-16 pb-20 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-[1.25fr_1fr] gap-12 lg:gap-16 items-center">
+        <div className="max-w-3xl">
           <div className="space-y-7">
             <p className="eyebrow text-brass">Wirtschaftsdetektei · bundesweit</p>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-[1.05]">
-              Wirtschaftsdetektei für Unternehmen,
-              <br className="hidden sm:block" />{" "}
-              <span className="text-brass">Versicherer und Kanzleien</span>
+            <h1 className="font-serif font-bold text-white">
+              <span className="block text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">
+                Verdacht ist keine
+                <br />
+                Entscheidungsgrundlage.
+              </span>
+              <span className="mt-4 block text-xl sm:text-2xl font-normal text-brass">
+                Wirtschaftsdetektei für Unternehmen
+              </span>
             </h1>
 
-            <p className="max-w-2xl text-lg sm:text-xl text-gray-300 leading-relaxed">
-              Verdacht ist keine Entscheidungsgrundlage. Wir klären Sachverhalte in Ihrem
-              Unternehmen auf und übergeben Ihnen belegte Fakten – in einer Form, mit der Sie
-              kündigen, klagen, regulieren oder Entwarnung geben können.
+            <p className="max-w-xl text-lg text-gray-300 leading-relaxed">
+              Wir liefern belegte Fakten – zum Kündigen, Klagen, Regulieren oder Entwarnung geben.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
@@ -70,57 +73,14 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 pt-4 border-t border-white/10">
+            <ul className="flex flex-wrap gap-x-8 gap-y-3 pt-6 border-t border-white/10">
               {heroProof.map((item) => (
-                <li key={item.label} className="flex items-center gap-3 text-sm text-gray-400">
+                <li key={item.label} className="flex items-center gap-2.5 text-sm text-gray-400">
                   <item.icon className="h-4 w-4 flex-shrink-0 text-brass" aria-hidden="true" />
                   {item.label}
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Mandatsakte */}
-          <div className="relative hidden lg:block">
-            <div className="absolute inset-0 bg-gray-200/60 rotate-1 rounded-sm shadow-lg" />
-            <div className="absolute inset-0 bg-gray-300/40 -rotate-1 rounded-sm shadow-lg" />
-
-            <div className="relative rotate-2 rounded-sm bg-white p-8 text-black shadow-2xl transition-transform duration-300 hover:rotate-1">
-              <div className="flex items-start justify-between mb-6">
-                <h2 className="font-mono text-xl font-bold tracking-tight">MANDAT #247</h2>
-                <span className="rounded-sm bg-red-600 px-2 py-1 font-mono text-[10px] text-white">
-                  ABGESCHLOSSEN
-                </span>
-              </div>
-
-              <dl className="space-y-3 font-mono text-sm">
-                {[
-                  ["Auftraggeber", "[VERTRAULICH]"],
-                  ["Mandatstyp", "Interne Untersuchung"],
-                  ["Anlass", "Verdacht auf Kick-back im Einkauf"],
-                  ["Laufzeit", "11 Wochen"],
-                  ["Ergebnis", "Schaden beziffert, Regress eingeleitet"],
-                ].map(([label, value]) => (
-                  <div key={label} className="border-b border-gray-200 pb-2">
-                    <dt className="text-xs font-bold uppercase tracking-wide text-gray-500">
-                      {label}
-                    </dt>
-                    <dd className={label === "Auftraggeber" ? "font-bold text-red-600" : ""}>
-                      {value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-
-              <p className="mt-6 border-l-4 border-brass bg-gray-100 p-4 text-xs italic leading-relaxed text-gray-700">
-                „Der Bericht war die Grundlage für die Trennung und für die Rückforderung. Ohne
-                belastbare Dokumentation hätten wir den Fall nicht führen können.&ldquo;
-              </p>
-
-              <div className="absolute -bottom-3 -right-3 flex h-16 w-16 rotate-12 items-center justify-center rounded-full border-2 border-red-600 bg-white">
-                <span className="text-[10px] font-bold text-red-600">GEHEIM</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -367,7 +327,7 @@ export function ProcessSection() {
 const pricingModels = [
   {
     icon: Handshake,
-    title: "Erstbewertung",
+    title: "Erste Einschätzung",
     price: "kostenfrei",
     description:
       "Einordnung Ihres Sachverhalts, Machbarkeit und grober Rahmen. Ohne Verpflichtung, auf Wunsch unter NDA.",
@@ -518,7 +478,9 @@ export function AssuranceSection() {
               </div>
               <div>
                 <dt className="font-serif text-3xl font-bold text-brass">24 h</dt>
-                <dd className="mt-1 text-sm text-gray-400">bis zur belastbaren Erstbewertung</dd>
+                <dd className="mt-1 text-sm text-gray-400">
+                  bis zur ersten Einschätzung Ihres Falls
+                </dd>
               </div>
             </dl>
           </div>
@@ -658,10 +620,10 @@ export function CaseStudySection() {
 
             <Link
               href="/leistungen/due-diligence"
-              className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-brass hover:text-brass-light transition-colors"
+              className="group inline-flex items-center gap-2 rounded-sm border border-brass/40 px-5 py-3 font-mono text-xs uppercase tracking-wider text-brass transition-colors hover:bg-brass/10 hover:text-brass-light"
             >
               Wie unsere Due Diligence arbeitet
-              <ArrowRight className="h-3.5 w-3.5" />
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
@@ -758,12 +720,12 @@ export const homeFaq = [
   {
     question: "Wie schnell können Sie beginnen?",
     answer:
-      "Die Erstbewertung erhalten Sie in der Regel binnen 24 Stunden. Feldarbeit können wir bundesweit meist innerhalb von 24 bis 48 Stunden aufnehmen. Bei laufenden Krankmeldungen oder drohenden Verfügungsfristen zählt jeder Tag – melden Sie sich lieber zu früh als zu spät.",
+      "Eine erste Einschätzung erhalten Sie in der Regel binnen 24 Stunden. Feldarbeit können wir bundesweit meist innerhalb von 24 bis 48 Stunden aufnehmen. Bei laufenden Krankmeldungen oder drohenden Verfügungsfristen zählt jeder Tag – melden Sie sich lieber zu früh als zu spät.",
   },
   {
     question: "Was kostet ein Ermittlungsmandat?",
     answer:
-      "Wahlweise Phasenfestpreis mit definierten Deliverables oder transparenter Tagessatz mit vereinbarter Obergrenze. Vor Mandatsannahme erhalten Sie ein schriftliches Angebot mit Zeit- und Kostenrahmen. Die Erstbewertung ist kostenfrei und unverbindlich.",
+      "Wahlweise Phasenfestpreis mit definierten Deliverables oder transparenter Tagessatz mit vereinbarter Obergrenze. Vor Mandatsannahme erhalten Sie ein schriftliches Angebot mit Zeit- und Kostenrahmen. Die erste Einschätzung ist kostenfrei und unverbindlich.",
   },
   {
     question: "Sind die Ergebnisse vor Gericht verwendbar?",

@@ -31,21 +31,9 @@ const initialForm = {
 }
 
 const reassurance = [
-  {
-    icon: Clock,
-    title: "Antwort binnen 24 Stunden",
-    text: "Sie erhalten eine erste Einschätzung zur Machbarkeit – werktags meist deutlich schneller.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "NDA vor dem Detail",
-    text: "Auf Wunsch unterzeichnen wir eine Vertraulichkeitsvereinbarung, bevor Sie Namen nennen.",
-  },
-  {
-    icon: UserCheck,
-    title: "Ehrliche Einschätzung",
-    text: "Wenn sich ein Mandat für Sie nicht rechnet oder rechtlich nicht trägt, sagen wir das.",
-  },
+  { icon: Clock, text: "Antwort binnen 24 Stunden" },
+  { icon: ShieldCheck, text: "NDA vor dem ersten Detail" },
+  { icon: UserCheck, text: "Ehrliche Absage, wenn es sich nicht rechnet" },
 ]
 
 export function ContactForm() {
@@ -118,20 +106,14 @@ export function ContactForm() {
               Schildern Sie uns Ihren Fall
             </h2>
             <p className="mt-4 text-lg text-gray-300 leading-relaxed">
-              Zwei Sätze genügen für den Anfang. Alles Weitere klären wir im vertraulichen Gespräch –
-              unverbindlich und ohne dass Sie sich festlegen.
+              Zwei Sätze genügen für den Anfang.
             </p>
 
-            <ul className="mt-8 space-y-6">
+            <ul className="mt-8 space-y-3">
               {reassurance.map((item) => (
-                <li key={item.title} className="flex gap-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-brass/15">
-                    <item.icon className="h-5 w-5 text-brass" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-white">{item.title}</p>
-                    <p className="mt-1 text-sm text-gray-400 leading-relaxed">{item.text}</p>
-                  </div>
+                <li key={item.text} className="flex items-center gap-3 text-gray-300">
+                  <item.icon className="h-4 w-4 flex-shrink-0 text-brass" aria-hidden="true" />
+                  {item.text}
                 </li>
               ))}
             </ul>
@@ -337,7 +319,7 @@ export function ContactForm() {
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-400" />
                   <p className="text-sm text-green-200">
                     Ihre Anfrage ist eingegangen. Sie erhalten in der Regel binnen 24 Stunden eine
-                    Erstbewertung – prüfen Sie sicherheitshalber auch Ihren Spam-Ordner.
+                    Einschätzung – prüfen Sie sicherheitshalber auch Ihren Spam-Ordner.
                   </p>
                 </div>
               )}

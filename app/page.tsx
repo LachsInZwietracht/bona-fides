@@ -26,7 +26,7 @@ import { siteConfig } from "@/lib/site-config"
 
 const title = "Wirtschaftsdetektei für Unternehmen | BONA FIDES Detektei"
 const description =
-  "Wirtschaftsdetektei für Unternehmen, Versicherer und Kanzleien: interne Untersuchungen, Lohnfortzahlungsbetrug, Due Diligence, IT-Forensik und Asset Tracing. Gerichtsverwertbar dokumentiert, DSGVO-konform, Erstbewertung binnen 24 Stunden."
+  "Wirtschaftsdetektei für Unternehmen, Versicherer und Kanzleien: interne Untersuchungen, Lohnfortzahlungsbetrug, Due Diligence, IT-Forensik und Asset Tracing. Gerichtsverwertbar dokumentiert, DSGVO-konform, erste Einschätzung binnen 24 Stunden."
 
 export const metadata: Metadata = {
   title,
@@ -168,8 +168,8 @@ export default function HomePage() {
 
         <CtaBand
           headline="Risiken sichtbar machen. Entscheidungen absichern."
-          subline="Schildern Sie uns Ihren Fall vertraulich. Sie erhalten in der Regel binnen 24 Stunden eine belastbare Erstbewertung – inklusive Zeit-, Ressourcen- und Kostenrahmen."
-          primaryLabel="Erstbewertung anfordern"
+          subline="Schildern Sie uns Ihren Fall vertraulich. Sie erhalten in der Regel binnen 24 Stunden eine erste Einschätzung: was aufklärbar ist, mit welchem Aufwand und in welchem Zeitrahmen."
+          primaryLabel="Einschätzung anfordern"
         />
 
         <Footer />

@@ -59,7 +59,7 @@ export const services: Service[] = [
     lead: "Wenn Zahlen, Warenbestände oder Aussagen nicht zusammenpassen, brauchen Sie keine Vermutung, sondern einen belastbaren Sachverhalt. Wir klären Wirtschaftsdelikte im Unternehmen strukturiert auf – ohne dass der Betrieb davon erfährt, solange das nicht gewollt ist.",
     metaTitle: "Wirtschaftsdetektei für Unternehmen",
     metaDescription:
-      "Wirtschaftsdetektei für Unternehmen: Aufklärung von Untreue, Diebstahl, Korruption und Wirtschaftsbetrug. Gerichtsverwertbar dokumentiert, DSGVO-konform, bundesweit. Erstbewertung binnen 24 Stunden.",
+      "Wirtschaftsdetektei für Unternehmen: Aufklärung von Untreue, Diebstahl, Korruption und Wirtschaftsbetrug. Gerichtsverwertbar dokumentiert, DSGVO-konform, bundesweit. Erste Einschätzung binnen 24 Stunden.",
     keywords: [
       "Wirtschaftsdetektei",
       "Detektei Unternehmen",
@@ -113,7 +113,7 @@ export const services: Service[] = [
     ],
     legalNote: rechtshinweis,
     frame: [
-      { label: "Erstbewertung", value: "kostenfrei, binnen 24 h" },
+      { label: "Erste Einschätzung", value: "kostenfrei, binnen 24 h" },
       { label: "Typische Laufzeit", value: "2 Wochen bis 4 Monate" },
       { label: "Abrechnung", value: "Festpreis je Phase oder Tagessatz" },
     ],
@@ -148,7 +148,7 @@ export const services: Service[] = [
     lead: "Eine Krankmeldung, die verdächtig gut zum abgelehnten Urlaubsantrag passt, kostet Sie Lohnfortzahlung, Vertretung und Betriebsfrieden. Wir klären, ob tatsächlich Arbeitsunfähigkeit vorliegt – mit Beweisen, die vor dem Arbeitsgericht Bestand haben.",
     metaTitle: "Detektei bei Lohnfortzahlungsbetrug",
     metaDescription:
-      "Verdacht auf vorgetäuschte Arbeitsunfähigkeit? Wir erschüttern den Beweiswert der AU-Bescheinigung mit gerichtsverwertbarer Dokumentation. Bundesweite Observation, DSGVO-konform, Erstbewertung in 24 h.",
+      "Verdacht auf vorgetäuschte Arbeitsunfähigkeit? Wir erschüttern den Beweiswert der AU-Bescheinigung mit gerichtsverwertbarer Dokumentation. Bundesweite Observation, DSGVO-konform, Einschätzung in 24 h.",
     keywords: [
       "Detektei Lohnfortzahlungsbetrug",
       "vorgetäuschte Krankheit Detektei",
@@ -640,7 +640,7 @@ export const services: Service[] = [
     ],
     legalNote: rechtshinweis,
     frame: [
-      { label: "Erstbewertung", value: "kostenfrei, binnen 24 h" },
+      { label: "Erste Einschätzung", value: "kostenfrei, binnen 24 h" },
       { label: "Typische Laufzeit", value: "1–8 Wochen" },
       { label: "Abrechnung", value: "Tagessatz oder Phasenfestpreis" },
     ],

@@ -2,13 +2,13 @@ import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 import { caseTypes, labelFor, urgencyOptions } from '@/lib/contact-options';
 
+/**
+ * Empfänger der Formularanfragen. Über CONTACT_EMAIL überschreibbar,
+ * mehrere Adressen kommasepariert.
+ */
 const contactRecipients = [...new Set(
-  [
-    process.env.CONTACT_EMAIL || 'fabianradlow@gmail.com',
-    'patrick.k.wenk@gmail.com',
-    'mb@brandes-it.com'
-  ]
-    .flatMap((recipients) => recipients.split(','))
+  (process.env.CONTACT_EMAIL || 'kontakt@bona-fides-detektei.de')
+    .split(',')
     .map((recipient) => recipient.trim())
     .filter(Boolean)
 )];

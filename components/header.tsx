@@ -31,18 +31,19 @@ export function Header({ dark = false }: { dark?: boolean }) {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-baseline gap-2">
+          <Link href="/" className="flex items-center gap-3" aria-label="BONA FIDES – Startseite">
             <span
               className={
                 dark
-                  ? "text-xl font-serif font-bold text-white"
+                  ? "text-xl font-serif font-bold tracking-tight text-white"
                   : "text-xl font-special-elite text-investigation-brown"
               }
             >
               BONA FIDES
             </span>
             {dark && (
-              <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-widest text-brass">
+              <span className="hidden sm:flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-gray-500">
+                <span className="h-4 w-px bg-white/15" aria-hidden="true" />
                 Wirtschaftsdetektei
               </span>
             )}
@@ -114,11 +115,10 @@ export function Header({ dark = false }: { dark?: boolean }) {
 
             <Button
               asChild
-              size="sm"
               className={
                 dark
-                  ? "bg-brass text-black hover:bg-brass-light font-semibold text-xs uppercase tracking-wide"
-                  : "bg-detective-blue hover:bg-detective-blue/90 text-white"
+                  ? "ml-2 bg-brass text-black hover:bg-brass-light font-semibold text-sm px-5 h-10"
+                  : "ml-2 bg-detective-blue hover:bg-detective-blue/90 text-white"
               }
             >
               <Link href="/#contact">Erstgespräch</Link>

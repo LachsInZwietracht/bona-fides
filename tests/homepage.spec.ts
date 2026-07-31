@@ -15,8 +15,9 @@ test.describe("B2B-Startseite", () => {
 
     const h1 = page.locator("h1");
     await expect(h1).toHaveCount(1);
+    // Claim zuerst, Keyword bleibt für die Suche in der Überschrift
+    await expect(h1).toContainText("Entscheidungsgrundlage");
     await expect(h1).toContainText("Wirtschaftsdetektei für Unternehmen");
-    await expect(h1).toContainText("Versicherer und Kanzleien");
 
     const description = page.locator('meta[name="description"]');
     await expect(description).toHaveAttribute("content", /Unternehmen, Versicherer und Kanzleien/);
@@ -43,29 +44,47 @@ test.describe("B2B-Startseite", () => {
     await expect(page.locator("h1")).toContainText("Lohnfortzahlungsbetrug");
   });
 
-  test("Schadensrechner reagiert auf Eingaben und führt zum Kontakt", async ({ page }) => {
-    const calculator = page.locator("#schadensrechner");
+  test("Rechner stellt Schadenssumme und Ermittlungsaufwand gegenüber", async ({ page }) => {
+    const calculator = page.locator("#rechner");
     await calculator.scrollIntoViewIfNeeded();
 
-    const total = calculator.getByTestId("damage-total");
-    const before = await total.textContent();
+    const effort = calculator.getByTestId("effort-range");
+    const effortBefore = await effort.textContent();
 
-    const daysSlider = calculator.getByTestId("days-slider").locator('[role="slider"]');
-    await daysSlider.focus();
-    for (let i = 0; i < 5; i += 1) {
-      await daysSlider.press("ArrowRight");
+    // Fallart wechseln: Aufwandsspanne und Startwert müssen mitziehen
+    await calculator.getByTestId("calc-case-trigger").click();
+    await page.getByRole("option", { name: /Vorgetäuschte Arbeitsunfähigkeit/ }).click();
+
+    await expect(effort).not.toHaveText(effortBefore ?? "");
+    await expect(calculator.getByTestId("damage-value")).toContainText("9.000");
+
+    // Höherer Schaden verschiebt das Verhältnis nach oben
+    const ratioBefore = await calculator.getByTestId("calc-ratio").textContent();
+    const slider = calculator.getByTestId("damage-slider").locator('[role="slider"]');
+    await slider.focus();
+    for (let i = 0; i < 10; i += 1) {
+      await slider.press("ArrowRight");
     }
-
-    await expect(calculator.getByTestId("days-value")).toContainText("25 Tage");
-    await expect(total).not.toHaveText(before ?? "");
+    await expect(calculator.getByTestId("calc-ratio")).not.toHaveText(ratioBefore ?? "");
 
     await calculator.getByRole("link", { name: /Fall prüfen lassen/i }).click();
     await expect(page.locator("#contact")).toBeInViewport({ timeout: 10000 });
   });
 
+  test("rät bei zu kleinen Summen vom Mandat ab, statt es zu verkaufen", async ({ page }) => {
+    const calculator = page.locator("#rechner");
+    await calculator.scrollIntoViewIfNeeded();
+
+    const slider = calculator.getByTestId("damage-slider").locator('[role="slider"]');
+    await slider.focus();
+    await slider.press("Home");
+
+    await expect(calculator.getByTestId("calc-ratio")).toContainText("Hier lohnt erst das Gespräch");
+  });
+
   test("macht Honorarmodelle und Kostenerstattung sichtbar", async ({ page }) => {
     const pricing = page.locator("#honorar");
-    await expect(pricing.getByRole("heading", { name: "Erstbewertung" })).toBeVisible();
+    await expect(pricing.getByRole("heading", { name: "Erste Einschätzung" })).toBeVisible();
     await expect(pricing.getByRole("heading", { name: "Phasenfestpreis" })).toBeVisible();
     await expect(pricing.getByRole("heading", { name: "Tagessatz" })).toBeVisible();
     await expect(pricing).toContainText(/Kostenerstattung/);
