@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react"
 import { BlogCard } from "@/components/blog-card"
 import { ContactForm } from "@/components/contact-form"
 import { CtaBand } from "@/components/cta-band"
-import { DamageCalculator } from "@/components/damage-calculator"
+import { LossLandscape } from "@/components/loss-landscape"
 import { Footer } from "@/components/footer"
 import {
   AssuranceSection,
@@ -33,7 +33,7 @@ export function LandingRedesignPage({ variant }: { variant: RedesignVariant }) {
         <LandingRedesignHero variant={variant} contactHref={contactHref} />
         <SegmentsSection />
         <ServicesSection />
-        <DamageCalculator contactHref={contactHref} />
+        <LossLandscape />
         <ProcessSection />
         <PricingSection />
         <AssuranceSection />
