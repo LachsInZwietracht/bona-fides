@@ -25,20 +25,22 @@ export function LossLandscape() {
           </h2>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 md:grid-cols-2">
           {lossFigures.map((figure) => (
             <article
               key={figure.claim}
-              className="group relative flex flex-col rounded-sm border border-white/10 bg-white/[0.03] p-5 transition-colors hover:border-brass/40 hover:bg-white/[0.06]"
+              className="group relative flex flex-col rounded-sm border border-white/10 bg-white/[0.03] p-6 sm:p-8 transition-colors hover:border-brass/40 hover:bg-white/[0.06]"
             >
-              <p className="flex items-baseline gap-1.5">
-                <span className="font-serif text-3xl font-bold text-brass">{figure.value}</span>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-gray-400">
+              <p className="flex items-baseline gap-2">
+                <span className="font-serif text-4xl sm:text-5xl font-bold text-brass">
+                  {figure.value}
+                </span>
+                <span className="font-mono text-xs uppercase tracking-wider text-gray-400">
                   {figure.unit}
                 </span>
               </p>
 
-              <h3 className="mt-2 flex-1 text-sm leading-snug text-gray-300">
+              <h3 className="mt-3 flex-1 text-lg leading-snug text-gray-300">
                 {/* Ganze Kachel klickbar, ohne den Quellenlink zu verschachteln */}
                 <Link href={`/leistungen/${figure.slug}`} className="after:absolute after:inset-0">
                   {figure.claim}
@@ -49,7 +51,7 @@ export function LossLandscape() {
                 href={figure.source.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative z-10 mt-4 inline-flex items-center gap-1 self-start border-t border-white/10 pt-3 font-mono text-[10px] uppercase tracking-wider text-gray-500 transition-colors hover:text-brass"
+                className="relative z-10 mt-6 inline-flex items-center gap-1.5 self-start border-t border-white/10 pt-4 font-mono text-[11px] uppercase tracking-wider text-gray-500 transition-colors hover:text-brass"
               >
                 {figure.source.label} {figure.source.year}
                 <ArrowUpRight className="h-3 w-3" aria-hidden="true" />
