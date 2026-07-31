@@ -13,7 +13,21 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301)
   }
 
-  return NextResponse.next()
+  const response = NextResponse.next()
+
+  // Unlisted design studies: keep them out of search indexes, archives,
+  // referrer logs and intermediary caches. The URLs are intentionally omitted
+  // from navigation, sitemap and robots.txt.
+  if (request.nextUrl.pathname.startsWith('/entwuerfe/')) {
+    response.headers.set(
+      'X-Robots-Tag',
+      'noindex, nofollow, noarchive, nosnippet, noimageindex',
+    )
+    response.headers.set('Referrer-Policy', 'no-referrer')
+    response.headers.set('Cache-Control', 'private, no-store')
+  }
+
+  return response
 }
 
 export const config = {

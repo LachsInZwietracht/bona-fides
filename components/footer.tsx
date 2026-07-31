@@ -19,7 +19,7 @@ const legalLinks = [
   { href: "/agb", label: "AGB" },
 ];
 
-export function Footer() {
+export function Footer({ contactHref = "/#contact" }: { contactHref?: string }) {
   const { reopenBanner } = useCookies();
   const privateService = services.find((service) => service.audience === "b2c");
 
@@ -77,7 +77,10 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               {companyLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="transition-colors hover:text-brass">
+                  <Link
+                    href={link.href === "/#contact" ? contactHref : link.href}
+                    className="transition-colors hover:text-brass"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -110,7 +113,7 @@ export function Footer() {
               </li>
             </ul>
             <Link
-              href="/#contact"
+              href={contactHref}
               className="inline-flex items-center rounded-sm border border-brass/40 px-4 py-2.5 font-mono text-[11px] uppercase tracking-wider text-brass transition-colors hover:bg-brass/10"
             >
               Erstgespräch anfragen

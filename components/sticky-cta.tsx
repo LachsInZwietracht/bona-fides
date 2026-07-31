@@ -10,7 +10,7 @@ import { mailtoLink } from "@/lib/site-config"
  * the hero and hides again while the contact form itself is on screen, so the
  * bar never covers the fields it is pointing at.
  */
-export function StickyCta() {
+export function StickyCta({ contactHref = "/#contact" }: { contactHref?: string }) {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export function StickyCta() {
     >
       <div className="flex items-center gap-3">
         <Link
-          href="/#contact"
+          href={contactHref}
           tabIndex={visible ? 0 : -1}
           className="flex-1 inline-flex items-center justify-center gap-2 rounded-sm bg-brass px-4 py-3 font-semibold text-black min-h-[48px]"
         >
