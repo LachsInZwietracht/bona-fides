@@ -130,9 +130,9 @@ Bona Fides ist Deutschlands führende Detektei für Stalking-Ermittlungen und di
 
 ## Verwandte Artikel
 
-- [Digitale Spur 1: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz)
-- [Rechtliche Aspekte 1: Was Detektive in Deutschland dürfen](/blog/rechtliche-aspekte-1-was-detektive-in-deutschland-duerfen)
-- [Untreue 1: Wie man digitale Hinweise erkennt](/blog/untreue-1-wie-man-digitale-hinweise-erkennt)
+- [Internet Detektei: Was eine Online-Ermittlung leistet und wie Bona Fides digitale Spuren sichert](/blog/internet-detektei-online-ermittlungen-digitale-beweise)
+- [Rechtliche Grundlagen für Detektive in Deutschland: Kompletleitfaden](/blog/rechtliche-grundlagen-detektive-deutschland-kompletleitfaden)
+- [Untreue-Verdacht: Digitale Hinweise erkennen und rechtssicher aufklären](/blog/untreue-1-wie-man-digitale-hinweise-erkennt)
 
 ---
 

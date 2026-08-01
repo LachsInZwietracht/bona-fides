@@ -21,6 +21,14 @@ Fehleinstellungen gehören zu den teuersten Unternehmensrisiken. Laut Steinbeis-
 
 *Hintergrundprüfungen sind wie Versicherungen: Man braucht sie nicht, bis man sie braucht. Dann ist es zu spät.*
 
+## Wo Bewerbungen typischerweise geschönt werden
+
+Falschangaben verteilen sich nicht gleichmäßig. Am häufigsten betroffen sind Ausbildungsabschlüsse (rund 42 Prozent der beanstandeten Fälle), gefolgt von Berufserfahrung (38 Prozent), Sprachkenntnissen (31 Prozent), Projekterfolgen (27 Prozent) und Kündigungsgründen (23 Prozent). Besonders kritisch sind gefälschte Abschlüsse bei Fachkräften – Ingenieure, IT-Experten, Mediziner – und verschleierte Vorstrafen bei sicherheitsrelevanten Positionen.
+
+Der Markt dafür ist niedrigschwellig: Ein gefälschtes Bachelor-Zeugnis kostet im Darknet zwischen 150 und 800 Euro. Kombiniert mit dem Fachkräftemangel, der den Druck auf Bewerber erhöht, erklärt das den vom BIBB gemeldeten Anstieg gefälschter Ausbildungsnachweise.
+
+**Der Zeitpunkt entscheidet.** Prüfungen gehören vor die Vertragsunterzeichnung. Danach wird es in zweifacher Hinsicht schwieriger: Rechtlich haftet das Unternehmen bereits für Handlungen des Mitarbeiters, und eine Anfechtung wegen arglistiger Täuschung oder eine fristlose Kündigung nach § 626 BGB setzt voraus, dass Sie die Täuschung beweisen können. Praktisch verschwinden Spuren: Alte Arbeitgeber sind schwerer erreichbar, Hochschularchive werden umgestellt, Social-Media-Profile werden bereinigt.
+
 ## Die drei Ebenen professioneller Background Checks
 
 ### Ebene 1: Basis-Check (Standardpositionen)
@@ -102,6 +110,25 @@ Hintergrundprüfungen können Mitbestimmungsrechte auslösen (§ 94 BetrVG). Wir
 
 **Dokumentationspflichten:**
 Jede Prüfung wird vollständig dokumentiert: Was wurde geprüft, warum war es stellenbezogen, welche Einwilligungen lagen vor, wie wurden die Daten verarbeitet. Diese Dokumentation ist bei Diskriminierungsklagen entscheidend.
+
+## Typische Befunde aus der Praxis
+
+Nicht jede Unstimmigkeit ist ein Betrugsfall. Diese fünf Muster begegnen uns am häufigsten – in absteigender Reihenfolge:
+
+1. **Geschönte Positionsbezeichnungen** – aus „Junior Consultant" wird „Senior Manager"
+2. **Verlängerte Beschäftigungszeiten** – um Lücken im Lebenslauf zu kaschieren
+3. **Erfundene oder zugerechnete Projekterfolge** – Ergebnisse des Teams werden zur Einzelleistung
+4. **Gefälschte Abschlüsse** – besonders häufig bei ausländischen Hochschulen mit schwacher Verifizierbarkeit
+5. **Verschleierte Kündigungsgründe** – „betriebsbedingt" statt „verhaltensbedingt"
+
+### Warnsignale im Referenzgespräch
+
+Das Referenzgespräch ist der Punkt, an dem konstruierte Lebensläufe am ehesten auffallen. Vier Signale sollten aufhorchen lassen:
+
+- Die Referenz kann sich an keine konkreten Projekte oder Zeiträume erinnern
+- Überschwängliches Lob ohne jede inhaltliche Substanz
+- Die Referenz ist nur über eine private Mobilnummer erreichbar, nicht über einen Firmenanschluss
+- Verschiedene Referenzen widersprechen sich in Daten, Rollen oder Zuständigkeiten
 
 ## Branchenspezifische Anforderungen
 
@@ -206,12 +233,17 @@ A: Durch unser Partnernetzwerk in 45 Ländern können wir auch komplexe internat
 **F: Was ist bei internen Beförderungen zu beachten?**
 A: Auch interne Kandidaten sollten bei kritischen Positionen überprüft werden. Oft haben sich seit Einstellung neue Risikofaktoren entwickelt (Verschuldung, private Probleme). Plus: Neue Position kann höhere Sicherheitsanforderungen haben.
 
+**F: Darf ich einen Kandidaten heimlich überprüfen?**
+A: Nein. DSGVO und AGG verlangen, dass Bewerber über Hintergrundprüfungen informiert werden und einwilligen. Wir arbeiten ausschließlich mit dokumentierter Kandidaten-Einwilligung. Heimliche Checks führen zu Schadenersatzforderungen und machen die Ergebnisse arbeitsrechtlich wertlos.
+
+**F: Kann ich auch nach der Einstellung noch prüfen lassen?**
+A: Nachträgliche Prüfungen ohne konkreten Anlass sind rechtlich problematisch. Bei begründetem Verdacht – etwa auf Betrug oder Interessenkonflikte – ist eine anlassbezogene Prüfung möglich, sollte aber arbeitsrechtlich begleitet werden. Der wirtschaftlich und rechtlich bessere Weg bleibt die Prüfung vor Vertragsunterzeichnung.
+
 ## Verwandte Artikel
 
-- [Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten](hintergrundpruefung-1-worauf-arbeitgeber-achten-sollten)
-- [Hintergrundprüfung 2: Referenzprüfung und Social-Media-Screening](hintergrundpruefung-2-worauf-arbeitgeber-achten-sollten)
-- [Unternehmensbetrug: Risiken und Lösungen für HR](unternehmensbetrug-1-risiken-und-loesungen-fuer-hr)
-- [Digitale Beweissicherung](digitale-beweissicherung)
+- [Unternehmensbetrug Ermittlungsleitfaden: HR-Compliance und forensische Aufklärung](/blog/unternehmensbetrug-ermittlungsleitfaden-hr-compliance)
+- [Referenzprüfung und Social-Media-Screening: Kandidaten rechtssicher überprüfen](/blog/hintergrundpruefung-2-worauf-arbeitgeber-achten-sollten)
+- [Rechtliche Grundlagen für Detektive in Deutschland](/blog/rechtliche-grundlagen-detektive-deutschland-kompletleitfaden)
 
 ---
 

@@ -129,9 +129,9 @@ Bona Fides ist Deutschlands führende Detektei für zukunftssichere digitale Erm
 
 ## Verwandte Artikel
 
-- [Technologie & Tools 1: Die wichtigsten Werkzeuge für Ermittlungen](/blog/technologie-tools-1-die-wichtigsten-werkzeuge-fuer-ermittlungen)
+- [Ermittlungs-Tools: Die wichtigsten Werkzeuge professioneller Detektive](/blog/technologie-tools-1-die-wichtigsten-werkzeuge-fuer-ermittlungen)
 - [Cybercrime: Moderne Techniken und KI-gestützter Betrug 2025](/blog/cybercrime-moderne-techniken-ki-betrug)
-- [Digitale Spur 9: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-9-moderne-ermittlungstechniken-im-netz)
+- [Internet Detektei: Was eine Online-Ermittlung leistet und wie Bona Fides digitale Spuren sichert](/blog/internet-detektei-online-ermittlungen-digitale-beweise)
 
 ---
 

@@ -125,9 +125,9 @@ Bona Fides ist Deutschlands führende Detektei für Erbschafts-Ermittlungen und 
 
 ## Verwandte Artikel
 
-- [Rechtliche Aspekte 1: Was Detektive in Deutschland dürfen](/blog/rechtliche-aspekte-1-was-detektive-in-deutschland-duerfen)
-- [Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-1-worauf-arbeitgeber-achten-sollten)
-- [Fallstudie 1: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-1-aus-der-praxis-der-digitalen-ermittlungen)
+- [Rechtliche Grundlagen für Detektive in Deutschland: Kompletleitfaden](/blog/rechtliche-grundlagen-detektive-deutschland-kompletleitfaden)
+- [Hintergrundprüfung Kompletleitfaden: Von Basis-Checks bis Enhanced Due Diligence](/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence)
+- [Fallstudie Insider-Datendiebstahl: Wie ein Ex-Vertriebsleiter zum Konkurrenten wurde](/blog/fallstudie-1-aus-der-praxis-der-digitalen-ermittlungen)
 
 ---
 

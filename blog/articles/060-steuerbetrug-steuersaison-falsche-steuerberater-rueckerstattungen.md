@@ -148,9 +148,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen und St
 
 ## Verwandte Artikel
 
-- [Cyberbetrug 1: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-1-neue-maschen-und-wie-man-sich-schuetzt)
+- [Cyberbetrug Grundlagen: Unternehmen und Privatpersonen schützen](/blog/cyberbetrug-grundlagen-unternehmen-schutz)
 - [Cybercrime: Moderne Techniken und KI-gestützter Betrug 2025](/blog/cybercrime-moderne-techniken-ki-betrug)
 - [Rechtliche Grundlagen: Detektive in Deutschland - Komplett-Leitfaden](/blog/rechtliche-grundlagen-detektive-deutschland-kompletleitfaden)
-- [Cyberbetrug Grundlagen: Unternehmen und Privatpersonen schützen](/blog/cyberbetrug-grundlagen-unternehmen-schutz)
 - [Cybercrime Prävention: Sofortmaßnahmen](/blog/cybercrime-praevention-sofortmassnahmen)
-- [Hintergrundprüfung Kompletleitfaden: Basis & Enhanced Due Diligence](/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence)

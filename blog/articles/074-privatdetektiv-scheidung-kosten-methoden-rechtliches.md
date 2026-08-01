@@ -81,7 +81,7 @@ Ein professioneller Detektiv sichert Beweise nach forensischen Standards: Zeitst
 - Heimliche Videoüberwachung in Privaträumen
 - Erschleichen von Informationen durch falsche Identität gegenüber Behörden
 
-Wichtig für Auftraggeber: Wenn Sie eine Detektei beauftragen, die illegale Methoden einsetzt, riskieren Sie selbst eine Strafverfolgung wegen Anstiftung. Zudem werden illegal beschaffte Beweise vom Gericht abgelehnt – Geld und Zeit sind verloren. Mehr zu den rechtlichen Rahmenbedingungen finden Sie in unserem Artikel über [digitale Ermittlungsmethoden im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz).
+Wichtig für Auftraggeber: Wenn Sie eine Detektei beauftragen, die illegale Methoden einsetzt, riskieren Sie selbst eine Strafverfolgung wegen Anstiftung. Zudem werden illegal beschaffte Beweise vom Gericht abgelehnt – Geld und Zeit sind verloren. Mehr zu den rechtlichen Rahmenbedingungen finden Sie in unserem Artikel über [digitale Ermittlungsmethoden im Netz](/blog/internet-detektei-online-ermittlungen-digitale-beweise).
 
 ## Sind Detektiv-Beweise vor Gericht verwertbar?
 

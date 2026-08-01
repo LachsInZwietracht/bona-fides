@@ -11,7 +11,7 @@ excerpt: "Komplete FAQ-Sammlung zur Detektiv-Beauftragung: Von Kosten über rech
 
 ## Zusammenfassung (TL;DR)
 
-"Sind Detektive überhaupt legal?" "Was kostet das wirklich?" "Ist mein Fall wichtig genug?" Diese 25 häufigsten Fragen zur Privatdetektiv-Beauftragung werden ehrlich und transparent beantwortet. Von Kosten (80-150€/Stunde) über Erfolgsaussichten (variiert stark je Falltyp) bis zu rechtlichen Grenzen (DSGVO, StGB, GeWO). Keine Verkaufsrhetorik, sondern realistische Einschätzungen für fundierte Entscheidungen. Detektive sind keine Luxusdienstleistung, sondern professionelle Problemlöser für jeden – vom KMU bis zum Privathaushalt. Erfolgsquoten: Untreue-Ermittlungen 85%, Vermögenssuche 60%, Personensuche 70%, Corporate Fraud 89%.
+"Sind Detektive überhaupt legal?" "Was kostet das wirklich?" "Ist mein Fall wichtig genug?" Diese 29 häufigsten Fragen zur Privatdetektiv-Beauftragung werden ehrlich und transparent beantwortet. Von Kosten (80-150€/Stunde) über Erfolgsaussichten (variiert stark je Falltyp) bis zu rechtlichen Grenzen (DSGVO, StGB, GeWO). Keine Verkaufsrhetorik, sondern realistische Einschätzungen für fundierte Entscheidungen. Detektive sind keine Luxusdienstleistung, sondern professionelle Problemlöser für jeden – vom KMU bis zum Privathaushalt. Erfolgsquoten: Untreue-Ermittlungen 85%, Vermögenssuche 60%, Personensuche 70%, Corporate Fraud 89%.
 
 ---
 
@@ -580,6 +580,48 @@ Bei Vermögensrückführung (Betrugsschäden, versteckte Assets): Erfolgshonorar
 - **Überschreitung** des Kosten-Budgets: Teilstorno möglich
 - **Rechtsverstöße:** Schadenersatz und Strafanzeige prüfen
 - **Unzureichende Kommunikation:** Management involvieren
+
+## Praktische Fragen zur Beauftragung
+
+### 24. Muss ich persönlich in Ihr Büro kommen?
+
+**Nein.** Viele Mandanten wollen aus Diskretionsgründen nicht physisch erscheinen – das ist kein Problem.
+
+**Möglich sind:**
+- **Verschlüsselte Videocalls** (Signal, passwortgeschützte Konferenzräume)
+- **Telefonische Erstberatung** – für die unverbindliche Ersteinschätzung reicht ein Anruf
+- **Persönliche Treffen** im Büro oder an einem neutralen Ort
+- **Verschlüsselte E-Mail-Kommunikation** (PGP)
+
+Der Mandatsvertrag kann digital geschlossen werden, per qualifizierter elektronischer Signatur.
+
+### 25. Kann ich anonym beauftragen?
+
+**Nein.** Aus geldwäscherechtlichen Gründen und wegen der DSGVO müssen wir Mandanten identifizieren. Die Erstberatung können Sie anonym führen – für die Mandatsvereinbarung brauchen wir Ihre Identität. Ihre Daten werden vertraulich behandelt und nach Verfahrensabschluss gelöscht.
+
+### 26. Wie schnell können Sie starten?
+
+Bei Standardfällen binnen **24 bis 72 Stunden** nach Auftragserteilung. Bei Notfällen – Beweise drohen verloren zu gehen, die Zielperson reist ab – reagieren wir innerhalb von Stunden.
+
+**Voraussetzung:** klarer Auftrag, geleistete Anzahlung und die nötigen Ausgangsinformationen (Name, Adresse, Foto der Zielperson, bekannte Gewohnheiten).
+
+Der häufigste Fehler von Mandanten ist übrigens das Gegenteil: zu lange zu warten. Digitale Spuren verschwinden, Zielpersonen werden vorsichtiger, Zeugenerinnerungen verblassen.
+
+### 27. Kann ich die Ermittlung jederzeit stoppen?
+
+**Ja.** Mandate sind jederzeit kündbar. Abgerechnet werden nur die bis dahin tatsächlich erbrachten Stunden. Sie erhalten auch bei vorzeitigem Abbruch eine Dokumentation dessen, was bereits ermittelt wurde.
+
+### 28. Brauche ich zusätzlich einen Anwalt?
+
+**Wir sind keine Anwälte und dürfen keine Rechtsberatung erteilen.** Wir liefern die Beweise – juristisch verwerten muss sie ein Anwalt.
+
+Einen Anwalt brauchen Sie definitiv bei Scheidungsverfahren, Kündigungen, Strafanzeigen und Zivilklagen. Wir arbeiten regelmäßig mit Anwälten zusammen (Sie beauftragen beide unabhängig voneinander) und bereiten Beweise so auf, dass sie sich direkt in ein Verfahren einbringen lassen. Empfehlungen können wir geben, die Auswahl bleibt bei Ihnen.
+
+### 29. Was unterscheidet eine Detektei von einer Sicherheitsfirma?
+
+Detekteien **ermitteln**: recherchieren, observieren, sichern Beweise, klären Sachverhalte auf. Sicherheitsfirmen **schützen**: bewachen Objekte, begleiten Personen, kontrollieren Zutritte. Es gibt Überschneidungen – beide unterliegen § 34a GewO –, aber die Kernkompetenzen sind verschieden. Wer einen Sachverhalt aufklären will, braucht eine Detektei; wer eine akute Gefahr abwehren will, eine Sicherheitsfirma oder die Polizei.
+
+Zur Polizei: Detekteien haben keine Sonderbefugnisse. Eine Zusammenarbeit entsteht typischerweise dann, wenn Mandanten Strafanzeige erstatten und die von uns gesicherten Beweise den Ermittlungsbehörden übergeben.
 
 ## Verwandte Artikel
 

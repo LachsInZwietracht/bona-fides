@@ -1,13 +1,13 @@
 ---
-title: "Digitale Spur 7: Moderne Ermittlungstechniken im Netz"
+title: "IoT-Forensik: Welche Spuren vernetzte Geräte hinterlassen"
 slug: digitale-spur-7-moderne-ermittlungstechniken-im-netz
-keyword: digitale spur 7
+keyword: iot forensik vernetzte geräte spuren
 category: Digital Investigations
 date: 2024-07-02
 excerpt: "IoT-Forensik und Smart-Device-Ermittlungen. Erfahren Sie, wie vernetzte Geräte zur Beweisquelle werden."
 ---
 
-# Digitale Spur 7: Moderne Ermittlungstechniken im Netz
+# IoT-Forensik: Welche Spuren vernetzte Geräte hinterlassen
 
 ## Zusammenfassung (TL;DR)
 
@@ -98,6 +98,5 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 
 ## Verwandte Artikel
 
-- [Digitale Spur 1: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz)
-- [Digitale Spur 2: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-2-moderne-ermittlungstechniken-im-netz)
-- [Digitale Spur 3: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-3-moderne-ermittlungstechniken-im-netz)
+- [Internet Detektei: Was eine Online-Ermittlung leistet und wie Bona Fides digitale Spuren sichert](/blog/internet-detektei-online-ermittlungen-digitale-beweise)
+- [Krypto-Forensik, Dark Web und Autorschaftsanalyse: Fortgeschrittene Ermittlungstechniken](/blog/digitale-spur-3-moderne-ermittlungstechniken-im-netz)

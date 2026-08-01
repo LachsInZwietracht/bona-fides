@@ -1,13 +1,13 @@
 ---
-title: "Fallstudie 1: Aus der Praxis der digitalen Ermittlungen"
+title: "Fallstudie Insider-Datendiebstahl: Wie ein Ex-Vertriebsleiter zum Konkurrenten wurde"
 slug: fallstudie-1-aus-der-praxis-der-digitalen-ermittlungen
-keyword: fallstudie 1
+keyword: fallstudie insider datendiebstahl ermittlung
 category: Case Studies & Real Stories
 date: 2025-01-07
 excerpt: "Reale Ermittlungsfälle aus der Praxis. Erfahren Sie, wie Bona Fides Detektei komplexe digitale Fälle erfolgreich aufklärt."
 ---
 
-# Fallstudie 1: Aus der Praxis der digitalen Ermittlungen
+# Fallstudie Insider-Datendiebstahl: Wie ein Ex-Vertriebsleiter zum Konkurrenten wurde
 
 ## Zusammenfassung (TL;DR)
 
@@ -101,6 +101,6 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 
 ## Verwandte Artikel
 
-- [Fallstudie 127: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-127-aus-der-praxis-der-digitalen-ermittlungen)
-- [Fallstudie 128: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-128-aus-der-praxis-der-digitalen-ermittlungen)
-- [Fallstudie 129: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-129-aus-der-praxis-der-digitalen-ermittlungen)
+- [Fallstudie Geheimnisverrat: Wenn ein leitender Angestellter an den Wettbewerb liefert](/blog/fallstudie-2-aus-der-praxis-der-digitalen-ermittlungen)
+- [Fallstudie Identitätsdiebstahl: Kredite auf fremden Namen aufspüren](/blog/fallstudie-3-aus-der-praxis-der-digitalen-ermittlungen)
+- [Fallstudie Arbeitszeitbetrug: Außendienst ohne Kundenbesuche](/blog/fallstudie-4-aus-der-praxis-der-digitalen-ermittlungen)

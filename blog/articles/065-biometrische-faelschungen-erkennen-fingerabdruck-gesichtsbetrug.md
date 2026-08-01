@@ -124,8 +124,8 @@ Bona Fides ist Deutschlands führende Detektei für biometrische Forensik und Id
 ## Verwandte Artikel
 
 - [KI-Betrug 2026: Wie Deepfakes Ermittlungen erschweren](/blog/ki-betrug-2026-deepfakes-ermittlungen-erschweren)
-- [Cyberbetrug 1: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-1-neue-maschen-und-wie-man-sich-schuetzt)
-- [Technologie & Tools 2: Die wichtigsten Werkzeuge für Ermittlungen](/blog/technologie-tools-2-die-wichtigsten-werkzeuge-fuer-ermittlungen)
+- [Cyberbetrug Grundlagen: Unternehmen und Privatpersonen schützen](/blog/cyberbetrug-grundlagen-unternehmen-schutz)
+- [Ermittlungs-Tools: Die wichtigsten Werkzeuge professioneller Detektive](/blog/technologie-tools-1-die-wichtigsten-werkzeuge-fuer-ermittlungen)
 
 ---
 

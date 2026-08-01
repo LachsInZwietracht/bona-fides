@@ -1,17 +1,17 @@
 ---
-title: "Leitfaden 1: Schritt-für-Schritt zur eigenen Sicherheit"
+title: "Digitale Sicherheit: Schritt für Schritt zum eigenen Schutz"
 slug: leitfaden-1-schritt-fuer-schritt-zur-eigenen-sicherheit
-keyword: leitfaden 1
+keyword: digitale sicherheit leitfaden schutz
 category: How-To & Educational Guides
 date: 2025-02-11
 excerpt: "Praktischer Leitfaden für digitale Sicherheit. Erfahren Sie, wie Sie sich selbst vor Cyber-Bedrohungen schützen können."
 ---
 
-# Leitfaden 1: Schritt-für-Schritt zur eigenen Sicherheit
+# Digitale Sicherheit: Schritt für Schritt zum eigenen Schutz
 
 ## Zusammenfassung (TL;DR)
 
-Digitale Sicherheit ist keine Raketenwissenschaft, aber sie erfordert Aufmerksamkeit und die richtigen Gewohnheiten. Dieser Leitfaden zeigt Ihnen in sieben praktischen Schritten, wie Sie sich gegen die häufigsten digitalen Bedrohungen schützen: von starken Passwörtern über Zwei-Faktor-Authentifizierung bis zu sicherem Online-Verhalten. Diese Maßnahmen verhindern 85% aller gängigen Cyberattacken und kosten Sie weniger als eine Stunde Zeit. Sollten Sie dennoch Opfer eines Angriffs werden, unterstützt Bona Fides Sie mit professionellen Ermittlungen und Schadensbegrenzung.
+Digitale Sicherheit ist keine Raketenwissenschaft, aber sie erfordert Aufmerksamkeit und die richtigen Gewohnheiten. Dieser Leitfaden zeigt Ihnen in acht praktischen Schritten, wie Sie sich gegen die häufigsten digitalen Bedrohungen schützen: von starken Passwörtern über Zwei-Faktor-Authentifizierung bis zu sicherem Online-Verhalten. Diese Maßnahmen verhindern 85% aller gängigen Cyberattacken und kosten Sie weniger als eine Stunde Zeit. Sollten Sie dennoch Opfer eines Angriffs werden, unterstützt Bona Fides Sie mit professionellen Ermittlungen und Schadensbegrenzung.
 
 ---
 
@@ -114,6 +114,26 @@ Dieser Leitfaden zeigt Ihnen wie. Keine komplizierte Technik – nur praktische 
 
 **Umsetzung:** Gehen Sie heute durch die Privatsphäre-Einstellungen Ihrer wichtigsten Social-Media-Accounts (Facebook, Instagram, LinkedIn) und verschärfen Sie sie.
 
+## Schritt 8: Sensible Kommunikation verschlüsseln
+
+**Das Problem:** E-Mail ist ein offenes Postkartensystem – auf dem Weg zwischen Absender und Empfänger liegt der Inhalt an mehreren Stellen unverschlüsselt vor. SMS lassen sich unter bestimmten Umständen abfangen.
+
+**Die Lösung:**
+- **Ende-zu-Ende-verschlüsselte Messenger** wie Signal oder Threema für alles, was vertraulich ist
+- **Keine Zugangsdaten, Kreditkartennummern oder Ausweiskopien per E-Mail** versenden – wenn es sein muss, dann in einem passwortgeschützten Archiv, dessen Passwort über einen anderen Kanal geht
+- **Vorsicht bei Anhängen mit sensiblen Daten**: Was einmal verschickt ist, liegt dauerhaft auf fremden Servern
+
+**Umsetzung:** Installieren Sie heute einen verschlüsselten Messenger und verlagern Sie mindestens Ihre familiären und finanziellen Gespräche dorthin.
+
+## Wenn die Basis steht: Weiterführende Maßnahmen
+
+Die sieben Schritte oben decken den Großteil des Alltagsrisikos ab. Wer darüber hinausgehen will:
+
+- **Festplattenverschlüsselung aktivieren** – BitLocker unter Windows, FileVault unter macOS. Schützt Ihre Daten, wenn das Gerät gestohlen wird oder verloren geht.
+- **Datensparsamkeit praktizieren** – Bei jeder Registrierung nur angeben, was tatsächlich nötig ist. Alte, ungenutzte Accounts aktiv löschen statt liegen zu lassen: Jeder existierende Account ist eine potenzielle Quelle für ein künftiges Datenleck.
+- **Tracking reduzieren** – Ein Werbe- und Skriptblocker im Browser sowie eine datensparsame Suchmaschine verringern die Menge an Profildaten, die über Sie zusammengeführt werden. Das ist kein Sicherheitsgewinn im engeren Sinn, erschwert aber gezielte Social-Engineering-Angriffe erheblich.
+- **Ihre digitale Angriffsfläche kennen** – Suchen Sie einmal jährlich selbst nach Ihrem Namen. Was ein Angreifer über Sie findet, ist der Ausgangspunkt jedes personalisierten Angriffs.
+
 ## Häufig gestellte Fragen (FAQ)
 
 **F: Sind Passwort-Manager nicht selbst ein Risiko? Wenn jemand das Master-Passwort knackt, hat er Zugriff auf alles!**
@@ -149,6 +169,6 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 
 ## Verwandte Artikel
 
-- [Leitfaden 132: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-132-schritt-fuer-schritt-zur-eigenen-sicherheit)
-- [Leitfaden 133: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-133-schritt-fuer-schritt-zur-eigenen-sicherheit)
-- [Leitfaden 134: Schritt für Schritt zur eigenen Sicherheit](/blog/leitfaden-134-schritt-fuer-schritt-zur-eigenen-sicherheit)
+- [Cybercrime Prävention und Sofortmaßnahmen](/blog/cybercrime-praevention-sofortmassnahmen)
+- [Cybercrime in Deutschland: Zahlen, Trends und Risikoprofile](/blog/branchenstatistik-1-aktuelle-trends-im-cybercrime)
+- [Cyberbetrug Grundlagen: Unternehmen und Privatpersonen schützen](/blog/cyberbetrug-grundlagen-unternehmen-schutz)

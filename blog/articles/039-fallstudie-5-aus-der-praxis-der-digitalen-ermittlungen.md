@@ -1,13 +1,13 @@
 ---
-title: "Fallstudie 130: Aus der Praxis der digitalen Ermittlungen"
+title: "Fallstudie Online-Rufschädigung: Anonyme Diffamierung aufdecken"
 slug: fallstudie-5-aus-der-praxis-der-digitalen-ermittlungen
-keyword: fallstudie 130
+keyword: fallstudie online rufschädigung ermittlung
 category: Case Studies & Real Stories
 date: 2025-05-06
 excerpt: "Reale Ermittlungsfälle aus der Praxis. Wie Bona Fides digitale Beweise sichert und komplexe Fälle löst."
 ---
 
-# Fallstudie 130: Aus der Praxis der digitalen Ermittlungen
+# Fallstudie Online-Rufschädigung: Anonyme Diffamierung aufdecken
 
 ## Zusammenfassung (TL;DR)
 
@@ -128,6 +128,6 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 
 ## Verwandte Artikel
 
-- [Fallstudie 1: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-1-aus-der-praxis-der-digitalen-ermittlungen)
-- [Fallstudie 127: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-127-aus-der-praxis-der-digitalen-ermittlungen)
-- [Fallstudie 128: Aus der Praxis der digitalen Ermittlungen](/blog/fallstudie-128-aus-der-praxis-der-digitalen-ermittlungen)
+- [Fallstudie Insider-Datendiebstahl: Wie ein Ex-Vertriebsleiter zum Konkurrenten wurde](/blog/fallstudie-1-aus-der-praxis-der-digitalen-ermittlungen)
+- [Fallstudie Geheimnisverrat: Wenn ein leitender Angestellter an den Wettbewerb liefert](/blog/fallstudie-2-aus-der-praxis-der-digitalen-ermittlungen)
+- [Fallstudie Identitätsdiebstahl: Kredite auf fremden Namen aufspüren](/blog/fallstudie-3-aus-der-praxis-der-digitalen-ermittlungen)

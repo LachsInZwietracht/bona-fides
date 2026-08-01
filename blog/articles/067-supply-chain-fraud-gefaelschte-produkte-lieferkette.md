@@ -124,9 +124,9 @@ Bona Fides ist Deutschlands führende Detektei für Supply Chain Fraud und Produ
 
 ## Verwandte Artikel
 
-- [Unternehmensbetrug 1: Risiken und Lösungen für HR](/blog/unternehmensbetrug-1-risiken-und-loesungen-fuer-hr)
+- [Unternehmensbetrug Ermittlungsleitfaden: HR-Compliance und forensische Aufklärung](/blog/unternehmensbetrug-ermittlungsleitfaden-hr-compliance)
 - [Hintergrundprüfung Kompletleitfaden: Basis & Enhanced Due Diligence](/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence)
-- [Internationale Ermittlungen 1: Grenzen überschreitende Fälle lösen](/blog/internationale-ermittlungen-1-grenzen-ueberschreitende-faelle-loesen)
+- [Internationale Ermittlungen: Deutsche Detektive im Ausland](/blog/internationale-ermittlungen-deutsche-detektive-im-ausland)
 
 ---
 

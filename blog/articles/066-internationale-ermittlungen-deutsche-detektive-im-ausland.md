@@ -73,6 +73,22 @@ Die Herausforderungen internationaler Ermittlungen gehen weit über Sprachbarrie
 
 4. **Operative Sicherheit und verschlüsselte Kommunikation** - Internationale Ermittlungen erfordern besondere operative Sicherheit: Ende-zu-Ende-verschlüsselte Kommunikation, sichere Dateiübertragung, Schutz der Ermittleridentitäten und Notfallprotokolle für Krisensituationen. Unsere Partner sind in diesen Verfahren geschult und befolgen einheitliche Sicherheitsstandards.
 
+**Der Ablauf in fünf Schritten:**
+
+1. Sie beauftragen uns in Deutschland – ein Vertrag, ein Ansprechpartner, ein Kostenrahmen.
+2. Wir wählen den passenden lokalen Partner aus und erstellen ein präzises Briefing in der Landessprache.
+3. Der Partner führt die Maßnahmen vor Ort durch: Observation, Befragungen, Registerrecherchen, Behördenkontakte.
+4. Wir erhalten die Rohberichte, übersetzen sie, prüfen sie auf Plausibilität und ordnen sie rechtlich ein.
+5. Sie erhalten einen deutschsprachigen Gesamtbericht mit Beweismitteln und Handlungsempfehlung.
+
+**Woraus sich die Kosten zusammensetzen:**
+
+- **Partnerhonorare vor Ort:** 80–200 € pro Stunde, stark länderabhängig
+- **Reisekosten:** Flüge, Unterkunft, Spesen bei Einsätzen mit deutscher Begleitung
+- **Beglaubigte Übersetzungen:** 150–300 € pro Seite
+- **Anwaltliche Begleitung im Zielland:** bei Vollstreckung, Rechtshilfe oder Registereinsicht
+- **Spezialrecherchen:** Offshore-Strukturen, verschachtelte Firmennetzwerke, Blockchain-Analysen
+
 **Was Sie erwarten können:**
 
 - **Zeitrahmen:** 2-4 Wochen für EU-Ermittlungen, 4-8 Wochen für außereuropäische Fälle, 8-12 Wochen bei Offshore-Vermögensermittlungen in komplexen Jurisdiktionen
@@ -97,6 +113,12 @@ A: Grundsätzlich ja, wenn die Beweiserhebung sowohl nach deutschem als auch nac
 **F: Wie schnell können Sie bei internationalen Notfällen reagieren?**
 A: Bei Kindesentführungen, akuter Vermögensverschiebung oder Fluchtgefahr aktivieren wir unser Partnernetzwerk innerhalb von 24 Stunden. In der EU sind operative Maßnahmen oft binnen 48 Stunden möglich, außerhalb Europas je nach Region in 3-7 Tagen. Bei HKÜ-Fällen (Haager Kindesentführungsübereinkommen) arbeiten wir parallel mit Anwälten und der Zentralen Behörde zusammen, um Rückführungsanträge zu beschleunigen.
 
+**F: Können Sie ins Ausland transferiertes Geld zurückholen?**
+A: Wir können Täter identifizieren, Geldflüsse nachvollziehen und die rechtlichen Schritte vorbereiten – die Rückführung selbst ist ein juristischer Vorgang, kein ermittlerischer. Wie realistisch sie ist, hängt an vier Faktoren: Wo liegt das Geld (Bankkonto, Kryptowallet, Bargeld, Sachwerte)? In welcher Jurisdiktion? Wie schnell wurde reagiert? Kooperieren die dortigen Behörden? Bei schneller Reaktion und kooperativer Jurisdiktion liegen die Chancen im niedrigen zweistelligen Prozentbereich, ohne professionelle Aufarbeitung deutlich darunter. Wir sagen Ihnen im Erstgespräch ehrlich, ob sich der Aufwand wirtschaftlich lohnt.
+
+**F: Gibt es Länder, in denen Sie nicht ermitteln?**
+A: Ja. Kriegs- und Krisengebiete, Länder ohne funktionierende Rechtsstaatlichkeit und Regionen, in denen die persönliche Sicherheit unserer Partner nicht gewährleistet ist, schließen wir aus. In autokratisch regierten Staaten sind Ermittlungen zwar teilweise möglich, aber riskanter, teurer und mit niedrigeren Erfolgsquoten – wir legen das vorab offen, statt es im Angebot zu verstecken.
+
 ---
 
 *Dieser Artikel dient nur zu Informationszwecken und stellt keine Rechtsberatung dar. Für spezifische internationale Fälle kontaktieren Sie bitte unsere Detektei oder einen Fachanwalt für internationales Privatrecht.*
@@ -118,9 +140,9 @@ Bona Fides ist Deutschlands führende Detektei für grenzüberschreitende Ermitt
 
 ## Verwandte Artikel
 
-- [Internationale Ermittlungen 1: Grenzen überschreitende Fälle lösen](/blog/internationale-ermittlungen-1-grenzen-ueberschreitende-faelle-loesen)
-- [Cyberbetrug 1: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-1-neue-maschen-und-wie-man-sich-schuetzt)
+- [Cyberbetrug Grundlagen: Unternehmen und Privatpersonen schützen](/blog/cyberbetrug-grundlagen-unternehmen-schutz)
 - [Hintergrundprüfung Kompletleitfaden: Basis & Enhanced Due Diligence](/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence)
+- [Love Scam erkennen und aufdecken: Liebesbetrug im Internet](/blog/love-scam-romance-betrug-aufdecken)
 
 ---
 

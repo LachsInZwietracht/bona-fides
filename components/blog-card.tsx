@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Article } from "@/lib/blog";
 
@@ -52,24 +51,12 @@ export function BlogCard({ article, isMobile = false, shouldAnimateOnMobile = fa
                 : 'text-gray-300'
               : 'text-gray-300 group-hover:text-[#FEF3C6]'
           }`}>
-            Fallakte • {new Date(article.metadata.date).toLocaleDateString("de-DE", {
-              year: "numeric",
-              month: "2-digit",
-              day: "2-digit",
-            })}
+            Fallakte • {article.metadata.category}
           </span>
         </div>
 
         {/* Content */}
         <div className="p-4 sm:p-5 lg:p-6 space-y-4 relative z-10">
-          {/* Category Badge with Golden Design */}
-          <Badge
-            className="text-[#1A1612] font-mono text-xs px-3 py-1 rounded-sm backdrop-blur-sm w-fit font-bold uppercase tracking-wide transition-all duration-500 shadow-lg"
-            style={{ backgroundColor: '#C2B16D' }}
-          >
-            {article.metadata.category}
-          </Badge>
-
           <h3 className={`font-serif font-bold text-xl leading-tight transition-all duration-500 line-clamp-2 ${
             isMobile
               ? shouldAnimateOnMobile

@@ -363,6 +363,6 @@ Die ersten 72 Stunden sind entscheidend – bei Diebstählen, Unterschlagung, od
 
 ## Verwandte Artikel
 
-- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte)
-- [Die Verdächtigen: Profile der mutmaßlichen Kunstdiebe](/blog/louvre-verdaechtige-profile)
-- [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-forensische-beweise)
+- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-1-die-nacht)
+- [Die Verdächtigen: Profile der mutmaßlichen Kunstdiebe](/blog/louvre-raub-4-verdaechtige-profile)
+- [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-raub-5-forensische-beweise)

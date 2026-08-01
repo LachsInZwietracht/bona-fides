@@ -53,7 +53,7 @@ Der erste und oft ergiebigste Schritt ist die **Open-Source-Intelligence-Analyse
 
 Professionelle OSINT-Analysten suchen nicht einfach nach dem Namen – sie analysieren Muster. Schreibstile, wiederkehrende Kontakte, geografische Hinweise in Bildern, verwendete Plattformen und zeitliche Aktivitätsmuster können zusammengefasst ein präzises Lagebild ergeben, selbst wenn die gesuchte Person unter einem Pseudonym agiert.
 
-Methoden der digitalen Spur im Überblick und wie Detektive diese rechtlich verwertbar dokumentieren, beschreibt unser Artikel zu [modernen Ermittlungstechniken im Netz](/blog/digitale-spur-9-moderne-ermittlungstechniken-im-netz).
+Methoden der digitalen Spur im Überblick und wie Detektive diese rechtlich verwertbar dokumentieren, beschreibt unser Artikel zu [modernen Ermittlungstechniken im Netz](/blog/internet-detektei-online-ermittlungen-digitale-beweise).
 
 ### Personenbefragungen und Feldermittlungen
 

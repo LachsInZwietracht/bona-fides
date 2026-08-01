@@ -1,13 +1,13 @@
 ---
-title: "Hintergrundprüfung 2: Worauf Arbeitgeber achten sollten"
+title: "Referenzprüfung und Social-Media-Screening: Kandidaten rechtssicher überprüfen"
 slug: hintergrundpruefung-2-worauf-arbeitgeber-achten-sollten
-keyword: hintergrundprüfung 2
+keyword: referenzprüfung social media screening bewerber
 category: Background Checks & Due Diligence
 date: 2024-02-06
 excerpt: "Referenzprüfung und Social-Media-Screening. Erfahren Sie, wie Sie Kandidaten rechts sicher überprüfen."
 ---
 
-# Hintergrundprüfung 2: Worauf Arbeitgeber achten sollten
+# Referenzprüfung und Social-Media-Screening: Kandidaten rechtssicher überprüfen
 
 ## Zusammenfassung (TL;DR)
 
@@ -90,6 +90,4 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 
 ## Verwandte Artikel
 
-- [Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-1-worauf-arbeitgeber-achten-sollten)
-- [Hintergrundprüfung 58: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-58-worauf-arbeitgeber-achten-sollten)
-- [Hintergrundprüfung 59: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-59-worauf-arbeitgeber-achten-sollten)
+- [Hintergrundprüfung Kompletleitfaden: Von Basis-Checks bis Enhanced Due Diligence](/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence)

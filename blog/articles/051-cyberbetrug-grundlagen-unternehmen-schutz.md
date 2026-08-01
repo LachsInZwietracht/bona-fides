@@ -114,7 +114,10 @@ Bei schneller Reaktion (24-48h) liegt die Erfolgsquote bei 30-40%. Nach einer Wo
 Unsere Stundensätze liegen zwischen 80-150€. Eine typische Cyberbetrug-Ermittlung dauert 14-35 Tage und kostet zwischen 2.500-8.000€ – oft deutlich weniger als der entstandene Schaden.
 
 **Kann ich selbst ermitteln?**
-Rechtlich problematisch und meist erfolglos. Ohne professionelle Tools und internationale Kontakte bleiben Täter unentdeckt. Zudem können selbst gesammelte "Beweise" vor Gericht unverwertbar sein.
+Rechtlich problematisch und meist erfolglos. Ohne professionelle Tools und internationale Kontakte bleiben Täter unentdeckt. Zudem können selbst gesammelte "Beweise" vor Gericht unverwertbar sein. Wer dabei zu illegalen Methoden greift – etwa Zugangsdaten ausprobiert oder sich unter falscher Identität Zugang verschafft –, macht sich selbst strafbar. Als lizenzierte Detektei nach § 34a GewO ermitteln wir ausschließlich mit legalen OSINT-Methoden und sichern Beweise so, dass sie gerichtsverwertbar sind.
+
+**Wozu eine Detektei, wenn ich Strafanzeige erstatten kann?**
+Beides schließt sich nicht aus – im Gegenteil, wir empfehlen die Anzeige in jedem Fall. Der Unterschied liegt in Geschwindigkeit und Reichweite: Die Polizei ermittelt strafrechtlich, priorisiert aber nach Schadenshöhe und Erfolgsaussichten. Bei kleineren Summen bleibt es häufig beim Aktenzeichen. Wir werden sofort tätig, sichern flüchtige digitale Spuren, bevor sie verschwinden, und verfolgen Geldflüsse auch dann weiter, wenn ein Rechtshilfeersuchen Monate dauern würde. Zusätzlich bereiten wir die Beweislage für eine zivilrechtliche Schadensersatzklage auf – ein Weg, den das Strafverfahren nicht abdeckt.
 
 ## Verwandte Artikel
 

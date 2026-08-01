@@ -486,6 +486,6 @@ Bona Fides Detektei bietet spezialisierte forensische Dienstleistungen:
 **[Kostenlose Beratung anfragen](/#contact)**
 ---
 ## Verwandte Artikel
-- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte)
-- [Sicherheitslücken im Louvre: Wie der perfekte Raub möglich wurde](/blog/louvre-sicherheitsluecken-analyse)
-- [Die digitale Spur: Cyberangriff als Ablenkung?](/blog/louvre-digitale-spur-cyberangriff)
+- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-1-die-nacht)
+- [Sicherheitslücken im Louvre: Wie der perfekte Raub möglich wurde](/blog/louvre-raub-2-sicherheitsluecken-analyse)
+- [Die digitale Spur: Cyberangriff als Ablenkung?](/blog/louvre-raub-komplette-ermittlungsgeschichte)

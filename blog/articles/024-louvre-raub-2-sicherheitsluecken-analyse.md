@@ -334,6 +334,6 @@ Bona Fides Detektei bietet comprehensive Security Audits für hochwertige Sammlu
 
 ## Verwandte Artikel
 
-- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte)
-- [Die digitale Spur: Cyberangriff als Ablenkung?](/blog/louvre-digitale-spur-cyberangriff)
-- [Kunstdiebstahl und Cyber-Sicherheit: Moderne Bedrohungen](/blog/kunstdiebstahl-cyber-sicherheit)
+- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-1-die-nacht)
+- [Die digitale Spur: Cyberangriff als Ablenkung?](/blog/louvre-raub-komplette-ermittlungsgeschichte)
+- [Kunstdiebstahl und Cyber-Sicherheit: Moderne Bedrohungen](/blog/louvre-raub-verdaechtige-beweise)

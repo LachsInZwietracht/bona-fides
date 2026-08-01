@@ -87,7 +87,27 @@ Wortwahl, Grammatikfehler, Zeitstempel und Verhaltensmuster ermöglichen es, ver
 **Digitale Forensik:**
 Die forensische Sicherung von Datenträgern, Chatverläufen und Webseiten erfolgt nach festen Standards, damit die Beweiskette lückenlos dokumentiert ist.
 
+**Username-Enumeration und Cross-Platform-Analyse:**
+Nutzer verwenden auf verschiedenen Plattformen unterschiedliche Namen – aber selten völlig unabhängige. Über systematische Abgleiche von Benutzernamen, Registrierungszeitpunkten, Profilbildern und Aktivitätsmustern über Hunderte Plattformen hinweg lassen sich Accounts derselben Person verknüpfen. Auch koordiniert betriebene Zweitprofile („Sock Puppets") fallen dabei auf: Sie teilen typischerweise Formulierungsmuster, Tippfehler und Aktivitätsfenster.
+
+**Webarchiv-Recherche:**
+Gelöschte Websites, ältere Profilversionen und entfernte Inhalte existieren häufig in Archiven weiter. Wayback Machine, Archive.today und kommerzielle Archivdienste machen sichtbar, was jemand einmal veröffentlicht und später entfernt hat – ein häufiger Wendepunkt bei Fällen mit gefälschten Referenzen.
+
 *Die wertvollste Fähigkeit einer Internet Detektei ist nicht das Finden von Informationen – davon gibt es im Netz unendlich viele. Es ist die Fähigkeit, aus dem Datenrauschen die wenigen relevanten, beweisbaren Fakten herauszufiltern.*
+
+## Der Ablauf einer digitalen Ermittlung
+
+Systematik ist der Unterschied zwischen einer Recherche und einer Ermittlung. Wir arbeiten in fünf Schritten:
+
+**1. Informationsbeschaffung** – Erfassung aller verfügbaren offenen Quellen: soziale Netzwerke, Webarchive, öffentliche Register, Presseberichte, Foren und Bewertungsplattformen.
+
+**2. Verifizierung und Querabgleich** – Jede einzelne Information wird gegen mindestens eine unabhängige Quelle geprüft. Widersprüche sind dabei wertvoller als Bestätigungen: Wenn ein Profil eine Geschäftsführertätigkeit „seit 2020" ausweist, das Unternehmen laut Handelsregister aber erst 2022 gegründet wurde, ist das ein belastbarer Ansatzpunkt.
+
+**3. Timeline-Rekonstruktion** – Alle Erkenntnisse werden chronologisch geordnet. Erst in der Zeitachse werden Lücken, Überschneidungen und Ungereimtheiten sichtbar, die im Einzelbefund unauffällig bleiben.
+
+**4. Forensische Dokumentation** – Sicherung mit Screenshot, Quell-URL, Zeitstempel und Hash-Wert. Ein Screenshot ohne diese Begleitdaten kann vor Gericht als manipuliert zurückgewiesen werden; die Zivilprozessordnung stellt an digitale Beweismittel Anforderungen an Urkundenqualität.
+
+**5. Bewertung und Bericht** – Wir trennen klar zwischen gerichtsverwertbarem Beweis, starkem Indiz und begründeter Vermutung. Diese Unterscheidung entscheidet darüber, ob Ihr Anwalt mit dem Material arbeiten kann.
 
 ## Was darf eine Internet Detektei – und was nicht?
 
@@ -165,6 +185,15 @@ A: Die Kosten richten sich nach Umfang und Komplexität des Falls. Eine einfache
 **F: Ist es legal, eine Internet Detektei zu beauftragen?**
 A: Ja. Die Beauftragung einer Detektei ist vollkommen legal, solange ein berechtigtes Interesse vorliegt – etwa die Aufklärung einer Straftat, der Schutz vor Betrug oder die Wahrung eigener Rechte. Die Ermittlungen müssen sich im Rahmen der DSGVO und des Strafrechts bewegen. Eine professionelle Internet Detektei achtet von sich aus darauf, diese Grenzen einzuhalten.
 
+**F: Worin unterscheidet sich das von einer gründlichen Google-Suche?**
+A: In der Tiefe der Quellen und in der Verwertbarkeit. Eine Suchmaschine erfasst nur einen Bruchteil des indexierten Netzes und praktisch nichts von dem, was gelöscht oder nie indexiert wurde. Professionelle Ermittlung greift auf kostenpflichtige Datenbanken, Archive, Registerauszüge und spezialisierte Analysewerkzeuge zu – und dokumentiert jeden Fund so, dass er einer gerichtlichen Prüfung standhält. Ein Screenshot aus dem Browser tut das in der Regel nicht.
+
+**F: Können Sie jemanden finden, der scheinbar spurlos verschwunden ist?**
+A: Häufig ja. Selbst wenn eine Person alle aktuellen Accounts gelöscht hat, bleiben Spuren: archivierte Profilversionen, alte Forenbeiträge, Registereinträge, Verknüpfungen über Dritte. Wie gut das funktioniert, hängt vor allem davon ab, wie präsent die Person früher online war – und wie viel Zeit seither vergangen ist.
+
+**F: Wie schnell muss ich handeln?**
+A: Möglichst innerhalb der ersten 48 Stunden. Plattformen löschen Inhalte, Accounts werden geschlossen, Archive überschreiben ältere Versionen und Domainregistrierungen laufen aus. Was heute noch dokumentierbar ist, kann in drei Monaten unwiederbringlich verschwunden sein.
+
 **F: Wie schnell bekomme ich Ergebnisse?**
 A: Das hängt vom Fall ab. Eine Profil- oder Identitätsprüfung liefert oft schon nach wenigen Tagen erste Erkenntnisse. Komplexe Betrugs- oder Forensikermittlungen können mehrere Wochen dauern. Bei Bona Fides erhalten Sie in der Regel innerhalb von 3 bis 30 Tagen einen abschließenden, gerichtsverwertbaren Bericht.
 
@@ -189,9 +218,7 @@ Bona Fides ist Ihre spezialisierte Detektei für Ermittlungen im digitalen Raum.
 
 ## Verwandte Artikel
 
-- [Digitale Spur: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz)
+- [Digitale Spur: Krypto-Forensik und Dark-Web-Monitoring](/blog/digitale-spur-3-moderne-ermittlungstechniken-im-netz)
 - [Cyberbetrug Grundlagen: Unternehmen und Privatpersonen schützen](/blog/cyberbetrug-grundlagen-unternehmen-schutz)
 - [Cybercrime: Moderne Techniken und KI-Betrug](/blog/cybercrime-moderne-techniken-ki-betrug)
 - [Stalking-Schutz 2026: Digitale und physische Bedrohungen abwehren](/blog/stalking-schutz-2026-digitale-physische-bedrohungen)
-- [Die wichtigsten Werkzeuge für digitale Ermittlungen](/blog/technologie-tools-1-die-wichtigsten-werkzeuge-fuer-ermittlungen)
-- [Rechtliche Grundlagen für Detektive in Deutschland](/blog/rechtliche-grundlagen-detektive-deutschland-kompletleitfaden)
