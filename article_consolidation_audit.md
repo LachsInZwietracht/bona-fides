@@ -72,6 +72,6 @@ Mögliche Reduktion: weitere 5 Artikel.
 
 ## Offene Punkte
 
-- **Zahlen und Statistiken prüfen.** Der Statistikartikel stützt sich weiterhin auf BKA- und Bitkom-Zahlen für 2024. Die widersprüchlichen Angaben aus dem zusammengeführten Zweitartikel wurden verworfen statt gemittelt. Eine Aktualisierung auf die aktuelle Berichtslage steht aus und sollte gegen die Originalquellen erfolgen, nicht gegen den Bestand.
+- ~~Zahlen und Statistiken prüfen.~~ **Erledigt am 1. August 2026.** Der Statistikartikel wurde gegen das BKA-Bundeslagebild Cybercrime 2025 und die Bitkom-Studie „Wirtschaftsschutz 2025" neu geschrieben. Nicht belegbare Detailstatistiken (Deepfake-Fallzahlen, KI-Phishing-Erfolgsquoten, Opferquoten nach Alter und Unternehmensgröße) wurden entfernt statt fortgeschrieben. Die Leitzahlen in `cyberbetrug-grundlagen`, `cybercrime-moderne-techniken-ki-betrug`, `cybercrime-praevention-sofortmassnahmen`, `internet-detektei` und `steuerbetrug-steuersaison` wurden auf denselben Stand gezogen, damit sich die Seiten nicht mehr widersprechen.
 - **Rankings vor weiteren Löschungen prüfen.** Vor Priorität B sollten Search Console und Analytics je Cluster die stärkste Ziel-URL bestimmen.
 - **Nach Veröffentlichung** Indexierung, Rankings und 404-Fehler beobachten.

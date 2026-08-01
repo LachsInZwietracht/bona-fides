@@ -48,3 +48,6 @@ node_modules/
 /playwright/.cache/
 # Konsolen-Logs und Snapshots des Playwright-MCP-Servers
 /.playwright-mcp/
+
+# Lokale, nicht committete Work-in-Progress-Dateien (siehe local-wip/README.md)
+/local-wip/

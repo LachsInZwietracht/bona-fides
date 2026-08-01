@@ -11,7 +11,7 @@ excerpt: "Umfassender Leitfaden für Cybercrime-Prävention und professionelle S
 
 ## Zusammenfassung (TL;DR)
 
-Cybersicherheit ist wie ein Immunsystem – perfekter Schutz gibt es nicht, aber die richtigen Maßnahmen reduzieren Risiken dramatisch und beschleunigen die Schadensbehebung. Deutsche Verbraucher und Unternehmen verlieren jährlich über 2,4 Milliarden Euro an Cyberkriminelle. Präventionsmaßnahmen kosten Bruchteile der möglichen Schäden. Nach einem Cyberangriff entscheiden die ersten 24-48 Stunden über Erfolg oder Misserfolg der Schadensbegrenzung. Bona Fides bietet sowohl präventive Security-Audits als auch Sofort-Ermittlungen mit 24/7-Verfügbarkeit. Erfolgsquote bei schneller Reaktion: 30-40%. Ermittlungszeit: 14-42 Tage je nach Komplexität.
+Cybersicherheit ist wie ein Immunsystem – perfekter Schutz gibt es nicht, aber die richtigen Maßnahmen reduzieren Risiken dramatisch und beschleunigen die Schadensbehebung. Der Schaden durch Cyberangriffe für die deutsche Wirtschaft beläuft sich laut Bitkom auf 202,4 Milliarden Euro jährlich. Präventionsmaßnahmen kosten Bruchteile der möglichen Schäden. Nach einem Cyberangriff entscheiden die ersten 24-48 Stunden über Erfolg oder Misserfolg der Schadensbegrenzung. Bona Fides bietet sowohl präventive Security-Audits als auch Sofort-Ermittlungen mit 24/7-Verfügbarkeit. Erfolgsquote bei schneller Reaktion: 30-40%. Ermittlungszeit: 14-42 Tage je nach Komplexität.
 
 ---
 

@@ -11,7 +11,7 @@ excerpt: "KI-generierte Phishing-Kampagnen, Deepfake-Betrug und moderne Cybercri
 
 ## Zusammenfassung (TL;DR)
 
-Cybercrime hat eine neue Dimension erreicht: KI-generierte Phishing-Kampagnen, Deepfake-Betrug, gefälschte Investment-Plattformen und Krypto-Schemes dominieren die Bedrohungslandschaft. Künstliche Intelligenz macht Betrügereien perfekter und schwerer erkennbar. Täter nutzen ChatGPT für personalisierte E-Mails, Deepfake-Technologie für gefälschte Videoanrufe und automatisierte Bots für Marketplace-Betrug. Deutsche Verbraucher und Unternehmen verlieren jährlich über 2,4 Milliarden Euro an moderne Cyberkriminelle. Die Erfolgsquote bei der Geldwiederbeschaffung hängt entscheidend von der Reaktionsgeschwindigkeit ab: 24-48 Stunden sind kritisch. Bona Fides kombiniert KI-Forensik mit internationaler Ermittlungserfahrung für digitale Spurenverfolgung.
+Cybercrime hat eine neue Dimension erreicht: KI-generierte Phishing-Kampagnen, Deepfake-Betrug, gefälschte Investment-Plattformen und Krypto-Schemes dominieren die Bedrohungslandschaft. Künstliche Intelligenz macht Betrügereien perfekter und schwerer erkennbar. Täter nutzen ChatGPT für personalisierte E-Mails, Deepfake-Technologie für gefälschte Videoanrufe und automatisierte Bots für Marketplace-Betrug. Der Schaden durch Cyberangriffe für die deutsche Wirtschaft liegt laut Bitkom bei 202,4 Milliarden Euro jährlich. Die Erfolgsquote bei der Geldwiederbeschaffung hängt entscheidend von der Reaktionsgeschwindigkeit ab: 24-48 Stunden sind kritisch. Bona Fides kombiniert KI-Forensik mit internationaler Ermittlungserfahrung für digitale Spurenverfolgung.
 
 ---
 

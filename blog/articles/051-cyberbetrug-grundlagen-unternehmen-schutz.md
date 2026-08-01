@@ -11,7 +11,7 @@ excerpt: "Umfassender Schutz vor Cyberbetrug für Unternehmen und Privatpersonen
 
 ## Zusammenfassung (TL;DR)
 
-Cyberbetrug nimmt dramatisch zu: CEO-Fraud, Romance Scams, Phishing, Fake-Shops – die Methoden werden raffinierter und schwerer zu durchschauen. Allein 2024 entstanden deutschen Verbrauchern und Unternehmen Schäden von über 2,4 Milliarden Euro. Bei Romance Scams verlieren Opfer durchschnittlich 24.000€, bei Business Email Compromise bis zu 87.000€. Ohne professionelle Ermittlung bleiben Täter unentdeckt und Gelder unerreichbar. Bona Fides kombiniert digitale Forensik mit internationaler Ermittlungserfahrung, um Betrügern auf die Spur zu kommen und rechtsverwertbare Beweise zu sichern. Erfolgsquote bei schneller Reaktion (24-48h): 30-40%. Ermittlungszeit: 14-35 Tage je nach Komplexität.
+Cyberbetrug nimmt dramatisch zu: CEO-Fraud, Romance Scams, Phishing, Fake-Shops – die Methoden werden raffinierter und schwerer zu durchschauen. Der Bitkom beziffert den Schaden durch Cyberangriffe für die deutsche Wirtschaft auf 202,4 Milliarden Euro jährlich. Bei Romance Scams verlieren Opfer durchschnittlich 24.000€, bei Business Email Compromise bis zu 87.000€. Ohne professionelle Ermittlung bleiben Täter unentdeckt und Gelder unerreichbar. Bona Fides kombiniert digitale Forensik mit internationaler Ermittlungserfahrung, um Betrügern auf die Spur zu kommen und rechtsverwertbare Beweise zu sichern. Erfolgsquote bei schneller Reaktion (24-48h): 30-40%. Ermittlungszeit: 14-35 Tage je nach Komplexität.
 
 ---
 
@@ -70,8 +70,8 @@ Das größte Problem: Die Täter sitzen oft im Ausland. Laut Europol stammen 67%
 Nach deutschem Recht (§ 263 StGB – Betrug) ist Cyberbetrug strafbar, aber die Beweisführung ist komplex. Sie müssen nachweisen: (1) Täuschung, (2) Irrtum, (3) Vermögensschaden, (4) Vorsatz. Ohne digitale Beweismittel (IP-Logs, E-Mail-Header-Analyse, Zahlungsströme) scheitern Strafanzeigen regelmäßig.
 
 **Zentrale Statistiken:**
-- Nur 18% aller angezeigten Cyberbetrugsfälle werden aufgeklärt
-- Bei internationalen Fällen sinkt die Quote auf unter 5%
+- Rund zwei Drittel aller registrierten Cybercrime-Fälle werden aus dem Ausland oder von unbekanntem Tatort aus begangen
+- Bei diesen Auslandstaten liegt die Aufklärungsquote bei lediglich 2,0 Prozent (BKA-Bundeslagebild 2025)
 - Besonders betroffen: KMUs (51%), Senioren über 65 Jahre (23%), Online-Händler (19%)
 - Nach einer Betrugsüberweisung haben Sie 24-48 Stunden, um Konten sperren zu lassen
 

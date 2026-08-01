@@ -11,7 +11,7 @@ excerpt: "Eine Internet Detektei klärt Online-Betrug, Fake-Profile und digitale
 
 ## Zusammenfassung (TL;DR)
 
-Eine **Internet Detektei** ist auf Ermittlungen im digitalen Raum spezialisiert – von der Identifizierung anonymer Täter über die Aufklärung von Online-Betrug bis zur gerichtsverwertbaren Sicherung digitaler Beweise. Während klassische Detekteien Personen observieren, arbeitet eine Internetdetektei mit OSINT (Open Source Intelligence), digitaler Forensik und Datenanalyse. Angesichts von über 130.000 erfassten Cybercrime-Fällen pro Jahr in Deutschland (BKA 2024) und einer hohen Dunkelziffer wird die Online-Ermittlung für Privatpersonen und Unternehmen immer wichtiger. Bona Fides kombiniert moderne digitale Ermittlungstechnik mit rechtssicherer Beweisführung. Typischer Ermittlungszeitraum: 3–30 Tage.
+Eine **Internet Detektei** ist auf Ermittlungen im digitalen Raum spezialisiert – von der Identifizierung anonymer Täter über die Aufklärung von Online-Betrug bis zur gerichtsverwertbaren Sicherung digitaler Beweise. Während klassische Detekteien Personen observieren, arbeitet eine Internetdetektei mit OSINT (Open Source Intelligence), digitaler Forensik und Datenanalyse. Angesichts von rund 333.900 erfassten Cybercrime-Fällen pro Jahr in Deutschland (BKA-Bundeslagebild 2025) und einer hohen Dunkelziffer wird die Online-Ermittlung für Privatpersonen und Unternehmen immer wichtiger. Bona Fides kombiniert moderne digitale Ermittlungstechnik mit rechtssicherer Beweisführung. Typischer Ermittlungszeitraum: 3–30 Tage.
 
 ---
 
