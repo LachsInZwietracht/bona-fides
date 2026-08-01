@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import {
   ArrowRight,
@@ -5,7 +6,6 @@ import {
   Briefcase,
   Building2,
   Check,
-  Clock,
   FileCheck2,
   Gavel,
   Handshake,
@@ -23,65 +23,96 @@ import { getTeamMemberCount } from "@/lib/team-data"
 /* ------------------------------------------------------------------ Hero */
 
 const heroProof = [
-  { icon: Clock, label: siteConfig.responsePromise },
-  { icon: ShieldCheck, label: "NDA vor dem Erstgespräch" },
-  { icon: Gavel, label: "Gerichtsverwertbar dokumentiert" },
-  { icon: Users, label: "Bundesweites Ermittlernetz" },
+  { code: "24H", label: siteConfig.responsePromise },
+  { code: "NDA", label: "NDA vor dem Erstgespräch" },
+  { code: "§", label: "Gerichtsverwertbar dokumentiert" },
+  { code: "DE", label: "Bundesweites Ermittlernetz" },
 ]
 
+/**
+ * Bildmotiv "Das Geflecht": hinter einer glatten Fassade wird das Geflecht aus
+ * Verbindungen sichtbar. Die Fuge im Bild sitzt bei rund 62 % der Breite, die
+ * Textspalte ist deshalb auf 46rem begrenzt und endet davor.
+ *
+ * Höhe abzüglich der 4rem hohen, sticky Kopfzeile, damit Hero und Header
+ * zusammen genau einen Bildschirm füllen.
+ */
 export function HeroSection() {
   return (
-    <section className="relative z-10 pt-16 pb-20 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <div className="space-y-7">
-            <p className="eyebrow text-brass">Wirtschaftsdetektei · bundesweit</p>
+    <section className="relative z-10 flex min-h-[calc(100vh-4rem)] flex-col overflow-hidden">
+      <Image
+        src="/hero-geflecht-v1.png"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[52%_center] lg:object-center"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[linear-gradient(95deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.82)_42%,rgba(0,0,0,0.35)_62%,rgba(0,0,0,0.2)_100%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/55 to-transparent"
+      />
 
-            <h1 className="font-serif font-bold text-white">
-              <span className="block text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">
-                Verdacht ist keine
-                <br />
-                Entscheidungsgrundlage.
-              </span>
-              <span className="mt-4 block text-xl sm:text-2xl font-normal text-brass">
-                Wirtschaftsdetektei für Unternehmen
-              </span>
-            </h1>
+      {/* Leerraum oben, Aussage am unteren Rand verankert */}
+      <div className="relative z-10 min-h-[12vh] flex-1" aria-hidden="true" />
 
-            <p className="max-w-xl text-lg text-gray-300 leading-relaxed">
-              Wir liefern belegte Fakten – zum Kündigen, Klagen, Regulieren oder Entwarnung geben.
-            </p>
+      <div className="container relative z-10 mx-auto px-4 pb-12 pt-16 sm:px-6 lg:px-8">
+        <div className="max-w-[46rem] space-y-7">
+          <p className="eyebrow text-brass">Wirtschaftsdetektei · bundesweit</p>
 
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button
-                asChild
-                size="lg"
-                className="bg-brass text-black hover:bg-brass-light font-semibold text-base px-8 min-h-[54px] shadow-2xl transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(194,177,109,0.5)]"
-              >
-                <Link href="/#contact">
-                  Fall vertraulich schildern
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white/25 bg-transparent text-white hover:bg-white/10 hover:text-white text-base px-8 min-h-[54px]"
-              >
-                <Link href="/leistungen">Leistungen ansehen</Link>
-              </Button>
-            </div>
+          <h1 className="font-serif font-bold text-white">
+            <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.02] tracking-[-0.02em]">
+              Verdacht ist keine
+              <br />
+              Entscheidungsgrundlage.
+            </span>
+            <span className="mt-4 block text-xl sm:text-2xl font-normal text-brass">
+              Wirtschaftsdetektei für Unternehmen
+            </span>
+          </h1>
 
-            <ul className="flex flex-wrap gap-x-8 gap-y-3 pt-6 border-t border-white/10">
-              {heroProof.map((item) => (
-                <li key={item.label} className="flex items-center gap-2.5 text-sm text-gray-400">
-                  <item.icon className="h-4 w-4 flex-shrink-0 text-brass" aria-hidden="true" />
-                  {item.label}
-                </li>
-              ))}
-            </ul>
+          <p className="max-w-xl text-lg text-gray-300 leading-relaxed">
+            Wir liefern belegte Fakten – zum Kündigen, Klagen, Regulieren oder Entwarnung geben.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Button
+              asChild
+              size="lg"
+              className="bg-brass text-black hover:bg-brass-light font-semibold text-base px-8 min-h-[54px] shadow-2xl transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(194,177,109,0.5)]"
+            >
+              <Link href="/#contact">
+                Fall vertraulich schildern
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/25 bg-black/20 text-white backdrop-blur-sm hover:bg-white/10 hover:text-white text-base px-8 min-h-[54px]"
+            >
+              <Link href="/leistungen">Leistungen ansehen</Link>
+            </Button>
           </div>
+        </div>
+      </div>
+
+      {/* Kennzahlenband */}
+      <div className="relative z-10 border-t border-white/10 bg-black/50 backdrop-blur-sm">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <ul className="grid grid-cols-2 gap-x-6 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/10">
+            {heroProof.map((item) => (
+              <li key={item.label} className="flex items-center gap-3 py-4 lg:px-6 lg:first:pl-0">
+                <span className="font-mono text-xs tracking-[0.14em] text-brass">{item.code}</span>
+                <span className="text-sm leading-tight text-gray-400">{item.label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
