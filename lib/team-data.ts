@@ -24,7 +24,7 @@ export const teamMembers: TeamMember[] = [
     division: 'digital',
     specialties: ['OSINT', 'Cyber-Ermittlungen', 'Wirtschaftsspionage'],
     status: 'Aktiv',
-    image: '/fabian.png',
+    image: '/fabian.jpg',
     note: 'Weiß, was du letzten Sommer gepostet hast – und mit welchem Gerät. Während du noch dein Passwort zurücksetzt, hat er dein digitales Ich bereits kartografiert.'
   },
   {
