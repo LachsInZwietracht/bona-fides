@@ -356,5 +356,3 @@ Bona Fides ist Ihre spezialisierte Detektei für den Schutz von Unternehmensgehe
 - [Markenpiraterie und Produktfälschung aufdecken: Ermittlungsleitfaden für Unternehmen](/blog/markenpiraterie-produktfaelschung-ermittlung-aufdecken)
 - [Cyberbetrug Grundlagen: Unternehmen und Privatpersonen schützen](/blog/cyberbetrug-grundlagen-unternehmen-schutz)
 - [Supply Chain Fraud: Gefälschte Produkte in der Lieferkette erkennen](/blog/supply-chain-fraud-gefaelschte-produkte-lieferkette)
-- [Rechtliche Grundlagen für Detektive in Deutschland](/blog/rechtliche-grundlagen-detektive-deutschland-kompletleitfaden)
-- [Hintergrundprüfung Komplettleitfaden: Basis und Enhanced Due Diligence](/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence)

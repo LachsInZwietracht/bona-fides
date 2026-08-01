@@ -1,13 +1,13 @@
 ---
-title: "Digitale Spur 4: Moderne Ermittlungstechniken im Netz"
+title: "Mobile Forensik: Was Standortdaten, Apps und Browserverlauf verraten"
 slug: digitale-spur-4-moderne-ermittlungstechniken-im-netz
-keyword: digitale spur 4
+keyword: mobile forensik standortdaten app daten
 category: Digital Investigations
 date: 2024-02-13
 excerpt: "Mobile Forensik und Geolocation-Analysen. Erfahren Sie, wie Smartphones zur Aufklärung digitaler Fälle beitragen."
 ---
 
-# Digitale Spur 4: Moderne Ermittlungstechniken im Netz
+# Mobile Forensik: Was Standortdaten, Apps und Browserverlauf verraten
 
 ## Zusammenfassung (TL;DR)
 
@@ -90,6 +90,5 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 
 ## Verwandte Artikel
 
-- [Digitale Spur 1: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz)
-- [Digitale Spur 2: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-2-moderne-ermittlungstechniken-im-netz)
-- [Digitale Spur 3: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-3-moderne-ermittlungstechniken-im-netz)
+- [Internet Detektei: Was eine Online-Ermittlung leistet und wie Bona Fides digitale Spuren sichert](/blog/internet-detektei-online-ermittlungen-digitale-beweise)
+- [Krypto-Forensik, Dark Web und Autorschaftsanalyse: Fortgeschrittene Ermittlungstechniken](/blog/digitale-spur-3-moderne-ermittlungstechniken-im-netz)

@@ -128,9 +128,8 @@ Bona Fides ist Deutschlands führende Detektei für Franchise-Due-Diligence und 
 
 ## Verwandte Artikel
 
-- [Hintergrundprüfung 1: Worauf Arbeitgeber achten sollten](/blog/hintergrundpruefung-1-worauf-arbeitgeber-achten-sollten)
+- [Hintergrundprüfung Kompletleitfaden: Von Basis-Checks bis Enhanced Due Diligence](/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence)
 - [Unternehmensbetrug Ermittlungsleitfaden: HR & Compliance](/blog/unternehmensbetrug-ermittlungsleitfaden-hr-compliance)
-- [Hintergrundprüfung Kompletleitfaden: Basis & Enhanced Due Diligence](/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence)
 
 ---
 

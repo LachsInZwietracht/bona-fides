@@ -368,6 +368,6 @@ Der Louvre-Raub zeigt: Selbst die besten Sicherheitssysteme können überwunden 
 
 ## Verwandte Artikel
 
-- [Sicherheitslücken im Louvre: Wie der perfekte Raub möglich wurde](/blog/louvre-sicherheitsluecken-analyse)
-- [Die verschwundene Mona Lisa: 72 Stunden nach dem Raub](/blog/mona-lisa-72-stunden-danach)
-- [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-forensische-beweise)
+- [Sicherheitslücken im Louvre: Wie der perfekte Raub möglich wurde](/blog/louvre-raub-2-sicherheitsluecken-analyse)
+- [Die verschwundene Mona Lisa: 72 Stunden nach dem Raub](/blog/louvre-raub-3-mona-lisa-72-stunden-danach)
+- [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-raub-5-forensische-beweise)

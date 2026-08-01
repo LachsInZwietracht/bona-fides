@@ -39,7 +39,7 @@ Die aktuelle Steuerbetrugs-Welle unterscheidet sich fundamental von früheren Ja
 
 Das größte Problem: Die rechtlichen Konsequenzen treffen oft die Opfer. Nach §370 AO (Abgabenordnung) ist bereits der fahrlässige Umgang mit falschen Steuerangaben strafbar. Wer eine manipulierte Steuererklärung unterschreibt – auch unwissentlich – kann sich der Steuerhinterziehung schuldig machen. 2024 gab es 5.559 Verurteilungen mit Haftstrafen von insgesamt 1.635 Jahren und Geldstrafen von 33,9 Millionen Euro.
 
-Die Aufklärungsquote ist erschreckend niedrig: Bei internationalen Steuerbetrugs-Netzwerken liegt sie unter 12%. Betrüger operieren von Osteuropa, Nigeria und Südostasien aus, nutzen gefälschte Identitäten und Kryptowährungen. Deutsche Behörden stoßen bei grenzüberschreitenden Ermittlungen an rechtliche und technische Grenzen.
+Die Aufklärungsquote ist erschreckend niedrig: Bei Cybercrime-Taten, die aus dem Ausland heraus begangen werden, liegt sie laut BKA-Bundeslagebild 2025 bei 2,0 Prozent. Betrüger operieren von Osteuropa, Nigeria und Südostasien aus, nutzen gefälschte Identitäten und Kryptowährungen. Deutsche Behörden stoßen bei grenzüberschreitenden Ermittlungen an rechtliche und technische Grenzen.
 
 **Besonders gefährdete Zielgruppen:**
 - **Erstmals Steuerpflichtige** (Berufsanfänger, Rentner): 34% aller Fälle
@@ -148,9 +148,7 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen und St
 
 ## Verwandte Artikel
 
-- [Cyberbetrug 1: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-1-neue-maschen-und-wie-man-sich-schuetzt)
+- [Cyberbetrug Grundlagen: Unternehmen und Privatpersonen schützen](/blog/cyberbetrug-grundlagen-unternehmen-schutz)
 - [Cybercrime: Moderne Techniken und KI-gestützter Betrug 2025](/blog/cybercrime-moderne-techniken-ki-betrug)
 - [Rechtliche Grundlagen: Detektive in Deutschland - Komplett-Leitfaden](/blog/rechtliche-grundlagen-detektive-deutschland-kompletleitfaden)
-- [Cyberbetrug Grundlagen: Unternehmen und Privatpersonen schützen](/blog/cyberbetrug-grundlagen-unternehmen-schutz)
 - [Cybercrime Prävention: Sofortmaßnahmen](/blog/cybercrime-praevention-sofortmassnahmen)
-- [Hintergrundprüfung Kompletleitfaden: Basis & Enhanced Due Diligence](/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence)

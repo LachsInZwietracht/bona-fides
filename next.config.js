@@ -18,16 +18,8 @@ const nextConfig = {
   async redirects() {
     return [
       // Cybercrime consolidation redirects - Phase 1
-      {
-        source: '/blog/cyberbetrug-1-neue-maschen-und-wie-man-sich-schuetzt',
-        destination: '/blog/cyberbetrug-grundlagen-unternehmen-schutz',
-        permanent: true,
-      },
-      {
-        source: '/blog/cyberbetrug-2-neue-maschen-und-wie-man-sich-schuetzt',
-        destination: '/blog/cyberbetrug-grundlagen-unternehmen-schutz',
-        permanent: true,
-      },
+      // Hinweis: cyberbetrug-1 und cyberbetrug-2 werden weiter unten
+      // (Konsolidierung Priorität A) auf ihre jeweils passenden Ziele geführt.
       {
         source: '/blog/cyberbetrug-23-neue-maschen-und-wie-man-sich-schuetzt',
         destination: '/blog/cyberbetrug-grundlagen-unternehmen-schutz',
@@ -547,7 +539,139 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Additional redirects will be added systematically during consolidation
+      // Konsolidierung Priorität A (August 2026): 78 → 54 Artikel
+      // Love Scam / Romance Scam
+      {
+        source: '/blog/cyberbetrug-2-neue-maschen-und-wie-man-sich-schuetzt',
+        destination: '/blog/love-scam-romance-betrug-aufdecken',
+        permanent: true,
+      },
+      {
+        source: '/blog/romance-scam-liebesbetrug-erkennen-aufdecken',
+        destination: '/blog/love-scam-romance-betrug-aufdecken',
+        permanent: true,
+      },
+      // Hintergrundprüfung
+      {
+        source: '/blog/hintergrundpruefung-1-worauf-arbeitgeber-achten-sollten',
+        destination: '/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence',
+        permanent: true,
+      },
+      {
+        source: '/blog/hintergrundpruefung-3-worauf-arbeitgeber-achten-sollten',
+        destination: '/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence',
+        permanent: true,
+      },
+      // Privatdetektiv-FAQ
+      {
+        source: '/blog/haeufige-fragen-1-antworten-vom-privatdetektiv',
+        destination: '/blog/privatdetektiv-faq-kompletleitfaden-kosten-ablauf',
+        permanent: true,
+      },
+      {
+        source: '/blog/haeufige-fragen-2-antworten-vom-privatdetektiv',
+        destination: '/blog/privatdetektiv-faq-kompletleitfaden-kosten-ablauf',
+        permanent: true,
+      },
+      // Rechtliche Grundlagen
+      {
+        source: '/blog/rechtliche-aspekte-1-was-detektive-in-deutschland-duerfen',
+        destination: '/blog/rechtliche-grundlagen-detektive-deutschland-kompletleitfaden',
+        permanent: true,
+      },
+      {
+        source: '/blog/rechtliche-aspekte-2-was-detektive-in-deutschland-duerfen',
+        destination: '/blog/rechtliche-grundlagen-detektive-deutschland-kompletleitfaden',
+        permanent: true,
+      },
+      // Internationale Ermittlungen
+      {
+        source: '/blog/internationale-ermittlungen-1-grenzen-ueberschreitende-faelle-loesen',
+        destination: '/blog/internationale-ermittlungen-deutsche-detektive-im-ausland',
+        permanent: true,
+      },
+      {
+        source: '/blog/internationale-ermittlungen-2-grenzen-ueberschreitende-faelle-loesen',
+        destination: '/blog/internationale-ermittlungen-deutsche-detektive-im-ausland',
+        permanent: true,
+      },
+      // Unternehmensbetrug / HR
+      {
+        source: '/blog/unternehmensbetrug-1-risiken-und-loesungen-fuer-hr',
+        destination: '/blog/unternehmensbetrug-ermittlungsleitfaden-hr-compliance',
+        permanent: true,
+      },
+      {
+        source: '/blog/unternehmensbetrug-2-risiken-und-loesungen-fuer-hr',
+        destination: '/blog/unternehmensbetrug-ermittlungsleitfaden-hr-compliance',
+        permanent: true,
+      },
+      // Ermittlungs-Tools
+      {
+        source: '/blog/technologie-tools-2-die-wichtigsten-werkzeuge-fuer-ermittlungen',
+        destination: '/blog/technologie-tools-1-die-wichtigsten-werkzeuge-fuer-ermittlungen',
+        permanent: true,
+      },
+      // Cybercrime-Statistik
+      {
+        source: '/blog/branchenstatistik-2-aktuelle-trends-im-cybercrime',
+        destination: '/blog/branchenstatistik-1-aktuelle-trends-im-cybercrime',
+        permanent: true,
+      },
+      // Sicherheitsleitfaden
+      {
+        source: '/blog/leitfaden-2-schritt-fuer-schritt-zur-eigenen-sicherheit',
+        destination: '/blog/leitfaden-1-schritt-fuer-schritt-zur-eigenen-sicherheit',
+        permanent: true,
+      },
+      // Cyberbetrug-Grundlagen, KI-Trends, Prävention
+      {
+        source: '/blog/cyberbetrug-1-neue-maschen-und-wie-man-sich-schuetzt',
+        destination: '/blog/cyberbetrug-grundlagen-unternehmen-schutz',
+        permanent: true,
+      },
+      {
+        source: '/blog/cyberbetrug-3-neue-maschen-und-wie-man-sich-schuetzt',
+        destination: '/blog/cybercrime-moderne-techniken-ki-betrug',
+        permanent: true,
+      },
+      {
+        source: '/blog/cyberbetrug-4-neue-maschen-und-wie-man-sich-schuetzt',
+        destination: '/blog/cybercrime-praevention-sofortmassnahmen',
+        permanent: true,
+      },
+      // Allgemeine digitale Ermittlungen
+      {
+        source: '/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz',
+        destination: '/blog/internet-detektei-online-ermittlungen-digitale-beweise',
+        permanent: true,
+      },
+      {
+        source: '/blog/digitale-spur-2-moderne-ermittlungstechniken-im-netz',
+        destination: '/blog/internet-detektei-online-ermittlungen-digitale-beweise',
+        permanent: true,
+      },
+      {
+        source: '/blog/digitale-spur-8-moderne-ermittlungstechniken-im-netz',
+        destination: '/blog/internet-detektei-online-ermittlungen-digitale-beweise',
+        permanent: true,
+      },
+      {
+        source: '/blog/digitale-spur-9-moderne-ermittlungstechniken-im-netz',
+        destination: '/blog/internet-detektei-online-ermittlungen-digitale-beweise',
+        permanent: true,
+      },
+      // Untreue
+      {
+        source: '/blog/untreue-2-wie-man-digitale-hinweise-erkennt',
+        destination: '/blog/untreue-1-wie-man-digitale-hinweise-erkennt',
+        permanent: true,
+      },
+      {
+        source: '/blog/untreue-3-wie-man-digitale-hinweise-erkennt',
+        destination: '/blog/untreue-1-wie-man-digitale-hinweise-erkennt',
+        permanent: true,
+      },
     ];
   },
 };

@@ -288,4 +288,3 @@ Bona Fides ist Ihre spezialisierte Detektei für den Schutz geistigen Eigentums.
 - [Cyberbetrug Grundlagen: Unternehmen und Privatpersonen schützen](/blog/cyberbetrug-grundlagen-unternehmen-schutz)
 - [Cybercrime: Moderne Techniken und KI-gestützter Betrug](/blog/cybercrime-moderne-techniken-ki-betrug)
 - [Rechtliche Grundlagen für Detektive in Deutschland](/blog/rechtliche-grundlagen-detektive-deutschland-kompletleitfaden)
-- [Hintergrundprüfung Komplettleitfaden: Basis und Enhanced Due Diligence](/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence)

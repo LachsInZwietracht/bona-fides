@@ -11,7 +11,7 @@ excerpt: "Umfassender Leitfaden für Cybercrime-Prävention und professionelle S
 
 ## Zusammenfassung (TL;DR)
 
-Cybersicherheit ist wie ein Immunsystem – perfekter Schutz gibt es nicht, aber die richtigen Maßnahmen reduzieren Risiken dramatisch und beschleunigen die Schadensbehebung. Deutsche Verbraucher und Unternehmen verlieren jährlich über 2,4 Milliarden Euro an Cyberkriminelle. Präventionsmaßnahmen kosten Bruchteile der möglichen Schäden. Nach einem Cyberangriff entscheiden die ersten 24-48 Stunden über Erfolg oder Misserfolg der Schadensbegrenzung. Bona Fides bietet sowohl präventive Security-Audits als auch Sofort-Ermittlungen mit 24/7-Verfügbarkeit. Erfolgsquote bei schneller Reaktion: 30-40%. Ermittlungszeit: 14-42 Tage je nach Komplexität.
+Cybersicherheit ist wie ein Immunsystem – perfekter Schutz gibt es nicht, aber die richtigen Maßnahmen reduzieren Risiken dramatisch und beschleunigen die Schadensbehebung. Der Schaden durch Cyberangriffe für die deutsche Wirtschaft beläuft sich laut Bitkom auf 202,4 Milliarden Euro jährlich. Präventionsmaßnahmen kosten Bruchteile der möglichen Schäden. Nach einem Cyberangriff entscheiden die ersten 24-48 Stunden über Erfolg oder Misserfolg der Schadensbegrenzung. Bona Fides bietet sowohl präventive Security-Audits als auch Sofort-Ermittlungen mit 24/7-Verfügbarkeit. Erfolgsquote bei schneller Reaktion: 30-40%. Ermittlungszeit: 14-42 Tage je nach Komplexität.
 
 ---
 
@@ -123,6 +123,12 @@ Cyberkriminelle sind keine Script-Kiddies im Keller – es sind organisierte, pr
 
 ### Tag 2-7: Systemwiederherstellung und Lessons Learned
 
+**Folgeschäden ausschließen:**
+- **Kontoauszüge vollständig durchgehen:** Gab es weitere unautorisierte Abbuchungen, auch kleine Testbeträge?
+- **Schufa-Selbstauskunft einholen:** Wurden auf Ihren Namen Verträge geschlossen oder Kredite beantragt? Identitätsdiebstahl zeigt sich hier oft zuerst.
+- **Umfeld informieren:** Geschäftspartner, Familie und Kollegen warnen – kompromittierte Konten werden häufig genutzt, um dasselbe Umfeld anzugreifen.
+- **Prüfen, ob Daten im Umlauf sind:** Kontrollieren Sie über einen seriösen Leak-Prüfdienst, ob Ihre Zugangsdaten in bekannten Datenlecks auftauchen.
+
 **Technische Wiederherstellung:**
 - **Malware-Entfernung:** Professionelle System-Bereinigung
 - **Backup-Recovery:** Daten aus sauberen Backups wiederherstellen
@@ -168,7 +174,7 @@ Cyberkriminelle sind keine Script-Kiddies im Keller – es sind organisierte, pr
 ### Internationale Ermittlungskooperation
 
 **Partner-Netzwerk:**
-- **40+ Länder:** Lokale Detekteien in den häufigsten Täter-Ländern
+- **Über 40 geprüfte Partnerdetekteien in 28 Ländern**, mit Schwerpunkt in den häufigsten Täterregionen
 - **Rechtsberatung:** Juristische Expertise für internationale Rechtshilfe-Verfahren
 - **Behördenkooperation:** Zusammenarbeit mit Polizei, BKA, Interpol, Europol
 

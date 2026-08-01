@@ -169,9 +169,7 @@ Bona Fides ist Deutschlands führende Detektei für KI-Betrug und synthetische M
 
 ## Verwandte Artikel
 
-- [Cyberbetrug 1: Neue Maschen und wie man sich schützt](/blog/cyberbetrug-1-neue-maschen-und-wie-man-sich-schuetzt)
+- [Cyberbetrug Grundlagen: Unternehmen und Privatpersonen schützen](/blog/cyberbetrug-grundlagen-unternehmen-schutz)
 - [Cybercrime: Moderne Techniken und KI-gestützter Betrug 2025](/blog/cybercrime-moderne-techniken-ki-betrug)
 - [Betrug zur Steuersaison: Falsche Steuerberater und Rückerstattungen](/blog/steuerbetrug-steuersaison-falsche-steuerberater-rueckerstattungen)
-- [Digitale Spur 9: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-9-moderne-ermittlungstechniken-im-netz)
-- [Rechtliche Grundlagen: Detektive in Deutschland - Komplett-Leitfaden](/blog/rechtliche-grundlagen-detektive-deutschland-kompletleitfaden)
-- [Cybercrime Prävention: Sofortmaßnahmen](/blog/cybercrime-praevention-sofortmassnahmen)
+- [Internet Detektei: Was eine Online-Ermittlung leistet und wie Bona Fides digitale Spuren sichert](/blog/internet-detektei-online-ermittlungen-digitale-beweise)

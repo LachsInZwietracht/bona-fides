@@ -1,13 +1,13 @@
 ---
-title: "Digitale Spur 3: Moderne Ermittlungstechniken im Netz"
+title: "Krypto-Forensik, Dark Web und Autorschaftsanalyse: Fortgeschrittene Ermittlungstechniken"
 slug: digitale-spur-3-moderne-ermittlungstechniken-im-netz
-keyword: digitale spur 3
+keyword: krypto forensik dark web ermittlung
 category: Digital Investigations
 date: 2024-01-16
 excerpt: "Erweiterte digitale Ermittlungstechniken für komplexe Fälle. Erfahren Sie, wie Bona Fides auch schwierigste Online-Recherchen erfolgreich abschließt."
 ---
 
-# Digitale Spur 3: Moderne Ermittlungstechniken im Netz
+# Krypto-Forensik, Dark Web und Autorschaftsanalyse: Fortgeschrittene Ermittlungstechniken
 
 ## Zusammenfassung (TL;DR)
 
@@ -113,6 +113,5 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 
 ## Verwandte Artikel
 
-- [Digitale Spur 1: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-1-moderne-ermittlungstechniken-im-netz)
-- [Digitale Spur 2: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-2-moderne-ermittlungstechniken-im-netz)
-- [Digitale Spur 4: Moderne Ermittlungstechniken im Netz](/blog/digitale-spur-4-moderne-ermittlungstechniken-im-netz)
+- [Internet Detektei: Was eine Online-Ermittlung leistet und wie Bona Fides digitale Spuren sichert](/blog/internet-detektei-online-ermittlungen-digitale-beweise)
+- [Mobile Forensik: Was Standortdaten, Apps und Browserverlauf verraten](/blog/digitale-spur-4-moderne-ermittlungstechniken-im-netz)

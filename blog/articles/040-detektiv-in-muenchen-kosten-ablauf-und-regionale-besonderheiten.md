@@ -167,4 +167,4 @@ Bona Fides ist Deutschlands führende Detektei für digitale Ermittlungen. Wir b
 
 - [Detektiv in Berlin: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-berlin-kosten-ablauf-und-regionale-besonderheiten)
 - [Detektiv in Hamburg: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-hamburg-kosten-ablauf-und-regionale-besonderheiten)
-- [Detektiv in Köln: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-köln-kosten-ablauf-und-regionale-besonderheiten)
+- [Detektiv in Köln: Kosten, Ablauf und regionale Besonderheiten](/blog/detektiv-in-koeln-kosten-ablauf-und-regionale-besonderheiten)

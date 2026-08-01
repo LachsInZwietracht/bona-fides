@@ -361,6 +361,6 @@ Bona Fides Detektei ist spezialisiert auf forensische Verhaltensanalyse und Verd
 **[Kostenlose Beratung anfragen](/#contact)**
 ---
 ## Verwandte Artikel
-- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-die-nacht-die-die-kunstwelt-erschuetterte)
-- [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-forensische-beweise)
-- [Die digitale Spur: Cyberangriff als Ablenkung?](/blog/louvre-digitale-spur-cyberangriff)
+- [Der Louvre-Raub: Die Nacht, die die Kunstwelt erschütterte](/blog/louvre-raub-1-die-nacht)
+- [Forensische Beweise: Was die Täter am Tatort hinterließen](/blog/louvre-raub-5-forensische-beweise)
+- [Die digitale Spur: Cyberangriff als Ablenkung?](/blog/louvre-raub-komplette-ermittlungsgeschichte)

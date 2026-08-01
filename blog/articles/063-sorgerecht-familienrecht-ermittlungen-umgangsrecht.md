@@ -308,7 +308,6 @@ Bona Fides ist Ihre diskrete und einfühlsame Detektei für Sorgerechts- und Fam
 ## Verwandte Artikel
 
 - [Untreue erkennen: Wie man digitale Hinweise erkennt – Teil 1](/blog/untreue-1-wie-man-digitale-hinweise-erkennt)
-- [Untreue erkennen: Wie man digitale Hinweise erkennt – Teil 2](/blog/untreue-2-wie-man-digitale-hinweise-erkennt)
 - [Rechtliche Grundlagen für Detektive in Deutschland](/blog/rechtliche-grundlagen-detektive-deutschland-kompletleitfaden)
 - [Privatdetektiv FAQ: Komplettleitfaden zu Kosten & Ablauf](/blog/privatdetektiv-faq-kompletleitfaden-kosten-ablauf)
 - [Hintergrundprüfung Komplettleitfaden: Basis und Enhanced Due Diligence](/blog/hintergrundpruefung-kompletleitfaden-basis-enhanced-due-diligence)
