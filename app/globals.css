@@ -311,6 +311,71 @@
   animation-play-state: paused;
 }
 
+/* Der Sucher fängt das Ziel: weit und blass, dann sitzt er.
+   Nur im mobilen Hero im Einsatz. */
+@keyframes hero-lock {
+  from {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-lock {
+  animation: hero-lock 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Linien zeichnen sich, statt fertig dazustehen */
+@keyframes hero-draw-x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.hero-draw-x {
+  transform-origin: left center;
+  animation: hero-draw-x 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes hero-draw-y {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+.hero-draw-y {
+  transform-origin: top center;
+  animation: hero-draw-y 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Ruhiges Atmen – der Sucher wirkt wach, ohne zu zappeln */
+@keyframes hero-breathe {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.045);
+  }
+}
+
+.hero-breathe {
+  animation: hero-breathe 7s ease-in-out infinite;
+}
+
 /* Section eyebrow used to anchor scanning readers */
 .eyebrow {
   font-family: var(--font-mono);
@@ -326,11 +391,21 @@
   .hero-sweep,
   .hero-scan,
   .hero-blink,
-  .hero-ticker {
+  .hero-ticker,
+  .hero-lock,
+  .hero-draw-x,
+  .hero-draw-y,
+  .hero-breathe {
     animation: none;
   }
 
-  .hero-rise {
+  /* Ohne Bewegung müssen die Endzustände trotzdem stehen –
+     sonst bliebe eine Linie auf Breite null zurück */
+  .hero-rise,
+  .hero-lock,
+  .hero-draw-x,
+  .hero-draw-y,
+  .hero-breathe {
     opacity: 1;
     transform: none;
   }

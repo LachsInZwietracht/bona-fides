@@ -1,7 +1,6 @@
 import {
+  CtaPair,
   Headline,
-  PrimaryCta,
-  SecondaryCta,
   heroEyebrow,
   heroLead,
   heroProof,
@@ -85,13 +84,7 @@ export function DossierHero() {
             {heroLead}
           </p>
 
-          <div
-            className="hero-rise mt-8 flex flex-col gap-3 sm:flex-row"
-            style={{ animationDelay: "0.35s" }}
-          >
-            <PrimaryCta />
-            <SecondaryCta />
-          </div>
+          <CtaPair className="hero-rise mt-8" style={{ animationDelay: "0.35s" }} />
         </div>
       </div>
     </section>

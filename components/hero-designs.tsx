@@ -4,9 +4,8 @@ import { ObservationHero } from "@/components/heroes/hero-observation"
 import { RedaktionHero } from "@/components/heroes/hero-redaktion"
 import { heroDesigns, type HeroDesignVariant } from "@/lib/hero-designs"
 import {
+  CtaPair,
   Headline,
-  PrimaryCta,
-  SecondaryCta,
   heroEyebrow,
   heroLead,
   heroProof,
@@ -40,10 +39,7 @@ function IndizHero() {
           <p className="eyebrow text-brass">{heroEyebrow}</p>
           <Headline />
           <p className="max-w-xl text-lg leading-relaxed text-gray-300">{heroLead}</p>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <PrimaryCta />
-            <SecondaryCta />
-          </div>
+          <CtaPair />
         </div>
       </div>
 
@@ -83,10 +79,7 @@ function EvidenzHero() {
             <p className="eyebrow text-brass">{heroEyebrow}</p>
             <Headline />
             <p className="max-w-xl text-lg leading-relaxed text-gray-300">{heroLead}</p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <PrimaryCta />
-              <SecondaryCta />
-            </div>
+            <CtaPair />
 
             {/* Nummerierte Prüfvermerke statt loser Icon-Reihe */}
             <ul className="border-t border-white/10 pt-2">
@@ -179,10 +172,7 @@ function GeflechtHero() {
           <p className="eyebrow text-brass">{heroEyebrow}</p>
           <Headline size="large" />
           <p className="max-w-xl text-lg leading-relaxed text-gray-300">{heroLead}</p>
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <PrimaryCta />
-            <SecondaryCta />
-          </div>
+          <CtaPair />
         </div>
       </div>
 

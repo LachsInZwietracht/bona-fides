@@ -44,25 +44,30 @@ export function ServiceDetail({ service }: { service: Service }) {
               {service.lead}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            {/* Ein Hauptweg als Fläche, der Nebenweg als Verweis – zwei gleich
+                laute Schaltflächen übereinander lasen sich mobil wie ein
+                Einwilligungsbanner. */}
+            <div className="flex flex-col items-start gap-4 pt-2 sm:flex-row sm:items-center sm:gap-7">
               <Button
                 asChild
                 size="lg"
-                className="bg-brass text-black hover:bg-brass-light font-semibold min-h-[52px] px-8"
+                className="bg-brass text-black hover:bg-brass-light font-semibold min-h-[52px] px-7 sm:px-8"
               >
                 <Link href="/#contact">
                   Fall vertraulich schildern
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white/25 bg-transparent text-white hover:bg-white/10 hover:text-white min-h-[52px] px-8"
+              <Link
+                href="#ablauf"
+                className="group inline-flex min-h-[44px] items-center gap-2 text-base text-gray-300 underline decoration-white/25 underline-offset-[6px] transition-colors hover:text-brass hover:decoration-brass/50"
               >
-                <Link href="#ablauf">So läuft ein Mandat</Link>
-              </Button>
+                So läuft ein Mandat
+                <ArrowRight
+                  className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                />
+              </Link>
             </div>
 
             <ul className="flex flex-wrap gap-x-6 gap-y-2 pt-2 font-mono text-xs text-gray-500">
