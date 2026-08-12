@@ -88,14 +88,21 @@ export function CtaPair({
   )
 }
 
+/**
+ * "Entscheidungsgrundlage." ist 23 Zeichen lang und passte bei festen 2rem auf
+ * keinem gängigen Telefon in die Zeile – die Sektion hat es rechts abgeschnitten.
+ * Die Größe wächst deshalb unter `sm` mit der Breite mit und ist bei 2rem
+ * gedeckelt, damit am Rechner alles bleibt, wie es war. `hyphens-auto` fängt
+ * Extremfälle ab, statt sie zu beschneiden.
+ */
 export function Headline({ size = "default" }: { size?: "default" | "large" }) {
   return (
-    <h1 className="font-serif font-bold text-white">
+    <h1 className="font-serif font-bold text-white [hyphens:auto]">
       <span
         className={
           size === "large"
-            ? "block text-[2rem] sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.02] tracking-[-0.02em]"
-            : "block text-[2rem] sm:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.015em]"
+            ? "block text-[clamp(1.35rem,7.8vw,2rem)] sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.02] tracking-[-0.02em]"
+            : "block text-[clamp(1.35rem,7.8vw,2rem)] sm:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.015em]"
         }
       >
         Verdacht ist keine

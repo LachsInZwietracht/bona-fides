@@ -138,12 +138,45 @@ export function ObservationHero({ fullHeight = false }: { fullHeight?: boolean }
         <div className="absolute bottom-0 right-0 h-10 w-10 border-b border-r border-white/25" />
       </div>
 
-      <div className="container relative z-10 mx-auto flex flex-1 flex-col justify-center px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+      {/* Auf dem Telefon liegt der Inhalt am unteren Anschlag: der Blick fällt
+          erst in die leere Sucherfläche und wandert dann zur Aussage. Ab `sm`
+          bleibt alles wie am Rechner mittig stehen. */}
+      <div className="container relative z-10 mx-auto flex flex-1 flex-col justify-end px-4 pb-10 pt-10 sm:justify-center sm:px-6 sm:py-20 lg:px-8">
+        {/* Ruhender Sucher, nur auf dem Telefon. Touchgeräte haben keinen
+            Zeiger, dem das Fadenkreuz folgen könnte – also bekommt es die
+            freie Fläche über dem Inhalt und steht dort still, während der
+            Suchstrahl hindurchwandert. Als eigener Flächenanteil statt fester
+            Prozentangabe, damit es nie in den Text ragt. */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none flex flex-1 items-center justify-center sm:hidden"
+        >
+          <div className="relative">
+            <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(194,177,109,0.16)_0%,rgba(194,177,109,0.05)_45%,transparent_72%)] blur-2xl" />
+            <div className="relative h-20 w-20">
+              <div className="absolute inset-0 rounded-full border border-white/20" />
+              <div className="hero-blink absolute inset-[30%] rounded-full border border-brass/60" />
+              <div className="absolute left-1/2 top-1/2 h-1 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brass-light" />
+              <div className="absolute left-1/2 top-0 h-5 w-px -translate-x-1/2 bg-white/40" />
+              <div className="absolute bottom-0 left-1/2 h-5 w-px -translate-x-1/2 bg-white/40" />
+              <div className="absolute left-0 top-1/2 h-px w-5 -translate-y-1/2 bg-white/40" />
+              <div className="absolute right-0 top-1/2 h-px w-5 -translate-y-1/2 bg-white/40" />
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-3xl space-y-8 sm:space-y-9">
-          <p className="eyebrow hero-rise flex flex-wrap items-center gap-x-3 gap-y-1 text-brass">
-            <span className="hero-blink inline-block h-1.5 w-1.5 rounded-full bg-brass" aria-hidden="true" />
-            {heroEyebrow}
-          </p>
+          <div className="hero-rise space-y-6 sm:space-y-0">
+            {/* Messinglinie: trennt die Leere vom Inhalt, statt sie zu erklären */}
+            <div
+              aria-hidden="true"
+              className="h-px w-full bg-gradient-to-r from-brass/70 via-brass/25 to-transparent sm:hidden"
+            />
+            <p className="eyebrow flex flex-wrap items-center gap-x-3 gap-y-1 text-brass">
+              <span className="hero-blink inline-block h-1.5 w-1.5 rounded-full bg-brass" aria-hidden="true" />
+              {heroEyebrow}
+            </p>
+          </div>
 
           <div className="hero-rise" style={{ animationDelay: "0.1s" }}>
             <Headline />

@@ -128,6 +128,33 @@ test.describe("Mobile Lead-Erfassung", () => {
   });
 });
 
+test.describe("Hero auf schmalen Telefonen", () => {
+  // 320 Pixel ist das schmalste Gerät, das noch zählt (iPhone SE).
+  test.use({ viewport: { width: 320, height: 568 } });
+
+  test("setzt die Kernaussage in zwei Zeilen statt sie zu trennen", async ({ page }) => {
+    await acceptCookiesUpfront(page);
+    await page.goto("/");
+
+    // Bei fester Schriftgröße passte "Entscheidungsgrundlage." in keine
+    // Telefonzeile: das Wort wurde mit Trennstrich umbrochen und die Aussage
+    // lief über drei Zeilen. Die mitwachsende Größe hält sie bei zweien.
+    // Erst messen, wenn Playfair wirklich da ist – die Ersatzschrift baut
+    // breiter und würde je nach Ladezeit mal drei, mal zwei Zeilen ergeben.
+    await page.evaluate(() => document.fonts.ready);
+
+    const claim = page.locator("h1 span").first();
+    await expect
+      .poll(() =>
+        claim.evaluate((el) => {
+          const zeilenhoehe = parseFloat(getComputedStyle(el).lineHeight);
+          return Math.round(el.getBoundingClientRect().height / zeilenhoehe);
+        }),
+      )
+      .toBe(2);
+  });
+});
+
 test.describe("Hero-Sucher", () => {
   test.beforeEach(async ({ page }) => {
     await acceptCookiesUpfront(page);
