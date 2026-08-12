@@ -4,8 +4,11 @@ import type { NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
   const host = request.headers.get('host') || ''
 
-  // Redirect all vercel.app traffic to the custom domain
-  if (host.includes('vercel.app')) {
+  // Die vercel.app-Adresse der Produktion auf die eigene Domain umleiten,
+  // damit sie nicht als Dublette indexiert wird. Preview-Deployments sind
+  // ausgenommen: dort ist die vercel.app-Adresse die einzige Adresse, unter
+  // der ein Branch überhaupt zu sehen ist.
+  if (host.includes('vercel.app') && process.env.VERCEL_ENV === 'production') {
     const url = new URL(request.url)
     url.host = 'www.bona-fides-detektei.de'
     url.protocol = 'https'
