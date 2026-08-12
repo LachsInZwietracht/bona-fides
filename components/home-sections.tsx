@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 import {
   ArrowRight,
@@ -6,7 +5,6 @@ import {
   Briefcase,
   Building2,
   Check,
-  Clock,
   FileCheck2,
   Gavel,
   Handshake,
@@ -15,113 +13,21 @@ import {
   Star,
   Users,
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { ServiceIcon } from "@/components/service-icon"
+import { ObservationHero } from "@/components/heroes/hero-observation"
 import { b2bServices, services } from "@/lib/services-data"
-import { siteConfig } from "@/lib/site-config"
 import { getTeamMemberCount } from "@/lib/team-data"
 
 /* ------------------------------------------------------------------ Hero */
 
-const heroProof = [
-  { icon: Clock, label: siteConfig.responsePromise },
-  { icon: ShieldCheck, label: "NDA vor dem Erstgespräch" },
-  { icon: Gavel, label: "Gerichtsverwertbar dokumentiert" },
-  { icon: Users, label: "Bundesweites Ermittlernetz" },
-]
-
 /**
- * Bildmotiv "Das Indiz": verstreute Bruchstücke richten sich nach rechts auf
- * und verschmelzen zum versiegelten Monolithen. Der Bildausschnitt ist nach
- * rechts verschoben, damit der Monolith mit Messingnaht und Siegel vollständig
- * im Bild bleibt – er trägt die Aussage des Motivs.
- *
+ * Entwurf 05 "Die Observation": Der Bildschirm wird zum Sucher – Eckwinkel,
+ * wandernder Suchstrahl und ein Fadenkreuz, das den Systemcursor ersetzt.
  * Höhe abzüglich der 4rem hohen, sticky Kopfzeile, damit Hero und Header
  * zusammen genau einen Bildschirm füllen.
  */
 export function HeroSection() {
-  return (
-    <section className="relative z-10 flex min-h-[calc(100vh-4rem)] flex-col overflow-hidden">
-      <Image
-        src="/hero-indiz-v1.png"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-[88%_center] lg:object-[78%_center]"
-      />
-      {/* Textzone links freistellen */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-[linear-gradient(100deg,#000_0%,rgba(0,0,0,0.94)_34%,rgba(0,0,0,0.72)_52%,rgba(0,0,0,0.15)_78%,transparent_100%)]"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black via-black/70 to-transparent"
-      />
-
-      {/* Flex-Zeile und Container getrennt halten: als Flex-Kind würde der
-          Container über min-width:auto auf die Breite des längsten Wortes
-          wachsen und rechts aus dem Bild laufen. */}
-      <div className="relative z-10 flex flex-1 items-center">
-        <div className="container mx-auto w-full px-4 py-16 sm:px-6 lg:px-8">
-          <div className="max-w-2xl space-y-7">
-            <p className="eyebrow text-brass">Wirtschaftsdetektei · bundesweit</p>
-
-            <h1 className="font-serif font-bold text-white">
-              <span className="block text-[2rem] sm:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.015em]">
-                Verdacht ist keine
-                <br />
-                Entscheidungsgrundlage.
-              </span>
-              <span className="mt-4 block text-xl sm:text-2xl font-normal text-brass">
-                Wirtschaftsdetektei für Unternehmen
-              </span>
-            </h1>
-
-            <p className="max-w-xl text-lg text-gray-300 leading-relaxed">
-              Wir liefern belegte Fakten – zum Kündigen, Klagen, Regulieren oder Entwarnung geben.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button
-                asChild
-                size="lg"
-                className="bg-brass text-black hover:bg-brass-light font-semibold text-base px-8 min-h-[54px] shadow-2xl transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(194,177,109,0.5)]"
-              >
-                <Link href="/#contact">
-                  Fall vertraulich schildern
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white/25 bg-black/20 text-white backdrop-blur-sm hover:bg-white/10 hover:text-white text-base px-8 min-h-[54px]"
-              >
-                <Link href="/leistungen">Leistungen ansehen</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Prüfvermerke als durchgehende Linie am unteren Rand */}
-      <div className="relative z-10 border-t border-white/10 bg-black/40 backdrop-blur-sm">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <ul className="grid grid-cols-2 gap-x-6 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/10">
-            {heroProof.map((item) => (
-              <li key={item.label} className="flex items-center gap-2.5 py-4 lg:px-6 lg:first:pl-0">
-                <item.icon className="h-4 w-4 flex-shrink-0 text-brass" aria-hidden="true" />
-                <span className="text-sm leading-tight text-gray-400">{item.label}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-  )
+  return <ObservationHero fullHeight />
 }
 
 /* -------------------------------------------------------------- Segments */

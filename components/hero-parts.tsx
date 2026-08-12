@@ -57,8 +57,8 @@ export function Headline({ size = "default" }: { size?: "default" | "large" }) {
       <span
         className={
           size === "large"
-            ? "block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.02] tracking-[-0.02em]"
-            : "block text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.015em]"
+            ? "block text-[2rem] sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.02] tracking-[-0.02em]"
+            : "block text-[2rem] sm:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.015em]"
         }
       >
         Verdacht ist keine
