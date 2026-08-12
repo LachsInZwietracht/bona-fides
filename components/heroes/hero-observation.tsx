@@ -96,6 +96,15 @@ export function ObservationHero({ fullHeight = false }: { fullHeight?: boolean }
         <div className="hero-scan absolute left-0 h-24 w-full bg-[linear-gradient(180deg,transparent,rgba(194,177,109,0.12),transparent)]" />
       </div>
 
+      {/* Lichtstimmung, nur auf dem Telefon. Am Rechner übernimmt das die
+          Taschenlampe unter dem Zeiger – hier gibt es keinen, also wird der
+          Schwarzraum von unten links angewärmt und zu den Rändern hin
+          abgedunkelt. Sonst wirkt die freie Fläche flach statt ausgeleuchtet. */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 sm:hidden">
+        <div className="absolute -left-24 bottom-[22%] h-[28rem] w-[28rem] rounded-full bg-[radial-gradient(circle,rgba(194,177,109,0.11)_0%,rgba(194,177,109,0.04)_45%,transparent_72%)] blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_38%,transparent_35%,rgba(0,0,0,0.6)_100%)]" />
+      </div>
+
       {/* Taschenlampe: weiter Schein plus heller Kern, additiv aufgehellt */}
       {pointer && (
         <div
@@ -149,14 +158,36 @@ export function ObservationHero({ fullHeight = false }: { fullHeight?: boolean }
             Prozentangabe, damit es nie in den Text ragt. */}
         <div
           aria-hidden="true"
-          className="pointer-events-none flex flex-1 items-center justify-center sm:hidden"
+          className="pointer-events-none relative flex flex-1 items-center justify-center sm:hidden"
         >
-          <div className="relative">
+          {/* Senkrechte Achse: sie läuft von oben durch den Sucher bis auf die
+              Messinglinie und bindet ihn in die Seite ein, statt ihn frei
+              schweben zu lassen. Zusammen ergeben beide Linien ein Fadenkreuz
+              über die ganze Fläche. */}
+          {/* Platzierung und Bewegung liegen getrennt: die Keyframes setzen
+              `transform` und würden ein `-translate-x-1/2` am selben Element
+              überschreiben. */}
+          <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2">
+            <div className="hero-draw-y h-full w-full bg-gradient-to-b from-transparent via-white/[0.09] to-brass/40" />
+          </div>
+
+          {/* Vermessungsmarke am Schnittpunkt von Achse und Messinglinie */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rotate-45">
+            <div
+              className="hero-lock h-1.5 w-1.5 bg-brass"
+              style={{ animationDelay: "0.9s" }}
+            />
+          </div>
+
+          <div className="hero-lock relative" style={{ animationDelay: "0.1s" }}>
             <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(194,177,109,0.16)_0%,rgba(194,177,109,0.05)_45%,transparent_72%)] blur-2xl" />
+
             <div className="relative h-20 w-20">
+              {/* Weiter Suchring, atmet langsam */}
+              <div className="hero-breathe absolute -inset-6 rounded-full border border-white/[0.07]" />
               <div className="absolute inset-0 rounded-full border border-white/20" />
-              <div className="hero-blink absolute inset-[30%] rounded-full border border-brass/60" />
-              <div className="absolute left-1/2 top-1/2 h-1 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brass-light" />
+              <div className="absolute inset-[30%] rounded-full border border-brass/70 shadow-[0_0_14px_rgba(194,177,109,0.35)]" />
+              <div className="hero-blink absolute left-1/2 top-1/2 h-1 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brass-light" />
               <div className="absolute left-1/2 top-0 h-5 w-px -translate-x-1/2 bg-white/40" />
               <div className="absolute bottom-0 left-1/2 h-5 w-px -translate-x-1/2 bg-white/40" />
               <div className="absolute left-0 top-1/2 h-px w-5 -translate-y-1/2 bg-white/40" />
@@ -167,10 +198,12 @@ export function ObservationHero({ fullHeight = false }: { fullHeight?: boolean }
 
         <div className="max-w-3xl space-y-8 sm:space-y-9">
           <div className="hero-rise space-y-6 sm:space-y-0">
-            {/* Messinglinie: trennt die Leere vom Inhalt, statt sie zu erklären */}
+            {/* Messinglinie: trennt die Leere vom Inhalt, statt sie zu erklären.
+                Sie zeichnet sich von links, wenn die Achse sie erreicht. */}
             <div
               aria-hidden="true"
-              className="h-px w-full bg-gradient-to-r from-brass/70 via-brass/25 to-transparent sm:hidden"
+              className="hero-draw-x h-px w-full bg-gradient-to-r from-brass/70 via-brass/25 to-transparent sm:hidden"
+              style={{ animationDelay: "0.15s" }}
             />
             <p className="eyebrow flex flex-wrap items-center gap-x-3 gap-y-1 text-brass">
               <span className="hero-blink inline-block h-1.5 w-1.5 rounded-full bg-brass" aria-hidden="true" />
