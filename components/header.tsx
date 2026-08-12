@@ -18,6 +18,14 @@ const primaryLinks = [
 export function Header({ dark = false }: { dark?: boolean }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  // Eigener Zustand fürs Telefon: das Mega-Menü am Rechner öffnet auf Hover,
+  // die mobile Liste soll davon unberührt bleiben.
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsMobileServicesOpen(false);
+  };
 
   const linkClass = dark
     ? "text-gray-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-colors"
@@ -125,21 +133,37 @@ export function Header({ dark = false }: { dark?: boolean }) {
             </Button>
           </nav>
 
-          {/* Mobile menu button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden"
-            aria-label={isMenuOpen ? "Menü schließen" : "Menü öffnen"}
-            aria-expanded={isMenuOpen}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <X className={`h-6 w-6 ${dark ? "text-white" : ""}`} />
-            ) : (
-              <Menu className={`h-6 w-6 ${dark ? "text-white" : ""}`} />
-            )}
-          </Button>
+          {/* Telefon: kompakter Einstieg neben dem Menü, damit der Weg ins
+              Erstgespräch immer eine Handbreit entfernt ist */}
+          <div className="flex items-center gap-1.5 lg:hidden">
+            <Button
+              asChild
+              className={
+                dark
+                  ? "h-9 bg-brass px-3.5 text-xs font-semibold text-black hover:bg-brass-light"
+                  : "h-9 bg-detective-blue px-3.5 text-xs font-semibold text-white hover:bg-detective-blue/90"
+              }
+            >
+              <Link href="/#contact" onClick={closeMenu}>
+                Erstgespräch
+              </Link>
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className={dark ? "text-white hover:bg-white/10 hover:text-white" : ""}
+              aria-label={isMenuOpen ? "Menü schließen" : "Menü öffnen"}
+              aria-expanded={isMenuOpen}
+              onClick={() => (isMenuOpen ? closeMenu() : setIsMenuOpen(true))}
+            >
+              {isMenuOpen ? (
+                <X className={`h-6 w-6 ${dark ? "text-white" : ""}`} />
+              ) : (
+                <Menu className={`h-6 w-6 ${dark ? "text-white" : ""}`} />
+              )}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -151,51 +175,60 @@ export function Header({ dark = false }: { dark?: boolean }) {
             aria-label="Mobile Navigation"
           >
             <div className="flex flex-col gap-1">
-              <Link
-                href="/leistungen"
-                className={`${linkClass} py-2`}
-                onClick={() => setIsMenuOpen(false)}
+              {/* Eingeklappt: acht Leistungen als Dauerliste haben das Menü
+                  unübersichtlich gemacht */}
+              <button
+                type="button"
+                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                aria-expanded={isMobileServicesOpen}
+                aria-controls="mobile-leistungen"
+                className={`${linkClass} flex items-center justify-between py-3 text-left`}
               >
-                Alle Leistungen
-              </Link>
+                Leistungen
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform duration-200 ${
+                    isMobileServicesOpen ? "rotate-180" : ""
+                  }`}
+                  aria-hidden="true"
+                />
+              </button>
 
-              <div className="my-2 grid grid-cols-1 gap-1 border-y border-white/10 py-3">
-                {b2bServices.map((service) => (
+              {isMobileServicesOpen && (
+                <div
+                  id="mobile-leistungen"
+                  className="mb-2 grid grid-cols-1 gap-1 border-y border-white/10 py-3"
+                >
+                  {b2bServices.map((service) => (
+                    <Link
+                      key={service.slug}
+                      href={`/leistungen/${service.slug}`}
+                      onClick={closeMenu}
+                      className="flex items-center gap-3 py-2 text-sm text-gray-300 hover:text-brass"
+                    >
+                      <ServiceIcon name={service.icon} className="h-4 w-4 text-brass" />
+                      {service.navLabel}
+                    </Link>
+                  ))}
                   <Link
-                    key={service.slug}
-                    href={`/leistungen/${service.slug}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center gap-3 py-2 text-sm text-gray-300 hover:text-brass"
+                    href="/leistungen"
+                    onClick={closeMenu}
+                    className="mt-1 py-2 font-mono text-[11px] uppercase tracking-wider text-gray-500 hover:text-brass"
                   >
-                    <ServiceIcon name={service.icon} className="h-4 w-4 text-brass" />
-                    {service.navLabel}
+                    Alle Leistungen im Überblick →
                   </Link>
-                ))}
-              </div>
+                </div>
+              )}
 
               {primaryLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`${linkClass} py-2`}
-                  onClick={() => setIsMenuOpen(false)}
+                  className={`${linkClass} py-3`}
+                  onClick={closeMenu}
                 >
                   {link.label}
                 </Link>
               ))}
-
-              <Button
-                asChild
-                className={
-                  dark
-                    ? "mt-3 bg-brass text-black hover:bg-brass-light font-semibold min-h-[48px]"
-                    : "mt-3 bg-detective-blue hover:bg-detective-blue/90 text-white min-h-[48px]"
-                }
-              >
-                <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>
-                  Fall vertraulich schildern
-                </Link>
-              </Button>
             </div>
           </nav>
         )}

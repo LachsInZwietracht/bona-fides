@@ -115,10 +115,14 @@ test.describe("Mobile Lead-Erfassung", () => {
     await page.goto("/");
 
     await page.getByRole("button", { name: "Menü öffnen" }).click();
-    await page
-      .getByRole("navigation", { name: "Mobile Navigation" })
-      .getByRole("link", { name: "Due Diligence" })
-      .click();
+
+    const mobileNav = page.getByRole("navigation", { name: "Mobile Navigation" });
+    // Die Leistungen liegen eingeklappt, damit das Menü überschaubar bleibt
+    const servicesToggle = mobileNav.getByRole("button", { name: "Leistungen" });
+    await expect(servicesToggle).toHaveAttribute("aria-expanded", "false");
+    await servicesToggle.click();
+
+    await mobileNav.getByRole("link", { name: "Due Diligence" }).click();
 
     await expect(page).toHaveURL(/\/leistungen\/due-diligence$/);
   });
@@ -139,8 +143,15 @@ test.describe("Hero-Sucher", () => {
     // Vor der ersten Bewegung bleibt der gewohnte Zeiger stehen
     await expect.poll(cursor).toBe("auto");
 
-    await page.mouse.move(900, 400);
-    await expect.poll(cursor).toBe("none");
+    // Bei jedem Versuch neu bewegen: eine einzelne Bewegung vor dem Ende der
+    // Hydration ginge verloren, und danach käme kein Ereignis mehr nach.
+    await expect
+      .poll(async () => {
+        await page.mouse.move(900, 400);
+        await page.mouse.move(901, 401);
+        return cursor();
+      })
+      .toBe("none");
 
     // Über der Handlungsaufforderung muss die Klickbarkeit erkennbar bleiben
     const primary = page.getByRole("link", { name: /Fall vertraulich schildern/i }).first();
