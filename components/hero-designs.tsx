@@ -1,69 +1,16 @@
 import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight, Clock, Gavel, ShieldCheck, Users } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { siteConfig } from "@/lib/site-config"
+import { DossierHero } from "@/components/heroes/hero-dossier"
+import { ObservationHero } from "@/components/heroes/hero-observation"
+import { RedaktionHero } from "@/components/heroes/hero-redaktion"
 import { heroDesigns, type HeroDesignVariant } from "@/lib/hero-designs"
-
-const heroProof = [
-  { icon: Clock, code: "24H", label: siteConfig.responsePromise },
-  { icon: ShieldCheck, code: "NDA", label: "NDA vor dem Erstgespräch" },
-  { icon: Gavel, code: "§", label: "Gerichtsverwertbar dokumentiert" },
-  { icon: Users, code: "DE", label: "Bundesweites Ermittlernetz" },
-]
-
-const contactHref = "/#contact"
-
-/* ------------------------------------------------------------ Bausteine */
-
-function PrimaryCta() {
-  return (
-    <Button
-      asChild
-      size="lg"
-      className="bg-brass text-black hover:bg-brass-light font-semibold text-base px-8 min-h-[54px] shadow-2xl transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(194,177,109,0.5)]"
-    >
-      <Link href={contactHref}>
-        Fall vertraulich schildern
-        <ArrowRight className="ml-2 h-5 w-5" />
-      </Link>
-    </Button>
-  )
-}
-
-function SecondaryCta() {
-  return (
-    <Button
-      asChild
-      size="lg"
-      variant="outline"
-      className="border-white/25 bg-black/20 text-white backdrop-blur-sm hover:bg-white/10 hover:text-white text-base px-8 min-h-[54px]"
-    >
-      <Link href="/leistungen">Leistungen ansehen</Link>
-    </Button>
-  )
-}
-
-function Headline({ size = "default" }: { size?: "default" | "large" }) {
-  return (
-    <h1 className="font-serif font-bold text-white">
-      <span
-        className={
-          size === "large"
-            ? "block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.02] tracking-[-0.02em]"
-            : "block text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.015em]"
-        }
-      >
-        Verdacht ist keine
-        <br />
-        Entscheidungsgrundlage.
-      </span>
-      <span className="mt-4 block text-xl sm:text-2xl font-normal text-brass">
-        Wirtschaftsdetektei für Unternehmen
-      </span>
-    </h1>
-  )
-}
+import {
+  Headline,
+  PrimaryCta,
+  SecondaryCta,
+  heroEyebrow,
+  heroLead,
+  heroProof,
+} from "@/components/hero-parts"
 
 /* -------------------------------------------------- 01 · Das Indiz */
 
@@ -90,11 +37,9 @@ function IndizHero() {
 
       <div className="container relative z-10 mx-auto px-4 py-24 sm:px-6 lg:px-8">
         <div className="max-w-2xl space-y-7">
-          <p className="eyebrow text-brass">Wirtschaftsdetektei · bundesweit</p>
+          <p className="eyebrow text-brass">{heroEyebrow}</p>
           <Headline />
-          <p className="max-w-xl text-lg leading-relaxed text-gray-300">
-            Wir liefern belegte Fakten – zum Kündigen, Klagen, Regulieren oder Entwarnung geben.
-          </p>
+          <p className="max-w-xl text-lg leading-relaxed text-gray-300">{heroLead}</p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <PrimaryCta />
             <SecondaryCta />
@@ -135,11 +80,9 @@ function EvidenzHero() {
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.68fr] lg:gap-16">
           <div className="space-y-7">
-            <p className="eyebrow text-brass">Wirtschaftsdetektei · bundesweit</p>
+            <p className="eyebrow text-brass">{heroEyebrow}</p>
             <Headline />
-            <p className="max-w-xl text-lg leading-relaxed text-gray-300">
-              Wir liefern belegte Fakten – zum Kündigen, Klagen, Regulieren oder Entwarnung geben.
-            </p>
+            <p className="max-w-xl text-lg leading-relaxed text-gray-300">{heroLead}</p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <PrimaryCta />
               <SecondaryCta />
@@ -233,11 +176,9 @@ function GeflechtHero() {
       <div className="container relative z-10 mx-auto px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         {/* Spaltenbreite endet vor der Fuge im Bild */}
         <div className="max-w-[46rem] space-y-7">
-          <p className="eyebrow text-brass">Wirtschaftsdetektei · bundesweit</p>
+          <p className="eyebrow text-brass">{heroEyebrow}</p>
           <Headline size="large" />
-          <p className="max-w-xl text-lg leading-relaxed text-gray-300">
-            Wir liefern belegte Fakten – zum Kündigen, Klagen, Regulieren oder Entwarnung geben.
-          </p>
+          <p className="max-w-xl text-lg leading-relaxed text-gray-300">{heroLead}</p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <PrimaryCta />
             <SecondaryCta />
@@ -267,5 +208,8 @@ function GeflechtHero() {
 export function HeroDesign({ variant }: { variant: HeroDesignVariant }) {
   if (variant === "indiz") return <IndizHero />
   if (variant === "evidenz") return <EvidenzHero />
-  return <GeflechtHero />
+  if (variant === "geflecht") return <GeflechtHero />
+  if (variant === "redaktion") return <RedaktionHero />
+  if (variant === "observation") return <ObservationHero />
+  return <DossierHero />
 }

@@ -1,7 +1,8 @@
 /**
- * Hero-Entwürfe – drei Bildkonzepte für die Startseite.
+ * Hero-Entwürfe – sechs Konzepte für die Startseite.
  *
- * Gleicher Inhalt, drei unterschiedliche Bildmetaphern und Layouts.
+ * 01–03 arbeiten mit Bildmetaphern, 04–06 kommen ohne Bild aus und tragen die
+ * Aussage über Typografie, Bewegung und Layout. Gleicher Text in allen sechs.
  * Erreichbar nur über die unten stehenden Review-Tokens: nicht verlinkt,
  * nicht in Navigation, Sitemap oder robots.txt, per Middleware auf noindex.
  */
@@ -33,13 +34,44 @@ export const heroDesigns = {
     image: "/hero-geflecht-v1.png",
     reviewToken: "hero-geflecht-dd49df7e576fe5a4",
   },
+  redaktion: {
+    number: "04",
+    name: "Die Schwärzung",
+    metaphor: "Verdeckt → belegt",
+    description:
+      "Die Aussage steht unter Messingbalken, die beim Laden weglaufen – eine Akte, die vor den Augen des Mandanten freigegeben wird. Kein Bild, reine Typografie.",
+    reviewToken: "hero-schwaerzung-8a6fd24a63bc2090",
+  },
+  observation: {
+    number: "05",
+    name: "Die Observation",
+    metaphor: "Blickfeld → Befund",
+    description:
+      "Der Bildschirm wird zum Sucher: Eckwinkel, wandernder Suchstrahl und ein Fadenkreuz, das dem Zeiger folgt. Fallarten laufen als Band am unteren Rand.",
+    reviewToken: "hero-observation-2087ade476f8874f",
+  },
+  dossier: {
+    number: "06",
+    name: "Das Dossier",
+    metaphor: "Akte → Aussage",
+    description:
+      "Editorialer Bruch zwischen Papier und Schwarz. Die Wortmarke liegt über der Naht und kippt von Weiß auf Tinte, sobald sie das Papier kreuzt.",
+    reviewToken: "hero-dossier-12722cdc37c829c6",
+  },
 } as const
 
 export type HeroDesignVariant = keyof typeof heroDesigns
 
-export const heroDesignOrder = ["indiz", "evidenz", "geflecht"] as const
+export const heroDesignOrder = [
+  "indiz",
+  "evidenz",
+  "geflecht",
+  "redaktion",
+  "observation",
+  "dossier",
+] as const
 
-/** Sammelseite mit allen drei Entwürfen untereinander. */
+/** Sammelseite mit allen Entwürfen untereinander. */
 export const heroOverviewToken = "hero-vergleich-3cca50f3308af36e"
 
 export function getHeroDesignByToken(token: string): HeroDesignVariant | undefined {

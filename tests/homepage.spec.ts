@@ -123,3 +123,40 @@ test.describe("Mobile Lead-Erfassung", () => {
     await expect(page).toHaveURL(/\/leistungen\/due-diligence$/);
   });
 });
+
+test.describe("Hero-Sucher", () => {
+  test.beforeEach(async ({ page }) => {
+    await acceptCookiesUpfront(page);
+    await page.goto("/");
+  });
+
+  test("ersetzt den Systemcursor durch das Fadenkreuz und gibt ihn danach zurück", async ({
+    page,
+  }) => {
+    const hero = page.getByTestId("hero-observation");
+    const cursor = () => hero.evaluate((el) => getComputedStyle(el).cursor);
+
+    // Vor der ersten Bewegung bleibt der gewohnte Zeiger stehen
+    await expect.poll(cursor).toBe("auto");
+
+    await page.mouse.move(900, 400);
+    await expect.poll(cursor).toBe("none");
+
+    // Über der Handlungsaufforderung muss die Klickbarkeit erkennbar bleiben
+    const primary = page.getByRole("link", { name: /Fall vertraulich schildern/i }).first();
+    await expect(primary).toHaveCSS("cursor", "pointer");
+
+    // Verlässt der Zeiger den Hero, verschwindet das Fadenkreuz wieder
+    await page.mouse.move(900, 400);
+    await hero.evaluate((el) => el.dispatchEvent(new PointerEvent("pointerleave")));
+    await expect.poll(cursor).toBe("auto");
+  });
+
+  test("bleibt ohne Zeigerbewegung vollständig bedienbar", async ({ page }) => {
+    // Tastaturnutzer und Touch sehen kein Fadenkreuz – der Weg ins Formular
+    // darf davon nicht abhängen.
+    await page.getByRole("link", { name: /Fall vertraulich schildern/i }).first().click();
+
+    await expect(page.locator("#contact")).toBeInViewport({ timeout: 10000 });
+  });
+});
