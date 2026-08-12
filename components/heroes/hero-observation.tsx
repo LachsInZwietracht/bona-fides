@@ -2,9 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 import {
+  CtaPair,
   Headline,
-  PrimaryCta,
-  SecondaryCta,
   heroEyebrow,
   heroLead,
   heroProof,
@@ -74,13 +73,15 @@ export function ObservationHero({ fullHeight = false }: { fullHeight?: boolean }
     ? "cursor-none [&_a]:cursor-pointer [&_button]:cursor-pointer"
     : ""
 
+  // `svh` statt `vh`: auf dem Telefon rechnet `vh` die eingeblendete
+  // Adressleiste mit, dadurch rutschte die Beweiszeile unter die Bildkante.
+  const heightClass = fullHeight ? "min-h-[calc(100svh-4rem)]" : "min-h-[88svh]"
+
   return (
     <section
       ref={sectionRef}
       data-testid="hero-observation"
-      className={`relative isolate z-10 flex flex-col overflow-hidden bg-black ${
-        fullHeight ? "min-h-[calc(100vh-4rem)]" : "min-h-[88vh]"
-      } ${cursorClass}`}
+      className={`relative isolate z-10 flex flex-col overflow-hidden bg-black ${heightClass} ${cursorClass}`}
     >
       <div aria-hidden="true" className="noir-grain absolute inset-0 opacity-[0.12] mix-blend-screen" />
 
@@ -137,8 +138,8 @@ export function ObservationHero({ fullHeight = false }: { fullHeight?: boolean }
         <div className="absolute bottom-0 right-0 h-10 w-10 border-b border-r border-white/25" />
       </div>
 
-      <div className="container relative z-10 mx-auto flex flex-1 flex-col justify-center px-4 py-16 sm:px-6 lg:px-8">
-        <div className="max-w-3xl space-y-7">
+      <div className="container relative z-10 mx-auto flex flex-1 flex-col justify-center px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+        <div className="max-w-3xl space-y-8 sm:space-y-9">
           <p className="eyebrow hero-rise flex flex-wrap items-center gap-x-3 gap-y-1 text-brass">
             <span className="hero-blink inline-block h-1.5 w-1.5 rounded-full bg-brass" aria-hidden="true" />
             {heroEyebrow}
@@ -149,28 +150,29 @@ export function ObservationHero({ fullHeight = false }: { fullHeight?: boolean }
           </div>
 
           <p
-            className="hero-rise max-w-xl border-l border-brass/40 pl-6 text-lg leading-relaxed text-gray-300"
+            className="hero-rise max-w-xl border-l border-brass/40 pl-5 text-base leading-relaxed text-gray-300 sm:pl-6 sm:text-lg"
             style={{ animationDelay: "0.2s" }}
           >
             {heroLead}
           </p>
 
-          <div
-            className="hero-rise flex flex-col gap-3 sm:flex-row"
-            style={{ animationDelay: "0.3s" }}
-          >
-            <PrimaryCta />
-            <SecondaryCta />
-          </div>
+          <CtaPair className="hero-rise" style={{ animationDelay: "0.3s" }} />
         </div>
       </div>
 
-      {/* Prüfvermerke als durchgehende Linie am unteren Rand */}
+      {/* Prüfvermerke als durchgehende Linie am unteren Rand.
+          Auf dem Telefon nur die beiden stärksten Zusagen – vier gestauchte
+          Spalten haben den ersten Bildschirm überladen. */}
       <div className="relative z-10 border-t border-white/10 bg-black/40 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <ul className="grid grid-cols-2 gap-x-6 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/10">
-            {heroProof.map((item) => (
-              <li key={item.label} className="flex items-center gap-2.5 py-4 lg:px-6 lg:first:pl-0">
+          <ul className="grid grid-cols-1 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-white/10">
+            {heroProof.map((item, index) => (
+              <li
+                key={item.label}
+                className={`flex items-center gap-2.5 py-3 sm:py-4 lg:px-6 lg:first:pl-0 ${
+                  index > 1 ? "max-sm:hidden" : ""
+                }`}
+              >
                 <item.icon className="h-4 w-4 flex-shrink-0 text-brass" aria-hidden="true" />
                 <span className="text-sm leading-tight text-gray-400">{item.label}</span>
               </li>
@@ -179,8 +181,8 @@ export function ObservationHero({ fullHeight = false }: { fullHeight?: boolean }
         </div>
       </div>
 
-      {/* Laufband der Fallarten */}
-      <div className="relative z-10 w-full border-t border-white/10 bg-black/50 py-3 backdrop-blur-sm">
+      {/* Laufband der Fallarten – reine Atmosphäre, deshalb erst ab Tablet */}
+      <div className="relative z-10 hidden w-full border-t border-white/10 bg-black/50 py-3 backdrop-blur-sm sm:block">
         <div className="overflow-hidden">
           <div className="hero-ticker flex w-max items-center gap-10 whitespace-nowrap">
             {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, index) => (

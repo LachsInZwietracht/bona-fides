@@ -1,8 +1,7 @@
 import type { CSSProperties } from "react"
 import {
+  CtaPair,
   Headline,
-  PrimaryCta,
-  SecondaryCta,
   heroEyebrow,
   heroProof,
 } from "@/components/hero-parts"
@@ -74,13 +73,7 @@ export function RedaktionHero() {
             oder Entwarnung geben.
           </p>
 
-          <div
-            className="hero-rise flex flex-col gap-3 sm:flex-row"
-            style={{ animationDelay: "1.3s" }}
-          >
-            <PrimaryCta />
-            <SecondaryCta />
-          </div>
+          <CtaPair className="hero-rise" style={{ animationDelay: "1.3s" }} />
         </div>
       </div>
 

@@ -4,6 +4,7 @@
  * Aussage, Handlungsaufforderungen und Beweisleiste sind über alle Entwürfe
  * identisch – verglichen wird die Bildsprache, nicht der Text.
  */
+import type { CSSProperties } from "react"
 import Link from "next/link"
 import { ArrowRight, Clock, Gavel, ShieldCheck, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -21,14 +22,18 @@ export const contactHref = "/#contact"
 export const heroLead =
   "Wir liefern belegte Fakten – zum Kündigen, Klagen, Regulieren oder Entwarnung geben."
 
-export const heroEyebrow = "Wirtschaftsdetektei · bundesweit"
+/**
+ * Kein zweites Mal "Wirtschaftsdetektei" – das Wort steht schon in der
+ * Überschrift direkt darunter. Die Zeile trägt hier nur die Reichweite.
+ */
+export const heroEyebrow = "Bundesweit im Einsatz"
 
 export function PrimaryCta() {
   return (
     <Button
       asChild
       size="lg"
-      className="bg-brass text-black hover:bg-brass-light font-semibold text-base px-8 min-h-[54px] shadow-2xl transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(194,177,109,0.5)]"
+      className="bg-brass text-black hover:bg-brass-light font-semibold text-base px-7 sm:px-8 min-h-[52px] shadow-2xl transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(194,177,109,0.5)]"
     >
       <Link href={contactHref}>
         Fall vertraulich schildern
@@ -38,16 +43,48 @@ export function PrimaryCta() {
   )
 }
 
+/**
+ * Bewusst kein Button: zwei gleich laute Flächen übereinander lesen sich auf
+ * dem Telefon wie ein Einwilligungsbanner. Der Nebenweg bleibt ein Verweis,
+ * behält aber eine daumengerechte Trefferfläche.
+ */
 export function SecondaryCta() {
   return (
-    <Button
-      asChild
-      size="lg"
-      variant="outline"
-      className="border-white/25 bg-black/20 text-white backdrop-blur-sm hover:bg-white/10 hover:text-white text-base px-8 min-h-[54px]"
+    <Link
+      href="/leistungen"
+      className="group inline-flex min-h-[44px] items-center gap-2 text-base text-gray-300 underline decoration-white/25 underline-offset-[6px] transition-colors hover:text-brass hover:decoration-brass/50"
     >
-      <Link href="/leistungen">Leistungen ansehen</Link>
-    </Button>
+      Leistungen ansehen
+      <ArrowRight
+        className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+        aria-hidden="true"
+      />
+    </Link>
+  )
+}
+
+/**
+ * Hauptweg und Nebenweg in einer Reihe – mobil untereinander, ab `sm` neben-
+ * einander auf einer Grundlinie. Alle Entwürfe teilen sich diesen Baustein,
+ * damit sich die Handlungsaufforderung nie zwischen ihnen unterscheidet;
+ * `className` und `style` reichen nur die Einblendung des jeweiligen Entwurfs
+ * durch.
+ */
+export function CtaPair({
+  className = "",
+  style,
+}: {
+  className?: string
+  style?: CSSProperties
+}) {
+  return (
+    <div
+      className={`flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-7 ${className}`.trim()}
+      style={style}
+    >
+      <PrimaryCta />
+      <SecondaryCta />
+    </div>
   )
 }
 
