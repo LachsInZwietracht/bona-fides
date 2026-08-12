@@ -210,6 +210,107 @@
   );
 }
 
+/* Hero-Entwürfe 04–06: Bewegung ohne Bild */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-rise {
+  animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Schwärzungsbalken laufen nach links weg und geben das Wort frei */
+@keyframes hero-redact-wipe {
+  0%,
+  22% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.hero-redact {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-redact::after {
+  content: "";
+  position: absolute;
+  inset: 0.08em -0.08em 0.04em -0.08em;
+  background: var(--color-brass);
+  transform-origin: 100% 50%;
+  animation: hero-redact-wipe 1.4s cubic-bezier(0.76, 0, 0.24, 1) both;
+  animation-delay: var(--hero-redact-delay, 0s);
+}
+
+@keyframes hero-sweep {
+  0% {
+    transform: translateX(-40%) skewX(-14deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateX(240%) skewX(-14deg);
+    opacity: 0;
+  }
+}
+
+.hero-sweep {
+  animation: hero-sweep 11s ease-in-out infinite;
+}
+
+@keyframes hero-scan {
+  0% {
+    transform: translateY(-5vh);
+    opacity: 0;
+  }
+  12%,
+  88% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(88vh);
+    opacity: 0;
+  }
+}
+
+.hero-scan {
+  animation: hero-scan 8s linear infinite;
+}
+
+@keyframes hero-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.hero-blink {
+  animation: hero-blink 1.8s steps(1, end) infinite;
+}
+
+.hero-ticker {
+  animation: ticker 42s linear infinite;
+}
+
+.hero-ticker:hover {
+  animation-play-state: paused;
+}
+
 /* Section eyebrow used to anchor scanning readers */
 .eyebrow {
   font-family: var(--font-mono);
@@ -220,7 +321,22 @@
 
 @media (prefers-reduced-motion: reduce) {
   .ticker-track,
-  .animate-pulse {
+  .animate-pulse,
+  .hero-rise,
+  .hero-sweep,
+  .hero-scan,
+  .hero-blink,
+  .hero-ticker {
     animation: none;
+  }
+
+  .hero-rise {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Ohne Bewegung bleibt kein Balken über der Aussage stehen */
+  .hero-redact::after {
+    display: none;
   }
 }
