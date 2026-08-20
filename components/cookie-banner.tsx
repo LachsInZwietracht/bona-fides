@@ -113,7 +113,9 @@ export function CookieBanner() {
                   </div>
 
                   <div className="flex-1">
-                    <h3 className="mb-1 font-serif text-base tracking-wide text-white sm:mb-2 sm:text-lg">
+                    {/* Auf dem Telefon trägt der Satz selbst den Hinweis – die
+                        eigene Zeile darüber kostete nur Höhe. */}
+                    <h3 className="mb-1 hidden font-serif tracking-wide text-white sm:mb-2 sm:block sm:text-lg">
                       Überwachungshinweis
                     </h3>
                     <p className="text-sm leading-relaxed text-white/80">
@@ -122,6 +124,15 @@ export function CookieBanner() {
                         {' '}Wir respektieren Ihre Privatsphäre und behandeln alle Daten mit
                         professioneller Diskretion.
                       </span>
+                      {/* Im Textfluss statt als eigene Zeile */}
+                      <button
+                        type="button"
+                        onClick={() => setShowDetails((open) => !open)}
+                        aria-expanded={showDetails}
+                        className="ml-1 font-mono text-xs text-[#C2B16D] underline underline-offset-4 transition-colors hover:text-[#FEF3C6] sm:hidden"
+                      >
+                        {showDetails ? 'Weniger' : 'Mehr erfahren'}
+                      </button>
                     </p>
                   </div>
                 </div>
@@ -143,16 +154,6 @@ export function CookieBanner() {
                   </Button>
                 </div>
               </div>
-
-              {/* Kleingedrucktes – mobil hinter „Mehr erfahren“ */}
-              <button
-                type="button"
-                onClick={() => setShowDetails((open) => !open)}
-                aria-expanded={showDetails}
-                className="mt-1 font-mono text-xs text-[#C2B16D] underline underline-offset-4 transition-colors hover:text-[#FEF3C6] sm:hidden"
-              >
-                {showDetails ? 'Weniger' : 'Mehr erfahren'}
-              </button>
 
               <div
                 className={`mt-4 border-t border-white/10 pt-4 sm:block ${

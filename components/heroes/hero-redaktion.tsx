@@ -35,7 +35,7 @@ export function RedaktionHero() {
       >
         <div className="h-24 w-px bg-gradient-to-b from-transparent to-white/25" />
         <span
-          className="font-mono text-[10px] uppercase tracking-[0.4em] text-gray-500"
+          className="font-mono text-[10px] uppercase tracking-[0.4em] text-gray-400"
           style={{ writingMode: "vertical-rl" }}
         >
           Akte · vertraulich

@@ -39,7 +39,7 @@ test.describe("Hero-Entwürfe", () => {
       await expect(headline).toContainText("Verdacht ist keine");
       await expect(headline).toContainText("Entscheidungsgrundlage");
 
-      const primary = page.getByRole("link", { name: /fall vertraulich schildern/i });
+      const primary = page.getByRole("link", { name: /fall schildern/i });
       await expect(primary).toHaveAttribute("href", "/#contact");
 
       const secondary = page.getByRole("link", { name: /leistungen ansehen/i });

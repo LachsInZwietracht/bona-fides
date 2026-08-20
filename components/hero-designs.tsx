@@ -115,7 +115,7 @@ function EvidenzHero() {
                 aria-hidden="true"
                 className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/85 to-transparent"
               />
-              <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between px-5 py-4 font-mono text-[10px] uppercase tracking-[0.24em] text-gray-500">
+              <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between px-5 py-4 font-mono text-[10px] uppercase tracking-[0.24em] text-gray-400">
                 <span>Rauschen</span>
                 <span className="mx-3 h-px flex-1 bg-white/15" />
                 <span className="text-brass">Signal</span>
@@ -157,7 +157,7 @@ function GeflechtHero() {
 
       {/* Meta-Leiste oben */}
       <div className="relative z-10 border-b border-white/10">
-        <div className="container mx-auto flex items-center justify-between px-4 py-4 font-mono text-[10px] uppercase tracking-[0.26em] text-gray-500 sm:px-6 lg:px-8">
+        <div className="container mx-auto flex items-center justify-between px-4 py-4 font-mono text-[10px] uppercase tracking-[0.26em] text-gray-400 sm:px-6 lg:px-8">
           <span>Bona Fides · Wirtschaftsdetektei</span>
           <span className="hidden text-brass sm:inline">Fakten vor Entscheidung</span>
         </div>

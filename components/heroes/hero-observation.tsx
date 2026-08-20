@@ -147,10 +147,11 @@ export function ObservationHero({ fullHeight = false }: { fullHeight?: boolean }
         <div className="absolute bottom-0 right-0 h-10 w-10 border-b border-r border-white/25" />
       </div>
 
-      {/* Auf dem Telefon liegt der Inhalt am unteren Anschlag: der Blick fällt
-          erst in die leere Sucherfläche und wandert dann zur Aussage. Ab `sm`
-          bleibt alles wie am Rechner mittig stehen. */}
-      <div className="container relative z-10 mx-auto flex flex-1 flex-col justify-end px-4 pb-10 pt-10 sm:justify-center sm:px-6 sm:py-20 lg:px-8">
+      {/* Auf dem Telefon steht der Inhalt oben: lag er am unteren Anschlag,
+          verschwanden Aussage und beide Wege hinter dem Cookie-Hinweis. Der
+          Sucher behält darüber einen festen, halbierten Streifen statt der
+          ganzen freien Fläche. Ab `sm` bleibt alles wie am Rechner mittig. */}
+      <div className="container relative z-10 mx-auto flex flex-1 flex-col justify-start px-4 pb-6 pt-2 sm:justify-center sm:px-6 sm:py-20 lg:px-8">
         {/* Ruhender Sucher, nur auf dem Telefon. Touchgeräte haben keinen
             Zeiger, dem das Fadenkreuz folgen könnte – also bekommt es die
             freie Fläche über dem Inhalt und steht dort still, während der
@@ -158,7 +159,7 @@ export function ObservationHero({ fullHeight = false }: { fullHeight?: boolean }
             Prozentangabe, damit es nie in den Text ragt. */}
         <div
           aria-hidden="true"
-          className="pointer-events-none relative flex flex-1 items-center justify-center sm:hidden"
+          className="pointer-events-none relative flex h-16 shrink-0 items-center justify-center sm:hidden"
         >
           {/* Senkrechte Achse: sie läuft von oben durch den Sucher bis auf die
               Messinglinie und bindet ihn in die Seite ein, statt ihn frei
@@ -182,21 +183,25 @@ export function ObservationHero({ fullHeight = false }: { fullHeight?: boolean }
           <div className="hero-lock relative" style={{ animationDelay: "0.1s" }}>
             <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(194,177,109,0.16)_0%,rgba(194,177,109,0.05)_45%,transparent_72%)] blur-2xl" />
 
-            <div className="relative h-20 w-20">
+            {/* Auf die halbe Höhe gestaucht: der Sucher lag als volle Fläche
+                über der Überschrift und drückte Aussage und beide Wege unter
+                die Kante. Er bleibt als Motiv erkennbar, kostet aber nicht mehr
+                den teuersten Platz der Seite. */}
+            <div className="relative h-14 w-14">
               {/* Weiter Suchring, atmet langsam */}
-              <div className="hero-breathe absolute -inset-6 rounded-full border border-white/[0.07]" />
+              <div className="hero-breathe absolute -inset-4 rounded-full border border-white/[0.07]" />
               <div className="absolute inset-0 rounded-full border border-white/20" />
               <div className="absolute inset-[30%] rounded-full border border-brass/70 shadow-[0_0_14px_rgba(194,177,109,0.35)]" />
               <div className="hero-blink absolute left-1/2 top-1/2 h-1 w-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brass-light" />
-              <div className="absolute left-1/2 top-0 h-5 w-px -translate-x-1/2 bg-white/40" />
-              <div className="absolute bottom-0 left-1/2 h-5 w-px -translate-x-1/2 bg-white/40" />
-              <div className="absolute left-0 top-1/2 h-px w-5 -translate-y-1/2 bg-white/40" />
-              <div className="absolute right-0 top-1/2 h-px w-5 -translate-y-1/2 bg-white/40" />
+              <div className="absolute left-1/2 top-0 h-4 w-px -translate-x-1/2 bg-white/40" />
+              <div className="absolute bottom-0 left-1/2 h-4 w-px -translate-x-1/2 bg-white/40" />
+              <div className="absolute left-0 top-1/2 h-px w-4 -translate-y-1/2 bg-white/40" />
+              <div className="absolute right-0 top-1/2 h-px w-4 -translate-y-1/2 bg-white/40" />
             </div>
           </div>
         </div>
 
-        <div className="max-w-3xl space-y-8 sm:space-y-9">
+        <div className="max-w-3xl space-y-5 sm:space-y-9">
           <div className="hero-rise space-y-6 sm:space-y-0">
             {/* Messinglinie: trennt die Leere vom Inhalt, statt sie zu erklären.
                 Sie zeichnet sich von links, wenn die Achse sie erreicht. */}
@@ -254,7 +259,7 @@ export function ObservationHero({ fullHeight = false }: { fullHeight?: boolean }
             {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, index) => (
               <span
                 key={`${item}-${index}`}
-                className="flex items-center gap-10 font-mono text-[10px] uppercase tracking-[0.3em] text-gray-500"
+                className="flex items-center gap-10 font-mono text-[10px] uppercase tracking-[0.3em] text-gray-400"
               >
                 {item}
                 <span className="h-1 w-1 rounded-full bg-brass/60" aria-hidden="true" />
