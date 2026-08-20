@@ -105,7 +105,7 @@ export default function LeistungenPage() {
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brass/15">
                     <ServiceIcon name={service.icon} className="h-5 w-5 text-brass" />
                   </div>
-                  <p className="eyebrow text-gray-500 mt-5">{service.kicker}</p>
+                  <p className="eyebrow text-gray-400 mt-5">{service.kicker}</p>
                   <h2 className="mt-2 font-serif text-xl font-semibold text-white group-hover:text-brass-light transition-colors">
                     {service.navLabel}
                   </h2>
@@ -125,7 +125,7 @@ export default function LeistungenPage() {
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
               <div className="rounded-sm border border-white/10 bg-white/[0.02] p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6 justify-between">
                 <div>
-                  <p className="eyebrow text-gray-500 mb-2">Auch für Privatpersonen</p>
+                  <p className="eyebrow text-gray-400 mb-2">Auch für Privatpersonen</p>
                   <h2 className="font-serif text-xl font-semibold text-white">
                     {privateService.navLabel}
                   </h2>

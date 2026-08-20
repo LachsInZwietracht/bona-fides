@@ -44,7 +44,7 @@ export function BlogCard({ article, isMobile = false, shouldAnimateOnMobile = fa
               : ''
             : 'group-hover:bg-[#C2B16D]/20 group-hover:border-[#C2B16D]/30'
         }`}>
-          <span className={`text-[10px] font-mono font-bold tracking-widest uppercase transition-colors duration-500 ${
+          <span className={`text-[11px] sm:text-[10px] font-mono font-bold tracking-wider sm:tracking-widest uppercase transition-colors duration-500 ${
             isMobile
               ? shouldAnimateOnMobile
                 ? 'text-[#FEF3C6]'
@@ -68,7 +68,7 @@ export function BlogCard({ article, isMobile = false, shouldAnimateOnMobile = fa
           </h3>
 
           {article.metadata.excerpt && (
-            <p className={`font-mono text-sm leading-relaxed line-clamp-3 transition-colors duration-500 ${
+            <p className={`text-sm leading-relaxed line-clamp-3 transition-colors duration-500 ${
               isMobile
                 ? shouldAnimateOnMobile
                   ? 'text-gray-300/90'
@@ -79,7 +79,7 @@ export function BlogCard({ article, isMobile = false, shouldAnimateOnMobile = fa
             </p>
           )}
 
-          <div className={`flex items-center gap-2 text-gray-500 text-xs font-mono pt-4 border-t transition-colors duration-500 ${
+          <div className={`flex items-center gap-2 text-gray-400 text-[13px] sm:text-xs font-mono pt-4 border-t transition-colors duration-500 ${
             isMobile
               ? shouldAnimateOnMobile
                 ? 'border-[#C2B16D]/20'

@@ -3,9 +3,7 @@ import {
   ArrowRight,
   Banknote,
   Briefcase,
-  Building2,
   Check,
-  FileCheck2,
   Gavel,
   Handshake,
   Scale,
@@ -30,96 +28,9 @@ export function HeroSection() {
   return <ObservationHero fullHeight />
 }
 
-/* -------------------------------------------------------------- Segments */
+/* Segments – eigenes Client-Modul, weil der mobile Aufklapper State braucht */
+export { SegmentsSection } from "@/components/segments-section"
 
-const segments = [
-  {
-    icon: Building2,
-    title: "Geschäftsführung & Vorstand",
-    problem: "Der Verdacht steht im Raum, aber die Faktenlage trägt keine Entscheidung.",
-    href: "/leistungen/wirtschaftsdetektei",
-    linkLabel: "Wirtschaftsermittlungen",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Compliance & Revision",
-    problem: "Eine Meldung muss unabhängig geprüft werden – ohne interne Befangenheit.",
-    href: "/leistungen/interne-ermittlungen",
-    linkLabel: "Interne Ermittlungen",
-  },
-  {
-    icon: Users,
-    title: "Personalleitung & HR",
-    problem: "Krankmeldungen, Nebentätigkeiten und Konkurrenztätigkeit, die nicht plausibel sind.",
-    href: "/leistungen/lohnfortzahlungsbetrug",
-    linkLabel: "Lohnfortzahlungsbetrug",
-  },
-  {
-    icon: FileCheck2,
-    title: "Versicherer & Schadenabteilungen",
-    problem: "Ein Schadenfall, der zu glatt wirkt, um vor der Regulierung ungeprüft zu bleiben.",
-    href: "/leistungen/versicherungsbetrug",
-    linkLabel: "Schadenermittlung",
-  },
-  {
-    icon: Scale,
-    title: "Kanzleien & Rechtsabteilungen",
-    problem: "Der Titel steht – nur das Vermögen des Schuldners ist nicht auffindbar.",
-    href: "/leistungen/asset-tracing",
-    linkLabel: "Asset Tracing",
-  },
-  {
-    icon: Handshake,
-    title: "Einkauf, M&A & Family Offices",
-    problem: "Hinter dem Geschäftspartner steht jemand, den das Handelsregister nicht zeigt.",
-    href: "/leistungen/due-diligence",
-    linkLabel: "Due Diligence",
-  },
-]
-
-export function SegmentsSection() {
-  return (
-    <section
-      id="fuer-wen"
-      className="relative z-10 py-20 sm:py-24 border-t border-white/10"
-      aria-labelledby="segments-heading"
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mb-12">
-          <p className="eyebrow text-brass mb-4">Für wen wir arbeiten</p>
-          <h2
-            id="segments-heading"
-            className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white leading-tight"
-          >
-            Sechs Ausgangslagen, in denen Unternehmen uns beauftragen
-          </h2>
-          <p className="mt-4 text-lg text-gray-300 leading-relaxed">
-            Finden Sie Ihre Situation – Sie landen direkt bei der passenden Leistung samt Ablauf,
-            Dauer und Kostenrahmen.
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {segments.map((segment) => (
-            <a
-              key={segment.title}
-              href={segment.href}
-              className="group flex flex-col rounded-sm border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:border-brass/40 hover:bg-white/[0.06]"
-            >
-              <segment.icon className="h-6 w-6 text-brass" aria-hidden="true" />
-              <h3 className="mt-4 font-serif text-lg font-semibold text-white">{segment.title}</h3>
-              <p className="mt-2 flex-1 text-sm text-gray-400 leading-relaxed">{segment.problem}</p>
-              <span className="mt-5 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-brass">
-                {segment.linkLabel}
-                <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-              </span>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
 
 /* -------------------------------------------------------------- Services */
 
@@ -145,28 +56,36 @@ export function ServicesSection() {
           </div>
           <Link
             href="/leistungen"
-            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-brass hover:text-brass-light transition-colors"
+            className="inline-flex items-center gap-2 font-mono text-[13px] sm:text-xs uppercase tracking-wider text-brass hover:text-brass-light transition-colors"
           >
             Alle Leistungen
             <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        {/* Mobil eine schlichte Liste mit Trennlinien statt neun gleich gebauter
+            Kästen – kompakter und schneller zu überfliegen. Ab sm das Raster. */}
+        <div className="grid divide-y divide-white/10 sm:gap-5 sm:divide-y-0 md:grid-cols-2 lg:grid-cols-4">
           {b2bServices.map((service) => (
             <Link
               key={service.slug}
               href={`/leistungen/${service.slug}`}
-              className="group flex flex-col rounded-sm border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:border-brass/40 hover:bg-white/[0.06]"
+              className="group flex min-h-11 flex-row items-center gap-3 py-3.5 transition-all duration-300 sm:flex-col sm:items-start sm:rounded-sm sm:border sm:border-white/10 sm:bg-white/[0.03] sm:p-6 sm:hover:border-brass/40 sm:hover:bg-white/[0.06]"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brass/15">
-                <ServiceIcon name={service.icon} className="h-5 w-5 text-brass" />
+              <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brass/15 sm:h-10 sm:w-10">
+                <ServiceIcon name={service.icon} className="h-4 w-4 text-brass sm:h-5 sm:w-5" />
               </div>
-              <h3 className="mt-4 font-serif text-lg font-semibold text-white group-hover:text-brass-light transition-colors">
+              <h3 className="flex-1 font-serif text-base font-semibold text-white transition-colors group-hover:text-brass-light sm:mt-4 sm:flex-none sm:text-lg">
                 {service.navLabel}
               </h3>
-              <p className="mt-2 flex-1 text-sm text-gray-400 leading-relaxed">{service.teaser}</p>
-              <span className="mt-5 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-brass">
+              <p className="hidden text-sm leading-relaxed text-gray-400 sm:mt-2 sm:block sm:flex-1">
+                {service.teaser}
+              </p>
+              <ArrowRight
+                className="h-4 w-4 flex-shrink-0 text-brass sm:hidden"
+                aria-hidden="true"
+              />
+              <span className="hidden font-mono text-[13px] uppercase tracking-wider text-brass sm:mt-5 sm:inline-flex sm:items-center sm:gap-2 sm:text-xs">
                 Mehr
                 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
               </span>
@@ -248,11 +167,11 @@ export function ProcessSection() {
               key={step.title}
               className="relative rounded-sm border border-white/10 bg-white/[0.03] p-6"
             >
-              <span className="font-mono text-xs text-brass">
+              <span className="font-mono text-[13px] sm:text-xs text-brass">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className="mt-2 font-serif text-lg font-semibold text-white">{step.title}</h3>
-              <p className="mt-1 font-mono text-[11px] uppercase tracking-wider text-brass/80">
+              <p className="mt-1 font-mono text-[12px] sm:text-[11px] uppercase tracking-wider text-brass/80">
                 {step.duration}
               </p>
               <p className="mt-3 text-sm text-gray-400 leading-relaxed">{step.description}</p>
@@ -328,7 +247,7 @@ export function PricingSection() {
             >
               <model.icon className="h-6 w-6 text-brass" aria-hidden="true" />
               <h3 className="mt-4 font-serif text-xl font-semibold text-white">{model.title}</h3>
-              <p className="mt-1 font-mono text-xs uppercase tracking-wider text-brass">
+              <p className="mt-1 font-mono text-[13px] sm:text-xs uppercase tracking-wider text-brass">
                 {model.price}
               </p>
               <p className="mt-4 text-sm text-gray-400 leading-relaxed">{model.description}</p>
@@ -483,7 +402,7 @@ export function CaseStudySection() {
                 ].map((step, index) => (
                   <li key={step} className="flex items-start gap-4">
                     <span
-                      className={`flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full font-mono text-xs ${
+                      className={`flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full font-mono text-[13px] sm:text-xs ${
                         index === 3 ? "bg-brass/25 text-brass" : "bg-white/10 text-gray-400"
                       }`}
                     >
@@ -522,7 +441,7 @@ export function CaseStudySection() {
                   ],
                 ].map(([title, detail], index) => (
                   <li key={title} className="flex items-start gap-4">
-                    <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-brass/20 font-mono text-xs font-bold text-brass">
+                    <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-brass/20 font-mono text-[13px] sm:text-xs font-bold text-brass">
                       {index + 1}
                     </span>
                     <div>
@@ -540,14 +459,14 @@ export function CaseStudySection() {
                 verhindert, dass Sie unwissentlich Teil eines Sachverhalts werden, der später
                 meldepflichtig ist.&ldquo;
               </p>
-              <p className="mt-4 font-mono text-xs uppercase tracking-wider text-gray-400">
+              <p className="mt-4 font-mono text-[13px] sm:text-xs uppercase tracking-wider text-gray-400">
                 Ermittlungsteam BONA FIDES
               </p>
             </div>
 
             <Link
               href="/leistungen/due-diligence"
-              className="group inline-flex items-center gap-2 rounded-sm border border-brass/40 px-5 py-3 font-mono text-xs uppercase tracking-wider text-brass transition-colors hover:bg-brass/10 hover:text-brass-light"
+              className="group inline-flex items-center gap-2 rounded-sm border border-brass/40 px-5 py-3 font-mono text-[13px] sm:text-xs uppercase tracking-wider text-brass transition-colors hover:bg-brass/10 hover:text-brass-light"
             >
               Wie unsere Due Diligence arbeitet
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
@@ -597,7 +516,7 @@ export function TestimonialsSection() {
           >
             Was Auftraggeber nach Mandatsende sagen
           </h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-sm text-gray-400">
             Anonymisiert – Mandatsverhältnisse unterliegen der Vertraulichkeit.
           </p>
         </div>
@@ -618,8 +537,8 @@ export function TestimonialsSection() {
               </blockquote>
               <figcaption className="mt-6 border-t border-white/10 pt-4">
                 <p className="font-medium text-white">{testimonial.role}</p>
-                <p className="mt-0.5 font-mono text-xs text-gray-500">{testimonial.org}</p>
-                <p className="mt-2 font-mono text-[11px] uppercase tracking-wider text-brass/80">
+                <p className="mt-0.5 font-mono text-[13px] sm:text-xs text-gray-400">{testimonial.org}</p>
+                <p className="mt-2 font-mono text-[12px] sm:text-[11px] uppercase tracking-wider text-brass/80">
                   {testimonial.caseType}
                 </p>
               </figcaption>

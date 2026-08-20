@@ -91,9 +91,16 @@ export function ContactForm() {
   }
 
   const fieldClass = (field: string) =>
-    `bg-white/5 border-white/15 text-white placeholder:text-gray-500 focus-visible:border-brass focus-visible:ring-brass/30 ${
+    `bg-white/5 border-white/15 text-white placeholder:text-gray-400 focus-visible:border-brass focus-visible:ring-brass/30 ${
       errors[field] ? "border-red-500" : ""
     }`
+
+  // 44 px Mindesthöhe für Tippflächen (Apple HIG); Textarea bringt ihre eigene Höhe mit
+  const inputClass = (field: string) => `${fieldClass(field)} h-11`
+
+  // Vergrößert die Trefferfläche der 16-px-Box unsichtbar auf 44 px
+  const checkboxClass =
+    "relative mt-0.5 border-white/30 before:absolute before:-inset-3.5 before:content-[''] data-[state=checked]:bg-brass data-[state=checked]:border-brass data-[state=checked]:text-black"
 
   return (
     <div className="relative z-10 py-20 sm:py-24 border-t border-white/10">
@@ -119,12 +126,12 @@ export function ContactForm() {
             </ul>
 
             <div className="mt-8 border-t border-white/10 pt-6">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-gray-500">
+              <p className="font-mono text-[12px] sm:text-[11px] uppercase tracking-wider text-gray-400">
                 Lieber direkt schreiben?
               </p>
               <a
                 href={mailtoLink}
-                className="mt-2 inline-flex items-center gap-2 text-brass hover:text-brass-light transition-colors"
+                className="mt-2 inline-flex min-h-11 items-center gap-2 text-brass transition-colors hover:text-brass-light"
               >
                 <Mail className="h-4 w-4" />
                 {siteConfig.email}
@@ -144,7 +151,7 @@ export function ContactForm() {
                     id="name"
                     value={formData.name}
                     onChange={(event) => update("name", event.target.value)}
-                    className={fieldClass("name")}
+                    className={inputClass("name")}
                     placeholder="Vor- und Nachname"
                     aria-invalid={Boolean(errors.name)}
                   />
@@ -159,7 +166,7 @@ export function ContactForm() {
                     id="company"
                     value={formData.company}
                     onChange={(event) => update("company", event.target.value)}
-                    className={fieldClass("company")}
+                    className={inputClass("company")}
                     placeholder="Firmenname"
                   />
                 </div>
@@ -175,7 +182,7 @@ export function ContactForm() {
                     type="email"
                     value={formData.email}
                     onChange={(event) => update("email", event.target.value)}
-                    className={fieldClass("email")}
+                    className={inputClass("email")}
                     placeholder="name@unternehmen.de"
                     aria-invalid={Boolean(errors.email)}
                   />
@@ -191,7 +198,7 @@ export function ContactForm() {
                     type="tel"
                     value={formData.phone}
                     onChange={(event) => update("phone", event.target.value)}
-                    className={fieldClass("phone")}
+                    className={inputClass("phone")}
                     placeholder="für den schnellen Rückruf"
                   />
                 </div>
@@ -206,7 +213,7 @@ export function ContactForm() {
                     id="role"
                     value={formData.role}
                     onChange={(event) => update("role", event.target.value)}
-                    className={fieldClass("role")}
+                    className={inputClass("role")}
                     placeholder="z. B. Geschäftsführung, HR, Compliance"
                   />
                 </div>
@@ -220,7 +227,7 @@ export function ContactForm() {
                     <SelectTrigger
                       data-testid="urgency-trigger"
                       aria-label="Dringlichkeit"
-                      className="w-full bg-white/5 border-white/15 text-white"
+                      className="data-[size=default]:h-11 w-full bg-white/5 border-white/15 text-white"
                     >
                       <SelectValue placeholder="Zeitrahmen wählen" />
                     </SelectTrigger>
@@ -243,7 +250,7 @@ export function ContactForm() {
                   <SelectTrigger
                     data-testid="case-type-trigger"
                     aria-label="Falltyp"
-                    className={`w-full bg-white/5 text-white ${
+                    className={`data-[size=default]:h-11 w-full bg-white/5 text-white ${
                       errors.caseType ? "border-red-500" : "border-white/15"
                     }`}
                   >
@@ -282,7 +289,7 @@ export function ContactForm() {
                     id="nda"
                     checked={formData.nda}
                     onCheckedChange={(checked) => update("nda", checked === true)}
-                    className="mt-0.5 border-white/30 data-[state=checked]:bg-brass data-[state=checked]:border-brass data-[state=checked]:text-black"
+                    className={checkboxClass}
                   />
                   <label htmlFor="nda" className="text-sm text-gray-300 leading-relaxed">
                     Bitte senden Sie mir vor dem Gespräch eine Vertraulichkeitsvereinbarung (NDA).
@@ -295,14 +302,14 @@ export function ContactForm() {
                     checked={formData.consent}
                     onCheckedChange={(checked) => update("consent", checked === true)}
                     aria-invalid={Boolean(errors.consent)}
-                    className="mt-0.5 border-white/30 data-[state=checked]:bg-brass data-[state=checked]:border-brass data-[state=checked]:text-black"
+                    className={checkboxClass}
                   />
                   <label htmlFor="consent" className="text-sm text-gray-300 leading-relaxed">
                     Ich willige ein, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet
                     werden. <span className="text-brass">*</span>{" "}
                     <Link
                       href="/datenschutz"
-                      className="underline underline-offset-4 hover:text-brass"
+                      className="inline-block py-1 underline underline-offset-4 hover:text-brass"
                     >
                       Datenschutzerklärung
                     </Link>
@@ -359,7 +366,7 @@ export function ContactForm() {
                 )}
               </Button>
 
-              <p className="text-center font-mono text-[11px] uppercase tracking-wider text-gray-500">
+              <p className="text-center font-mono text-[12px] sm:text-[11px] uppercase tracking-wider text-gray-400">
                 Verschlüsselte Übertragung · DSGVO-konform · Keine Weitergabe an Dritte
               </p>
             </form>

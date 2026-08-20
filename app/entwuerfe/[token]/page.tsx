@@ -74,7 +74,7 @@ function DesignHeader({
         <div className="lg:flex-1">
           <h2 className="font-serif text-2xl font-bold text-white">
             {design.name}
-            <span className="ml-3 font-sans text-sm font-normal text-gray-500">
+            <span className="ml-3 font-sans text-sm font-normal text-gray-400">
               {design.metaphor}
             </span>
           </h2>
@@ -100,7 +100,7 @@ function Overview() {
     <div className="min-h-screen bg-black text-white">
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/85 backdrop-blur">
         <div className="container mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3 sm:px-6 lg:px-8">
-          <span className="font-mono text-[10px] uppercase tracking-[0.26em] text-gray-500">
+          <span className="font-mono text-[10px] uppercase tracking-[0.26em] text-gray-400">
             Hero-Entwürfe
           </span>
           {heroDesignOrder.map((variant) => (

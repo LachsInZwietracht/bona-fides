@@ -77,7 +77,7 @@ export function RecentArticlesSection({
               ></div>
             </Button>
 
-            <p className="mt-4 font-mono text-xs text-gray-500 uppercase tracking-wider">
+            <p className="mt-4 font-mono text-xs text-gray-400 uppercase tracking-wider">
               {displayedArticles.length} von {articles.length} Akten angezeigt
             </p>
           </div>

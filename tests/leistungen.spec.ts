@@ -68,7 +68,7 @@ test.describe("Leistungs-Detailseiten", () => {
   test("bietet auf jeder Detailseite einen Weg ins Formular", async ({ page }) => {
     await page.goto("/leistungen/versicherungsbetrug");
 
-    await page.getByRole("link", { name: /Fall vertraulich schildern/i }).first().click();
+    await page.getByRole("link", { name: /Fall schildern/i }).first().click();
     await expect(page).toHaveURL(/\/#contact$/);
 
     const form = page.locator("#contact form");

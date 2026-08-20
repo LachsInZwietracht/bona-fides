@@ -24,7 +24,7 @@ test.describe("B2B-Startseite", () => {
   });
 
   test("führt Besucher vom Hero-CTA in das Anfrageformular", async ({ page }) => {
-    await page.getByRole("link", { name: /Fall vertraulich schildern/i }).first().click();
+    await page.getByRole("link", { name: /Fall schildern/i }).first().click();
 
     const contact = page.locator("#contact");
     await expect(contact).toBeInViewport({ timeout: 10000 });

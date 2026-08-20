@@ -13,7 +13,7 @@ export function ServiceDetail({ service }: { service: Service }) {
     <div className="relative z-10">
       {/* Breadcrumb */}
       <nav aria-label="Brotkrumen" className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
-        <ol className="flex flex-wrap items-center gap-2 font-mono text-xs text-gray-500">
+        <ol className="flex flex-wrap items-center gap-2 font-mono text-xs text-gray-400">
           <li>
             <Link href="/" className="hover:text-brass transition-colors">
               Start
@@ -54,7 +54,7 @@ export function ServiceDetail({ service }: { service: Service }) {
                 className="bg-brass text-black hover:bg-brass-light font-semibold min-h-[52px] px-7 sm:px-8"
               >
                 <Link href="/#contact">
-                  Fall vertraulich schildern
+                  Fall schildern
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -70,7 +70,7 @@ export function ServiceDetail({ service }: { service: Service }) {
               </Link>
             </div>
 
-            <ul className="flex flex-wrap gap-x-6 gap-y-2 pt-2 font-mono text-xs text-gray-500">
+            <ul className="flex flex-wrap gap-x-6 gap-y-2 pt-2 font-mono text-xs text-gray-400">
               <li>{siteConfig.responsePromise}</li>
               <li>NDA vor dem Erstgespräch</li>
               <li>Bundesweit im Einsatz</li>
@@ -88,7 +88,7 @@ export function ServiceDetail({ service }: { service: Service }) {
             <dl className="space-y-4">
               {service.frame.map((item) => (
                 <div key={item.label}>
-                  <dt className="font-mono text-[11px] uppercase tracking-wider text-gray-500">
+                  <dt className="font-mono text-[11px] uppercase tracking-wider text-gray-400">
                     {item.label}
                   </dt>
                   <dd className="text-white mt-0.5">{item.value}</dd>
@@ -96,7 +96,7 @@ export function ServiceDetail({ service }: { service: Service }) {
               ))}
             </dl>
             <div className="mt-6 border-t border-white/10 pt-4">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-gray-500 mb-2">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-gray-400 mb-2">
                 Typischerweise beauftragt von
               </p>
               <p className="text-sm text-gray-300">{service.buyers.join(" · ")}</p>

@@ -36,7 +36,7 @@ export function PrimaryCta() {
       className="bg-brass text-black hover:bg-brass-light font-semibold text-base px-7 sm:px-8 min-h-[52px] shadow-2xl transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(194,177,109,0.5)]"
     >
       <Link href={contactHref}>
-        Fall vertraulich schildern
+        Fall schildern
         <ArrowRight className="ml-2 h-5 w-5" />
       </Link>
     </Button>

@@ -373,7 +373,7 @@ useEffect(() => {
                       className="relative z-40 w-full border text-black hover:scale-105 transition-all duration-300"
                       style={{ backgroundColor: '#C2B16D', borderColor: '#C2B16D' }}
                     >
-                      Vertrauliches Erstgespräch vereinbaren
+                      Fall schildern
                     </Button>
                   </Link>
                 </div>
@@ -457,7 +457,7 @@ useEffect(() => {
                 <div className="rounded-sm border border-white/10 bg-black/70 p-4 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.9)]">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-500">{activeMilestone.year}</div>
+                      <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400">{activeMilestone.year}</div>
                       <h3 className="mt-1 font-serif text-lg text-white">{activeMilestone.title}</h3>
                     </div>
                     <span className="rounded-sm border border-white/20 px-2 py-1 text-xs font-mono tracking-[0.2em] text-gray-400">
@@ -468,7 +468,7 @@ useEffect(() => {
 
                   {/* Mobile Evidence Card */}
                   <div className="rounded-sm border border-white/10 bg-black/60 p-3">
-                    <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-[0.2em] text-gray-500 mb-2">
+                    <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-[0.2em] text-gray-400 mb-2">
                       <Fingerprint className="h-3 w-3" />
                       <span>Beweisdokument</span>
                     </div>
@@ -484,7 +484,7 @@ useEffect(() => {
                 <div className="space-y-8">
                   {/* Slider Control */}
                   <div className="rounded-sm border border-white/5 bg-black/40 p-4">
-                    <label className="text-xs font-mono uppercase tracking-[0.3em] text-gray-500" htmlFor="timeline-slider">
+                    <label className="text-xs font-mono uppercase tracking-[0.3em] text-gray-400" htmlFor="timeline-slider">
                       Prozess-Phasen durchlaufen
                     </label>
                     <input
@@ -496,7 +496,7 @@ useEffect(() => {
                       onChange={(event) => setActiveMilestoneIndex(Number(event.target.value))}
                       className="timeline-slider mt-4 w-full"
                     />
-                    <div className="mt-3 flex items-center justify-between text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                    <div className="mt-3 flex items-center justify-between text-xs font-mono uppercase tracking-[0.3em] text-gray-400">
                       {milestones.map((milestone, index) => (
                         <span key={milestone.year} className={index === activeMilestoneIndex ? 'text-white' : undefined}>
                           {milestone.year}
@@ -509,7 +509,7 @@ useEffect(() => {
                   <div className="relative overflow-hidden rounded-sm border border-white/10 bg-black/70 p-6 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.9)]">
                     <div className="flex items-center justify-between">
                       <div>
-                        <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-500">{activeMilestone.year}</div>
+                        <div className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400">{activeMilestone.year}</div>
                         <h3 className="mt-2 font-serif text-xl sm:text-2xl text-white">{activeMilestone.title}</h3>
                       </div>
                       <span className="rounded-sm border border-white/20 px-3 py-1 text-xs font-mono tracking-[0.3em] text-gray-400">
@@ -524,19 +524,19 @@ useEffect(() => {
                           <Camera className="h-4 w-4" />
                         </div>
                         <div className="mt-4 h-24 rounded-sm border border-dashed border-white/20 bg-black/40">
-                          <div className="flex h-full items-center justify-center text-[10px] font-mono uppercase tracking-[0.4em] text-gray-500">
+                          <div className="flex h-full items-center justify-center text-[10px] font-mono uppercase tracking-[0.4em] text-gray-400">
                             Beweisfoto
                           </div>
                         </div>
                       </div>
                       <div className="rounded-sm border border-white/10 bg-black/60 p-4">
-                        <div className="flex items-center space-x-3 text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                        <div className="flex items-center space-x-3 text-xs font-mono uppercase tracking-[0.3em] text-gray-400">
                           <Fingerprint className="h-4 w-4" />
                           <span>Beweisdokument</span>
                         </div>
                         <h4 className="mt-3 font-serif text-base sm:text-lg text-white">{activeMilestone.evidence.title}</h4>
                         <p className="mt-3 text-sm text-gray-400">{activeMilestone.evidence.summary}</p>
-                        <div className="mt-4 flex items-center space-x-3 text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                        <div className="mt-4 flex items-center space-x-3 text-xs font-mono uppercase tracking-[0.3em] text-gray-400">
                           <Newspaper className="h-4 w-4" />
                           <span>Archiviertes Protokoll verfügbar</span>
                         </div>
@@ -555,7 +555,7 @@ useEffect(() => {
                       }`}
                       onClick={() => setActiveMilestoneIndex(index)}
                     >
-                      <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                      <div className="flex items-center justify-between text-xs font-mono uppercase tracking-[0.3em] text-gray-400">
                         <span>{milestone.year}</span>
                         <span>{milestone.evidence.tag}</span>
                       </div>
@@ -589,7 +589,7 @@ useEffect(() => {
                       Tresor-Authentifizierung
                     </span>
                   </div>
-                  <span className="text-[10px] lg:text-xs font-mono uppercase tracking-[0.2em] lg:tracking-[0.3em] text-gray-500">
+                  <span className="text-[10px] lg:text-xs font-mono uppercase tracking-[0.2em] lg:tracking-[0.3em] text-gray-400">
                     {vaultUnlocked ? 'FREIGESCHALTET' : `KOMBI ${dialStage + 1}/${combinationAngles.length}`}
                   </span>
                 </div>
@@ -606,7 +606,7 @@ useEffect(() => {
                     </div>
                   </button>
                 </div>
-                <div className="rounded-sm border border-white/10 bg-black/70 p-3 lg:p-4 text-center text-[10px] lg:text-xs font-mono uppercase tracking-[0.2em] lg:tracking-[0.3em] text-gray-500">
+                <div className="rounded-sm border border-white/10 bg-black/70 p-3 lg:p-4 text-center text-[10px] lg:text-xs font-mono uppercase tracking-[0.2em] lg:tracking-[0.3em] text-gray-400">
                   <span className="hidden sm:inline">
                     {vaultUnlocked ? 'Tresor geöffnet – Zugriff auf sichere Kontaktaufnahme aktiviert.' : 'Drehen Sie den Wahlscheibenschutz, um den Zugriff freizuschalten.'}
                   </span>
@@ -627,7 +627,7 @@ useEffect(() => {
                   </Link>
                 ) : (
                   <button
-                    className="w-full sm:w-fit px-6 py-3 border rounded-sm transition-all duration-300 text-gray-500 cursor-not-allowed opacity-40 font-medium"
+                    className="w-full sm:w-fit px-6 py-3 border rounded-sm transition-all duration-300 text-gray-400 cursor-not-allowed opacity-40 font-medium"
                     style={{
                       backgroundColor: '#4a4a4a',
                       borderColor: '#666666'
