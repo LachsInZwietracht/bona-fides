@@ -376,12 +376,21 @@
   animation: hero-breathe 7s ease-in-out infinite;
 }
 
-/* Section eyebrow used to anchor scanning readers */
+/* Section eyebrow used to anchor scanning readers.
+   Auf dem Telefon eine Stufe größer und enger gesperrt: Versalien in Monospace
+   sind weit gesperrt am schwersten zu lesen, weil die Wortform verlorengeht. */
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.28em;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .eyebrow {
+    font-size: 0.6875rem;
+    letter-spacing: 0.28em;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

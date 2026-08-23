@@ -35,7 +35,7 @@ export function LossLandscape() {
                 <span className="font-serif text-4xl sm:text-5xl font-bold text-brass">
                   {figure.value}
                 </span>
-                <span className="font-mono text-xs uppercase tracking-wider text-gray-400">
+                <span className="font-mono text-[13px] sm:text-xs uppercase tracking-wider text-gray-400">
                   {figure.unit}
                 </span>
               </p>
@@ -51,7 +51,7 @@ export function LossLandscape() {
                 href={figure.source.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative z-10 mt-6 inline-flex items-center gap-1.5 self-start border-t border-white/10 pt-4 font-mono text-[11px] uppercase tracking-wider text-gray-500 transition-colors hover:text-brass"
+                className="relative z-10 mt-6 inline-flex min-h-11 items-center gap-1.5 self-start border-t border-white/10 pt-4 font-mono text-[12px] uppercase tracking-wider text-gray-400 transition-colors hover:text-brass sm:text-[11px]"
               >
                 {figure.source.label} {figure.source.year}
                 <ArrowUpRight className="h-3 w-3" aria-hidden="true" />

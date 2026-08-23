@@ -24,7 +24,7 @@ test.describe("B2B-Startseite", () => {
   });
 
   test("führt Besucher vom Hero-CTA in das Anfrageformular", async ({ page }) => {
-    await page.getByRole("link", { name: /Fall vertraulich schildern/i }).first().click();
+    await page.getByRole("link", { name: /Fall schildern/i }).first().click();
 
     const contact = page.locator("#contact");
     await expect(contact).toBeInViewport({ timeout: 10000 });
@@ -181,7 +181,7 @@ test.describe("Hero-Sucher", () => {
       .toBe("none");
 
     // Über der Handlungsaufforderung muss die Klickbarkeit erkennbar bleiben
-    const primary = page.getByRole("link", { name: /Fall vertraulich schildern/i }).first();
+    const primary = page.getByRole("link", { name: /Fall schildern/i }).first();
     await expect(primary).toHaveCSS("cursor", "pointer");
 
     // Verlässt der Zeiger den Hero, verschwindet das Fadenkreuz wieder
@@ -193,7 +193,7 @@ test.describe("Hero-Sucher", () => {
   test("bleibt ohne Zeigerbewegung vollständig bedienbar", async ({ page }) => {
     // Tastaturnutzer und Touch sehen kein Fadenkreuz – der Weg ins Formular
     // darf davon nicht abhängen.
-    await page.getByRole("link", { name: /Fall vertraulich schildern/i }).first().click();
+    await page.getByRole("link", { name: /Fall schildern/i }).first().click();
 
     await expect(page.locator("#contact")).toBeInViewport({ timeout: 10000 });
   });

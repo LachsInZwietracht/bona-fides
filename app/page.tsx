@@ -144,7 +144,7 @@ export default function HomePage() {
                 </div>
                 <Link
                   href="/blog"
-                  className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-brass hover:text-brass-light transition-colors"
+                  className="inline-flex min-h-11 items-center gap-2 font-mono text-[13px] sm:text-xs uppercase tracking-wider text-brass hover:text-brass-light transition-colors"
                 >
                   Zum Fallarchiv
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -169,7 +169,7 @@ export default function HomePage() {
         <CtaBand
           headline="Risiken sichtbar machen. Entscheidungen absichern."
           subline="Schildern Sie uns Ihren Fall vertraulich. Sie erhalten in der Regel binnen 24 Stunden eine erste Einschätzung: was aufklärbar ist, mit welchem Aufwand und in welchem Zeitrahmen."
-          primaryLabel="Einschätzung anfordern"
+          primaryLabel="Fall schildern"
         />
 
         <Footer />

@@ -18,7 +18,7 @@ interface CtaBandProps {
 export function CtaBand({
   headline,
   subline,
-  primaryLabel = "Fall vertraulich schildern",
+  primaryLabel = "Fall schildern",
   contactHref = "/#contact",
 }: CtaBandProps) {
   return (
@@ -59,7 +59,7 @@ export function CtaBand({
               </a>
             </div>
 
-            <p className="eyebrow text-gray-500">
+            <p className="eyebrow text-gray-400">
               NDA auf Wunsch · DSGVO-konform · {siteConfig.responsePromise}
             </p>
           </div>
